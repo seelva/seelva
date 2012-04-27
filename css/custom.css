@@ -1,0 +1,71 @@
+/******** Custom ********/
+html {
+  background: #fdfdfd;
+}
+
+body {
+  /* Body style */
+}
+
+.ie6 body, .ie7 body {
+  font-size: 82%;
+  line-height: 1.12em;
+}
+
+#outer {
+  /* Outer style */
+}
+
+#wrapper {
+  /* Wrapper style */
+}
+
+.holder {
+  /* override default holder style */
+}
+
+#header .holder {
+  /* override default header holder style */
+}
+
+#logo {
+  float: left;
+}
+
+#site-name {
+  clear: right;
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  font-size: 214%;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+#slogan {
+  float: left;
+  width: 350px;
+}
+
+#main-nav .holder {
+  /* override default main-nav holder style */
+}
+#main-nav .horizontal-menu {
+  margin-bottom: 0;
+}
+
+#teaser .holder {
+  /* override default header holder style */
+}
+
+#primary {
+  /* primary style */
+}
+
+#secondary .holder {
+  /* override default header holder style */
+}
+
+#footer .holder {
+  /* override default header holder style */
+}
+
+/******** End Custom ********/

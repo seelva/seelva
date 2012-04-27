@@ -1,0 +1,388 @@
+/******** Core ********/
+html {
+  font-size: 100.01%;
+}
+
+body {
+  color: black;
+  font-family: Helvetica, Geneva, Arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+}
+
+/* Links */
+a, a:link {
+  color: #4e9a06;
+  text-decoration: underline;
+  outline: 0;
+}
+a:visited {
+  color: #7b9712;
+  text-decoration: none;
+}
+a:hover {
+  color: #3b7c03;
+  text-decoration: underline;
+}
+a:active {
+  color: #7b9712;
+  text-decoration: underline;
+}
+a:focus {
+  background: #ecfddc;
+  color: #4e9a06;
+  outline: #4e9a06 dotted thin;
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  font-weight: normal;
+  line-height: 120%;
+  margin-bottom: 0.5em;
+}
+h1 .subtitle, h2 .subtitle, h3 .subtitle, h4 .subtitle, h5 .subtitle, h6 .subtitle {
+  color: #888888;
+  font-size: 80%;
+}
+h1.styled, h2.styled, h3.styled, h4.styled, h5.styled, h6.styled {
+  border-bottom: 1px solid #888888;
+  padding-bottom: 6px;
+}
+
+h1 {
+  font-size: 214%;
+}
+
+h2 {
+  font-size: 192%;
+}
+
+h3 {
+  font-size: 171%;
+}
+
+h4 {
+  font-size: 150%;
+}
+
+h5 {
+  font-size: 128%;
+}
+
+h6 {
+  font-size: 107%;
+}
+
+/* Text */
+p, address {
+  margin-bottom: 1em;
+}
+
+blockquote {
+  border-left: 1px solid #e3e3e3;
+  font-size: 122%;
+  font-style: italic;
+  line-height: 150%;
+  margin: 6px 15px 1em 15px;
+  padding-left: 6px;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+blockquote span, blockquote .credit {
+  font-size: 78%;
+  font-style: italic;
+  margin-bottom: 0;
+}
+blockquote span:before, blockquote .credit:before {
+  content: '\2013';
+}
+blockquote.styled {
+  background: #f5f5f5;
+  border: 0;
+  color: #555555;
+  padding: 18px 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+blockquote.styled:before {
+  color: #d5d5d5;
+  content: '\201C';
+  font-size: 60px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 40px;
+  padding-left: 9px;
+}
+blockquote.styled p {
+  margin: 0 18px 1em 36px;
+}
+blockquote.styled p:first-child {
+  margin-top: -40px;
+}
+blockquote.styled p:last-child {
+  margin-bottom: 0;
+}
+
+cite, q {
+  font-style: italic;
+  quotes: '"' '"' "'" "'";
+}
+cite:after, q:after {
+  content: open-quote;
+}
+cite:before, q:before {
+  content: close-quote;
+}
+
+pre, code {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  _font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 100%;
+  white-space: pre;
+}
+
+pre {
+  background: #fdf9ff;
+  border: 1px solid #f3ddff;
+  display: block;
+  margin: 0 0 9px 0;
+  padding: 6px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+code {
+  background: #f5f5f5;
+  border: 1px solid #eeeeee;
+  line-height: 192%;
+  padding: 2px 4px;
+}
+
+pre code {
+  background: transparent;
+  border: 0;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+del, s {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+acronym, abbr {
+  border-bottom: 1px dotted #4e9a06;
+  cursor: help;
+  letter-spacing: 2px;
+}
+
+sub {
+  font-size: 80%;
+}
+
+sup {
+  font-size: 80%;
+  vertical-align: 50%;
+}
+
+small, .small {
+  font-size: 80%;
+}
+
+/* Lists */
+ul {
+  margin: 0 0 15px 18px;
+  padding: 0;
+}
+ul li {
+  padding-left: 0;
+}
+
+ol {
+  margin: 0 0 15px 18px;
+  padding: 0;
+}
+ol li {
+  margin: 0 0 0 9px;
+  padding: 0;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin-bottom: 0;
+}
+ul.armenian, ol.armenian {
+  list-style-type: armenian;
+}
+ul.circle, ol.circle {
+  list-style-type: circle;
+}
+ul.decimal, ol.decimal {
+  list-style-type: decimal;
+}
+ul.decimalzero, ol.decimalzero {
+  list-style-type: decimal-leading-zero;
+}
+ul.disc, ol.disc {
+  list-style-type: disc;
+}
+ul.georgian, ol.georgian {
+  list-style-type: georgian;
+}
+ul.lalpha, ol.lalpha {
+  list-style-type: lower-alpha;
+}
+ul.lgreek, ol.lgreek {
+  list-style-type: lower-greek;
+}
+ul.llatin, ol.llatin {
+  list-style-type: lower-latin;
+}
+ul.lroman, ol.lroman {
+  list-style-type: lower-roman;
+}
+ul.square, ol.square {
+  list-style-type: square;
+}
+ul.ualpha, ol.ualpha {
+  list-style-type: upper-alpha;
+}
+ul.ulatin, ol.ulatin {
+  list-style-type: upper-latin;
+}
+ul.uroman, ol.uroman {
+  list-style-type: upper-roman;
+}
+ul.unstyled, ol.unstyled {
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.styled, ol.styled {
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.styled li, ol.styled li {
+  background: url(../images/bullet.png) no-repeat 0 6px;
+  padding-left: 16px;
+}
+
+/* Values not allowed in CSS2.1, re-allowed in CSS3 */
+/*
+ul.hebrew 		{list-style-type: hebrew}
+ul.cideo 		{list-style-type: cjk-ideographic}
+ul.hira 		{list-style-type: hiragana}
+ul.kata 		{list-style-type: katakana}
+ul.hira-iroha 	{list-style-type: hiragana-iroha}
+ul.kata-iroha 	{list-style-type: katakana-iroha}
+*/
+dl {
+  margin: 0 0 15px 18px;
+  padding: 0;
+}
+dl dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+dl dd {
+  margin: 0 0 0 9px;
+  padding: 0;
+}
+
+/* Tables */
+table {
+  border-right: 1px solid #f5f5f5;
+  border-top: 1px solid #e3e3e3;
+  margin: 0 0 15px 0;
+  width: 100%;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+table caption {
+  font-size: 85.7%;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 3px 0;
+}
+
+th {
+  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left -292px;
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  font-weight: bold;
+  padding: 6px;
+  text-align: left;
+}
+
+table thead tr:first-child th:first-child {
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  -ms-border-radius: 3px 0 0 0;
+  -o-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+
+table thead tr:last-child th:last-child {
+  border-right: 1px solid #f5f5f5;
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  -ms-border-radius: 0 3px 0 0;
+  -o-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+
+tr.odd, .zebra tr:nth-child(odd) {
+  background: white;
+}
+tr.even, .zebra tr:nth-child(even) {
+  background: #fafafa;
+}
+
+td {
+  border-bottom: 1px solid #f5f5f5;
+  border-left: 1px solid #f5f5f5;
+  padding: 6px;
+  vertical-align: top;
+}
+
+table.compact td, table.compact th {
+  padding: 2px 6px;
+}
+
+/*Rulers and line breaks */
+hr {
+  clear: both;
+  color: #888888;
+  height: 0;
+  /*height: 1px;*/
+}
+
+br {
+  clear: both;
+}
+
+/******** End Core ********/

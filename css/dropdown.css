@@ -1,0 +1,67 @@
+/******** Dropdown ********/
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  max-width: 180px;
+  padding: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 100;
+  zoom: 1;
+}
+.dropdown ul ul {
+  left: 100%;
+  position: absolute;
+  top: 6px;
+  visibility: hidden;
+  width: 100%;
+}
+.dropdown ul li {
+  border-left: 1px solid #f5f5f5;
+  display: block;
+  float: none;
+}
+.dropdown ul li > a, .dropdown ul li > a:link, .dropdown ul li > a:visited {
+  background: #e3e3e3;
+  color: black;
+  display: block;
+  padding: 6px 9px;
+  text-decoration: none;
+}
+.dropdown ul li > a:hover, .dropdown ul li.active > a, .dropdown ul li.active > a:link {
+  background: #888888;
+  color: white;
+}
+.dropdown:hover > ul, .dropdown ul a:hover ul, .dropdown:hover .drop-content {
+  visibility: visible;
+}
+.dropdown ul :hover ul :hover ul {
+  visibility: visible;
+}
+.dropdown.active ul li a, .dropdown.active ul li a:link, .dropdown .active ul li a, .dropdown .active ul li a:link {
+  background: #e3e3e3;
+  color: black;
+}
+.dropdown.active ul li a:hover, .dropdown .active ul li a:hover {
+  background: #888888;
+  color: white;
+}
+.dropdown .drop-content {
+  background: #d5d5d5;
+  width: 230px;
+  padding: 9px;
+  position: absolute;
+  visibility: hidden;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+.dropdown .drop-content a, .dropdown .drop-content a:link {
+  background: transparent;
+  display: inline;
+  padding: 0;
+}
+
+/******** End Dropdown ********/

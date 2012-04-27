@@ -1,0 +1,418 @@
+@import "_config";
+
+/******** Forms ********/
+/* Form elements*/
+form {
+	p {
+		clear: both;
+		margin-bottom: $baseUnit3;
+	}
+
+	div {
+		clear: both;
+		margin-bottom: $baseUnit3;
+
+		p {
+			margin: $baseUnit2 0;
+		}
+	}
+}
+
+fieldset {
+	border: 0;
+	margin-bottom: $baseUnit5;
+
+	legend {
+		border-bottom: 1px solid $WhiteSmoke;
+		color:$dimgray;
+		font: {
+			size: 128%;
+			weight: normal;
+		}
+		padding: 0 0 $baseUnit2 0;
+		width:100%;
+	}
+}
+
+label, span.label {
+	display: inline-block;
+	line-height: 130%;
+	padding: $baseUnit2 0;
+}
+
+label em, span.label em, label .required {
+	color: $Crimson;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin:0;
+
+	&:focus {
+		outline-color:#8ea81f;
+	}
+}
+
+input[type=""],
+input[type="file"],
+input[type="password"],
+input[type="text"],
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+
+select,
+textarea {
+	background: $white url(../images/txt_bg.png) repeat-x left top;
+	border: 1px solid $Silver {
+		left-width: 2px;
+		top-width: 2px;
+	}
+	font: {
+		family: $fstack-verdana;
+		size: 100%;
+	}
+	margin: 0;
+	padding: $baseUnit1 0;
+	width: 100%;
+
+	@include border-radius($baseUnit1);
+	@include box-sizing(border-box);
+
+	&:focus {
+		background-color: #fdfdfd;
+		border-color: #8ea81f;
+		outline-color:#8ea81f;
+	}
+
+	&[readonly] {
+		background-color: $GhostWhite;
+	}
+
+	&[disabled] {
+		background-color: $LightGrey;
+		color: $gray;
+	}
+}
+
+input.image,
+input[type="image"] {
+	border: 0;
+	height: auto;
+	width: auto;
+}
+
+textarea {
+	height: 8em;
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+
+select {
+	padding: $baseUnit1;
+}
+
+.control-set {
+	clear: both;
+	float: none;
+	margin: 0;
+
+	span.label {
+		line-height: normal;
+	}
+
+	label {
+		display: inline;
+		padding: 0;
+		width: auto;
+	}
+}
+
+/* Buttons */
+/* From: http://particletree.com/features/rediscovering-the-button-element/ */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+a.button {
+	background: $LightGrey url(../images/gradient-bg.png) repeat-x left top;
+	border: 1px solid $Silver;
+	color: $gray;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $fstack-verdana;
+	font-size: 100%;
+	font-weight: bold;
+	margin: 0 $baseUnit2 0 0;
+	padding: $baseUnit1 $baseUnit3;/*! For links */
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #FDFDFD;
+
+	@include border-radius($baseUnit1);
+
+	/*! Standard button */
+	&:hover, &:focus {
+		background-position: 0 -292px;
+		color: $dimgray;
+		outline-color:#8ea81f;
+	}
+
+	&:active {
+		background-position: 0 bottom;
+		color: $gray;
+
+		@include single-box-shadow(#b4b4b4, 0, 0, $baseUnit2, 0, true);
+	}
+
+	/*! Neutral button */
+	&.neutral {
+		color: $SteelBlue;
+
+		&:hover, &:focus {
+			background-color: $LightCyan;
+			border-color: $DarkTurquoise;
+		}
+
+		&:active {
+			@include single-box-shadow(#9dc0ff, 0, 0, $baseUnit2, 0, true);
+		}
+	}
+
+	/*! Positive button */
+	&.positive {
+		color: $OliveDrab;
+
+		&:hover, &:focus {
+			background-color: $PaleGreen;
+			border-color: $YellowGreen;
+		}
+
+		&:active {
+			@include single-box-shadow(#ccda74, 0, 0, $baseUnit2, 0, true);
+		}
+	}
+
+	/* Negative button */
+	&.negative {
+		color: $Crimson;
+
+		&:hover, &:focus {
+			background-color: $LavenderBlush;
+			border-color: $Pink;
+		}
+
+		&:active {
+			@include single-box-shadow($Pink, 0, 0, $baseUnit2, 0, true);
+		}
+	}
+
+	/* Disabled button */
+	&[disabled], &[disabled]:hover, &[disabled]:active {
+		background: $LightGrey;
+		border: 1px solid $Silver;
+		color: $gray;
+		cursor:default;
+		text-shadow:1px 1px 0 $WhiteSmoke;
+		@include single-box-shadow(none);
+	}
+}
+
+/* Buttons Fixes */
+button {
+	overflow: visible;
+	width: auto;
+
+	&[type] {
+		line-height: 180%;/* Safari */
+		padding: $baseUnit1 $baseUnit4 $baseUnit1 $baseUnit2;/* Firefox */
+	}
+	*:first-child + html button[type] {
+		line-height: 180%;
+		padding: $baseUnit1 $baseUnit4 $baseUnit1 $baseUnit2;/* IE7 */
+	}
+}
+
+button img,
+a.button img{
+	border: 0;
+	margin:0;
+	padding: 0;
+}
+
+/* Wrappers, widths, columns */
+.btn-row {
+	float: none;
+	margin-bottom: $baseUnit5;
+	overflow: auto;
+	width: auto;
+}
+
+/* Form helper classes */
+form {
+	.field-prefix, .field-suffix {
+		.label {
+			background: $GhostWhite;
+			border: 1px solid $Silver;
+			color:$dimgray;
+			float:left;
+			margin: 0;
+			padding: $baseUnit1 $baseUnit3;
+			text-shadow:1px 1px 0 $white;
+		}
+
+		input,
+		select {
+			clear:none;
+			float:left;
+			position: relative;
+			width:auto;
+		}
+	}
+
+	.field-prefix {
+		.label {
+			@include border-radius($baseUnit1 0 0 $baseUnit1);
+		}
+
+		input,
+		select {
+			border: 1px solid $Silver {
+				top-width: 2px;
+			};
+			@include border-radius(0);
+			@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		}
+	}
+
+	.field-suffix {
+		.label {
+			@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		}
+
+		input,
+		select {
+			border: 1px solid $Silver {
+				top-width: 2px;
+			};
+			@include border-radius(0);
+			@include border-radius($baseUnit1 0 0 $baseUnit1);
+		}
+	}
+
+	.field-prefix.field-suffix {
+		overflow:hidden;
+
+		input,
+		select {
+			border: 1px solid $Silver {
+				top-width: 2px;
+			}
+			float: left;
+
+			@include border-radius(0);
+		}
+
+		.label:first-child {
+			float:left;
+			width:auto;
+
+			@include border-radius(0);
+			@include border-radius($baseUnit1 0 0 $baseUnit1);
+		}
+		.label:last-child,
+		input:last-child, select:last-child {
+			width:auto;
+
+			@include border-radius(0);
+			@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		}
+	}
+
+	.inline-field {
+		&:before, &:after { content:""; display:table; clear: both; } & { zoom:1; }
+
+		label, span.label {
+			clear: none;
+			display: inline;
+			float: left;
+			width: 35%;
+		}
+
+		& > input[type="file"],
+		& > input[type="password"],
+		& > input[type="text"],
+		& > select,
+		& > textarea,
+		& > div.control-set {
+			clear: none;
+			float: right;
+			width: 60%;
+		}
+
+		.field-prefix,
+		.field-suffix {
+			clear: none;
+			float: right;
+			width: 60%;
+
+			input {
+				width:auto;
+			}
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+		}
+
+		.control-set label, .control-set span.label {
+			float:none;
+			width:auto;
+		}
+	}
+
+	.last-field { clear: right; float: right; margin-right: 0; }
+
+	.error-field {
+		label {
+			color: $Crimson;
+		}
+
+		input[type="file"],
+		input[type="password"],
+		input[type="text"],
+		select,
+		textarea {
+			background: $Snow;
+			border-color:$Pink;
+		}
+	}
+
+	.success-field {
+		label {
+			color: $LimeGreen;
+		}
+
+		input[type="file"],
+		input[type="password"],
+		input[type="text"],
+		select,
+		textarea {
+			background: $Beige;
+			border-color:$YellowGreen;
+		}
+	}
+}
+
+/******** End Forms ********/

@@ -1,0 +1,77 @@
+@import "_config";
+
+/******** Utilities ********/
+
+/* Clearing */
+/* From:http://www.contentwithstyle.co.uk/content/a-css-framework */
+.clear 			{ clear:both; display:block; }
+.clearfix:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+* html .clearfix { height: 1%; } /* IE6 */
+*:first-child + html .clearfix { min-height: 1%; } /* IE7 */
+
+hr.clear,
+hr.clearing {
+	background: transparent;
+	border: 0;
+	clear: both;
+	color: #ffffff;
+	float: none;
+	height: 1px;
+	margin: 0 0 $baseUnit3;
+	visibility: hidden;
+	width: 100%;
+}
+
+/* accessibility */
+#skip-links { clear:both; list-style:none; margin:0; position:absolute; text-align:center; width:100%; }
+#skip-links a, #skip-links a:link, #skip-links a:visited { background:$LimeGreen; color:$white; display:block; left:-200%; padding:$baseUnit2 0; position:absolute; width:100%; z-index:2; }
+#skip-links a:active, #skip-links a:focus { left:0; text-align:center; z-index:100; }
+.accessibility { position:absolute; left:-5000em; }
+
+/* Image replacement */
+.imgreplace { display:block; text-indent:-5000em; }
+
+/* Hidden and invisible elements */
+/* Screen readers can see it */
+.invisible 	{ position: absolute !important; /* IE6, IE7 */ clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
+ /* Screen readers cannot see it */
+.hidden 	{ display:none; }
+
+/* Resizable elements without js */
+.resizable { resize:both; overflow:auto; }
+
+/* Selection styling */
+::-moz-selection, ::selection { background:$Beige; color:$OliveDrab; text-shadow:none; }
+
+/* UNLEASH THE UNSEMANTIC CLASSES! Sorry about this, used carefully it's somewhat useful */
+/* Alignment */
+.alignleft 		{ text-align:left; }
+.aligncenter 	{ text-align:center; }
+.alignright 	{ text-align:right; }
+.alignjust 		{ text-align:justify; }
+
+/* Floating */
+.floatleft 		{ float:left; }
+.floatright 	{ float:right; }
+.nofloat 		{ float:none; }
+
+/* Text */
+.highlight, mark 	{ background:$Gold; }
+.big 			{ font-size: 125%; }
+.large 			{ font-size:150%; }
+.loud 			{ color:$Crimson; }
+.quiet 			{ color:$LightGrey; }
+
+.capitalize 	{ text-transform:capitalize; }
+.lowercase 		{ text-transform:lowercase; }
+.uppercase 		{ text-transform:uppercase; }
+
+/* Help */
+.help 			{ font-size: 82%; }
+
+.underline {
+	border-bottom: 1px solid $gray;
+	padding-bottom: $baseUnit2;
+}
+
+/******** End Utilities ********/

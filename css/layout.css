@@ -1,0 +1,30 @@
+/******** Layout ********/
+.section { clear:both; width:100%; }
+.holder { margin: 0 auto; overflow: hidden; }
+.holder.liquid { padding:0 10px; width:auto; }
+
+/* Percentage Width classes. Should't go any further than 1/6 (one-sixth) width!! */
+/* Deprecated: .fullwidth, half-width, .one2width, .onehalf, .one3width, .one4width, .onefourth, .one5width, .onefifth, .one6width, .onesixth, .one7width, .oneseventh */
+.half-width, .one-half, .one-third, .one-fourth, .one-fifth, .one-sixth, .two-thirds, .two-fourths, .two-fifths, .two-sixths, .three-fourths, .three-fifths, .three-sixths, .four-fifths, .four-sixths, .five-sixths { float: left; clear:none; margin-right:1%; }
+
+.full-width 			{ clear:both; width:100%; }
+.half-width, .one-half, .two-fourths, .three-sixths { clear:none; width:49.5%; }
+.one-third, .two-sixths	{ width:32.5%; }
+.one-fourth 			{ width:24.25%; }
+.one-fifth 				{ width:19.2%; }
+.one-sixth 				{ width:15.82%; }
+
+.two-thirds, .four-sixths { width:66.58%; }
+.two-fifths 	{ width:39.5%; }
+.three-fourths 	{ width:74.5%; }
+.three-fifths 	{ width:59.5%; }
+.four-fifths 	{ width:79.5%; }
+.five-sixths 	{ width:83%; }
+
+ .row { zoom:1; } .row:before, .row:after { content:""; display:table; clear: both; }
+
+/* The last column in a row */
+.row > div:last-child, .last-col { clear: right; float: right; margin-right: 0; }
+.row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"], .last-col[class^="suffix"], .last-col[class*=" suffix"] { float: left; }
+
+/******** End Layout ********/

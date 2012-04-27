@@ -1,0 +1,246 @@
+/******** Navigation ********/
+/* nav abstraction object
+Source: http://csswizardry.com/2011/09/the-nav-abstraction/
+*/
+.nav {
+  list-style: none;
+}
+.nav li {
+  display: block;
+  float: left;
+}
+.nav li a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Global setup */
+.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul {
+  list-style: none;
+  margin: 0 0 9px 0;
+  overflow: hidden;
+}
+.tabs li, .vertical-tabs li, .horizontal-menu li, .vertical-menu li, .horizontal-list li, .breadcrumb li, .pagination li, .pagination ul li {
+  display: block;
+  float: left;
+}
+.tabs li a, .vertical-tabs li a, .horizontal-menu li a, .vertical-menu li a, .horizontal-list li a, .breadcrumb li a, .pagination li a, .pagination ul li a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Tabs setup */
+.tabs, .vertical-tabs {
+  overflow: visible;
+  zoom: 1;
+}
+.tabs:before, .tabs:after, .vertical-tabs:before, .vertical-tabs:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+.tabs:after, .vertical-tabs:after {
+  clear: both;
+}
+.tabs li, .vertical-tabs li {
+  position: relative;
+}
+.tabs li a, .tabs li a:link, .tabs li a:visited, .vertical-tabs li a, .vertical-tabs li a:link, .vertical-tabs li a:visited {
+  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+  border: 1px solid #e3e3e3;
+  color: black;
+  padding: 6px 9px;
+}
+
+/* Tabs */
+.tabs {
+  border-bottom: 1px solid #d5d5d5;
+}
+.tabs li {
+  margin-right: 3px;
+  top: 1px;
+}
+.tabs li a, .tabs li a:link, .tabs li a:visited {
+  border-bottom-width: 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+.tabs li a:hover, .tabs li.active a, .tabs li.active a:link {
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-bottom-color: transparent;
+}
+
+/* Vertical tabs */
+.vertical-tabs {
+  border-right: 1px solid #d5d5d5;
+  float: left;
+  margin-right: 9px;
+  width: 120px;
+}
+.vertical-tabs li {
+  float: none;
+  left: 1px;
+  margin-bottom: 3px;
+  padding-left: 1px;
+}
+.vertical-tabs li a, .vertical-tabs li a:link, .vertical-tabs li a:visited {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.vertical-tabs li a:hover, .vertical-tabs li.active a, .vertical-tabs li.active a:link {
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-right-color: transparent;
+}
+
+/* Tabs content */
+.tabs-content {
+  background: white;
+  display: block;
+  margin: 0;
+  zoom: 1;
+}
+.tabs-content:before, .tabs-content:after {
+  content: "";
+  display: table;
+}
+.tabs-content:after {
+  clear: both;
+}
+.tabs-content > li, .tabs-content > div {
+  display: none;
+  height: 1%;
+  overflow: auto;
+}
+.tabs-content > li.active, .tabs-content > div.active {
+  display: block;
+}
+
+/* Horizontal-menu */
+.horizontal-menu li {
+  border-left: 1px solid #e3e3e3;
+  display: inline-block;
+  float: left;
+}
+.horizontal-menu li a, .horizontal-menu li a:link, .horizontal-menu li a:visited {
+  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
+  color: black;
+  padding: 6px 9px;
+}
+.horizontal-menu li a:hover, .horizontal-menu li.active a, .horizontal-menu li.active a:link {
+  background: #888888 url(../images/gradient-bg.png) repeat-x left -15px;
+  color: white;
+}
+
+/* Vertical menu */
+.vertical-menu li {
+  border-bottom: 1px solid #e3e3e3;
+  float: none;
+}
+.vertical-menu li a, .vertical-menu li a:link, .vertical-menu li a:visited {
+  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
+  color: black;
+  padding: 6px 9px;
+}
+.vertical-menu li a:hover, .vertical-menu li.active a, .vertical-menu li.active a:link {
+  background: #888888 url(../images/gradient-bg.png) repeat-x left -15px;
+  color: white;
+}
+
+/* Horizontal list*/
+.horizontal-list li {
+  border-left: 1px solid #e3e3e3;
+  display: inline-block;
+  float: none;
+}
+.horizontal-list li:first-child {
+  border-left: 0;
+}
+.horizontal-list li a, .horizontal-list li a:link, .horizontal-list li a:visited {
+  padding: 0 9px;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+  border: 1px solid #d5d5d5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.breadcrumb span {
+  display: block;
+}
+.breadcrumb > a {
+  display: inline-block;
+}
+.breadcrumb a, .breadcrumb a:link, .breadcrumb a:visited, .breadcrumb span {
+  padding: 6px 0 6px 9px;
+}
+.breadcrumb a:after, .breadcrumb a:link:after {
+  content: " \00BB";
+  /* Adds an arrow character to every breadcrumb item*/
+}
+.breadcrumb a:hover, .breadcrumb .active a, .breadcrumb .active a:link {
+  color: black;
+}
+.breadcrumb .active a:after, .breadcrumb .active a:link:after {
+  content: "";
+}
+
+/* Pagination*/
+.pagination {
+  clear: both;
+}
+.pagination ul {
+  clear: both;
+  margin: 0;
+}
+.pagination li, .pagination ul li {
+  float: left;
+}
+.pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
+  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+  color: #d5d5d5;
+  text-decoration: none;
+}
+.pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited {
+  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+  border: 1px solid #d5d5d5;
+  color: #555555;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 3px 9px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 white;
+}
+.pagination li a, .pagination li a:link, .pagination li a:visited {
+  border-left-width: 0;
+}
+.pagination li:first-child a, .pagination li:first-child a:link, .pagination li:first-child a:visited {
+  border-left-width: 1px;
+}
+.pagination span {
+  background: transparent;
+  border-color: transparent;
+}
+.pagination .current, .pagination .current span, .pagination li.active a, .pagination li.active a:link, .pagination a:hover {
+  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
+  color: black;
+  text-decoration: none;
+}
+
+/******** End Navigation ********/

@@ -1,0 +1,78 @@
+@import "_config";
+
+/******** Dropdown ********/
+.dropdown {
+	ul {
+		list-style:none;
+		margin:0;
+		max-width: 180px;
+		padding:0;
+		position: absolute;
+		visibility: hidden;
+		z-index:100;
+		zoom:1;
+
+		ul {
+			left:100%;
+			position:absolute;
+			top:$baseUnit2;
+			visibility:hidden;
+			width: 100%;
+		}
+
+		li {
+			border-left: 1px solid $WhiteSmoke;
+			display: block;
+			float:none;
+
+			> a, > a:link, > a:visited {
+				background: $LightGrey;
+				color:$black;
+				display:block;
+				padding: $baseUnit2 $baseUnit3;
+				text-decoration:none;
+			}
+			> a:hover, &.active > a, &.active > a:link {
+				background: $gray;
+				color: $white;
+			}
+		}
+	}
+
+	&:hover > ul, ul a:hover ul, &:hover .drop-content {
+		visibility:visible;
+	}
+
+	ul :hover ul :hover ul {
+		visibility:visible;
+	}
+
+	&.active, .active {
+		ul li a, ul li a:link {
+			background:$LightGrey;
+			color:$black;
+		}
+		ul li a:hover {
+			background:$gray;
+			color:$white;
+		}
+	}
+
+	.drop-content {
+		background:$Silver;
+		width: 230px;
+		padding:$baseUnit3;
+		position: absolute;
+		visibility:hidden;
+
+		@include border-radius(0 0 $baseUnit2 $baseUnit2);
+
+		a, a:link {
+			background: transparent;
+			display: inline;
+			padding: 0;
+		}
+	}
+}
+
+/******** End Dropdown ********/

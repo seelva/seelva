@@ -1,0 +1,188 @@
+/******** UI ********/
+/* Buttonsets / Button groups */
+.btn-set {
+  display: inline-block;
+}
+.btn-set input[type="button"], .btn-set input[type="submit"], .btn-set input[type="reset"], .btn-set button, .btn-set a.button {
+  float: left;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.btn-set input[type="button"]:first-child, .btn-set input[type="submit"]:first-child, .btn-set input[type="reset"]:first-child, .btn-set button:first-child, .btn-set a.button:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.btn-set input[type="button"]:last-child, .btn-set input[type="submit"]:last-child, .btn-set input[type="reset"]:last-child, .btn-set button:last-child, .btn-set a.button:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Close btn */
+a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:focus {
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  top: -3px;
+}
+
+/* Messages / Alerts */
+.alert,
+.error,
+.guidelines,
+.info, .ok,
+.notice, .warning,
+.status, .success {
+  background: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: 4px 1em;
+  border: 1px solid #e3e3e3;
+  color: #888888;
+  margin-bottom: 15px;
+  padding: 9px 9px 9px 24px;
+  text-shadow: 1px 1px 0 white;
+}
+.alert a,
+.error a,
+.guidelines a,
+.info a, .ok a,
+.notice a, .warning a,
+.status a, .success a {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  background-color: #fff0f5;
+  background-image: url(../images/icons/cross.png);
+  border-color: #ffc0cb;
+  color: #e14049;
+}
+.error a {
+  color: #e14049;
+}
+
+.guidelines {
+  background-color: #fffff0;
+  background-image: url(../images/icons/.png);
+  border-color: #fff6cc;
+  color: #555555;
+  font-size: 82%;
+  line-height: 130%;
+  margin-top: 6px;
+  padding: 9px 6px;
+  text-shadow: 1px 1px 0 white;
+}
+.guidelines a {
+  color: #daa520;
+}
+
+.info, .status {
+  background-color: #d9e8ff;
+  background-image: url(../images/icons/information.png);
+  border-color: #82d2df;
+  color: #4682b4;
+}
+.info a, .status a {
+  color: #4682b4;
+}
+
+.notice, .warning {
+  background-color: #fffacd;
+  background-image: url(../images/icons/error.png);
+  border-color: #ffd700;
+  color: #daa520;
+}
+.notice a, .warning a {
+  color: #daa520;
+}
+
+.success, .ok {
+  background-color: #edf2c4;
+  background-image: url(../images/icons/tick.png);
+  border-color: #becf59;
+  color: #7b9712;
+}
+.success a, .ok a {
+  color: #7b9712;
+}
+
+/* Progress bar */
+.progressbar,
+.progressbar-neutral,
+.progressbar-negative,
+.progressbar-positive {
+  background: #fafafa;
+  border: 1px solid #d5d5d5;
+  color: #555555;
+  height: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 1px 1px 0 white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.progressbar .progress-value, .progressbar .progress-text,
+.progressbar-neutral .progress-value,
+.progressbar-neutral .progress-text,
+.progressbar-negative .progress-value,
+.progressbar-negative .progress-text,
+.progressbar-positive .progress-value,
+.progressbar-positive .progress-text {
+  /* The width and height of your image */
+  height: 18px;
+}
+.progressbar .progress-value,
+.progressbar-neutral .progress-value,
+.progressbar-negative .progress-value,
+.progressbar-positive .progress-value {
+  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
+}
+.progressbar .progress-text,
+.progressbar-neutral .progress-text,
+.progressbar-negative .progress-text,
+.progressbar-positive .progress-text {
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+  left: 0;
+  line-height: 18px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+  top: 0;
+  width: 100%;
+}
+
+.progressbar-neutral .progress-value {
+  background-color: #3399ff;
+}
+
+.progressbar-negative .progress-value {
+  background-color: #e14049;
+}
+
+.progressbar-positive .progress-value {
+  background-color: #becf59;
+}
+
+/******** End UI ********/
