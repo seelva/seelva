@@ -32,9 +32,11 @@ img.unstyled, button img, a.button img {
   padding: 0;
 }
 img.alignleft, img.floatleft {
+  float: left;
   margin-right: 9px;
 }
 img.alignright, img.floatright {
+  float: right;
   margin-left: 9px;
 }
 img.nofloat {

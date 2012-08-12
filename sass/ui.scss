@@ -104,7 +104,7 @@ a.close {
 	position: relative;
 	text-shadow:1px 1px 0 $white;
 
-	@include border-radius($baseUnit1);
+	@include border-radius($baseUnit3);
 	@include box-sizing(border-box);
 
 	.progress-value, .progress-text {
@@ -114,6 +114,7 @@ a.close {
 
 	.progress-value {
 		background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+		@include border-radius($baseUnit3 0 0 $baseUnit3);
 	}
 
 	.progress-text {

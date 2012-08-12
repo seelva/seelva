@@ -22,8 +22,8 @@ img {
 		border-width:0; padding:0;
 	}
 
-	&.alignleft, &.floatleft 	{ margin-right:$baseUnit3; }
-	&.alignright, &.floatright 	{ margin-left:$baseUnit3; }
+	&.alignleft, &.floatleft 	{ float:left; margin-right:$baseUnit3; }
+	&.alignright, &.floatright 	{ float:right; margin-left:$baseUnit3; }
 	&.nofloat 					{ display:block; margin-left:auto; margin-right:auto; }
 }
 .image-caption, .caption {

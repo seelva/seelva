@@ -62,14 +62,14 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  background: white url(../images/txt_bg.png) repeat-x left top;
+  background: white url(../images/txt-bg.png) repeat-x left top;
   border: 1px solid #d5d5d5;
   border-left-width: 2px;
   border-top-width: 2px;
   font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
   font-size: 100%;
   margin: 0;
-  padding: 3px 0;
+  padding: 3px;
   width: 100%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -177,7 +177,6 @@ select {
 }
 
 /* Buttons */
-/* From: http://particletree.com/features/rediscovering-the-button-element/ */
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -201,6 +200,9 @@ a.button {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  -webkit-box-shadow: 0 2px 4px 0 #eeeeee;
+  -moz-box-shadow: 0 2px 4px 0 #eeeeee;
+  box-shadow: 0 2px 4px 0 #eeeeee;
   /* Standard button */
   /* Neutral button */
   /* Positive button */
@@ -532,6 +534,17 @@ form .success-field select,
 form .success-field textarea {
   background: #f5f5dc;
   border-color: #becf59;
+}
+
+/* Search form */
+.search-form > div, .search-form > p {
+  float: left;
+  clear: none;
+}
+.search-form input, .search-form label {
+  float: left;
+  width: auto;
+  margin-right: 3px;
 }
 
 /******** End Forms ********/

@@ -5,36 +5,39 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .nav {
   list-style: none;
 }
-.nav li {
+.nav > li {
   display: block;
   float: left;
 }
-.nav li a {
+.nav > li > a {
   display: block;
   text-decoration: none;
 }
 
 /* Global setup */
-.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul {
+.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
   list-style: none;
   margin: 0 0 9px 0;
   overflow: hidden;
 }
-.tabs li, .vertical-tabs li, .horizontal-menu li, .vertical-menu li, .horizontal-list li, .breadcrumb li, .pagination li, .pagination ul li {
+.tabs > li, .vertical-tabs > li, .horizontal-menu > li, .vertical-menu > li, .horizontal-list > li, .breadcrumb > li, .pagination > li, .pagination ul > li, .pager > li, .pager ul > li {
   display: block;
   float: left;
 }
-.tabs li a, .vertical-tabs li a, .horizontal-menu li a, .vertical-menu li a, .horizontal-list li a, .breadcrumb li a, .pagination li a, .pagination ul li a {
+.tabs > li > a, .vertical-tabs > li > a, .horizontal-menu > li > a, .vertical-menu > li > a, .horizontal-list > li > a, .breadcrumb > li > a, .pagination > li > a, .pagination ul > li > a, .pager > li > a, .pager ul > li > a {
   display: block;
   text-decoration: none;
 }
 
 /* Tabs setup */
-.tabs, .vertical-tabs {
+.tabs,
+.vertical-tabs {
   overflow: visible;
   zoom: 1;
 }
-.tabs:before, .tabs:after, .vertical-tabs:before, .vertical-tabs:after {
+.tabs:before, .tabs:after,
+.vertical-tabs:before,
+.vertical-tabs:after {
   content: '\0020';
   display: block;
   height: 0;
@@ -42,13 +45,18 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   visibility: hidden;
   width: 0;
 }
-.tabs:after, .vertical-tabs:after {
+.tabs:after,
+.vertical-tabs:after {
   clear: both;
 }
-.tabs li, .vertical-tabs li {
+.tabs > li,
+.vertical-tabs > li {
   position: relative;
 }
-.tabs li a, .tabs li a:link, .tabs li a:visited, .vertical-tabs li a, .vertical-tabs li a:link, .vertical-tabs li a:visited {
+.tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited,
+.vertical-tabs > li > a,
+.vertical-tabs > li > a:link,
+.vertical-tabs > li > a:visited {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #e3e3e3;
   color: black;
@@ -59,11 +67,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .tabs {
   border-bottom: 1px solid #d5d5d5;
 }
-.tabs li {
+.tabs > li {
   margin-right: 3px;
   top: 1px;
 }
-.tabs li a, .tabs li a:link, .tabs li a:visited {
+.tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited {
   border-bottom-width: 0;
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
@@ -71,7 +79,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
-.tabs li a:hover, .tabs li.active a, .tabs li.active a:link {
+.tabs > li > a:hover, .tabs > li.active > a, .tabs > li.active > a:link {
   background-color: white;
   border: 1px solid #e3e3e3;
   border-bottom-color: transparent;
@@ -84,20 +92,20 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   margin-right: 9px;
   width: 120px;
 }
-.vertical-tabs li {
+.vertical-tabs > li {
   float: none;
   left: 1px;
   margin-bottom: 3px;
   padding-left: 1px;
 }
-.vertical-tabs li a, .vertical-tabs li a:link, .vertical-tabs li a:visited {
+.vertical-tabs > li > a, .vertical-tabs > li > a:link, .vertical-tabs > li > a:visited {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -ms-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-.vertical-tabs li a:hover, .vertical-tabs li.active a, .vertical-tabs li.active a:link {
+.vertical-tabs > li > a:hover, .vertical-tabs > li.active > a, .vertical-tabs > li.active > a:link {
   background-color: white;
   border: 1px solid #e3e3e3;
   border-right-color: transparent;
@@ -127,46 +135,48 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /* Horizontal-menu */
-.horizontal-menu li {
+.horizontal-menu > li {
   border-left: 1px solid #e3e3e3;
   display: inline-block;
   float: left;
 }
-.horizontal-menu li a, .horizontal-menu li a:link, .horizontal-menu li a:visited {
+.horizontal-menu > li > a, .horizontal-menu > li > a:link, .horizontal-menu > li > a:visited {
   background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
   color: black;
   padding: 6px 9px;
 }
-.horizontal-menu li a:hover, .horizontal-menu li.active a, .horizontal-menu li.active a:link {
-  background: #888888 url(../images/gradient-bg.png) repeat-x left -15px;
+.horizontal-menu > li > a:hover, .horizontal-menu > li.active > a, .horizontal-menu > li.active > a:link {
+  background-color: #888888;
+  background-position: left -15px;
   color: white;
 }
 
 /* Vertical menu */
-.vertical-menu li {
+.vertical-menu > li {
   border-bottom: 1px solid #e3e3e3;
   float: none;
 }
-.vertical-menu li a, .vertical-menu li a:link, .vertical-menu li a:visited {
+.vertical-menu > li > a, .vertical-menu > li > a:link, .vertical-menu > li > a:visited {
   background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
   color: black;
   padding: 6px 9px;
 }
-.vertical-menu li a:hover, .vertical-menu li.active a, .vertical-menu li.active a:link {
-  background: #888888 url(../images/gradient-bg.png) repeat-x left -15px;
+.vertical-menu > li > a:hover, .vertical-menu > li.active > a, .vertical-menu > li.active > a:link {
+  background-color: #888888;
+  background-position: left -15px;
   color: white;
 }
 
 /* Horizontal list*/
-.horizontal-list li {
+.horizontal-list > li {
   border-left: 1px solid #e3e3e3;
   display: inline-block;
   float: none;
 }
-.horizontal-list li:first-child {
+.horizontal-list > li:first-child {
   border-left: 0;
 }
-.horizontal-list li a, .horizontal-list li a:link, .horizontal-list li a:visited {
+.horizontal-list > li > a, .horizontal-list > li > a:link, .horizontal-list > li > a:visited {
   padding: 0 9px;
 }
 
@@ -200,32 +210,54 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   content: "";
 }
 
-/* Pagination*/
-.pagination {
+/* Pagination */
+.pagination,
+.pager {
   clear: both;
 }
-.pagination ul {
+.pagination ul,
+.pager ul {
   clear: both;
   margin: 0;
 }
-.pagination li, .pagination ul li {
-  float: left;
-}
-.pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
-  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
-  color: #d5d5d5;
-  text-decoration: none;
-}
-.pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited {
+.pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited,
+.pager span,
+.pager li span,
+.pager a,
+.pager a:link,
+.pager a:visited {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #d5d5d5;
   color: #555555;
   display: block;
-  float: left;
+  display: inline-block;
   margin: 0;
   padding: 3px 9px;
   text-decoration: none;
   text-shadow: 1px 1px 0 white;
+}
+.pagination .current, .pagination .current span, .pagination li.active a, .pagination li.active a:link, .pagination a:hover,
+.pager .current,
+.pager .current span,
+.pager li.active a,
+.pager li.active a:link,
+.pager a:hover {
+  background-color: #d5d5d5;
+  color: black;
+  text-decoration: none;
+}
+
+/* Full Pagination */
+.pagination li, .pagination ul li {
+  float: left;
+}
+.pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited {
+  float: left;
+}
+.pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
+  background-color: #f5f5f5;
+  color: #d5d5d5;
+  text-decoration: none;
 }
 .pagination li a, .pagination li a:link, .pagination li a:visited {
   border-left-width: 0;
@@ -237,10 +269,20 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   background: transparent;
   border-color: transparent;
 }
-.pagination .current, .pagination .current span, .pagination li.active a, .pagination li.active a:link, .pagination a:hover {
-  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
-  color: black;
-  text-decoration: none;
+
+/* Pager */
+.pager a, .pager a:link, .pager a:visited {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.pager li:first-child, .pager .prev, .pager .prev a, .pager .prev a:link {
+  float: left;
+}
+.pager li:last-child, .pager .next, .pager .next a, .pager .prev a:link {
+  float: right;
 }
 
 /******** End Navigation ********/

@@ -6,41 +6,42 @@
 Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 */
 
-@mixin nav 		{ list-style:none; }
-@mixin nav-li 	{ display:block; float:left; }
-@mixin nav-li-a { display:block; text-decoration: none; }
+@mixin nav 		{ list-style: none; }
+@mixin nav-li 	{ display: block; float: left; }
+@mixin nav-li-a { display: block; text-decoration: none; }
 
 .nav {
 	@include nav;
 
-	li {
+	> li {
 		@include nav-li;
 
-		a { @include nav-li-a; }
+		> a { @include nav-li-a; }
 	}
 }
 
 /* Global setup */
-.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul {
+.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
 	@include nav;
 	margin: 0 0 $baseUnit3 0;
 	overflow: hidden;
 
-	li {
+	> li {
 		@include nav-li;
 
-		a { @include nav-li-a; }
+		> a { @include nav-li-a; }
 	}
 }
 
 /* Tabs setup */
-.tabs, .vertical-tabs {
+.tabs,
+.vertical-tabs {
 	overflow: visible;
 	zoom: 1;
 
 	&:before, &:after {
 		content: '\0020';
-		display:block;
+		display: block;
 		height: 0;
 		overflow: hidden;
 		visibility: hidden;
@@ -48,10 +49,10 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 	}
 	&:after { clear: both; }
 
-	li {
+	> li {
 		position: relative;
 
-		a, a:link, a:visited {
+		> a, > a:link, > a:visited {
 			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 			border: 1px solid $LightGrey;
 			color: $black;
@@ -64,17 +65,17 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .tabs {
 	border-bottom: 1px solid $Silver;
 
-	li {
+	> li {
 		margin-right: $baseUnit1;
 		top: 1px;
 
-		a, a:link, a:visited {
+		> a, > a:link, > a:visited {
 			border-bottom-width: 0;
 
 			@include border-radius($baseUnit1 $baseUnit1 0 0);
 		}
 
-		a:hover, &.active a, &.active a:link {
+		> a:hover, &.active > a, &.active > a:link {
 			background-color: $white;
 			border: 1px solid $LightGrey;
 			border-bottom-color: transparent;
@@ -89,17 +90,17 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 	margin-right: $baseUnit3;
 	width: 120px;
 
-	li {
-		float:none;
+	> li {
+		float: none;
 		left: 1px;
 		margin-bottom: $baseUnit1;
 		padding-left: 1px;
 
-		a, a:link, a:visited {
+		> a, > a:link, > a:visited {
 			@include border-radius($baseUnit1 0 0 $baseUnit1);
 		}
 
-		a:hover, &.active a, &.active a:link {
+		> a:hover, &.active > a, &.active > a:link {
 			background-color: $white;
 			border: 1px solid $LightGrey;
 			border-right-color: transparent;
@@ -110,31 +111,32 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 /* Tabs content */
 .tabs-content {
 	background: $white;
-	display:block;
+	display: block;
 	margin: 0;
 	zoom:1;
 
-	&:before, &:after { content:""; display:table; }
-	&:after { clear:both; }
-	> li, > div { display:none; height: 1%; overflow: auto; }
-	> li.active, > div.active { display:block; }
+	&:before, &:after { content:""; display: table; }
+	&:after { clear: both; }
+	> li, > div { display: none; height: 1%; overflow: auto; }
+	> li.active, > div.active { display: block; }
 }
 
 /* Horizontal-menu */
 .horizontal-menu {
-	li {
+	> li {
 		border-left: 1px solid $LightGrey;
-		display:inline-block;
-		float:left;
+		display: inline-block;
+		float: left;
 
-		a, a:link, a:visited {
+		> a, > a:link, > a:visited {
 			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
 			color: $black;
 			padding: $baseUnit2 $baseUnit3;
 		}
 
-		a:hover, &.active a, &.active a:link {
-			background: $gray url(../images/gradient-bg.png) repeat-x left -15px;
+		> a:hover, &.active > a, &.active > a:link {
+			background-color: $gray;
+			background-position: left -15px;
 			color: $white;
 		}
 	}
@@ -142,17 +144,18 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /* Vertical menu */
 .vertical-menu {
-	li {
+	> li {
 		border-bottom: 1px solid $LightGrey;
 		float: none;
 
-		a, a:link, a:visited {
+		> a, > a:link, > a:visited {
 			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
 			color: $black;
 			padding: $baseUnit2 $baseUnit3;
 		}
-		a:hover, &.active a, &.active a:link {
-			background: $gray url(../images/gradient-bg.png) repeat-x left -15px;
+		> a:hover, &.active > a, &.active > a:link {
+			background-color: $gray;
+			background-position: left -15px;
 			color: $white;
 		}
 	}
@@ -160,14 +163,14 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /* Horizontal list*/
 .horizontal-list {
-	li {
+	> li {
 		border-left: 1px solid $LightGrey;
-		display:inline-block;
-		float:none;
+		display: inline-block;
+		float: none;
 
 		&:first-child { border-left: 0; }
-		a, a:link, a:visited { padding: 0 $baseUnit3; }
-		a:hover, &.active a, &.active a:link {}
+		> a, > a:link, > a:visited { padding: 0 $baseUnit3; }
+		> a:hover, &.active > a, &.active > a:link {}
 	}
 }
 
@@ -185,36 +188,53 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 	.active a:after, .active a:link:after { content: ""; }
 }
 
-/* Pagination*/
-.pagination {
-	clear:both;
+/* Pagination */
+.pagination,
+.pager {
+	clear: both;
 
 	ul { clear: both; margin:0; }
-	li, ul li { float: left; }
-	.disabled, .disabled span, .disabled a, .disabled a:link {
-		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
-		color: $Silver;
-		text-decoration: none;
-	}
+
 	span, li span, a, a:link, a:visited {
 		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 		border: 1px solid $Silver;
 		color: $dimgray;
-		display:block;
-		float: left;
+		display: block;
+		display: inline-block;
 		margin: 0;
 		padding: $baseUnit1 $baseUnit3;
 		text-decoration: none;
 		text-shadow:1px 1px 0 $white;
 	}
-	li a, li a:link, li a:visited { border-left-width: 0; }
-	li:first-child a, li:first-child a:link, li:first-child a:visited { border-left-width: 1px; }
-	span { background: transparent; border-color: transparent; }
 	.current, .current span, li.active a, li.active a:link, a:hover {
-		background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+		background-color: $Silver;
 		color: $black;
 		text-decoration: none;
 	}
+}
+
+/* Full Pagination */
+.pagination {
+	li, ul li { float: left; }
+	span, li span, a, a:link, a:visited { float: left; }
+	.disabled, .disabled span, .disabled a, .disabled a:link {
+		background-color: $WhiteSmoke;
+		color: $Silver;
+		text-decoration: none;
+	}
+
+	li a, li a:link, li a:visited { border-left-width: 0; }
+	li:first-child a, li:first-child a:link, li:first-child a:visited { border-left-width: 1px; }
+	span { background: transparent; border-color: transparent; }
+}
+
+/* Pager */
+.pager {
+	a, a:link, a:visited { @include border-radius($baseUnit1); }
+
+	li:first-child, .prev, .prev a, .prev a:link { float: left; }
+
+	li:last-child, .next, .next a, .prev a:link { float: right; }
 }
 
 /******** End Navigation ********/

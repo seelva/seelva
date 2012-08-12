@@ -4,10 +4,10 @@
 
 /* TEAM */
   <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  Site:
+  Twitter:
+  Location:
 
 /* SITE */
   Standards: XHTML, CSS
-  Components: jQuery
+  Components:
