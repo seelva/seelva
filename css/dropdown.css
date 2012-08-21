@@ -35,7 +35,7 @@
   float: none;
 }
 .dropdown > ul > li > a, .dropdown > ul > li > a:link, .dropdown > ul > li > a:visited {
-  background: #e3e3e3;
+  background: #e5e5e5;
   color: black;
   display: block;
   padding: 6px 9px;
@@ -62,7 +62,7 @@
   visibility: visible;
 }
 .dropdown.active ul li a, .dropdown.active ul li a:link, .dropdown .active ul li a, .dropdown .active ul li a:link {
-  background: #e3e3e3;
+  background: #e5e5e5;
   color: black;
 }
 .dropdown.active ul li a:hover, .dropdown .active ul li a:hover {
@@ -70,7 +70,7 @@
   color: white;
 }
 .dropdown .drop-content {
-  background: #d5d5d5;
+  background: #dadada;
   width: 230px;
   padding: 9px;
   position: absolute;

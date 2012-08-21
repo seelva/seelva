@@ -10,7 +10,7 @@
 .dropdown {
 	> a:after,
 	> a:link:after {
-		border: 4px solid $gray;
+		border: 4px solid $Gray;
 		border-bottom-color: transparent;
 		border-left-color: transparent;
 		border-right-color: transparent;
@@ -39,15 +39,15 @@
 			float:none;
 
 			> a, > a:link, > a:visited {
-				background: $LightGrey;
-				color:$black;
+				background: $LightGray;
+				color:$Black;
 				display:block;
 				padding: $baseUnit2 $baseUnit3;
 				text-decoration:none;
 			}
 			> a:hover, &.active > a, &.active > a:link {
-				background: $gray;
-				color: $white;
+				background: $Gray;
+				color: $White;
 			}
 		}
 	}
@@ -73,12 +73,12 @@
 
 	&.active, .active {
 		ul li a, ul li a:link {
-			background:$LightGrey;
-			color:$black;
+			background:$LightGray;
+			color:$Black;
 		}
 		ul li a:hover {
-			background:$gray;
-			color:$white;
+			background:$Gray;
+			color:$White;
 		}
 	}
 

@@ -24,7 +24,7 @@ hr.clearing {
 
 /* accessibility */
 #skip-links { clear:both; list-style:none; margin:0; position:absolute; text-align:center; width:100%; }
-#skip-links a, #skip-links a:link, #skip-links a:visited { background:$LimeGreen; color:$white; display:block; left:-200%; padding:$baseUnit2 0; position:absolute; width:100%; z-index:2; }
+#skip-links a, #skip-links a:link, #skip-links a:visited { background:$LimeGreen; color:$White; display:block; left:-200%; padding:$baseUnit2 0; position:absolute; width:100%; z-index:2; }
 #skip-links a:active, #skip-links a:focus { left:0; text-align:center; z-index:100; }
 .accessibility { position:absolute; left:-5000em; }
 
@@ -60,7 +60,7 @@ hr.clearing {
 .big 			{ font-size: 125%; }
 .large 			{ font-size:150%; }
 .loud 			{ color:$Crimson; }
-.quiet 			{ color:$LightGrey; }
+.quiet 			{ color:$LightGray; }
 
 .capitalize 	{ text-transform:capitalize; }
 .lowercase 		{ text-transform:lowercase; }
@@ -70,7 +70,7 @@ hr.clearing {
 .help 			{ font-size: 82%; }
 
 .underline {
-	border-bottom: 1px solid $gray;
+	border-bottom: 1px solid $Gray;
 	padding-bottom: $baseUnit2;
 }
 

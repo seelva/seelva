@@ -24,7 +24,7 @@ fieldset {
 
 	legend {
 		border-bottom: 1px solid $WhiteSmoke;
-		color:$dimgray;
+		color:$DimGray;
 		font: {
 			size: 128%;
 			weight: normal;
@@ -71,7 +71,7 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-	background: $white url(../images/txt-bg.png) repeat-x left top;
+	background: $White url(../images/txt-bg.png) repeat-x left top;
 	border: 1px solid $Silver {
 		left-width: 2px;
 		top-width: 2px;
@@ -98,8 +98,8 @@ textarea {
 	}
 
 	&[disabled] {
-		background-color: $LightGrey;
-		color: $gray;
+		background-color: $LightGray;
+		color: $Gray;
 	}
 }
 
@@ -144,9 +144,10 @@ input[type="submit"],
 input[type="reset"],
 button,
 a.button {
-	background: $LightGrey url(../images/gradient-bg.png) repeat-x left top;
+	background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
 	border: 1px solid $Silver;
-	color: $gray;
+	border-bottom-color: $DarkGray;
+	color: $Gray;
 	cursor: pointer;
 	display: inline-block;
 	font-family: $fstack-verdana;
@@ -155,23 +156,26 @@ a.button {
 	margin: 0 $baseUnit2 0 0;
 	padding: $baseUnit1 $baseUnit3;/*! For links */
 	text-decoration: none;
-	text-shadow: 1px 1px 0 #FDFDFD;
+	text-shadow: 0 1px 0 $White;
+	white-space: nowrap;
+	word-wrap: normal;
 
 	@include border-radius($baseUnit1);
-	@include single-box-shadow($Gainsboro, 0, 2px, 4px, 0);
+	@include single-box-shadow($WhiteSmoke, 0, 1px, 0, 0);
 
 	/*! Standard button */
 	&:hover, &:focus {
 		background-position: 0 -292px;
-		color: $dimgray;
+		color: $DimGray;
 		outline-color:#8ea81f;
 	}
 
 	&:active {
 		background-position: 0 bottom;
-		color: $gray;
+		border-color: $Gray $DarkGray $Silver;
+		color: $Gray;
 
-		@include single-box-shadow(#b4b4b4, 0, 0, $baseUnit2, 0, true);
+		@include box-shadow(inset 0 1px $baseUnit2 $DarkGray, 0 1px 0 $WhiteSmoke);
 	}
 
 	/*! Neutral button */
@@ -184,7 +188,7 @@ a.button {
 		}
 
 		&:active {
-			@include single-box-shadow(#9dc0ff, 0, 0, $baseUnit2, 0, true);
+			@include box-shadow(inset 0 1px $baseUnit2 darken($LightCyan, 40), 0 1px 0 $WhiteSmoke);
 		}
 	}
 
@@ -198,7 +202,7 @@ a.button {
 		}
 
 		&:active {
-			@include single-box-shadow(#ccda74, 0, 0, $baseUnit2, 0, true);
+			@include box-shadow(inset 0 1px $baseUnit2 darken($PaleGreen, 50), 0 1px 0 $WhiteSmoke);
 		}
 	}
 
@@ -212,15 +216,15 @@ a.button {
 		}
 
 		&:active {
-			@include single-box-shadow($Pink, 0, 0, $baseUnit2, 0, true);
+			@include box-shadow(inset 0 1px $baseUnit2 darken($LavenderBlush, 60), 0 1px 0 $WhiteSmoke);
 		}
 	}
 
 	/* Disabled button */
 	&[disabled], &[disabled]:hover, &[disabled]:active {
-		background: $LightGrey;
+		background: $LightGray;
 		border: 1px solid $Silver;
-		color: $gray;
+		color: $Gray;
 		cursor:default;
 		text-shadow:1px 1px 0 $WhiteSmoke;
 		@include single-box-shadow(none);
@@ -263,11 +267,11 @@ form {
 		.label {
 			background: $GhostWhite;
 			border: 1px solid $Silver;
-			color:$dimgray;
+			color:$DimGray;
 			float:left;
 			margin: 0;
 			padding: $baseUnit1 $baseUnit3;
-			text-shadow:1px 1px 0 $white;
+			text-shadow:1px 1px 0 $White;
 		}
 
 		input,

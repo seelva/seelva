@@ -58,14 +58,14 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .vertical-tabs > li > a:link,
 .vertical-tabs > li > a:visited {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e5e5e5;
   color: black;
   padding: 6px 9px;
 }
 
 /* Tabs */
 .tabs {
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid #dadada;
 }
 .tabs > li {
   margin-right: 3px;
@@ -81,13 +81,13 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 .tabs > li > a:hover, .tabs > li.active > a, .tabs > li.active > a:link {
   background-color: white;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e5e5e5;
   border-bottom-color: transparent;
 }
 
 /* Vertical tabs */
 .vertical-tabs {
-  border-right: 1px solid #d5d5d5;
+  border-right: 1px solid #dadada;
   float: left;
   margin-right: 9px;
   width: 120px;
@@ -107,7 +107,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 .vertical-tabs > li > a:hover, .vertical-tabs > li.active > a, .vertical-tabs > li.active > a:link {
   background-color: white;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e5e5e5;
   border-right-color: transparent;
 }
 
@@ -136,12 +136,12 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /* Horizontal-menu */
 .horizontal-menu > li {
-  border-left: 1px solid #e3e3e3;
+  border-left: 1px solid #e5e5e5;
   display: inline-block;
   float: left;
 }
 .horizontal-menu > li > a, .horizontal-menu > li > a:link, .horizontal-menu > li > a:visited {
-  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
+  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
   color: black;
   padding: 6px 9px;
 }
@@ -153,11 +153,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /* Vertical menu */
 .vertical-menu > li {
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e5e5e5;
   float: none;
 }
 .vertical-menu > li > a, .vertical-menu > li > a:link, .vertical-menu > li > a:visited {
-  background: #d5d5d5 url(../images/gradient-bg.png) repeat-x left top;
+  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
   color: black;
   padding: 6px 9px;
 }
@@ -169,7 +169,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /* Horizontal list*/
 .horizontal-list > li {
-  border-left: 1px solid #e3e3e3;
+  border-left: 1px solid #e5e5e5;
   display: inline-block;
   float: none;
 }
@@ -183,7 +183,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 /* Breadcrumbs */
 .breadcrumb {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
-  border: 1px solid #d5d5d5;
+  border: 1px solid #dadada;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -227,7 +227,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .pager a:link,
 .pager a:visited {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
-  border: 1px solid #d5d5d5;
+  border: 1px solid #dadada;
   color: #555555;
   display: block;
   display: inline-block;
@@ -242,7 +242,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .pager li.active a,
 .pager li.active a:link,
 .pager a:hover {
-  background-color: #d5d5d5;
+  background-color: #dadada;
   color: black;
   text-decoration: none;
 }
@@ -256,7 +256,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 .pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
   background-color: #f5f5f5;
-  color: #d5d5d5;
+  color: #dadada;
   text-decoration: none;
 }
 .pagination li a, .pagination li a:link, .pagination li a:visited {

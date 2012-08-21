@@ -1,5 +1,8 @@
 /******** Media ********/
 /* Images*/
+img[width], img[height] {
+  display: inline-block;
+}
 img, a img {
   border: 0;
   vertical-align: bottom;

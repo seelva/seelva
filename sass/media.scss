@@ -4,6 +4,7 @@
 
 /* Images*/
 img {
+	&[width], &[height] { display:inline-block; }
 	&, a & { border:0; vertical-align:bottom; }
 	&.styled {
 		background:$GhostWhite url(../images/loading.gif) no-repeat center;

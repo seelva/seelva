@@ -54,8 +54,8 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 		> a, > a:link, > a:visited {
 			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
-			border: 1px solid $LightGrey;
-			color: $black;
+			border: 1px solid $LightGray;
+			color: $Black;
 			padding: $baseUnit2 $baseUnit3;
 		}
 	}
@@ -76,8 +76,8 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			background-color: $white;
-			border: 1px solid $LightGrey;
+			background-color: $White;
+			border: 1px solid $LightGray;
 			border-bottom-color: transparent;
 		}
 	}
@@ -101,8 +101,8 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			background-color: $white;
-			border: 1px solid $LightGrey;
+			background-color: $White;
+			border: 1px solid $LightGray;
 			border-right-color: transparent;
 		}
 	}
@@ -110,7 +110,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /* Tabs content */
 .tabs-content {
-	background: $white;
+	background: $White;
 	display: block;
 	margin: 0;
 	zoom:1;
@@ -124,20 +124,20 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 /* Horizontal-menu */
 .horizontal-menu {
 	> li {
-		border-left: 1px solid $LightGrey;
+		border-left: 1px solid $LightGray;
 		display: inline-block;
 		float: left;
 
 		> a, > a:link, > a:visited {
 			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
-			color: $black;
+			color: $Black;
 			padding: $baseUnit2 $baseUnit3;
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			background-color: $gray;
+			background-color: $Gray;
 			background-position: left -15px;
-			color: $white;
+			color: $White;
 		}
 	}
 }
@@ -145,18 +145,18 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 /* Vertical menu */
 .vertical-menu {
 	> li {
-		border-bottom: 1px solid $LightGrey;
+		border-bottom: 1px solid $LightGray;
 		float: none;
 
 		> a, > a:link, > a:visited {
 			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
-			color: $black;
+			color: $Black;
 			padding: $baseUnit2 $baseUnit3;
 		}
 		> a:hover, &.active > a, &.active > a:link {
-			background-color: $gray;
+			background-color: $Gray;
 			background-position: left -15px;
-			color: $white;
+			color: $White;
 		}
 	}
 }
@@ -164,7 +164,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 /* Horizontal list*/
 .horizontal-list {
 	> li {
-		border-left: 1px solid $LightGrey;
+		border-left: 1px solid $LightGray;
 		display: inline-block;
 		float: none;
 
@@ -184,7 +184,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 	> a { display: inline-block;}
 	a, a:link, a:visited, span { padding: $baseUnit2 0 $baseUnit2 $baseUnit3; }
 	a:after, a:link:after { content: " \00BB"; /* Adds an arrow character to every breadcrumb item*/ }
-	a:hover, .active a, .active a:link { color: $black; }
+	a:hover, .active a, .active a:link { color: $Black; }
 	.active a:after, .active a:link:after { content: ""; }
 }
 
@@ -198,17 +198,17 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 	span, li span, a, a:link, a:visited {
 		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 		border: 1px solid $Silver;
-		color: $dimgray;
+		color: $DimGray;
 		display: block;
 		display: inline-block;
 		margin: 0;
 		padding: $baseUnit1 $baseUnit3;
 		text-decoration: none;
-		text-shadow:1px 1px 0 $white;
+		text-shadow:1px 1px 0 $White;
 	}
 	.current, .current span, li.active a, li.active a:link, a:hover {
 		background-color: $Silver;
-		color: $black;
+		color: $Black;
 		text-decoration: none;
 	}
 }

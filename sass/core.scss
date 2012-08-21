@@ -4,7 +4,7 @@
 html { font-size:100.01%; }
 
 body {
-	color: $black;
+	color: $Black;
 	font: {
 		family: $fstack-helvetica;
 		size: 0.875em;
@@ -32,12 +32,12 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.5em;
 
 	.subtitle {
-		color: $gray;
+		color: $Gray;
 		font-size: 80%;
 	}
 
 	&.styled {
-		border-bottom: 1px solid $gray;
+		border-bottom: 1px solid $Gray;
 		padding-bottom: $baseUnit2;
 	}
 }
@@ -54,7 +54,7 @@ p, address {
 	margin-bottom: 1em;
 }
 blockquote {
-	border-left: 1px solid $LightGrey;
+	border-left: 1px solid $LightGray;
 	font: {
 		size: 122%;
 		style: italic;
@@ -82,7 +82,7 @@ blockquote {
 	&.styled {
 		background:$WhiteSmoke;
 		border:0;
-		color:$dimgray;
+		color:$DimGray;
 		padding:$baseUnit6 0;
 		@include border-radius($baseUnit2);
 
@@ -144,6 +144,23 @@ code {
 pre code {
 	background:transparent;
 	border:0;
+}
+kbd {
+	background: $WhiteSmoke;
+	color: $DimGray;
+	font: {
+		family: $fstack-consolas;
+		size: 85.7%;
+		weight: bold;
+	}
+	_font-family: $fstack-consolas;
+	line-height:192%;
+	padding:#{$baseUnit1 - 1} #{$baseUnit2};
+	text-transform: capitalize;
+	white-space: pre;
+
+	@include box-shadow($Silver 0 2px 0, $DimGray 0 2px 2px);
+	@include border-radius($baseUnit1);
 }
 
 strong, b 	{ font-weight: bold; }
@@ -238,7 +255,7 @@ dl {
 table {
 	border: {
 		right:1px solid $WhiteSmoke;
-		top:1px solid $LightGrey;
+		top:1px solid $LightGray;
 	}
 	margin: 0 0 $baseUnit5 0;
 	width:100%;
@@ -259,8 +276,8 @@ table {
 th {
 	background:$WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
 	border: {
-		bottom: 1px solid $LightGrey;
-		left: 1px solid $LightGrey;
+		bottom: 1px solid $LightGray;
+		left: 1px solid $LightGray;
 	}
 	font-weight: bold;
 	padding:$baseUnit2;
@@ -280,7 +297,7 @@ table thead tr:last-child th:last-child {
 }
 
 tr {
-	&.odd, .zebra &:nth-child(odd) 	{ background:$white; }
+	&.odd, .zebra &:nth-child(odd) 	{ background:$White; }
 	&.even, .zebra &:nth-child(even) { background:$GhostWhite; }
 }
 td {
@@ -296,7 +313,7 @@ table.compact td, table.compact th { padding: #{$baseUnit1 - 1} $baseUnit2; }
 /*Rulers and line breaks */
 hr {
 	clear: both;
-	color: $gray;
+	color: $Gray;
 	height: 0;
 	/*!height: 1px;*/
 }
