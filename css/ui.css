@@ -167,8 +167,8 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
 .progressbar-negative .progress-text,
 .progressbar-positive .progress-text {
   color: black;
-  font-weight: bold;
   font-size: 12px;
+  font-weight: bold;
   left: 0;
   line-height: 18px;
   position: absolute;

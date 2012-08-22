@@ -51,34 +51,42 @@ li[class*=" icon-"] {
 /* Fixed icon sizes */
 .icon-8 {
   font-size: 8px;
+  line-height: 8px;
 }
 
 .icon-12 {
   font-size: 12px;
+  line-height: 12px;
 }
 
 .icon-16 {
   font-size: 16px;
+  line-height: 16px;
 }
 
 .icon-20 {
   font-size: 20px;
+  line-height: 20px;
 }
 
 .icon-24 {
   font-size: 24px;
+  line-height: 24px;
 }
 
 .icon-32 {
   font-size: 32px;
+  line-height: 32px;
 }
 
 .icon-48 {
   font-size: 48px;
+  line-height: 48px;
 }
 
 .icon-64 {
   font-size: 64px;
+  line-height: 64px;
 }
 
 /*  Font Awesome styles

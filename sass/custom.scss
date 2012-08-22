@@ -25,8 +25,10 @@ body {/*! Body style */}
 
 	#site-name {
 		clear:right;
-		font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-		font-size:214%;
+		font: {
+			family: $fstack-segoe;
+			size:214%;
+		}
 		line-height:120%;
 		margin-bottom:20px;
 	}

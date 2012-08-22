@@ -54,7 +54,6 @@ input[type="datetime-local"],
 input[type="email"],
 input[type="month"],
 input[type="number"],
-input[type="range"],
 input[type="search"],
 input[type="tel"],
 input[type="time"],
@@ -90,7 +89,6 @@ input[type="datetime-local"]:focus,
 input[type="email"]:focus,
 input[type="month"]:focus,
 input[type="number"]:focus,
-input[type="range"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="time"]:focus,
@@ -112,7 +110,6 @@ input[type="datetime-local"][readonly],
 input[type="email"][readonly],
 input[type="month"][readonly],
 input[type="number"][readonly],
-input[type="range"][readonly],
 input[type="search"][readonly],
 input[type="tel"][readonly],
 input[type="time"][readonly],
@@ -132,7 +129,6 @@ input[type="datetime-local"][disabled],
 input[type="email"][disabled],
 input[type="month"][disabled],
 input[type="number"][disabled],
-input[type="range"][disabled],
 input[type="search"][disabled],
 input[type="tel"][disabled],
 input[type="time"][disabled],
@@ -142,6 +138,10 @@ select[disabled],
 textarea[disabled] {
   background-color: #e5e5e5;
   color: #888888;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
 }
 
 input.image,
@@ -191,6 +191,7 @@ a.button {
   font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
   font-size: 100%;
   font-weight: bold;
+  line-height: 100%;
   margin: 0 6px 0 0;
   padding: 3px 9px;
   /* For links */

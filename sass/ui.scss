@@ -119,8 +119,10 @@ a.close {
 
 	.progress-text {
 		color: $Black;
-		font-weight: bold;
-		font-size:12px;
+		font: {
+			size:12px;
+			weight: bold;
+		}
 		left:0;
 		line-height:$baseUnit6;
 		position: absolute;

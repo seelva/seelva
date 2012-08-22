@@ -120,9 +120,11 @@ cite, q {
 }
 
 pre, code {
-	font-family: $fstack-consolas;
+	font: {
+		family: $fstack-consolas;
+		size: 100%;
+	}
 	_font-family: $fstack-consolas;
-	font-size: 100%;
 	white-space: pre;
 }
 pre {
@@ -138,6 +140,9 @@ pre {
 code {
 	background: $WhiteSmoke;
 	border:1px solid $Gainsboro;
+	font: {
+		size: 85.7%;
+	}
 	line-height:192%;
 	padding:#{$baseUnit1 - 1} #{$baseUnit1 + 1};
 }
@@ -169,9 +174,10 @@ del, s 			{ text-decoration: line-through; }
 ins 				{ text-decoration:underline; }
 acronym, abbr 	{
 	border-bottom: 1px dotted $LimeGreen;
-	cursor: help;
 	letter-spacing: 2px;
 }
+acronym[title], abbr[title] { cursor: help; }
+
 sub 				{ font-size: 80%; }
 sup 				{ font-size: 80%; vertical-align:50%; }
 small, .small 	{ font-size: 80%; }
@@ -309,6 +315,39 @@ td {
 	vertical-align: top;
 }
 table.compact td, table.compact th { padding: #{$baseUnit1 - 1} $baseUnit2; }
+
+/* Details / Summary */
+details {
+	background: $GhostWhite;
+	border: 1px solid $LightGray;
+
+	@include border-radius($baseUnit1);
+
+	summary {
+		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+		border-bottom: 1px solid $LightGray;
+		cursor: pointer;
+		margin: 0;
+		padding: 0 $baseUnit2;
+		text-align: left;
+
+		@include border-radius($baseUnit1 $baseUnit1 0 0);
+
+		&:focus {
+		border-color: #8ea81f;
+		outline-color:#8ea81f;
+		}
+	}
+
+	> div {
+		padding: $baseUnit2;
+	}
+
+	&[open] summary {
+		border-color: $Silver;
+	}
+
+}
 
 /*Rulers and line breaks */
 hr {
