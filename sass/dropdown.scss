@@ -1,6 +1,14 @@
 @import "_config";
 
 /******** Dropdown ********/
+/***************************************************************************
+*  WARNING:
+*  Seelva's CSS dropdowns DO NOT WORK with touchscreen devices. Seelva's CSS
+*  dropdowns use mouse over and mouse out events to display submenus. Be
+*  aware that if you want to use dropdowns with touchscreen devices you
+*  should use a Javascript-based alternative.
+****************************************************************************/
+
 /* Reset the style from other nav components (horz-menu) */
 .dropdown li {
 	display: block;

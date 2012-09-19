@@ -29,6 +29,7 @@ fieldset {
 			size: 128%;
 			weight: normal;
 		}
+		margin: 0 0 $baseUnit2 0;
 		padding: 0 0 $baseUnit2 0;
 		width:100%;
 	}
@@ -37,7 +38,7 @@ fieldset {
 label, span.label {
 	display: inline-block;
 	line-height: 130%;
-	padding: $baseUnit2 0;
+	padding: #{$baseUnit1 + 1} 0;
 }
 
 label em, span.label em, label .required {
@@ -149,6 +150,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button,
+button[type],
 a.button {
 	background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
 	border: 1px solid $Silver;
@@ -163,7 +165,7 @@ a.button {
 	}
 	line-height: 100%;
 	margin: 0 $baseUnit2 0 0;
-	padding: $baseUnit1 $baseUnit3;/*! For links */
+	padding: #{$baseUnit2 - 1} $baseUnit3;/*! For links */
 	text-decoration: none;
 	text-shadow: 0 1px 0 $White;
 	white-space: nowrap;
@@ -171,6 +173,10 @@ a.button {
 
 	@include border-radius($baseUnit1);
 	@include single-box-shadow($WhiteSmoke, 0, 1px, 0, 0);
+
+	/* IE7 padding bugfix */
+	overflow: visible;
+	width: auto;
 
 	/*! Standard button */
 	&:hover, &:focus {
@@ -240,20 +246,6 @@ a.button {
 	}
 }
 
-/* Buttons Fixes */
-button {
-	overflow: visible;
-	width: auto;
-
-	&[type] {
-		line-height: 180%;/* Safari */
-		padding: $baseUnit1 $baseUnit4 $baseUnit1 $baseUnit2;/* Firefox */
-	}
-	*:first-child + html button[type] {
-		line-height: 180%;
-		padding: $baseUnit1 $baseUnit4 $baseUnit1 $baseUnit2;/* IE7 */
-	}
-}
 
 button img,
 a.button img{

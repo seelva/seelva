@@ -27,7 +27,7 @@ img {
 	&.alignright, &.floatright 	{ float:right; margin-left:$baseUnit3; }
 	&.nofloat 					{ display:block; margin-left:auto; margin-right:auto; }
 }
-.image-caption, .caption {
+.image-caption, .caption, figure.styled {
 	&, &.alignleft, &.alignright, &.floatleft, &.floatright {
 		background:$GhostWhite;
 		border:1px solid $WhiteSmoke;

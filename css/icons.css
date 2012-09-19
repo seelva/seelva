@@ -36,7 +36,7 @@
   display: inline;
   width: auto;
   height: auto;
-  line-height: inherit;
+  line-height: 100%;
   vertical-align: baseline;
   background-image: none;
   background-position: 0% 0%;
