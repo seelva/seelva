@@ -1,13 +1,16 @@
-/*******************************************************************
-[Master Stylesheet]
-Project:				seelva
-Version:				2.1.3
-URL:					http://seelva.com/
-Latest Edition (Y/M/D):	2012/09/18
-Assigned to:			Hernan Silva
-********************************************************************/
+/*=========================================
+=            Master Stylesheet            =
+=========================================*\
+*
+* Project:                 seelva
+* Version:                 2.2.0
+* URL:                     http://seelva.com/
+* Latest Edition (Y/M/D):  2012/09/22
+* Assigned to:             Hernan Silva
+*
+==========================================*/
 
-@import "reset.css"; 		/* Custom version of Eric Meyer's reset 						*/
+@import "normalize.css"; 	/* Set of styles to homogenize defaults							*/
 @import "grid.css"; 		/* Grid helper 													*/
 @import "layout.css"; 		/* Layout and percentage-width elements 		 				*/
 @import "core.css"; 		/* Hyperlinks, Headings, Text, Lists, Tables 					*/

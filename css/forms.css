@@ -1,5 +1,7 @@
-/******** Forms ********/
-/* Form elements*/
+/*==============================
+=            $Forms            =
+==============================*/
+/*==========  $Form elements  ==========*/
 form p {
   clear: both;
   margin-bottom: 9px;
@@ -14,7 +16,8 @@ form div p {
 
 fieldset {
   border: 0;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+  padding: 0;
 }
 fieldset legend {
   border-bottom: 1px solid #f5f5f5;
@@ -38,6 +41,7 @@ label em, span.label em, label .required {
 
 input[type="checkbox"],
 input[type="radio"] {
+  cursor: pointer;
   margin: 0;
 }
 input[type="checkbox"]:focus,
@@ -160,6 +164,7 @@ textarea {
 }
 
 select {
+  cursor: pointer;
   padding: 3px;
 }
 
@@ -177,7 +182,7 @@ select {
   width: auto;
 }
 
-/* Buttons */
+/*==========  $Buttons  ==========*/
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -375,7 +380,7 @@ a.button img {
   padding: 0;
 }
 
-/* Wrappers, widths, columns */
+/*==========  Wrappers, Width, Columns  ==========*/
 .btn-row {
   float: none;
   margin-bottom: 15px;
@@ -383,7 +388,7 @@ a.button img {
   width: auto;
 }
 
-/* Form helper classes */
+/*==========  $Form helper classes  ==========*/
 form .field-prefix .label, form .field-suffix .label {
   background: #fafafa;
   border: 1px solid #dadada;
@@ -547,7 +552,7 @@ form .success-field textarea {
   border-color: #becf59;
 }
 
-/* Search form */
+/*==========  $Search Form  ==========*/
 .search-form > div, .search-form > p {
   float: left;
   clear: none;
@@ -558,4 +563,4 @@ form .success-field textarea {
   margin-right: 3px;
 }
 
-/******** End Forms ********/
+/*-----  End of $Forms  ------*/

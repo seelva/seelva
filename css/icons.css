@@ -1,4 +1,6 @@
-/******** Icons ********/
+/*==============================
+=            $Icons            =
+==============================*/
 /*  Font Awesome
     the iconic font designed for use with Twitter Bootstrap
     -------------------------------------------------------
@@ -89,8 +91,7 @@ li[class*=" icon-"] {
   line-height: 64px;
 }
 
-/*  Font Awesome styles
-    ------------------------------------------------------- */
+/*==========  Font-Awesome styles  ==========*/
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: FontAwesome;
@@ -988,4 +989,4 @@ ul.icons li .icon-large:before {
   content: "\f200";
 }
 
-/******** End Icons ********/
+/*-----  End of $Icons  ------*/

@@ -1,5 +1,7 @@
-/******** UI ********/
-/* Buttonsets / Button groups */
+/*===========================
+=            $UI            =
+===========================*/
+/*==========  $Buttonsets  ==========*/
 .btn-set {
   display: inline-block;
 }
@@ -27,7 +29,7 @@
   border-radius: 0 3px 3px 0;
 }
 
-/* Close btn */
+/*==========  $Close button  ==========*/
 a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:focus {
   cursor: pointer;
   float: right;
@@ -37,7 +39,7 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
   top: -3px;
 }
 
-/* Messages / Alerts */
+/*==========  $Messages/Alerts  ==========*/
 .alert,
 .error,
 .guidelines,
@@ -119,7 +121,7 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
   color: #7b9712;
 }
 
-/* Progress bar */
+/*==========  $Progress bars  ==========*/
 .progressbar,
 .progressbar-neutral,
 .progressbar-negative,
@@ -190,4 +192,4 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
   background-color: #becf59;
 }
 
-/******** End UI ********/
+/*-----  End of $UI  ------*/

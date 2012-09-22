@@ -1,5 +1,7 @@
-/******** Media ********/
-/* Images*/
+/*==============================
+=            $Media            =
+==============================*/
+/*==========  $images  ==========*/
 img[width], img[height] {
   display: inline-block;
 }
@@ -81,7 +83,7 @@ img.nofloat {
   font-style: italic;
 }
 
-/* Gallery */
+/*==========  Gallery  ==========*/
 .gallery {
   overflow: hidden;
 }
@@ -121,10 +123,10 @@ img.nofloat {
   border-radius: 6px;
 }
 
-/* Video */
-/* Audio */
+/*==========  $Video  ==========*/
+/*==========  $Audio  ==========*/
 audio {
   width: 100%;
 }
 
-/******** End Media ********/
+/*-----  End of $Media  ------*/

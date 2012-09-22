@@ -1,7 +1,10 @@
 @import "_config";
 
-/******** Forms ********/
-/* Form elements*/
+/*==============================
+=            $Forms            =
+==============================*/
+
+/*==========  $Form elements  ==========*/
 form {
 	p {
 		clear: both;
@@ -20,7 +23,8 @@ form {
 
 fieldset {
 	border: 0;
-	margin-bottom: $baseUnit5;
+	margin: 0 0 $baseUnit5 0;
+	padding: 0;
 
 	legend {
 		border-bottom: 1px solid $WhiteSmoke;
@@ -47,6 +51,7 @@ label em, span.label em, label .required {
 
 input[type="checkbox"],
 input[type="radio"] {
+	cursor: pointer;
 	margin:0;
 
 	&:focus {
@@ -125,6 +130,7 @@ textarea {
 }
 
 select {
+	cursor: pointer;
 	padding: $baseUnit1;
 }
 
@@ -144,8 +150,7 @@ select {
 	}
 }
 
-/* Buttons */
-
+/*==========  $Buttons  ==========*/
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -254,7 +259,7 @@ a.button img{
 	padding: 0;
 }
 
-/* Wrappers, widths, columns */
+/*==========  Wrappers, Width, Columns  ==========*/
 .btn-row {
 	float: none;
 	margin-bottom: $baseUnit5;
@@ -262,7 +267,7 @@ a.button img{
 	width: auto;
 }
 
-/* Form helper classes */
+/*==========  $Form helper classes  ==========*/
 form {
 	.field-prefix, .field-suffix {
 		.label {
@@ -418,7 +423,8 @@ form {
 	}
 }
 
-/* Search form */
+/*==========  $Search Form  ==========*/
+
 .search-form {
 	> div, > p {
 		float: left;
@@ -428,4 +434,4 @@ form {
 	input, label { float: left; width: auto; margin-right: $baseUnit1; }
 }
 
-/******** End Forms ********/
+/*-----  End of $Forms  ------*/

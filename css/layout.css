@@ -1,10 +1,13 @@
-/******** Layout ********/
+/*===============================
+=            $Layout            =
+===============================*/
+
 .section { clear:both; width:100%; }
 .holder { margin: 0 auto; overflow: hidden; }
 .holder.liquid { padding:0 10px; width:auto; }
 
-/* Percentage Width classes. Should't go any further than 1/6 (one-sixth) width!! */
-/* Deprecated: .fullwidth, half-width, .one2width, .onehalf, .one3width, .one4width, .onefourth, .one5width, .onefifth, .one6width, .onesixth, .one7width, .oneseventh */
+/*==========  $Relative-width classes  ==========*/
+/* Should't go any further than 1/6 (one-sixth) width!! */
 .half-width, .one-half, .one-third, .one-fourth, .one-fifth, .one-sixth, .two-thirds, .two-fourths, .two-fifths, .two-sixths, .three-fourths, .three-fifths, .three-sixths, .four-fifths, .four-sixths, .five-sixths { float: left; clear:none; margin-right:1%; }
 
 .full-width 			{ clear:both; width:100%; }
@@ -27,4 +30,4 @@
 .row > div:last-child, .last-col { clear: right; float: right; margin-right: 0; }
 .row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"], .last-col[class^="suffix"], .last-col[class*=" suffix"] { float: left; }
 
-/******** End Layout ********/
+/*-----  End of $Layout  ------*/

@@ -1,8 +1,10 @@
 @import "_config";
 
-/******** UI ********/
+/*===========================
+=            $UI            =
+===========================*/
 
-/* Buttonsets / Button groups */
+/*==========  $Buttonsets  ==========*/
 .btn-set {
 	display:inline-block;
 
@@ -21,7 +23,7 @@
 	}
 }
 
-/* Close btn */
+/*==========  $Close button  ==========*/
 .closable {}
 a.close {
 	&, &:link, &:visited, &:hover &:active,	&:focus {
@@ -34,7 +36,7 @@ a.close {
 	}
 }
 
-/* Messages / Alerts */
+/*==========  $Messages/Alerts  ==========*/
 .alert,
 .error,
 .guidelines,
@@ -90,7 +92,7 @@ a.close {
 }
 
 
-/* Progress bar */
+/*==========  $Progress bars  ==========*/
 .progressbar,
 .progressbar-neutral,
 .progressbar-negative,
@@ -145,4 +147,4 @@ a.close {
 	.progress-value { background-color: $YellowGreen; }
 }
 
-/******** End UI ********/
+/*-----  End of $UI  ------*/

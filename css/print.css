@@ -1,4 +1,6 @@
-/******** Print ********/
+/*==============================
+=            $Print            =
+==============================*/
 
 @media print {
   *                   { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
@@ -15,4 +17,4 @@
   @page               { margin: 0.5cm; }
 }
 
-/******** End Print ********/
+/*-----  End of $Print  ------*/

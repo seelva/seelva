@@ -1,4 +1,6 @@
-/******** Dropdown ********/
+/*=================================
+=            $Dropdown            =
+=================================*/
 /***************************************************************************
 *  WARNING:
 *  Seelva's CSS dropdowns DO NOT WORK with touchscreen devices. Seelva's CSS
@@ -90,4 +92,4 @@
   border-radius: 0 0 6px 6px;
 }
 
-/******** End Dropdown ********/
+/*-----  End of $Dropdown  ------*/

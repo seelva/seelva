@@ -1,8 +1,10 @@
 @import "_config";
 
-/******** Media ********/
+/*==============================
+=            $Media            =
+==============================*/
 
-/* Images*/
+/*==========  $images  ==========*/
 img {
 	&[width], &[height] { display:inline-block; }
 	&, a & { border:0; vertical-align:bottom; }
@@ -44,7 +46,7 @@ img {
 	& .caption-text 			{ margin-bottom:0; text-align:center; font-style:italic; }
 }
 
-/* Gallery */
+/*==========  Gallery  ==========*/
 .gallery {
 	overflow:hidden;
 
@@ -81,12 +83,9 @@ img {
 	}
 }
 
-/* Video */
-video {
-}
+/*==========  $Video  ==========*/
+video {}
 
-/* Audio */
-audio {
-	width:100%;
-}
-/******** End Media ********/
+/*==========  $Audio  ==========*/
+audio { width:100%; }
+/*-----  End of $Media  ------*/

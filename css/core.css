@@ -1,4 +1,6 @@
-/******** Core ********/
+/*=============================
+=            $Core            =
+=============================*/
 html {
   font-size: 100.01%;
 }
@@ -10,7 +12,7 @@ body {
   line-height: 1.5em;
 }
 
-/* Links */
+/*==========  $Links  ==========*/
 a, a:link {
   color: #4e9a06;
   text-decoration: underline;
@@ -29,19 +31,19 @@ a:active {
   text-decoration: underline;
 }
 a:focus {
-  background: #ecfddc;
+  background-color: #ecfddc;
   color: #4e9a06;
-  outline: #4e9a06 dotted thin;
+  outline-color: #4e9a06;
   text-decoration: underline;
 }
 
-/* Headings */
+/*==========  $Headings  ==========*/
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
   font-weight: normal;
   line-height: 120%;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em 0;
 }
 h1 .subtitle, h2 .subtitle, h3 .subtitle, h4 .subtitle, h5 .subtitle, h6 .subtitle {
   color: #888888;
@@ -76,9 +78,9 @@ h6 {
   font-size: 107%;
 }
 
-/* Text */
+/*==========  $Text  ==========*/
 p, address {
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
 }
 
 blockquote {
@@ -88,6 +90,10 @@ blockquote {
   line-height: 150%;
   margin: 6px 15px 1em 15px;
   padding-left: 6px;
+  quotes: none;
+}
+blockquote:before, blockquote:after {
+  content: none;
 }
 blockquote p:last-child {
   margin-bottom: 0;
@@ -141,26 +147,9 @@ cite:before, q:before {
   content: close-quote;
 }
 
-pre, code {
+code, kbd, pre {
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: 100%;
   _font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  white-space: pre;
-}
-
-pre {
-  background: #fdf9ff;
-  border: 1px solid #f3ddff;
-  display: block;
-  margin: 0 0 9px 0;
-  padding: 6px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
 }
 
 code {
@@ -169,20 +158,14 @@ code {
   font-size: 85.7%;
   line-height: 192%;
   padding: 2px 4px;
-}
-
-pre code {
-  background: transparent;
-  border: 0;
+  white-space: pre;
 }
 
 kbd {
   background: #f5f5f5;
   color: #555555;
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   font-size: 85.7%;
   font-weight: bold;
-  _font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   line-height: 192%;
   padding: 2px 6px;
   text-transform: capitalize;
@@ -197,15 +180,34 @@ kbd {
   border-radius: 3px;
 }
 
-strong, b {
+pre {
+  background: #fdf9ff;
+  border: 1px solid #f3ddff;
+  display: block;
+  font-size: 100%;
+  margin: 0 0 9px 0;
+  padding: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+pre code {
+  background: transparent;
+  border: 0;
+}
+
+b, strong {
   font-weight: bold;
 }
 
-em, i {
+i, em {
   font-style: italic;
 }
 
-del, s {
+s, del {
   text-decoration: line-through;
 }
 
@@ -222,35 +224,30 @@ acronym[title], abbr[title] {
   cursor: help;
 }
 
-sub {
+sub, sup {
   font-size: 80%;
 }
 
-sup {
-  font-size: 80%;
-  vertical-align: 50%;
+mark, .highlight {
+  background: #ffd700;
 }
 
 small, .small {
   font-size: 80%;
 }
 
-/* Lists */
+/*==========  $Lists  ==========*/
 ul {
-  margin: 0 0 15px 18px;
+  margin: 0 0 15px 24px;
   padding: 0;
-}
-ul li {
-  padding-left: 0;
 }
 
 ol {
-  margin: 0 0 15px 18px;
+  margin: 0 0 15px 24px;
   padding: 0;
 }
 ol li {
   margin: 0 0 0 9px;
-  padding: 0;
 }
 
 ul ul, ul ol, ol ul, ol ol {
@@ -298,13 +295,9 @@ ul.ulatin, ol.ulatin {
 ul.uroman, ol.uroman {
   list-style-type: upper-roman;
 }
-ul.unstyled, ol.unstyled {
+ul.styled, ul.unstyled, ol.styled, ol.unstyled {
   list-style-type: none;
-  margin-left: 0;
-}
-ul.styled, ol.styled {
-  list-style-type: none;
-  margin-left: 0;
+  margin-left: 9px;
 }
 ul.styled li, ol.styled li {
   background: url(../images/bullet.png) no-repeat 0 6px;
@@ -321,21 +314,24 @@ ul.hira-iroha 	{list-style-type: hiragana-iroha}
 ul.kata-iroha 	{list-style-type: katakana-iroha}
 */
 dl {
-  margin: 0 0 15px 18px;
+  margin: 0 0 15px 24px;
   padding: 0;
 }
-dl dt {
+
+dt {
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
-dl dd {
+
+dd {
   margin: 0 0 0 9px;
   padding: 0;
 }
 
-/* Tables */
+/*==========  $Tables  ==========*/
 table {
+  border-collapse: separate;
   border-right: 1px solid #f5f5f5;
   border-top: 1px solid #e5e5e5;
   margin: 0 0 15px 0;
@@ -398,7 +394,7 @@ table.compact td, table.compact th {
   padding: 2px 6px;
 }
 
-/* Details / Summary */
+/*==========  $Details/Summary  ==========*/
 details {
   background: #fafafa;
   border: 1px solid #e5e5e5;
@@ -432,7 +428,7 @@ details[open] summary {
   border-color: #dadada;
 }
 
-/*Rulers and line breaks */
+/*==========  $Rulers and line breaks  ==========*/
 hr {
   clear: both;
   color: #888888;
@@ -443,4 +439,4 @@ br {
   clear: both;
 }
 
-/******** End Core ********/
+/*-----  End of $Core  ------*/

@@ -1,4 +1,6 @@
-/******** Custom ********/
+/*===============================
+=            $Custom            =
+===============================*/
 html {
   background: #fdfdfd;
 }
@@ -68,4 +70,4 @@ body {
   /* override default header holder style */
 }
 
-/******** End Custom ********/
+/*-----  End of $Custom  ------*/

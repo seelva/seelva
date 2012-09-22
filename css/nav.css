@@ -1,4 +1,6 @@
-/******** Navigation ********/
+/*===================================
+=            $Navigation            =
+===================================*/
 /* nav abstraction object
 Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 */
@@ -14,7 +16,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   text-decoration: none;
 }
 
-/* Global setup */
+/*==========  $Nav global setup  ==========*/
 .tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
   list-style: none;
   margin: 0 0 9px 0;
@@ -29,7 +31,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   text-decoration: none;
 }
 
-/* Tabs setup */
+/*==========  $Tabs setup  ==========*/
 .tabs,
 .vertical-tabs {
   overflow: visible;
@@ -63,7 +65,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   padding: 6px 9px;
 }
 
-/* Tabs */
+/*==========  $Tabs  ==========*/
 .tabs {
   border-bottom: 1px solid #dadada;
 }
@@ -85,7 +87,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-bottom-color: transparent;
 }
 
-/* Vertical tabs */
+/*==========  $Vertical tabs  ==========*/
 .vertical-tabs {
   border-right: 1px solid #dadada;
   float: left;
@@ -111,7 +113,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-right-color: transparent;
 }
 
-/* Tabs content */
+/*==========  $Tabs content  ==========*/
 .tabs-content {
   background: white;
   display: block;
@@ -134,7 +136,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   display: block;
 }
 
-/* Horizontal-menu */
+/*==========  $Horizontal-menu  ==========*/
 .horizontal-menu > li {
   border-left: 1px solid #e5e5e5;
   display: inline-block;
@@ -151,7 +153,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   color: white;
 }
 
-/* Vertical menu */
+/*==========  $Vertical-menu  ==========*/
 .vertical-menu > li {
   border-bottom: 1px solid #e5e5e5;
   float: none;
@@ -167,7 +169,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   color: white;
 }
 
-/* Horizontal list*/
+/*==========  $Horizontal-list  ==========*/
 .horizontal-list > li {
   border-left: 1px solid #e5e5e5;
   display: inline-block;
@@ -180,7 +182,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   padding: 0 9px;
 }
 
-/* Breadcrumbs */
+/*==========  $Breadcrumbs  ==========*/
 .breadcrumb {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #dadada;
@@ -210,7 +212,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   content: "";
 }
 
-/* Pagination */
+/*==========  $Pagination  ==========*/
 .pagination,
 .pager {
   clear: both;
@@ -285,4 +287,4 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   float: right;
 }
 
-/******** End Navigation ********/
+/*-----  End of $Navigation  ------*/

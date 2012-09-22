@@ -1,7 +1,10 @@
 @import "_config";
 
-/******** Core ********/
-html { font-size:100.01%; }
+/*=============================
+=            $Core            =
+=============================*/
+
+html { font-size: 100.01%; }
 
 body {
 	color: $Black;
@@ -12,16 +15,16 @@ body {
 	line-height: 1.5em;
 }
 
-/* Links */
+/*==========  $Links  ==========*/
 a {
 	&, &:link 	{ color: $LimeGreen; text-decoration: underline; outline: 0; }
 	&:visited 	{ color: $OliveDrab; text-decoration: none; }
-	&:hover 	{ color: #3b7c03; text-decoration: underline; }
+	&:hover 	{ color: #3b7c03;    text-decoration: underline; }
 	&:active 	{ color: $OliveDrab; text-decoration: underline; }
-	&:focus 	{ background:#ecfddc; color: $LimeGreen; outline: $LimeGreen dotted thin; text-decoration: underline; }
+	&:focus 	{ background-color: #ecfddc; color: $LimeGreen; outline-color: $LimeGreen; text-decoration: underline; }
 }
 
-/* Headings */
+/*==========  $Headings  ==========*/
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font: {
@@ -29,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 		weight: normal;
 	}
 	line-height: 120%;
-	margin-bottom: 0.5em;
+	margin: 0 0 0.5em 0;
 
 	.subtitle {
 		color: $Gray;
@@ -49,9 +52,9 @@ h4 { font-size: 150%; }
 h5 { font-size: 128%; }
 h6 { font-size: 107%; }
 
-/* Text */
+/*==========  $Text  ==========*/
 p, address {
-	margin-bottom: 1em;
+	margin: 0 0 1em 0;
 }
 blockquote {
 	border-left: 1px solid $LightGray;
@@ -59,20 +62,25 @@ blockquote {
 		size: 122%;
 		style: italic;
 	}
-	line-height:150%;
-	margin:$baseUnit2 $baseUnit5 1em $baseUnit5;
+	line-height: 150%;
+	margin: $baseUnit2 $baseUnit5 1em $baseUnit5;
 	padding-left: $baseUnit2;
+	quotes: none;
+
+	&:before, &:after {
+		content: none;
+	}
 
 	p:last-child {
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
 
 	span, .credit {
 		font: {
-			size:78%;
-			style:italic;
+			size: 78%;
+			style: italic;
 		}
-		margin-bottom:0;
+		margin-bottom: 0;
 
 		&:before {
 			content: '\2013';
@@ -80,37 +88,38 @@ blockquote {
 	}
 
 	&.styled {
-		background:$WhiteSmoke;
-		border:0;
-		color:$DimGray;
-		padding:$baseUnit6 0;
+		background: $WhiteSmoke;
+		border: 0;
+		color: $DimGray;
+		padding: $baseUnit6 0;
 		@include border-radius($baseUnit2);
 
 		&:before {
-			color:$Silver;
+			color: $Silver;
 			content: '\201C';
 			font: {
-				size:60px;
-				style:normal;
-				weight:bold;
+				size: 60px;
+				style: normal;
+				weight: bold;
 			}
-			line-height:40px;
-			padding-left:$baseUnit3;
+			line-height: 40px;
+			padding-left: $baseUnit3;
 		}
 
 		p {
-			margin:0 $baseUnit6 1em #{$baseUnit6 * 2};
+			margin: 0 $baseUnit6 1em #{$baseUnit6 * 2};
 
 			&:first-child {
-				margin-top:-40px;
+				margin-top: -40px;
 			}
 
 			&:last-child {
-				margin-bottom:0;
+				margin-bottom: 0;
 			}
 		}
 	}
 }
+
 cite, q {
 	font-style: italic;
 	quotes: '"' '"' "'" "'";
@@ -119,86 +128,73 @@ cite, q {
 	&:before 	{ content: close-quote; }
 }
 
-pre, code {
-	font: {
-		family: $fstack-consolas;
-		size: 100%;
-	}
+code, kbd, pre {
+	font-family: $fstack-consolas;
 	_font-family: $fstack-consolas;
-	white-space: pre;
-}
-pre {
-	background: $Lavender;
-	border: 1px solid $Thistle;
-	display:block;
-	margin: 0 0 $baseUnit3 0;
-	padding:$baseUnit2;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-	@include border-radius($baseUnit1);
 }
 code {
 	background: $WhiteSmoke;
-	border:1px solid $Gainsboro;
-	font: {
-		size: 85.7%;
-	}
-	line-height:192%;
-	padding:#{$baseUnit1 - 1} #{$baseUnit1 + 1};
-}
-pre code {
-	background:transparent;
-	border:0;
+	border: 1px solid $Gainsboro;
+	font-size: 85.7%;
+	line-height: 192%;
+	padding: #{$baseUnit1 - 1} #{$baseUnit1 + 1};
+	white-space: pre;
 }
 kbd {
 	background: $WhiteSmoke;
 	color: $DimGray;
 	font: {
-		family: $fstack-consolas;
 		size: 85.7%;
 		weight: bold;
 	}
-	_font-family: $fstack-consolas;
-	line-height:192%;
-	padding:#{$baseUnit1 - 1} #{$baseUnit2};
+	line-height: 192%;
+	padding: #{$baseUnit1 - 1} #{$baseUnit2};
 	text-transform: capitalize;
 	white-space: pre;
 
 	@include box-shadow($Silver 0 2px 0, $DimGray 0 2px 2px);
 	@include border-radius($baseUnit1);
 }
+pre {
+	background: $Lavender;
+	border: 1px solid $Thistle;
+	display: block;
+	font-size: 100%;
+	margin: 0 0 $baseUnit3 0;
+	padding: $baseUnit2;
+	@include border-radius($baseUnit1);
+}
+pre code {
+	background: transparent;
+	border: 0;
+}
 
-strong, b 	{ font-weight: bold; }
-em, i 			{ font-style:italic; }
-del, s 			{ text-decoration: line-through; }
-ins 				{ text-decoration:underline; }
+b, strong 		{ font-weight: bold; }
+i, em 			{ font-style: italic; }
+s, del 			{ text-decoration: line-through; }
+ins 			{ text-decoration: underline; }
 acronym, abbr 	{
 	border-bottom: 1px dotted $LimeGreen;
 	letter-spacing: 2px;
 }
 acronym[title], abbr[title] { cursor: help; }
 
-sub 				{ font-size: 80%; }
-sup 				{ font-size: 80%; vertical-align:50%; }
+sub, sup 		{ font-size: 80%; }
+mark, .highlight 	{ background: $Gold; }
 small, .small 	{ font-size: 80%; }
 
-/* Lists */
+/*==========  $Lists  ==========*/
 ul {
-	margin: 0 0 $baseUnit5 $baseUnit6;
+	margin: 0 0 $baseUnit5 $baseUnit8;
 	padding: 0;
-
-	li {
-		padding-left: 0;
-	}
 }
 
 ol {
-	margin: 0 0 $baseUnit5 $baseUnit6;
+	margin: 0 0 $baseUnit5 $baseUnit8;
 	padding: 0;
 
 	li {
 		margin: 0 0 0 $baseUnit3;
-		padding: 0;
 	}
 }
 ul, ol {
@@ -219,16 +215,10 @@ ul, ol {
 	&.ulatin 		{ list-style-type: upper-latin }
 	&.uroman 		{ list-style-type: upper-roman }
 
-	&.unstyled 		{ list-style-type: none; margin-left: 0 }
-
-	&.styled {
-		list-style-type: none;
-		margin-left: 0;
-
-		li {
-			background: url(../images/bullet.png) no-repeat 0 6px;
-			padding-left: 16px;
-		}
+	&.styled, &.unstyled { list-style-type: none; margin-left: $baseUnit3; }
+	&.styled li {
+		background: url(../images/bullet.png) no-repeat 0 6px;
+		padding-left: 16px;
 	}
 }
 
@@ -243,36 +233,36 @@ ul.kata-iroha 	{list-style-type: katakana-iroha}
 */
 
 dl {
-	margin: 0 0 $baseUnit5 $baseUnit6;
+	margin: 0 0 $baseUnit5 $baseUnit8;
 	padding: 0;
-
-	dt {
-		font-weight: bold;
-		margin: 0;
-		padding: 0;
-	}
-	dd {
-		margin: 0 0 0 $baseUnit3;
-		padding: 0;
-	}
+}
+dt {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+dd {
+	margin: 0 0 0 $baseUnit3;
+	padding: 0;
 }
 
-/* Tables */
+/*==========  $Tables  ==========*/
 table {
 	border: {
-		right:1px solid $WhiteSmoke;
-		top:1px solid $LightGray;
+		collapse: separate;
+		right: 1px solid $WhiteSmoke;
+		top: 1px solid $LightGray;
 	}
 	margin: 0 0 $baseUnit5 0;
-	width:100%;
+	width: 100%;
 
 	// Border top radius
 	@include border-radius($baseUnit1 $baseUnit1 0 0);
 
 	caption {
 		font: {
-			size:85.7%;
-			style:italic;
+			size: 85.7%;
+			style: italic;
 			weight: bold;
 		}
 		margin: 0;
@@ -280,14 +270,14 @@ table {
 	}
 }
 th {
-	background:$WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
+	background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
 	border: {
 		bottom: 1px solid $LightGray;
 		left: 1px solid $LightGray;
 	}
 	font-weight: bold;
-	padding:$baseUnit2;
-	text-align:left;
+	padding: $baseUnit2;
+	text-align: left;
 }
 
 table thead tr:first-child th:first-child {
@@ -296,27 +286,27 @@ table thead tr:first-child th:first-child {
 }
 
 table thead tr:last-child th:last-child {
-	border-right:1px solid $WhiteSmoke;
+	border-right: 1px solid $WhiteSmoke;
 
 	// Border topright
 	@include border-radius(0 $baseUnit1 0 0);
 }
 
 tr {
-	&.odd, .zebra &:nth-child(odd) 	{ background:$White; }
-	&.even, .zebra &:nth-child(even) { background:$GhostWhite; }
+	&.odd, .zebra &:nth-child(odd) 	{ background: $White; }
+	&.even, .zebra &:nth-child(even) { background: $GhostWhite; }
 }
 td {
 	border: {
-		bottom:1px solid $WhiteSmoke;
-		left:1px solid $WhiteSmoke;
+		bottom: 1px solid $WhiteSmoke;
+		left: 1px solid $WhiteSmoke;
 	}
-	padding:$baseUnit2;
+	padding: $baseUnit2;
 	vertical-align: top;
 }
 table.compact td, table.compact th { padding: #{$baseUnit1 - 1} $baseUnit2; }
 
-/* Details / Summary */
+/*==========  $Details/Summary  ==========*/
 details {
 	background: $GhostWhite;
 	border: 1px solid $LightGray;
@@ -335,7 +325,7 @@ details {
 
 		&:focus {
 		border-color: #8ea81f;
-		outline-color:#8ea81f;
+		outline-color: #8ea81f;
 		}
 	}
 
@@ -349,7 +339,7 @@ details {
 
 }
 
-/*Rulers and line breaks */
+/*==========  $Rulers and line breaks  ==========*/
 hr {
 	clear: both;
 	color: $Gray;
@@ -358,4 +348,4 @@ hr {
 
 br { clear: both; }
 
-/******** End Core ********/
+/*-----  End of $Core  ------*/
