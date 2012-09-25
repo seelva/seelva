@@ -219,7 +219,6 @@ acronym, abbr {
   border-bottom: 1px dotted #4e9a06;
   letter-spacing: 2px;
 }
-
 acronym[title], abbr[title] {
   cursor: help;
 }

@@ -176,8 +176,9 @@ ins 			{ text-decoration: underline; }
 acronym, abbr 	{
 	border-bottom: 1px dotted $LimeGreen;
 	letter-spacing: 2px;
+
+	&[title] { cursor: help; }
 }
-acronym[title], abbr[title] { cursor: help; }
 
 sub, sup 		{ font-size: 80%; }
 mark, .highlight 	{ background: $Gold; }

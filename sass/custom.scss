@@ -7,9 +7,11 @@ html {
 	background: #fdfdfd;
 }
 
-body {/*! Body style */}
+body {
+	/* Body style */
 
-.ie6 body, .ie7 body { font-size: 82%; line-height: 1.12em; }
+	.ie6 &, .ie7 & { font-size: 82%; line-height: 1.12em; }
+}
 
 #outer {/*! Outer style */}
 

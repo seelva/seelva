@@ -35,7 +35,7 @@ fieldset {
 		}
 		margin: 0 0 $baseUnit2 0;
 		padding: 0 0 $baseUnit2 0;
-		width:100%;
+		width: 100%;
 	}
 }
 
@@ -125,8 +125,8 @@ input[type="image"] {
 textarea {
 	height: 8em;
 	overflow: auto;
-	vertical-align: top;
 	resize: vertical;
+	vertical-align: top;
 }
 
 select {
@@ -139,9 +139,7 @@ select {
 	float: none;
 	margin: 0;
 
-	span.label {
-		line-height: normal;
-	}
+	span.label { line-height: normal; }
 
 	label {
 		display: inline;
@@ -282,10 +280,10 @@ form {
 
 		input,
 		select {
-			clear:none;
-			float:left;
+			clear: none;
+			float: left;
 			position: relative;
-			width:auto;
+			width: auto;
 		}
 	}
 
@@ -320,7 +318,7 @@ form {
 	}
 
 	.field-prefix.field-suffix {
-		overflow:hidden;
+		overflow: hidden;
 
 		input,
 		select {
@@ -333,15 +331,15 @@ form {
 		}
 
 		.label:first-child {
-			float:left;
-			width:auto;
+			float: left;
+			width: auto;
 
 			@include border-radius(0);
 			@include border-radius($baseUnit1 0 0 $baseUnit1);
 		}
 		.label:last-child,
 		input:last-child, select:last-child {
-			width:auto;
+			width: auto;
 
 			@include border-radius(0);
 			@include border-radius(0 $baseUnit1 $baseUnit1 0);
@@ -427,11 +425,11 @@ form {
 
 .search-form {
 	> div, > p {
-		float: left;
 		clear: none;
+		float: left;
 	}
 
-	input, label { float: left; width: auto; margin-right: $baseUnit1; }
+	input, label { float: left; margin-right: $baseUnit1; width: auto; }
 }
 
 /*-----  End of $Forms  ------*/

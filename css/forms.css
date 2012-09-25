@@ -159,8 +159,8 @@ input[type="image"] {
 textarea {
   height: 8em;
   overflow: auto;
-  vertical-align: top;
   resize: vertical;
+  vertical-align: top;
 }
 
 select {
@@ -554,13 +554,13 @@ form .success-field textarea {
 
 /*==========  $Search Form  ==========*/
 .search-form > div, .search-form > p {
-  float: left;
   clear: none;
+  float: left;
 }
 .search-form input, .search-form label {
   float: left;
-  width: auto;
   margin-right: 3px;
+  width: auto;
 }
 
 /*-----  End of $Forms  ------*/

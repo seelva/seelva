@@ -12,20 +12,12 @@
 *  should use a Javascript-based alternative.
 ****************************************************************************/
 
-/* Reset the style from other nav components (horz-menu) */
-.dropdown li {
-	display: block;
-	float: none;
-}
-
 .dropdown {
-	> a:after,
-	> a:link:after {
-		border: 4px solid $Gray;
-		border-bottom-color: transparent;
-		border-left-color: transparent;
-		border-right-color: transparent;
-		content: "";
+	> a:after, > a:link:after {
+		/* Arrow for dropdown links */
+		border: 4px solid transparent;
+		border-top-color: $Gray;
+		content: " ";
 		display: inline-block;
 		line-height: 100%;
 		margin-left: 4px;
@@ -33,28 +25,40 @@
 		vertical-align: middle;
 	}
 
+	.drop-content, > ul {
+		/* Common styles for submenus */
+		display: none;
+		position: absolute;
+		z-index: 100;
+	}
+
+	.drop-content {
+		background: $Silver;
+		padding: $baseUnit3;
+		width: 230px;
+
+		@include border-radius(0 0 $baseUnit2 $baseUnit2);
+	}
+
 	> ul {
-		list-style:none;
-		margin:0;
+		list-style: none;
+		margin: 0;
 		max-width: 180px;
 		min-width: 150px;
-		padding:0;
-		position: absolute;
-		visibility: hidden;
-		z-index:100;
-		zoom:1;
+		padding: 0;
+		zoom: 1;
 
 		> li {
 			border-left: 1px solid $WhiteSmoke;
 			display: block;
-			float:none;
+			float: none;
 
 			> a, > a:link, > a:visited {
 				background: $LightGray;
-				color:$Black;
-				display:block;
+				color: $Black;
+				display: block;
 				padding: $baseUnit2 $baseUnit3;
-				text-decoration:none;
+				text-decoration: none;
 			}
 			> a:hover, &.active > a, &.active > a:link {
 				background: $Gray;
@@ -63,45 +67,53 @@
 		}
 	}
 
-	.dropdown > ul {
-		left:100%;
-		position:absolute;
-		top:$baseUnit2;
-		visibility:hidden;
-		width: 100%;
+	.dropdown {
+		> a:after, > a:link:after {
+			/* Arrow for 2nd+ level dropdown links */
+			border: {
+				left-color: $Gray;
+				top-color: transparent;
+			}
+		}
+
+		&:hover > a:after, &:hover > a:link:after, &.active > a:after, &.active > a:link:after {
+			border: {
+				left-color: #fff;
+				top-color: transparent;
+			}
+		}
+
+		> ul {
+			/* 3rd+ Level submenu style */
+			display: none;
+			left: 100%;
+			position: absolute;
+			top: $baseUnit2;
+			width: 100%;
+		}
 	}
 
-	&:hover > a:after, &:hover > a:link:after, &.active > a:after, &.active > a:link:after {
-		border-top-color: #fff;
+	&:hover, &.active {
+		> a:after, > a:link:after {
+			border-top-color: #fff;
+		}
 	}
+
 	&:hover > ul, ul a:hover ul, &:hover .drop-content {
-		visibility:visible;
+		display: block;
 	}
 
-	ul :hover ul :hover ul {
-		visibility:visible;
-	}
+	ul :hover ul :hover ul { display: block; }
 
 	&.active, .active {
 		ul li a, ul li a:link {
-			background:$LightGray;
-			color:$Black;
+			background: $LightGray;
+			color: $Black;
 		}
 		ul li a:hover {
-			background:$Gray;
-			color:$White;
+			background: $Gray;
+			color: $White;
 		}
-	}
-
-	.drop-content {
-		background:$Silver;
-		width: 230px;
-		padding:$baseUnit3;
-		position: absolute;
-		visibility:hidden;
-		z-index: 100;
-
-		@include border-radius(0 0 $baseUnit2 $baseUnit2);
 	}
 }
 

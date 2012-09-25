@@ -78,9 +78,9 @@ img.nofloat {
   padding: 0;
 }
 .image-caption .caption-text, .caption .caption-text, figure.styled .caption-text {
+  font-style: italic;
   margin-bottom: 0;
   text-align: center;
-  font-style: italic;
 }
 
 /*==========  Gallery  ==========*/

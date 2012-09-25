@@ -26,23 +26,23 @@
     */
 @font-face {
   font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
   src: url("../fonts/fontawesome-webfont.eot");
   src: url("../fonts/fontawesome-webfont.eot?#iefix") format("eot"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* sprites.less reset */
 [class^="icon-"],
 [class*=" icon-"] {
-  display: inline;
-  width: auto;
-  height: auto;
-  line-height: 100%;
-  vertical-align: baseline;
   background-image: none;
   background-position: 0% 0%;
   background-repeat: repeat;
+  display: inline;
+  height: auto;
+  line-height: 100%;
+  vertical-align: baseline;
+  width: auto;
 }
 
 li[class^="icon-"],

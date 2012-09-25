@@ -33,29 +33,31 @@ $fontAwesomePath: "../fonts/fontawesome-webfont" !default;
 
 // Font face hack avoiding path issues in windows
 @font-face {
-  font-family: "FontAwesome";
+  font: {
+	  family: "FontAwesome";
+      style: normal;
+      weight: normal;
+  }
   src: url('#{$fontAwesomePath}.eot');
   src: url('#{$fontAwesomePath}.eot?#iefix') format('eot'),
         url('#{$fontAwesomePath}.woff') format('woff'),
         url('#{$fontAwesomePath}.ttf') format('truetype'),
         url('#{$fontAwesomePath}.svg#FontAwesomeRegular') format('svg');
-  font: {
-      weight: normal;
-      style: normal;
-  }
 }
 
 /* sprites.less reset */
 [class^="icon-"],
 [class*=" icon-"] {
+    background: {
+	    image: none;
+	    position: 0% 0%;
+	    repeat: repeat;
+    }
     display: inline;
-    width: auto;
     height: auto;
     line-height: 100%;
     vertical-align: baseline;
-    background-image: none;
-    background-position: 0% 0%;
-    background-repeat: repeat;
+    width: auto;
 }
 li[class^="icon-"],
 li[class*=" icon-"] {
@@ -63,14 +65,14 @@ li[class*=" icon-"] {
 }
 
 /* Fixed icon sizes */
-.icon-8  { font-size:8px;  line-height:8px; }
-.icon-12 { font-size:12px; line-height:12px; }
-.icon-16 { font-size:16px; line-height:16px; }
-.icon-20 { font-size:20px; line-height:20px; }
-.icon-24 { font-size:24px; line-height:24px; }
-.icon-32 { font-size:32px; line-height:32px; }
-.icon-48 { font-size:48px; line-height:48px; }
-.icon-64 { font-size:64px; line-height:64px; }
+.icon-8  { font-size: 8px;  line-height: 8px; }
+.icon-12 { font-size: 12px; line-height: 12px; }
+.icon-16 { font-size: 16px; line-height: 16px; }
+.icon-20 { font-size: 20px; line-height: 20px; }
+.icon-24 { font-size: 24px; line-height: 24px; }
+.icon-32 { font-size: 32px; line-height: 32px; }
+.icon-48 { font-size: 48px; line-height: 48px; }
+.icon-64 { font-size: 64px; line-height: 64px; }
 
 /*==========  Font-Awesome styles  ==========*/
 [class^="icon-"]:before,

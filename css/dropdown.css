@@ -8,24 +8,32 @@
 *  aware that if you want to use dropdowns with touchscreen devices you
 *  should use a Javascript-based alternative.
 ****************************************************************************/
-/* Reset the style from other nav components (horz-menu) */
-.dropdown li {
-  display: block;
-  float: none;
-}
-
-.dropdown > a:after,
-.dropdown > a:link:after {
-  border: 4px solid #888888;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  content: "";
+.dropdown > a:after, .dropdown > a:link:after {
+  /* Arrow for dropdown links */
+  border: 4px solid transparent;
+  border-top-color: #888888;
+  content: " ";
   display: inline-block;
   line-height: 100%;
   margin-left: 4px;
   text-align: right;
   vertical-align: middle;
+}
+.dropdown .drop-content, .dropdown > ul {
+  /* Common styles for submenus */
+  display: none;
+  position: absolute;
+  z-index: 100;
+}
+.dropdown .drop-content {
+  background: #dadada;
+  padding: 9px;
+  width: 230px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
 }
 .dropdown > ul {
   list-style: none;
@@ -33,9 +41,6 @@
   max-width: 180px;
   min-width: 150px;
   padding: 0;
-  position: absolute;
-  visibility: hidden;
-  z-index: 100;
   zoom: 1;
 }
 .dropdown > ul > li {
@@ -54,21 +59,31 @@
   background: #888888;
   color: white;
 }
+.dropdown .dropdown > a:after, .dropdown .dropdown > a:link:after {
+  /* Arrow for 2nd+ level dropdown links */
+  border-left-color: #888888;
+  border-top-color: transparent;
+}
+.dropdown .dropdown:hover > a:after, .dropdown .dropdown:hover > a:link:after, .dropdown .dropdown.active > a:after, .dropdown .dropdown.active > a:link:after {
+  border-left-color: #fff;
+  border-top-color: transparent;
+}
 .dropdown .dropdown > ul {
+  /* 3rd+ Level submenu style */
+  display: none;
   left: 100%;
   position: absolute;
   top: 6px;
-  visibility: hidden;
   width: 100%;
 }
 .dropdown:hover > a:after, .dropdown:hover > a:link:after, .dropdown.active > a:after, .dropdown.active > a:link:after {
   border-top-color: #fff;
 }
 .dropdown:hover > ul, .dropdown ul a:hover ul, .dropdown:hover .drop-content {
-  visibility: visible;
+  display: block;
 }
 .dropdown ul :hover ul :hover ul {
-  visibility: visible;
+  display: block;
 }
 .dropdown.active ul li a, .dropdown.active ul li a:link, .dropdown .active ul li a, .dropdown .active ul li a:link {
   background: #e5e5e5;
@@ -77,19 +92,6 @@
 .dropdown.active ul li a:hover, .dropdown .active ul li a:hover {
   background: #888888;
   color: white;
-}
-.dropdown .drop-content {
-  background: #dadada;
-  width: 230px;
-  padding: 9px;
-  position: absolute;
-  visibility: hidden;
-  z-index: 100;
-  -webkit-border-radius: 0 0 6px 6px;
-  -moz-border-radius: 0 0 6px 6px;
-  -ms-border-radius: 0 0 6px 6px;
-  -o-border-radius: 0 0 6px 6px;
-  border-radius: 0 0 6px 6px;
 }
 
 /*-----  End of $Dropdown  ------*/

@@ -6,10 +6,10 @@
 
 /*==========  $Buttonsets  ==========*/
 .btn-set {
-	display:inline-block;
+	display: inline-block;
 
 	input[type="button"], input[type="submit"], input[type="reset"], button, a.button {
-		float:left;
+		float: left;
 		margin: 0;
 		@include border-radius(0);
 
@@ -28,11 +28,11 @@
 a.close {
 	&, &:link, &:visited, &:hover &:active,	&:focus {
 		cursor: pointer;
-		float:right;
-		font-weight:bold;
+		float: right;
+		font-weight: bold;
 		position: relative;
 		text-decoration:none;
-		top:-$baseUnit1;
+		top:-#{$baseUnit1};
 	}
 }
 
@@ -43,20 +43,21 @@ a.close {
 .info, .ok,
 .notice, .warning,
 .status, .success {
-	background:$WhiteSmoke;
-	background-repeat: no-repeat;
-	background-position: 4px 1em;
-	border:1px solid $LightGray;
-	color:$Gray;
-	margin-bottom:$baseUnit5;
-	padding:$baseUnit3 $baseUnit3 $baseUnit3 $baseUnit8;
+	background: $WhiteSmoke {
+		position: 4px 1em;
+		repeat: no-repeat;
+	}
+	border: 1px solid $LightGray;
+	color: $Gray;
+	margin-bottom: $baseUnit5;
+	padding: $baseUnit3 $baseUnit3 $baseUnit3 $baseUnit8;
 	text-shadow: 1px 1px 0 $White;
 
-	a { background:none; margin:0; padding:0; }
+	a { background: none; margin: 0; padding: 0; }
 }
 
 @mixin alert-config($bg, $image, $border-color, $color) {
-	background-color:$bg; background-image: url(../images/icons/#{$image}.png); border-color:$border-color; color:$color;
+	background-color: $bg; background-image: url(../images/icons/#{$image}.png); border-color: $border-color; color: $color;
 }
 
 .error {
@@ -67,7 +68,6 @@ a.close {
 .guidelines {
 	@include alert-config($Ivory, "", $Cornsilk, $DimGray);
 
-	font-size: 82%;
 	line-height: 130%;
 	margin-top: $baseUnit2;
 	padding: $baseUnit3 $baseUnit2;
@@ -99,10 +99,10 @@ a.close {
 .progressbar-positive {
 	background: $GhostWhite;
 	border: 1px solid $Silver;
-	color:$DimGray;
-	height:$baseUnit6;
-	margin:$baseUnit2 0;
-	overflow:hidden;
+	color: $DimGray;
+	height: $baseUnit6;
+	margin: $baseUnit2 0;
+	overflow: hidden;
 	position: relative;
 	text-shadow:1px 1px 0 $White;
 
@@ -111,7 +111,7 @@ a.close {
 
 	.progress-value, .progress-text {
 		/* The width and height of your image */
-		height:$baseUnit6;
+		height: $baseUnit6;
 	}
 
 	.progress-value {
@@ -122,15 +122,17 @@ a.close {
 	.progress-text {
 		color: $Black;
 		font: {
-			size:12px;
+			size: 12px;
 			weight: bold;
 		}
-		left:0;
-		line-height:$baseUnit6;
+		left: 0;
+		line-height: $baseUnit6;
 		position: absolute;
-		text-align: center;
-		text-shadow: 1px 1px 1px $White;
-		top:0;
+		text: {
+			align: center;
+			shadow: 1px 1px 1px $White;
+		}
+		top: 0;
 		width: 100%;
 	}
 }
