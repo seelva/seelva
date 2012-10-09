@@ -1,21 +1,9 @@
 /*==================================
 =            $Utilities            =
 ==================================*/
-/*==========  $Clearing  ==========*/
-/* From:http://www.contentwithstyle.co.uk/content/a-css-framework */
-.clear {
-  clear: both;
-  display: block;
-}
-
-.clearfix:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
+/*==========  Clearfix  ==========*/
+/* Standard clearfix. */
+/* Source: http://www.contentwithstyle.co.uk/content/a-css-framework */
 * html .clearfix {
   height: 1%;
 }
@@ -26,49 +14,43 @@
 }
 
 /* IE7 */
-hr.clear,
-hr.clearing {
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* Micro clearfix */
+/* Source: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf {
+  *zoom: 1;
+}
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/*==========  $Clearing  ==========*/
+.clear {
+  clear: both;
+  display: block;
+}
+
+hr.clear, hr.clearing {
   background: transparent;
   border: 0;
   clear: both;
-  color: #ffffff;
+  color: white;
   float: none;
-  height: 1px;
+  height: 0;
   margin: 0;
   visibility: hidden;
   width: 100%;
-}
-
-/*==========  $Accesibility  ==========*/
-#skip-links {
-  clear: both;
-  list-style: none;
-  margin: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-
-#skip-links a, #skip-links a:link, #skip-links a:visited {
-  background: #4e9a06;
-  color: white;
-  display: block;
-  left: -200%;
-  padding: 6px 0;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-
-#skip-links a:active, #skip-links a:focus {
-  left: 0;
-  text-align: center;
-  z-index: 100;
-}
-
-.accessibility {
-  position: absolute;
-  left: -5000em;
 }
 
 /*==========  $Image replacement  ==========*/
@@ -102,6 +84,38 @@ hr.clearing {
   background: #f5f5dc;
   color: #7b9712;
   text-shadow: none;
+}
+
+/*==========  $Accesibility  ==========*/
+#skip-links {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+#skip-links a, #skip-links a:link, #skip-links a:visited {
+  background: #4e9a06;
+  color: white;
+  display: block;
+  left: -200%;
+  padding: 6px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+#skip-links a:active, #skip-links a:focus {
+  left: 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.accessibility {
+  position: absolute;
+  left: -5000em;
 }
 
 /**
