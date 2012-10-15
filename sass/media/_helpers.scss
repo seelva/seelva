@@ -1,0 +1,54 @@
+/*==========  $Captioned image  ==========*/
+.image-caption, .caption, figure.styled {
+	&, &.alignleft, &.alignright, &.floatleft, &.floatright {
+		background: $GhostWhite;
+		border: 1px solid $WhiteSmoke;
+		display: inline-block;
+		margin-bottom: $baseUnit3;
+		padding: $baseUnit2;
+		text-align: center;
+		@include border-radius($baseUnit2);
+	}
+
+	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
+	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
+	& img 						{ background: transparent; border-width: 0; margin: 0; padding: 0; }
+	& .caption-text 			{ font-style: italic; margin-bottom: 0; text-align: center; }
+}
+
+/*==========  $Gallery  ==========*/
+.gallery {
+	overflow: hidden;
+
+	div, li {
+		background: $GhostWhite;
+		border: 1px solid $WhiteSmoke;
+		float: left;
+		margin: 0 20px 20px 0;
+		padding: $baseUnit2;
+		text-align: center;
+		@include border-radius($baseUnit2);
+
+		a {
+			display: inline-block;
+		}
+	}
+
+	&.styled {
+		div, li {
+			@include border-radius($baseUnit2);
+		}
+	}
+
+	&.light-styled {
+		div, li {
+			background: transparent;
+			border: 0;
+			padding: 0;
+
+			img {
+				@include border-radius($baseUnit2);
+			}
+		}
+	}
+}

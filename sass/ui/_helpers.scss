@@ -1,0 +1,18 @@
+/*==========  $Buttonsets  ==========*/
+.btn-set {
+	display: inline-block;
+
+	input[type="button"], input[type="submit"], input[type="reset"], button, a.button {
+		float: left;
+		margin: 0;
+		@include border-radius(0);
+
+		&:first-child {
+			@include border-radius($baseUnit1 0 0 $baseUnit1);
+		}
+
+		&:last-child {
+			@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		}
+	}
+}

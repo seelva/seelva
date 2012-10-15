@@ -83,6 +83,43 @@ p, address {
   margin: 0 0 1em 0;
 }
 
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+s, del {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+acronym, abbr {
+  border-bottom: 1px dotted #4e9a06;
+  letter-spacing: 2px;
+}
+acronym[title], abbr[title] {
+  cursor: help;
+}
+
+sub, sup {
+  font-size: 80%;
+}
+
+mark, .highlight {
+  background: #ffd700;
+}
+
+small, .small {
+  font-size: 80%;
+}
+
+/*==========  $Quotes  ==========*/
 blockquote {
   border-left: 1px solid #e5e5e5;
   font-size: 122%;
@@ -147,6 +184,7 @@ cite:before, q:before {
   content: close-quote;
 }
 
+/*==========  $Code  ==========*/
 code, kbd, pre {
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   _font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
@@ -197,42 +235,6 @@ pre {
 pre code {
   background: transparent;
   border: 0;
-}
-
-b, strong {
-  font-weight: bold;
-}
-
-i, em {
-  font-style: italic;
-}
-
-s, del {
-  text-decoration: line-through;
-}
-
-ins {
-  text-decoration: underline;
-}
-
-acronym, abbr {
-  border-bottom: 1px dotted #4e9a06;
-  letter-spacing: 2px;
-}
-acronym[title], abbr[title] {
-  cursor: help;
-}
-
-sub, sup {
-  font-size: 80%;
-}
-
-mark, .highlight {
-  background: #ffd700;
-}
-
-small, .small {
-  font-size: 80%;
 }
 
 /*==========  $Lists  ==========*/

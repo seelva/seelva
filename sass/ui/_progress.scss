@@ -1,0 +1,56 @@
+/*==========  $Progress bars  ==========*/
+.progressbar,
+.progressbar-neutral,
+.progressbar-negative,
+.progressbar-positive {
+	background: $GhostWhite;
+	border: 1px solid $Silver;
+	color: $DimGray;
+	height: $baseUnit6;
+	margin: $baseUnit2 0;
+	overflow: hidden;
+	position: relative;
+	text-shadow:1px 1px 0 $White;
+
+	@include border-radius($baseUnit3);
+	@include box-sizing(border-box);
+
+	.progress-value, .progress-text {
+		/* The width and height of your image */
+		height: $baseUnit6;
+	}
+
+	.progress-value {
+		background: $Silver url(../images/gradient-bg.png) repeat-x left -6px;
+		@include border-radius($baseUnit3 0 0 $baseUnit3);
+	}
+
+	.progress-text {
+		color: $Black;
+		font: {
+			size: 12px;
+			weight: bold;
+		}
+		left: 0;
+		line-height: $baseUnit6;
+		position: absolute;
+		text: {
+			align: center;
+			shadow: 1px 1px 1px $White;
+		}
+		top: 0;
+		width: 100%;
+	}
+}
+
+.progressbar-neutral {
+	.progress-value { background-color: $DodgerBlue; }
+}
+
+.progressbar-negative {
+	.progress-value { background-color: $Crimson; }
+}
+
+.progressbar-positive {
+	.progress-value { background-color: $YellowGreen; }
+}

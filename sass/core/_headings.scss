@@ -1,0 +1,27 @@
+/*==========  $Headings  ==========*/
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font: {
+		family: $fstack-segoe;
+		weight: normal;
+	}
+	line-height: 120%;
+	margin: 0 0 0.5em 0;
+
+	.subtitle {
+		color: $Gray;
+		font-size: 80%;
+	}
+
+	&.styled {
+		border-bottom: 1px solid $Gray;
+		padding-bottom: $baseUnit2;
+	}
+}
+
+h1 { font-size: 214%; }
+h2 { font-size: 192%; }
+h3 { font-size: 171%; }
+h4 { font-size: 150%; }
+h5 { font-size: 128%; }
+h6 { font-size: 107%; }

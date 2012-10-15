@@ -1,0 +1,12 @@
+/*==========  $Close button  ==========*/
+.closable {}
+a.close {
+	&, &:link, &:visited, &:hover &:active,	&:focus {
+		cursor: pointer;
+		float: right;
+		font-weight: bold;
+		position: relative;
+		text-decoration:none;
+		top:-#{$baseUnit1};
+	}
+}

@@ -1,0 +1,42 @@
+/*==========  $Code  ==========*/
+
+code, kbd, pre {
+	font-family: $fstack-consolas;
+	_font-family: $fstack-consolas;
+}
+code {
+	background: $WhiteSmoke;
+	border: 1px solid $Gainsboro;
+	font-size: 85.7%;
+	line-height: 192%;
+	padding: #{$baseUnit1 - 1} #{$baseUnit1 + 1};
+	white-space: pre;
+}
+kbd {
+	background: $WhiteSmoke;
+	color: $DimGray;
+	font: {
+		size: 85.7%;
+		weight: bold;
+	}
+	line-height: 192%;
+	padding: #{$baseUnit1 - 1} #{$baseUnit2};
+	text-transform: capitalize;
+	white-space: pre;
+
+	@include box-shadow($Silver 0 2px 0, $DimGray 0 2px 2px);
+	@include border-radius($baseUnit1);
+}
+pre {
+	background: $Lavender;
+	border: 1px solid $Thistle;
+	display: block;
+	font-size: 100%;
+	margin: 0 0 $baseUnit3 0;
+	padding: $baseUnit2;
+	@include border-radius($baseUnit1);
+}
+pre code {
+	background: transparent;
+	border: 0;
+}

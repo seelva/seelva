@@ -53,12 +53,6 @@ hr.clear, hr.clearing {
   width: 100%;
 }
 
-/*==========  $Image replacement  ==========*/
-.imgreplace {
-  display: block;
-  text-indent: -5000em;
-}
-
 /*==========  $Hidden/invisible elements  ==========*/
 /* Screen readers can see it */
 .invisible {
@@ -73,17 +67,10 @@ hr.clear, hr.clearing {
   display: none;
 }
 
-/*==========  $Resizable elements  ==========*/
-.resizable {
-  resize: both;
-  overflow: auto;
-}
-
-/*==========  $Selection styling  ==========*/
-::-moz-selection, ::selection {
-  background: #f5f5dc;
-  color: #7b9712;
-  text-shadow: none;
+/*==========  $Image replacement  ==========*/
+.imgreplace {
+  display: block;
+  text-indent: -5000em;
 }
 
 /*==========  $Accesibility  ==========*/
@@ -116,6 +103,19 @@ hr.clear, hr.clearing {
 .accessibility {
   position: absolute;
   left: -5000em;
+}
+
+/*==========  $Resizable elements  ==========*/
+.resizable {
+  resize: both;
+  overflow: auto;
+}
+
+/*==========  $Selection styling  ==========*/
+::-moz-selection, ::selection {
+  background: #f5f5dc;
+  color: #7b9712;
+  text-shadow: none;
 }
 
 /**

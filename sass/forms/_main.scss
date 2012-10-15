@@ -1,0 +1,16 @@
+/*==========  $Main  ==========*/
+form {
+	p {
+		clear: both;
+		margin-bottom: $baseUnit3;
+	}
+
+	div {
+		clear: both;
+		margin-bottom: $baseUnit3;
+
+		p {
+			margin: $baseUnit2 0;
+		}
+	}
+}

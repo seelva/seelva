@@ -1,0 +1,46 @@
+/*==========  $Icons fix  ==========*/
+@import "compass/css3/font-face";
+$fontAwesomePath: "../fonts/fontawesome-webfont" !default;
+
+// Font face hack avoiding path issues in windows
+@font-face {
+	font: {
+		family: "FontAwesome";
+		style: normal;
+		weight: normal;
+	}
+	src: url('#{$fontAwesomePath}.eot');
+	src: url('#{$fontAwesomePath}.eot?#iefix') format('eot'),
+		url('#{$fontAwesomePath}.woff') format('woff'),
+		url('#{$fontAwesomePath}.ttf') format('truetype'),
+		url('#{$fontAwesomePath}.svg#FontAwesomeRegular') format('svg');
+}
+
+/* sprites.less reset */
+[class^="icon-"],
+[class*=" icon-"] {
+	background: {
+		image: none;
+		position: 0% 0%;
+		repeat: repeat;
+	}
+	display: inline;
+	height: auto;
+	line-height: 100%;
+	vertical-align: baseline;
+	width: auto;
+}
+li[class^="icon-"],
+li[class*=" icon-"] {
+	display: block;
+}
+
+/* Fixed icon sizes */
+.icon-8  { font-size: 8px;  line-height: 8px; }
+.icon-12 { font-size: 12px; line-height: 12px; }
+.icon-16 { font-size: 16px; line-height: 16px; }
+.icon-20 { font-size: 20px; line-height: 20px; }
+.icon-24 { font-size: 24px; line-height: 24px; }
+.icon-32 { font-size: 32px; line-height: 32px; }
+.icon-48 { font-size: 48px; line-height: 48px; }
+.icon-64 { font-size: 64px; line-height: 64px; }

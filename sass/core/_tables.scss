@@ -1,0 +1,59 @@
+/*==========  $Tables  ==========*/
+table {
+	border: {
+		collapse: separate;
+		right: 1px solid $WhiteSmoke;
+		top: 1px solid $LightGray;
+	}
+	margin: 0 0 $baseUnit5 0;
+	width: 100%;
+
+	// Border top radius
+	@include border-radius($baseUnit1 $baseUnit1 0 0);
+
+	caption {
+		font: {
+			size: 85.7%;
+			style: italic;
+			weight: bold;
+		}
+		margin: 0;
+		padding: 0 0 $baseUnit1 0;
+	}
+}
+th {
+	background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
+	border: {
+		bottom: 1px solid $LightGray;
+		left: 1px solid $LightGray;
+	}
+	font-weight: bold;
+	padding: $baseUnit2;
+	text-align: left;
+}
+
+table thead tr:first-child th:first-child {
+	// Border topleft
+	@include border-radius($baseUnit1 0 0 0);
+}
+
+table thead tr:last-child th:last-child {
+	border-right: 1px solid $WhiteSmoke;
+
+	// Border topright
+	@include border-radius(0 $baseUnit1 0 0);
+}
+
+tr {
+	&.odd, .zebra &:nth-child(odd) 	{ background: $White; }
+	&.even, .zebra &:nth-child(even) { background: $GhostWhite; }
+}
+td {
+	border: {
+		bottom: 1px solid $WhiteSmoke;
+		left: 1px solid $WhiteSmoke;
+	}
+	padding: $baseUnit2;
+	vertical-align: top;
+}
+table.compact td, table.compact th { padding: #{$baseUnit1 - 1} $baseUnit2; }

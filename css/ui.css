@@ -1,44 +1,6 @@
 /*===========================
 =            $UI            =
 ===========================*/
-/*==========  $Buttonsets  ==========*/
-.btn-set {
-  display: inline-block;
-}
-.btn-set input[type="button"], .btn-set input[type="submit"], .btn-set input[type="reset"], .btn-set button, .btn-set a.button {
-  float: left;
-  margin: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-.btn-set input[type="button"]:first-child, .btn-set input[type="submit"]:first-child, .btn-set input[type="reset"]:first-child, .btn-set button:first-child, .btn-set a.button:first-child {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -ms-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-.btn-set input[type="button"]:last-child, .btn-set input[type="submit"]:last-child, .btn-set input[type="reset"]:last-child, .btn-set button:last-child, .btn-set a.button:last-child {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-
-/*==========  $Close button  ==========*/
-a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:focus {
-  cursor: pointer;
-  float: right;
-  font-weight: bold;
-  position: relative;
-  text-decoration: none;
-  top: -3px;
-}
-
 /*==========  $Messages/Alerts  ==========*/
 .alert,
 .error,
@@ -189,6 +151,44 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
 
 .progressbar-positive .progress-value {
   background-color: #becf59;
+}
+
+/*==========  $Close button  ==========*/
+a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:focus {
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  top: -3px;
+}
+
+/*==========  $Buttonsets  ==========*/
+.btn-set {
+  display: inline-block;
+}
+.btn-set input[type="button"], .btn-set input[type="submit"], .btn-set input[type="reset"], .btn-set button, .btn-set a.button {
+  float: left;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.btn-set input[type="button"]:first-child, .btn-set input[type="submit"]:first-child, .btn-set input[type="reset"]:first-child, .btn-set button:first-child, .btn-set a.button:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.btn-set input[type="button"]:last-child, .btn-set input[type="submit"]:last-child, .btn-set input[type="reset"]:last-child, .btn-set button:last-child, .btn-set a.button:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
 }
 
 /*-----  End of $UI  ------*/

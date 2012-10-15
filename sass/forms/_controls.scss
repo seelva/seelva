@@ -1,0 +1,85 @@
+/*==========  $Inputs  ==========*/
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+	margin:0;
+
+	&:focus {
+		outline-color:#8ea81f;
+	}
+}
+
+input[type=""],
+input[type="file"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+	background: $White url(../images/txt-bg.png) repeat-x left top;
+	border: 1px solid $Silver {
+		left-width: 2px;
+		top-width: 2px;
+	}
+	font: {
+		family: $fstack-verdana;
+		size: 100%;
+	}
+	margin: 0;
+	padding: $baseUnit1;
+	width: 100%;
+
+	@include border-radius($baseUnit1);
+	@include box-sizing(border-box);
+
+
+	&:focus {
+		background-color: #fdfdfd;
+		border-color: #8ea81f;
+		outline-color:#8ea81f;
+	}
+
+	&[readonly] {
+		background-color: $GhostWhite;
+	}
+
+	&[disabled] {
+		background-color: $LightGray;
+		color: $Gray;
+	}
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+input[type="range"] {}
+
+input.image,
+input[type="image"] {
+	border: 0;
+	height: auto;
+	width: auto;
+}
+
+textarea {
+	height: 8em;
+	overflow: auto;
+	resize: vertical;
+	vertical-align: top;
+}
+
+select {
+	cursor: pointer;
+	padding: $baseUnit1;
+}

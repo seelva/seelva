@@ -50,6 +50,13 @@ img.nofloat {
   margin-right: auto;
 }
 
+/*==========  $Video  ==========*/
+/*==========  $Audio  ==========*/
+audio {
+  width: 100%;
+}
+
+/*==========  $Captioned image  ==========*/
 .image-caption, .image-caption.alignleft, .image-caption.alignright, .image-caption.floatleft, .image-caption.floatright, .caption, .caption.alignleft, .caption.alignright, .caption.floatleft, .caption.floatright, figure.styled, figure.styled.alignleft, figure.styled.alignright, figure.styled.floatleft, figure.styled.floatright {
   background: #fafafa;
   border: 1px solid #f5f5f5;
@@ -83,7 +90,7 @@ img.nofloat {
   text-align: center;
 }
 
-/*==========  Gallery  ==========*/
+/*==========  $Gallery  ==========*/
 .gallery {
   overflow: hidden;
 }
@@ -121,12 +128,6 @@ img.nofloat {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-}
-
-/*==========  $Video  ==========*/
-/*==========  $Audio  ==========*/
-audio {
-  width: 100%;
 }
 
 /*-----  End of $Media  ------*/

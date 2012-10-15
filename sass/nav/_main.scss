@@ -1,0 +1,30 @@
+/* nav abstraction object
+Source: http://csswizardry.com/2011/09/the-nav-abstraction/
+*/
+
+@mixin nav 		{ list-style: none; }
+@mixin nav-li 	{ display: block; float: left; }
+@mixin nav-li-a { display: block; text-decoration: none; }
+
+.nav {
+	@include nav;
+
+	> li {
+		@include nav-li;
+
+		> a { @include nav-li-a; }
+	}
+}
+
+/*==========  $Nav global setup  ==========*/
+.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
+	@include nav;
+	margin: 0 0 $baseUnit3 0;
+	overflow: hidden;
+
+	> li {
+		@include nav-li;
+
+		> a { @include nav-li-a; }
+	}
+}

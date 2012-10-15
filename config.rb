@@ -1,5 +1,6 @@
 css_dir = "css"
 sass_dir = "sass"
+fonts_dir = "fonts"
 images_dir = "images"
 javascripts_dir = "js"
 

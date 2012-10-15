@@ -1,0 +1,107 @@
+/*==========  $Buttons  ==========*/
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+button[type],
+a.button {
+	background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
+	border: 1px solid $Silver;
+	border-bottom-color: $DarkGray;
+	color: $Gray;
+	cursor: pointer;
+	display: inline-block;
+	font: {
+		family: $fstack-verdana;
+		size: 100%;
+		weight: bold;
+	}
+	line-height: 100%;
+	margin: 0 $baseUnit2 0 0;
+	padding: #{$baseUnit2 - 1} $baseUnit3;/*! For links */
+	text-decoration: none;
+	text-shadow: 0 1px 0 $White;
+	white-space: nowrap;
+	word-wrap: normal;
+
+	@include border-radius($baseUnit1);
+	@include single-box-shadow($WhiteSmoke, 0, 1px, 0, 0);
+
+	/* IE7 padding bugfix */
+	overflow: visible;
+	width: auto;
+
+	/*! Standard button */
+	&:hover, &:focus {
+		background-position: 0 -292px;
+		color: $DimGray;
+		outline-color:#8ea81f;
+	}
+
+	&:active {
+		background-position: 0 bottom;
+		border-color: $Gray $DarkGray $Silver;
+		color: $Gray;
+
+		@include box-shadow(inset 0 1px $baseUnit2 $DarkGray, 0 1px 0 $WhiteSmoke);
+	}
+
+	/*! Neutral button */
+	&.neutral {
+		color: $SteelBlue;
+
+		&:hover, &:focus {
+			background-color: $LightCyan;
+			border-color: $DarkTurquoise;
+		}
+
+		&:active {
+			@include box-shadow(inset 0 1px $baseUnit2 darken($LightCyan, 40), 0 1px 0 $WhiteSmoke);
+		}
+	}
+
+	/*! Positive button */
+	&.positive {
+		color: $OliveDrab;
+
+		&:hover, &:focus {
+			background-color: $PaleGreen;
+			border-color: $YellowGreen;
+		}
+
+		&:active {
+			@include box-shadow(inset 0 1px $baseUnit2 darken($PaleGreen, 50), 0 1px 0 $WhiteSmoke);
+		}
+	}
+
+	/* Negative button */
+	&.negative {
+		color: $Crimson;
+
+		&:hover, &:focus {
+			background-color: $LavenderBlush;
+			border-color: $Pink;
+		}
+
+		&:active {
+			@include box-shadow(inset 0 1px $baseUnit2 darken($LavenderBlush, 60), 0 1px 0 $WhiteSmoke);
+		}
+	}
+
+	/* Disabled button */
+	&[disabled], &[disabled]:hover, &[disabled]:active {
+		background: $LightGray;
+		border: 1px solid $Silver;
+		color: $Gray;
+		cursor:default;
+		text-shadow:1px 1px 0 $WhiteSmoke;
+		@include single-box-shadow(none);
+	}
+}
+
+button img,
+a.button img{
+	border: 0;
+	margin:0;
+	padding: 0;
+}

@@ -1,0 +1,32 @@
+/*==========  $Details/Summary  ==========*/
+details {
+	background: $GhostWhite;
+	border: 1px solid $LightGray;
+
+	@include border-radius($baseUnit1);
+
+	summary {
+		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+		border-bottom: 1px solid $LightGray;
+		cursor: pointer;
+		margin: 0;
+		padding: 0 $baseUnit2;
+		text-align: left;
+
+		@include border-radius($baseUnit1 $baseUnit1 0 0);
+
+		&:focus {
+		border-color: #8ea81f;
+		outline-color: #8ea81f;
+		}
+	}
+
+	> div {
+		padding: $baseUnit2;
+	}
+
+	&[open] summary {
+		border-color: $Silver;
+	}
+
+}

@@ -1,0 +1,22 @@
+/*==========  $Horizontal-menu  ==========*/
+.horizontal-menu {
+	> li {
+		border-left: 1px solid $LightGray;
+		display: inline-block;
+		float: left;
+
+		> a, > a:link, > a:visited {
+			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+			color: $Black;
+			padding: $baseUnit2 $baseUnit3;
+		}
+
+		> a:hover, &.active > a, &.active > a:link {
+			background: {
+				color: $Gray;
+				position: left -15px;
+			}
+			color: $White;
+		}
+	}
+}

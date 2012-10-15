@@ -1,0 +1,73 @@
+/*==========  $Quotes  ==========*/
+
+blockquote {
+	border-left: 1px solid $LightGray;
+	font: {
+		size: 122%;
+		style: italic;
+	}
+	line-height: 150%;
+	margin: $baseUnit2 $baseUnit5 1em $baseUnit5;
+	padding-left: $baseUnit2;
+	quotes: none;
+
+	&:before, &:after {
+		content: none;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	span, .credit {
+		font: {
+			size: 78%;
+			style: italic;
+		}
+		margin-bottom: 0;
+
+		&:before {
+			content: '\2013';
+		}
+	}
+
+	&.styled {
+		background: $WhiteSmoke;
+		border: 0;
+		color: $DimGray;
+		padding: $baseUnit6 0;
+		@include border-radius($baseUnit2);
+
+		&:before {
+			color: $Silver;
+			content: '\201C';
+			font: {
+				size: 60px;
+				style: normal;
+				weight: bold;
+			}
+			line-height: 40px;
+			padding-left: $baseUnit3;
+		}
+
+		p {
+			margin: 0 $baseUnit6 1em #{$baseUnit6 * 2};
+
+			&:first-child {
+				margin-top: -40px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+cite, q {
+	font-style: italic;
+	quotes: '"' '"' "'" "'";
+
+	&:after 	{ content: open-quote; }
+	&:before 	{ content: close-quote; }
+}

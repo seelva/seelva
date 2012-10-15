@@ -1,7 +1,7 @@
 /*==============================
 =            $Forms            =
 ==============================*/
-/*==========  $Form elements  ==========*/
+/*==========  $Main  ==========*/
 form p {
   clear: both;
   margin-bottom: 9px;
@@ -14,6 +14,7 @@ form div p {
   margin: 6px 0;
 }
 
+/*==========  $Info  ==========*/
 fieldset {
   border: 0;
   margin: 0 0 15px 0;
@@ -34,11 +35,15 @@ label, span.label {
   line-height: 130%;
   padding: 4px 0;
 }
-
-label em, span.label em, label .required {
+label em, span.label em {
   color: #e14049;
 }
 
+label .required {
+  color: #e14049;
+}
+
+/*==========  $Inputs  ==========*/
 input[type="checkbox"],
 input[type="radio"] {
   cursor: pointer;
@@ -166,20 +171,6 @@ textarea {
 select {
   cursor: pointer;
   padding: 3px;
-}
-
-.control-set {
-  clear: both;
-  float: none;
-  margin: 0;
-}
-.control-set span.label {
-  line-height: normal;
-}
-.control-set label {
-  display: inline;
-  padding: 0;
-  width: auto;
 }
 
 /*==========  $Buttons  ==========*/
@@ -378,6 +369,21 @@ a.button img {
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+/*==========  $Helpers  ==========*/
+.control-set {
+  clear: both;
+  float: none;
+  margin: 0;
+}
+.control-set span.label {
+  line-height: normal;
+}
+.control-set label {
+  display: inline;
+  padding: 0;
+  width: auto;
 }
 
 /*==========  Wrappers, Width, Columns  ==========*/

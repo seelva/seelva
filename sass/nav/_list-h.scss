@@ -1,0 +1,12 @@
+/*==========  $Horizontal-list  ==========*/
+.horizontal-list {
+	> li {
+		border-left: 1px solid $LightGray;
+		display: inline-block;
+		float: none;
+
+		&:first-child { border-left: 0; }
+		> a, > a:link, > a:visited { padding: 0 $baseUnit3; }
+		> a:hover, &.active > a, &.active > a:link {}
+	}
+}

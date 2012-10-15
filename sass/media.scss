@@ -4,89 +4,9 @@
 =            $Media            =
 ==============================*/
 
-/*==========  $images  ==========*/
-img {
-	&[width], &[height] { display: inline-block; }
-	&, a & { border:0; vertical-align: bottom; }
-	&.styled {
-		background: $GhostWhite url(../images/loading.gif) no-repeat center;
-		border: 1px solid $WhiteSmoke;
-		padding: $baseUnit2;
-		@include border-radius($baseUnit2);
-	}
-	&.light-styled, a &.light-styled {
-		border-width: 0;
-		padding: 0;
-		@include border-radius($baseUnit2);
-		@include single-box-shadow(#bbbbbb, 0, 0, $baseUnit2, 0, true);
-	}
-	&.unstyled, button &, a.button & {
-		background: transparent;
-		border-width: 0;
-		padding: 0;
-	}
+@import "media/images";
+@import "media/video";
+@import "media/audio";
+@import "media/helpers";
 
-	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
-	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
-	&.nofloat 					{ display: block; margin-left: auto; margin-right: auto; }
-}
-.image-caption, .caption, figure.styled {
-	&, &.alignleft, &.alignright, &.floatleft, &.floatright {
-		background: $GhostWhite;
-		border: 1px solid $WhiteSmoke;
-		display: inline-block;
-		margin-bottom: $baseUnit3;
-		padding: $baseUnit2;
-		text-align: center;
-		@include border-radius($baseUnit2);
-	}
-
-	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
-	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
-	& img 						{ background: transparent; border-width: 0; margin: 0; padding: 0; }
-	& .caption-text 			{ font-style: italic; margin-bottom: 0; text-align: center; }
-}
-
-/*==========  Gallery  ==========*/
-.gallery {
-	overflow: hidden;
-
-	div, li {
-		background: $GhostWhite;
-		border: 1px solid $WhiteSmoke;
-		float: left;
-		margin: 0 20px 20px 0;
-		padding: $baseUnit2;
-		text-align: center;
-		@include border-radius($baseUnit2);
-
-		a {
-			display: inline-block;
-		}
-	}
-
-	&.styled {
-		div, li {
-			@include border-radius($baseUnit2);
-		}
-	}
-
-	&.light-styled {
-		div, li {
-			background: transparent;
-			border: 0;
-			padding: 0;
-
-			img {
-				@include border-radius($baseUnit2);
-			}
-		}
-	}
-}
-
-/*==========  $Video  ==========*/
-video {}
-
-/*==========  $Audio  ==========*/
-audio { width: 100%; }
 /*-----  End of $Media  ------*/
