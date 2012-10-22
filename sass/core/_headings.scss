@@ -19,9 +19,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 { font-size: 214%; }
-h2 { font-size: 192%; }
-h3 { font-size: 171%; }
-h4 { font-size: 150%; }
-h5 { font-size: 128%; }
-h6 { font-size: 107%; }
+h1, .alpha   { font-size: 214%; }
+h2, .beta    { font-size: 192%; }
+h3, .gamma   { font-size: 171%; }
+h4, .delta   { font-size: 150%; }
+h5, .epsilon { font-size: 128%; }
+h6, .zeta    { font-size: 107%; }

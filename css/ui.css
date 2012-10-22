@@ -84,13 +84,13 @@
 
 /*==========  $Progress bars  ==========*/
 .progressbar,
-.progressbar-neutral,
-.progressbar-negative,
-.progressbar-positive {
+.progressbar-error,
+.progressbar-info,
+.progressbar-notice,
+.progressbar-success {
   background: #fafafa;
   border: 1px solid #dadada;
-  color: #555555;
-  height: 18px;
+  height: 21px;
   margin: 6px 0;
   overflow: hidden;
   position: relative;
@@ -104,36 +104,29 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.progressbar .progress-value, .progressbar .progress-text,
-.progressbar-neutral .progress-value,
-.progressbar-neutral .progress-text,
-.progressbar-negative .progress-value,
-.progressbar-negative .progress-text,
-.progressbar-positive .progress-value,
-.progressbar-positive .progress-text {
-  /* The width and height of your image */
-  height: 18px;
-}
 .progressbar .progress-value,
-.progressbar-neutral .progress-value,
-.progressbar-negative .progress-value,
-.progressbar-positive .progress-value {
-  background: #dadada url(../images/gradient-bg.png) repeat-x left -6px;
-  -webkit-border-radius: 9px 0 0 9px;
-  -moz-border-radius: 9px 0 0 9px;
-  -ms-border-radius: 9px 0 0 9px;
-  -o-border-radius: 9px 0 0 9px;
-  border-radius: 9px 0 0 9px;
+.progressbar-error .progress-value,
+.progressbar-info .progress-value,
+.progressbar-notice .progress-value,
+.progressbar-success .progress-value {
+  background: #dadada url(../images/gradient-bg.png) repeat-x left -12px;
+  float: left;
+  height: 20px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
 }
 .progressbar .progress-text,
-.progressbar-neutral .progress-text,
-.progressbar-negative .progress-text,
-.progressbar-positive .progress-text {
-  color: black;
-  font-size: 12px;
+.progressbar-error .progress-text,
+.progressbar-info .progress-text,
+.progressbar-notice .progress-text,
+.progressbar-success .progress-text {
+  color: #555555;
+  font-size: 14px;
   font-weight: bold;
   left: 0;
-  line-height: 18px;
   position: absolute;
   text-align: center;
   text-shadow: 1px 1px 1px white;
@@ -141,16 +134,20 @@
   width: 100%;
 }
 
-.progressbar-neutral .progress-value {
-  background-color: #3399ff;
+.progressbar-error .progress-value {
+  background-color: #ef989d;
 }
 
-.progressbar-negative .progress-value {
-  background-color: #e14049;
+.progressbar-info .progress-value {
+  background-color: #99ccff;
 }
 
-.progressbar-positive .progress-value {
-  background-color: #becf59;
+.progressbar-notice .progress-value {
+  background-color: #ffe766;
+}
+
+.progressbar-success .progress-value {
+  background-color: #dde6a8;
 }
 
 /*==========  $Close button  ==========*/

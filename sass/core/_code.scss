@@ -1,13 +1,15 @@
 /*==========  $Code  ==========*/
 
 code, kbd, pre {
-	font-family: $fstack-consolas;
+	font: {
+		family: $fstack-consolas;
+		size: 85.7%;
+	}
 	_font-family: $fstack-consolas;
 }
 code {
 	background: $WhiteSmoke;
 	border: 1px solid $Gainsboro;
-	font-size: 85.7%;
 	line-height: 192%;
 	padding: #{$baseUnit1 - 1} #{$baseUnit1 + 1};
 	white-space: pre;
@@ -15,10 +17,7 @@ code {
 kbd {
 	background: $WhiteSmoke;
 	color: $DimGray;
-	font: {
-		size: 85.7%;
-		weight: bold;
-	}
+	font-weight: bold;
 	line-height: 192%;
 	padding: #{$baseUnit1 - 1} #{$baseUnit2};
 	text-transform: capitalize;

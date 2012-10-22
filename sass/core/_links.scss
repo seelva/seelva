@@ -1,8 +1,8 @@
 /*==========  $Links  ==========*/
 a {
 	&, &:link 	{ color: $LimeGreen; text-decoration: underline; outline: 0; }
-	&:visited 	{ color: $OliveDrab; text-decoration: none; }
-	&:hover 	{ color: #3b7c03;    text-decoration: underline; }
-	&:active 	{ color: $OliveDrab; text-decoration: underline; }
-	&:focus 	{ background-color: #ecfddc; color: $LimeGreen; outline-color: $LimeGreen; text-decoration: underline; }
+	&:visited 	{ color: $OliveDrab; }
+	&:hover 	{ color: darken( $LimeGreen, 5% ); }
+	&:active 	{ color: $OliveDrab; }
+	&:focus 	{ background-color: $PaleGreen; color: $LimeGreen; outline-color: $LimeGreen; }
 }

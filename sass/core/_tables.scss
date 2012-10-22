@@ -32,16 +32,18 @@ th {
 	text-align: left;
 }
 
-table thead tr:first-child th:first-child {
-	// Border topleft
-	@include border-radius($baseUnit1 0 0 0);
-}
+thead {
+	tr:first-child th:first-child {
+		// Border topleft
+		@include border-radius($baseUnit1 0 0 0);
+	}
 
-table thead tr:last-child th:last-child {
-	border-right: 1px solid $WhiteSmoke;
+	tr:last-child th:last-child {
+		border-right: 1px solid $WhiteSmoke;
 
-	// Border topright
-	@include border-radius(0 $baseUnit1 0 0);
+		// Border topright
+		@include border-radius(0 $baseUnit1 0 0);
+	}
 }
 
 tr {

@@ -20,21 +20,17 @@ a, a:link {
 }
 a:visited {
   color: #7b9712;
-  text-decoration: none;
 }
 a:hover {
-  color: #3b7c03;
-  text-decoration: underline;
+  color: #428105;
 }
 a:active {
   color: #7b9712;
-  text-decoration: underline;
 }
 a:focus {
-  background-color: #ecfddc;
+  background-color: #edf2c4;
   color: #4e9a06;
   outline-color: #4e9a06;
-  text-decoration: underline;
 }
 
 /*==========  $Headings  ==========*/
@@ -54,27 +50,27 @@ h1.styled, h2.styled, h3.styled, h4.styled, h5.styled, h6.styled {
   padding-bottom: 6px;
 }
 
-h1 {
+h1, .alpha {
   font-size: 214%;
 }
 
-h2 {
+h2, .beta {
   font-size: 192%;
 }
 
-h3 {
+h3, .gamma {
   font-size: 171%;
 }
 
-h4 {
+h4, .delta {
   font-size: 150%;
 }
 
-h5 {
+h5, .epsilon {
   font-size: 128%;
 }
 
-h6 {
+h6, .zeta {
   font-size: 107%;
 }
 
@@ -187,13 +183,13 @@ cite:before, q:before {
 /*==========  $Code  ==========*/
 code, kbd, pre {
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 85.7%;
   _font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 code {
   background: #f5f5f5;
   border: 1px solid #eeeeee;
-  font-size: 85.7%;
   line-height: 192%;
   padding: 2px 4px;
   white-space: pre;
@@ -202,7 +198,6 @@ code {
 kbd {
   background: #f5f5f5;
   color: #555555;
-  font-size: 85.7%;
   font-weight: bold;
   line-height: 192%;
   padding: 2px 6px;
@@ -238,19 +233,10 @@ pre code {
 }
 
 /*==========  $Lists  ==========*/
-ul {
+ul, ol {
   margin: 0 0 15px 24px;
   padding: 0;
 }
-
-ol {
-  margin: 0 0 15px 24px;
-  padding: 0;
-}
-ol li {
-  margin: 0 0 0 9px;
-}
-
 ul ul, ul ol, ol ul, ol ol {
   margin-bottom: 0;
 }
@@ -303,6 +289,10 @@ ul.styled, ul.unstyled, ol.styled, ol.unstyled {
 ul.styled li, ol.styled li {
   background: url(../images/bullet.png) no-repeat 0 6px;
   padding-left: 16px;
+}
+
+ol li {
+  margin: 0 0 0 9px;
 }
 
 /* Values not allowed in CSS2.1, re-allowed in CSS3 */
@@ -360,15 +350,14 @@ th {
   text-align: left;
 }
 
-table thead tr:first-child th:first-child {
+thead tr:first-child th:first-child {
   -webkit-border-radius: 3px 0 0 0;
   -moz-border-radius: 3px 0 0 0;
   -ms-border-radius: 3px 0 0 0;
   -o-border-radius: 3px 0 0 0;
   border-radius: 3px 0 0 0;
 }
-
-table thead tr:last-child th:last-child {
+thead tr:last-child th:last-child {
   border-right: 1px solid #f5f5f5;
   -webkit-border-radius: 0 3px 0 0;
   -moz-border-radius: 0 3px 0 0;

@@ -1,18 +1,8 @@
 /*==========  $Lists  ==========*/
-ul {
-	margin: 0 0 $baseUnit5 $baseUnit8;
-	padding: 0;
-}
-
-ol {
-	margin: 0 0 $baseUnit5 $baseUnit8;
-	padding: 0;
-
-	li {
-		margin: 0 0 0 $baseUnit3;
-	}
-}
 ul, ol {
+	margin: 0 0 $baseUnit5 $baseUnit8;
+	padding: 0;
+
 	ul, ol { margin-bottom: 0; }
 
 	&.armenian 		{ list-style-type: armenian }
@@ -34,6 +24,12 @@ ul, ol {
 	&.styled li {
 		background: url(../images/bullet.png) no-repeat 0 6px;
 		padding-left: 16px;
+	}
+}
+
+ol {
+	li {
+		margin: 0 0 0 $baseUnit3;
 	}
 }
 

@@ -73,7 +73,6 @@ select,
 textarea {
   background: white url(../images/txt-bg.png) repeat-x left top;
   border: 1px solid #dadada;
-  border-left-width: 2px;
   border-top-width: 2px;
   font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
   font-size: 100%;
@@ -364,6 +363,15 @@ a.button[disabled]:active {
   box-shadow: none;
 }
 
+/*Fixing a NASTY bug in Firefox where input's line-height does not work */
+@-moz-document url-prefix() {
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    height: 1.9em;
+  }
+}
+
 button img,
 a.button img {
   border: 0;
@@ -395,9 +403,14 @@ a.button img {
 }
 
 /*==========  $Form helper classes  ==========*/
+form .field-prefix, form .field-suffix {
+  overflow: hidden;
+  /* Clearfix */
+}
 form .field-prefix .label, form .field-suffix .label {
   background: #fafafa;
   border: 1px solid #dadada;
+  border-right-width: 0;
   color: #555555;
   float: left;
   margin: 0;
@@ -405,11 +418,38 @@ form .field-prefix .label, form .field-suffix .label {
   text-shadow: 1px 1px 0 white;
 }
 form .field-prefix input,
-form .field-prefix select, form .field-suffix input, form .field-suffix select {
+form .field-prefix select,
+form .field-prefix button, form .field-suffix input, form .field-suffix select, form .field-suffix button {
+  border-right-width: 0;
   clear: none;
   float: left;
+  margin: 0;
   position: relative;
   width: auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+form .field-prefix input:first-child,
+form .field-prefix select:first-child,
+form .field-prefix button:first-child, form .field-suffix input:first-child, form .field-suffix select:first-child, form .field-suffix button:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+form .field-prefix input:last-child,
+form .field-prefix select:last-child,
+form .field-prefix button:last-child, form .field-suffix input:last-child, form .field-suffix select:last-child, form .field-suffix button:last-child {
+  border-right-width: 1px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
 }
 form .field-prefix .label {
   -webkit-border-radius: 3px 0 0 3px;
@@ -418,60 +458,15 @@ form .field-prefix .label {
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-form .field-prefix input,
-form .field-prefix select {
-  border: 1px solid #dadada;
-  border-top-width: 2px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
 form .field-suffix .label {
+  border-right-width: 1px;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-}
-form .field-suffix input,
-form .field-suffix select {
-  border: 1px solid #dadada;
-  border-top-width: 2px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -ms-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-form .field-prefix.field-suffix {
-  overflow: hidden;
-}
-form .field-prefix.field-suffix input,
-form .field-prefix.field-suffix select {
-  border: 1px solid #dadada;
-  border-top-width: 2px;
-  float: left;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
 }
 form .field-prefix.field-suffix .label:first-child {
-  float: left;
-  width: auto;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -484,8 +479,9 @@ form .field-prefix.field-suffix .label:first-child {
   border-radius: 3px 0 0 3px;
 }
 form .field-prefix.field-suffix .label:last-child,
-form .field-prefix.field-suffix input:last-child, form .field-prefix.field-suffix select:last-child {
-  width: auto;
+form .field-prefix.field-suffix input:last-child,
+form .field-prefix.field-suffix select:last-child,
+form .field-prefix.field-suffix button:last-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -497,36 +493,53 @@ form .field-prefix.field-suffix input:last-child, form .field-prefix.field-suffi
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-form .inline-field:before, form .inline-field:after {
+form.horizontal-fields div:before, form.horizontal-fields div:after,
+form .horizontal-field:before,
+form .horizontal-field:after {
   content: "";
   display: table;
   clear: both;
 }
-form .inline-field {
+form.horizontal-fields div,
+form .horizontal-field {
   zoom: 1;
 }
-form .inline-field label, form .inline-field span.label {
+form.horizontal-fields div label, form.horizontal-fields div span.label,
+form .horizontal-field label,
+form .horizontal-field span.label {
   clear: none;
   display: inline;
   float: left;
   width: 35%;
 }
-form .inline-field > input[type="file"], form .inline-field > input[type="password"], form .inline-field > input[type="text"], form .inline-field > select, form .inline-field > textarea, form .inline-field > div.control-set {
+form.horizontal-fields div > input[type="file"], form.horizontal-fields div > input[type="password"], form.horizontal-fields div > input[type="text"], form.horizontal-fields div > select, form.horizontal-fields div > textarea, form.horizontal-fields div > div.control-set,
+form .horizontal-field > input[type="file"],
+form .horizontal-field > input[type="password"],
+form .horizontal-field > input[type="text"],
+form .horizontal-field > select,
+form .horizontal-field > textarea,
+form .horizontal-field > div.control-set {
   clear: none;
   float: right;
   width: 60%;
 }
-form .inline-field .field-prefix,
-form .inline-field .field-suffix {
+form.horizontal-fields div .field-prefix,
+form.horizontal-fields div .field-suffix,
+form .horizontal-field .field-prefix,
+form .horizontal-field .field-suffix {
   clear: none;
   float: right;
   width: 60%;
 }
-form .inline-field .field-prefix input,
-form .inline-field .field-suffix input {
+form.horizontal-fields div .field-prefix input,
+form.horizontal-fields div .field-suffix input,
+form .horizontal-field .field-prefix input,
+form .horizontal-field .field-suffix input {
   width: auto;
 }
-form .inline-field .control-set label, form .inline-field .control-set span.label {
+form.horizontal-fields div .control-set label, form.horizontal-fields div .control-set span.label,
+form .horizontal-field .control-set label,
+form .horizontal-field .control-set span.label {
   float: none;
   width: auto;
 }
@@ -545,20 +558,48 @@ form .error-field select,
 form .error-field textarea {
   background: #fffafa;
   border-color: #ffc0cb;
+  color: #e14049;
+}
+form .info-field label {
+  color: #4682b4;
+}
+form .info-field input[type="file"], form .info-field input[type="password"], form .info-field input[type="text"], form .info-field select, form .info-field textarea {
+  background: #d9e8ff;
+  border-color: #82d2df;
+  color: #4682b4;
+}
+form .notice-field label {
+  color: #daa520;
+}
+form .notice-field input[type="file"], form .notice-field input[type="password"], form .notice-field input[type="text"], form .notice-field select, form .notice-field textarea {
+  background: #fffacd;
+  border-color: #ffd700;
+  color: #daa520;
 }
 form .success-field label {
   color: #4e9a06;
 }
-form .success-field input[type="file"],
-form .success-field input[type="password"],
-form .success-field input[type="text"],
-form .success-field select,
-form .success-field textarea {
+form .success-field input[type="file"], form .success-field input[type="password"], form .success-field input[type="text"], form .success-field select, form .success-field textarea {
   background: #f5f5dc;
   border-color: #becf59;
+  color: #4e9a06;
 }
 
 /*==========  $Search Form  ==========*/
+.inline-fields {
+  line-height: 250%;
+  /* This produces vertical spacing between inputs */
+}
+.inline-fields label {
+  display: inline;
+  display: inline-block;
+}
+.inline-fields input, .inline-fields select {
+  display: inline;
+  display: inline-block;
+  width: auto;
+}
+
 .search-form > div, .search-form > p {
   clear: none;
   float: left;

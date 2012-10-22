@@ -99,9 +99,18 @@ a.button {
 	}
 }
 
+/*Fixing a NASTY bug in Firefox where input's line-height does not work */
+@-moz-document url-prefix() {
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"] {
+		height: 1.9em;
+	}
+}
+
 button img,
-a.button img{
+a.button img {
 	border: 0;
-	margin:0;
+	margin: 0;
 	padding: 0;
 }

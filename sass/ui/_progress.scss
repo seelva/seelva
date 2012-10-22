@@ -1,12 +1,12 @@
 /*==========  $Progress bars  ==========*/
 .progressbar,
-.progressbar-neutral,
-.progressbar-negative,
-.progressbar-positive {
+.progressbar-error,
+.progressbar-info,
+.progressbar-notice,
+.progressbar-success {
 	background: $GhostWhite;
 	border: 1px solid $Silver;
-	color: $DimGray;
-	height: $baseUnit6;
+	height: $baseUnit7;
 	margin: $baseUnit2 0;
 	overflow: hidden;
 	position: relative;
@@ -15,24 +15,20 @@
 	@include border-radius($baseUnit3);
 	@include box-sizing(border-box);
 
-	.progress-value, .progress-text {
-		/* The width and height of your image */
-		height: $baseUnit6;
-	}
-
 	.progress-value {
-		background: $Silver url(../images/gradient-bg.png) repeat-x left -6px;
-		@include border-radius($baseUnit3 0 0 $baseUnit3);
+		background: $Silver url(../images/gradient-bg.png) repeat-x left -12px;
+		float: left;
+		height: $baseUnit7 - 1;
+		@include border-radius($baseUnit3);
 	}
 
 	.progress-text {
-		color: $Black;
+		color: $DimGray;
 		font: {
-			size: 12px;
+			size: 14px;
 			weight: bold;
 		}
 		left: 0;
-		line-height: $baseUnit6;
 		position: absolute;
 		text: {
 			align: center;
@@ -43,14 +39,8 @@
 	}
 }
 
-.progressbar-neutral {
-	.progress-value { background-color: $DodgerBlue; }
-}
+.progressbar-error   .progress-value { background-color: lighten( $Crimson, 20% ); }
+.progressbar-info    .progress-value { background-color: lighten( $DodgerBlue, 20% ); }
+.progressbar-notice  .progress-value { background-color: lighten( $Gold, 20% ); }
+.progressbar-success .progress-value { background-color: lighten( $YellowGreen, 20% ); }
 
-.progressbar-negative {
-	.progress-value { background-color: $Crimson; }
-}
-
-.progressbar-positive {
-	.progress-value { background-color: $YellowGreen; }
-}
