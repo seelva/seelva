@@ -2,15 +2,11 @@
 .tabs,
 .vertical-tabs {
 	overflow: visible;
-	zoom: 1;
+	*zoom: 1;
 
 	&:before, &:after {
-		content: '\0020';
-		display: block;
-		height: 0;
-		overflow: hidden;
-		visibility: hidden;
-		width: 0;
+		content: ' ';
+		display: table;
 	}
 	&:after { clear: both; }
 
@@ -75,12 +71,11 @@
 
 /*==========  $Tabs content  ==========*/
 .tabs-content {
-	background: $White;
 	display: block;
 	margin: 0;
-	zoom:1;
+	*zoom: 1;
 
-	&:before, &:after { content:""; display: table; }
+	&:before, &:after { content: ' '; display: table; }
 	&:after { clear: both; }
 	> li, > div { display: none; height: 1%; overflow: auto; }
 	> li.active, > div.active { display: block; }

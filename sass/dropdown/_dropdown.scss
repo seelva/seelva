@@ -1,11 +1,3 @@
-/***************************************************************************
-*  WARNING:
-*  Seelva's CSS dropdowns DO NOT WORK with touchscreen devices. Seelva's CSS
-*  dropdowns use mouse over and mouse out events to display submenus. Be
-*  aware that if you want to use dropdowns with touchscreen devices you
-*  should use a Javascript-based alternative.
-****************************************************************************/
-
 .dropdown {
 	> a:after, > a:link:after {
 		/* Arrow for dropdown links */
@@ -31,7 +23,7 @@
 		padding: $baseUnit3;
 		width: 230px;
 
-		@include border-radius(0 0 $baseUnit2 $baseUnit2);
+		@include border-radius( 0 0 $baseUnit2 $baseUnit2 );
 	}
 
 	> ul {
@@ -70,10 +62,12 @@
 			}
 		}
 
-		&:hover > a:after, &:hover > a:link:after, &.active > a:after, &.active > a:link:after {
-			border: {
-				left-color: #fff;
-				top-color: transparent;
+		&:hover, &.active {
+			> a:after, > a:link:after {
+				border: {
+					left-color: $White;
+					top-color: transparent;
+				}
 			}
 		}
 
@@ -89,7 +83,7 @@
 
 	&:hover, &.active {
 		> a:after, > a:link:after {
-			border-top-color: #fff;
+			border-top-color: $White;
 		}
 	}
 

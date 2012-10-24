@@ -2,7 +2,7 @@
 =            $Custom            =
 ===============================*/
 html {
-  background: #fdfdfd;
+  /* HTML style */
 }
 
 body {
@@ -25,8 +25,8 @@ body {
   /* override default holder style */
 }
 
-#header .holder {
-  /* override default header holder style */
+#header {
+  /* header style */
 }
 
 #logo {
@@ -46,27 +46,15 @@ body {
   width: 350px;
 }
 
-#main-nav .holder {
-  /* override default main-nav holder style */
-}
 #main-nav .horizontal-menu {
   margin-bottom: 0;
-}
-
-#teaser .holder {
-  /* override default header holder style */
 }
 
 #primary {
   /* primary style */
 }
-
-#secondary .holder {
-  /* override default header holder style */
-}
-
-#footer .holder {
-  /* override default header holder style */
+#primary .holder {
+  /* override default holder style */
 }
 
 /*-----  End of $Custom  ------*/

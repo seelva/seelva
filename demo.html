@@ -467,59 +467,11 @@ GREAT!&lt;/p&gt;</code></pre>
 											<input id="passwd" type="password" name="passwd" />
 										</div>
 										<div>
-											<label for="state">Select <em>*</em></label>
-											<select name="state" id="state">
-												<optgroup label="Select your state...">
-													<option value="AL">Alabama</option>
-													<option value="AK">Alaska</option>
-													<option value="AZ">Arizona</option>
-													<option value="AR">Arkansas</option>
-													<option value="CA">California</option>
-													<option value="CO">Colorado</option>
-													<option value="CT">Connecticut</option>
-													<option value="DE">Delaware</option>
-													<option value="FL">Florida</option>
-													<option value="GA">Georgia</option>
-													<option value="HI">Hawaii</option>
-													<option value="ID">Idaho</option>
-													<option value="IL">Illinois</option>
-													<option value="IN">Indiana</option>
-													<option value="IA">Iowa</option>
-													<option value="KS">Kansas</option>
-													<option value="KY">Kentucky</option>
-													<option value="LA">Louisiana</option>
-													<option value="ME">Maine</option>
-													<option value="MD">Maryland</option>
-													<option value="MA">Massachusetts</option>
-													<option value="MI">Michigan</option>
-													<option value="MN">Minnesota</option>
-													<option value="MS">Mississippi</option>
-													<option value="MO">Missouri</option>
-													<option value="MT">Montana</option>
-													<option value="NE">Nebraska</option>
-													<option value="NV">Nevada</option>
-													<option value="NH">New Hampshire</option>
-													<option value="NJ">New Jersey</option>
-													<option value="NM">New Mexico</option>
-													<option value="NY">New York</option>
-													<option value="NC">North Carolina</option>
-													<option value="ND">North Dakota</option>
-													<option value="OH">Ohio</option>
-													<option value="OK">Oklahoma</option>
-													<option value="OR">Oregon</option>
-													<option value="PA">Pennsylvania</option>
-													<option value="RI">Rhode Island</option>
-													<option value="SC">South Carolina</option>
-													<option value="SD">South Dakota</option>
-													<option value="TN">Tennessee</option>
-													<option value="TX">Texas</option>
-													<option value="UT">Utah</option>
-													<option value="VT">Vermont</option>
-													<option value="VA">Virginia</option>
-													<option value="WA">Washington</option>
-													<option value="WV">West Virginia</option>
-													<option value="WI">Wisconsin</option>
-													<option value="WY">Wyoming</option>
+											<label for="gender">Select <em>*</em></label>
+											<select name="gender" id="gender">
+												<optgroup label="Select your gender&hellip;">
+													<option value="male">Male</option>
+													<option value="female">Female</option>
 												</optgroup>
 											</select>
 										</div>
@@ -642,12 +594,24 @@ GREAT!&lt;/p&gt;</code></pre>
 												<span class="label">$</span>
 												<input id="day3" type="text" name="day3" value="" />
 											</div>
+
+											<label for="day3">Day</label>
+											<div class="field-prefix">
+												<button>Enviar</button>
+												<input id="day3" type="text" name="day3" value="" />
+											</div>
 										</div>
 										<div class="one-third">
 											<label for="passwd3">Readonly field</label>
 											<div class="field-suffix">
 												<input id="passwd3" type="text" name="passwd3" value="Write here" readonly="readonly" />
 												<span class="label">$</span>
+											</div>
+
+											<label for="passwd3">Readonly field</label>
+											<div class="field-suffix">
+												<input id="passwd3" type="text" name="passwd3" value="Write here" readonly="readonly" />
+												<button>Send</button>
 											</div>
 										</div>
 
@@ -657,6 +621,13 @@ GREAT!&lt;/p&gt;</code></pre>
 												<span class="label">$</span>
 												<input id="passwd4" type="text" name="passwd4" value="Write here" disabled="disabled" />
 												<span class="label">$</span>
+											</div>
+
+											<label for="passwd4">Disabled field</label>
+											<div class="field-prefix field-suffix">
+												<span class="label">$</span>
+												<input id="passwd4" type="text" name="passwd4" value="Write here" disabled="disabled" />
+												<button disabled>Hello</button>
 											</div>
 										</div>
 
@@ -670,20 +641,20 @@ GREAT!&lt;/p&gt;</code></pre>
 											<p class="help">Help text for this field <strong>(p.help)</strong></p>
 										</div>
 
-										<p class="guidelines">Inline label - element pairs (using <code>.inline-field</code> class):</p>
+										<p class="guidelines">Inline label - element pairs (using <code>.horizontal-field</code> class):</p>
 
-										<div class="inline-field">
+										<div class="horizontal-field">
 											<label for="elem">Text </label>
 											<input id="elem" type="text" name="elem" value="" />
 											<p class="help">Help text for this field <strong>(p.help)</strong></p>
 										</div>
 
-										<div class="inline-field">
+										<div class="horizontal-field">
 											<label for="info">Additional Info </label>
 											<textarea id="info" name="info" rows="12" cols="10"></textarea>
 										</div>
 
-										<div class="inline-field">
+										<div class="horizontal-field">
 											<span class="label">Checkboxes list <em>*</em></span>
 											<div class="control-set">
 												<input name="check3" id="check12" value="approved" type="checkbox" /> <label for="check12">Some Option 1</label> <br />
@@ -694,18 +665,23 @@ GREAT!&lt;/p&gt;</code></pre>
 
 										<p class="guidelines">Error field highlighting (using <code>.error-field</code> class):</p>
 
-										<div class="unit8 success-field">
-											<label for="address1">Address 1</label>
-											<input id="address1" name="address1" type="text" />
-										</div>
-										<div class="unit8 error-field">
+										<div class="unit6 error-field">
 											<label for="address2">Address 2</label>
 											<input id="address2" name="address2" type="text" />
 											<p class="help guidelines">Error field (div.error-field).</p>
 										</div>
-										<div class="unit8 last-col">
+										<div class="unit6 info-field">
+											<label for="address2">Address 2</label>
+											<input id="address2" name="address2" type="text" />
+											<p class="help guidelines">Error field (div.error-field).</p>
+										</div>
+										<div class="unit6 notice-field">
 											<label for="country">Country <em>*</em></label>
 											<input id="country" type="text" name="country" value="" />
+										</div>
+										<div class="unit6 success-field last-col">
+											<label for="address1">Address 1</label>
+											<input id="address1" name="address1" type="text" />
 										</div>
 								</fieldset>
 
@@ -738,6 +714,93 @@ GREAT!&lt;/p&gt;</code></pre>
 									<input type="text" name="search" id="search" value="" />
 									<input type="submit" value="Submit" />
 								</div>
+							</form>
+
+							<form action="#" method="post" class="search-form">
+								<div class="field-suffix">
+									<label for="search">Search:</label>
+									<input type="text" name="search" id="search" value="" />
+									<input type="submit" value="Submit" />
+									<input type="submit" value="Submit" />
+								</div>
+								<div>
+								</div>
+							</form>
+
+							<form action="#" method="post" class="inline-fields">
+								<p>
+									Hello my <label for="name2">name</label> is
+									<input type="text" name="name2" id="name2" value="" />
+									and I am a
+									<select name="gndr" id="gndr">
+										<option value="v1">male</option>
+										<option value="v1">female</option>
+									</select>.<br />
+									I have been working at
+									<input type="text" name="company" id="company" value="" />
+									for
+									<input type="text" name="yrs" id="yrs" value="" />
+									<label for="yrs">years</label>.
+								</p>
+								<p>
+									<input type="submit" value="Submit" />
+								</p>
+							</form>
+
+							<form action="a" class="horizontal-form">
+								<fieldset>
+									<legend>Regular elements</legend>
+										<div>
+											<label for="uname">Textfield <em>*</em></label>
+											<input id="uname" type="text" name="uname" value="" />
+										</div>
+										<div>
+											<label for="passwd">Password</label>
+											<input id="passwd" type="password" name="passwd" />
+										</div>
+										<div>
+											<label for="state">Select <em>*</em></label>
+											<select name="state" id="state">
+												<optgroup label="Select your state...">
+													<option value="WV">West Virginia</option>
+													<option value="WI">Wisconsin</option>
+													<option value="WY">Wyoming</option>
+												</optgroup>
+											</select>
+										</div>
+										<div>
+											<label for="file">File <em>*</em></label>
+											<input id="file" type="file" name="file" />
+										</div>
+										<div>
+											<label for="desc">Textarea</label>
+											<textarea id="desc" name="desc" cols="30" rows="4"></textarea>
+										</div>
+										<div>
+											<span class="label">Checkboxes <em>*</em></span>
+											<div class="control-set">
+												<input name="check1" id="approved" value="1" type="checkbox" />	<label for="approved">Approved</label>
+												<input name="check1" id="pending" value="1" type="checkbox" /> <label for="pending">Pending</label>
+												<input name="check1" id="actives" value="1" type="checkbox" /> <label for="actives">Active</label>
+											</div>
+										</div>
+										<div>
+											<span class="label">Radio buttons</span>
+											<div class="control-set">
+												<input name="radio1" id="radio1" value="1" type="radio" /> <label for="radio1">Option 1</label>
+												<input name="radio1" id="radio2" value="1" type="radio" /> <label for="radio2">Option 2</label>
+												<input name="radio1" id="radio3" value="1" type="radio" /> <label for="radio3">Option 3</label>
+											</div>
+										</div>
+										<div>
+											<span class="label">Checkboxes list <em>*</em></span>
+											<div class="control-set">
+												<input name="check2" id="check1" value="approved" type="checkbox" /> <label for="check1">Some Option 1</label> <br />
+												<input name="check2" id="check2" value="pending" type="checkbox" /> <label for="check2">Some Option 2</label> <br />
+												<input name="check2" id="check3" value="actives" type="checkbox" /> <label for="check3">Some Option 3</label> <br />
+											</div>
+										</div>
+								</fieldset>
 							</form>
 
 <!--- ************* End Forms ************* -->
@@ -1268,20 +1331,26 @@ GREAT!&lt;/p&gt;</code></pre>
 									<div class="progress-text">Default: 29%</div>
 								</div>
 							</div>
-							<p>Neutral (<code>.progressbar-neutral</code>)</p>
-							<div class="progressbar-neutral">
+							<p>Neutral (<code>.progressbar-info</code>)</p>
+							<div class="progressbar-info">
 								<div class="progress-value" style="width: 07%;">
 									<div class="progress-text">Neutral: 07%</div>
 								</div>
 							</div>
-							<p>Negative (<code>.progressbar-negative</code>)</p>
-							<div class="progressbar-negative">
+							<p>Negative (<code>.progressbar-error</code>)</p>
+							<div class="progressbar-error">
 								<div class="progress-value" style="width: 19%;">
 									<div class="progress-text">Negative: 19%</div>
 								</div>
 							</div>
-							<p>Positive (<code>.progressbar-positive</code>)</p>
-							<div class="progressbar-positive">
+							<p>Positive (<code>.progressbar-success</code>)</p>
+							<div class="progressbar-success">
+								<div class="progress-value" style="width: 87%;">
+									<div class="progress-text">Positive: 87%</div>
+								</div>
+							</div>
+							<p>Positive (<code>.progressbar-notice</code>)</p>
+							<div class="progressbar-notice">
 								<div class="progress-value" style="width: 87%;">
 									<div class="progress-text">Positive: 87%</div>
 								</div>

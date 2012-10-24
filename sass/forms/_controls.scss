@@ -2,10 +2,10 @@
 input[type="checkbox"],
 input[type="radio"] {
 	cursor: pointer;
-	margin:0;
+	margin: 0;
 
 	&:focus {
-		outline-color:#8ea81f;
+		outline-color: $OliveDrab;
 	}
 }
 
@@ -41,11 +41,9 @@ textarea {
 	@include border-radius($baseUnit1);
 	@include box-sizing(border-box);
 
-
 	&:focus {
-		background-color: #fdfdfd;
-		border-color: #8ea81f;
-		outline-color:#8ea81f;
+		border-color: $OliveDrab;
+		outline-color: $OliveDrab;
 	}
 
 	&[readonly] {

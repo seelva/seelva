@@ -6,8 +6,9 @@ button,
 button[type],
 a.button {
 	background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
-	border: 1px solid $Silver;
-	border-bottom-color: $DarkGray;
+	border: 1px solid $Silver {
+		bottom-color: $DarkGray;
+	}
 	color: $Gray;
 	cursor: pointer;
 	display: inline-block;
@@ -35,7 +36,7 @@ a.button {
 	&:hover, &:focus {
 		background-position: 0 -292px;
 		color: $DimGray;
-		outline-color:#8ea81f;
+		outline-color: $OliveDrab;
 	}
 
 	&:active {
@@ -93,13 +94,13 @@ a.button {
 		background: $LightGray;
 		border: 1px solid $Silver;
 		color: $Gray;
-		cursor:default;
-		text-shadow:1px 1px 0 $WhiteSmoke;
+		cursor: default;
+		text-shadow: 1px 1px 0 $WhiteSmoke;
 		@include single-box-shadow(none);
 	}
 }
 
-/*Fixing a NASTY bug in Firefox where input's line-height does not work */
+/* Fixing a NASTY bug in Firefox where input's line-height does not work */
 @-moz-document url-prefix() {
 	input[type="button"],
 	input[type="submit"],

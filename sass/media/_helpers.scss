@@ -12,15 +12,25 @@
 
 	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
 	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
-	& img 						{ background: transparent; border-width: 0; margin: 0; padding: 0; }
-	& .caption-text 			{ font-style: italic; margin-bottom: 0; text-align: center; }
+	& img {
+		background: transparent;
+		border-width: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	& .caption-text {
+		font-style: italic;
+		margin-bottom: 0;
+		text-align: center;
+	}
 }
 
 /*==========  $Gallery  ==========*/
 .gallery {
 	overflow: hidden;
 
-	div, li {
+	> div, > li {
 		background: $GhostWhite;
 		border: 1px solid $WhiteSmoke;
 		float: left;
@@ -35,13 +45,13 @@
 	}
 
 	&.styled {
-		div, li {
+		> div, > li {
 			@include border-radius($baseUnit2);
 		}
 	}
 
 	&.light-styled {
-		div, li {
+		> div, > li {
 			background: transparent;
 			border: 0;
 			padding: 0;

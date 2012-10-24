@@ -14,7 +14,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
   background-image: none;
-  background-position: 0% 0%;
+  background-position: 0;
   background-repeat: repeat;
   display: inline;
   height: auto;
@@ -28,7 +28,7 @@ li[class*=" icon-"] {
   display: block;
 }
 
-/* Fixed icon sizes */
+/* Fixed-size icons */
 .icon-8 {
   font-size: 8px;
   line-height: 8px;

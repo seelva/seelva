@@ -2,11 +2,7 @@
 =            $Forms            =
 ==============================*/
 /*==========  $Main  ==========*/
-form p {
-  clear: both;
-  margin-bottom: 9px;
-}
-form div {
+form div, form p {
   clear: both;
   margin-bottom: 9px;
 }
@@ -20,7 +16,8 @@ fieldset {
   margin: 0 0 15px 0;
   padding: 0;
 }
-fieldset legend {
+
+legend {
   border-bottom: 1px solid #f5f5f5;
   color: #555555;
   font-size: 128%;
@@ -35,11 +32,7 @@ label, span.label {
   line-height: 130%;
   padding: 4px 0;
 }
-label em, span.label em {
-  color: #e14049;
-}
-
-label .required {
+label em, label .required, span.label em, span.label .required {
   color: #e14049;
 }
 
@@ -51,7 +44,7 @@ input[type="radio"] {
 }
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  outline-color: #8ea81f;
+  outline-color: #7b9712;
 }
 
 input[type=""],
@@ -105,9 +98,8 @@ input[type="url"]:focus,
 input[type="week"]:focus,
 select:focus,
 textarea:focus {
-  background-color: #fdfdfd;
-  border-color: #8ea81f;
-  outline-color: #8ea81f;
+  border-color: #7b9712;
+  outline-color: #7b9712;
 }
 input[type=""][readonly],
 input[type="file"][readonly],
@@ -226,7 +218,7 @@ a.button:hover,
 a.button:focus {
   background-position: 0 -292px;
   color: #555555;
-  outline-color: #8ea81f;
+  outline-color: #7b9712;
 }
 input[type="button"]:active,
 input[type="submit"]:active,
@@ -363,7 +355,7 @@ a.button[disabled]:active {
   box-shadow: none;
 }
 
-/*Fixing a NASTY bug in Firefox where input's line-height does not work */
+/* Fixing a NASTY bug in Firefox where input's line-height does not work */
 @-moz-document url-prefix() {
   input[type="button"],
   input[type="submit"],
@@ -467,11 +459,6 @@ form .field-suffix .label {
   border-radius: 0 3px 3px 0;
 }
 form .field-prefix.field-suffix .label:first-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -ms-border-radius: 3px 0 0 3px;
@@ -482,11 +469,6 @@ form .field-prefix.field-suffix .label:last-child,
 form .field-prefix.field-suffix input:last-child,
 form .field-prefix.field-suffix select:last-child,
 form .field-prefix.field-suffix button:last-child {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
@@ -512,13 +494,13 @@ form .horizontal-field span.label {
   float: left;
   width: 35%;
 }
-form.horizontal-fields div > input[type="file"], form.horizontal-fields div > input[type="password"], form.horizontal-fields div > input[type="text"], form.horizontal-fields div > select, form.horizontal-fields div > textarea, form.horizontal-fields div > div.control-set,
+form.horizontal-fields div > input[type="file"], form.horizontal-fields div > input[type="password"], form.horizontal-fields div > input[type="text"], form.horizontal-fields div > select, form.horizontal-fields div > textarea, form.horizontal-fields div > .control-set,
 form .horizontal-field > input[type="file"],
 form .horizontal-field > input[type="password"],
 form .horizontal-field > input[type="text"],
 form .horizontal-field > select,
 form .horizontal-field > textarea,
-form .horizontal-field > div.control-set {
+form .horizontal-field > .control-set {
   clear: none;
   float: right;
   width: 60%;
@@ -591,11 +573,9 @@ form .success-field input[type="file"], form .success-field input[type="password
   /* This produces vertical spacing between inputs */
 }
 .inline-fields label {
-  display: inline;
   display: inline-block;
 }
 .inline-fields input, .inline-fields select {
-  display: inline;
   display: inline-block;
   width: auto;
 }

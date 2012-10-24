@@ -90,7 +90,6 @@ form {
 
 	.field-prefix.field-suffix {
 		.label:first-child {
-			@include border-radius(0);
 			@include border-radius($baseUnit1 0 0 $baseUnit1);
 		}
 
@@ -98,7 +97,6 @@ form {
 		input:last-child,
 		select:last-child,
 		button:last-child {
-			@include border-radius(0);
 			@include border-radius(0 $baseUnit1 $baseUnit1 0);
 		}
 	}
@@ -119,7 +117,7 @@ form {
 		& > input[type="text"],
 		& > select,
 		& > textarea,
-		& > div.control-set {
+		& > .control-set {
 			clear: none;
 			float: right;
 			width: 60%;
@@ -132,13 +130,13 @@ form {
 			width: 60%;
 
 			input {
-				width:auto;
+				width: auto;
 			}
 		}
 
 		.control-set label, .control-set span.label {
-			float:none;
-			width:auto;
+			float: none;
+			width: auto;
 		}
 	}
 
@@ -155,12 +153,10 @@ form {
 	line-height: 250%; /* This produces vertical spacing between inputs */
 
 	label {
-		display: inline;
 		display: inline-block;
 	}
 
 	input, select {
-		display: inline;
 		display: inline-block;
 		width: auto;
 	}

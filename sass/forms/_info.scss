@@ -4,17 +4,18 @@ fieldset {
 	margin: 0 0 $baseUnit5 0;
 	padding: 0;
 
-	legend {
-		border-bottom: 1px solid $WhiteSmoke;
-		color:$DimGray;
-		font: {
-			size: 128%;
-			weight: normal;
-		}
-		margin: 0 0 $baseUnit2 0;
-		padding: 0 0 $baseUnit2 0;
-		width: 100%;
+}
+
+legend {
+	border-bottom: 1px solid $WhiteSmoke;
+	color: $DimGray;
+	font: {
+		size: 128%;
+		weight: normal;
 	}
+	margin: 0 0 $baseUnit2 0;
+	padding: 0 0 $baseUnit2 0;
+	width: 100%;
 }
 
 label, span.label {
@@ -22,11 +23,7 @@ label, span.label {
 	line-height: 130%;
 	padding: #{$baseUnit1 + 1} 0;
 
-	em {
+	em, .required {
 		color: $Crimson;
 	}
-}
-
-label .required {
-	color: $Crimson;
 }

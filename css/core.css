@@ -408,8 +408,8 @@ details summary {
   border-radius: 3px 3px 0 0;
 }
 details summary:focus {
-  border-color: #8ea81f;
-  outline-color: #8ea81f;
+  border-color: #7b9712;
+  outline-color: #7b9712;
 }
 details > div {
   padding: 6px;

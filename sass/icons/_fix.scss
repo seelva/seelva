@@ -21,7 +21,7 @@ $fontAwesomePath: "../fonts/fontawesome-webfont" !default;
 [class*=" icon-"] {
 	background: {
 		image: none;
-		position: 0% 0%;
+		position: 0;
 		repeat: repeat;
 	}
 	display: inline;
@@ -35,12 +35,10 @@ li[class*=" icon-"] {
 	display: block;
 }
 
-/* Fixed icon sizes */
-.icon-8  { font-size: 8px;  line-height: 8px; }
-.icon-12 { font-size: 12px; line-height: 12px; }
-.icon-16 { font-size: 16px; line-height: 16px; }
-.icon-20 { font-size: 20px; line-height: 20px; }
-.icon-24 { font-size: 24px; line-height: 24px; }
-.icon-32 { font-size: 32px; line-height: 32px; }
-.icon-48 { font-size: 48px; line-height: 48px; }
-.icon-64 { font-size: 64px; line-height: 64px; }
+/* Fixed-size icons */
+@each $size in 8, 12, 16, 20, 24, 32, 48, 64 {
+	.icon-#{$size} {
+		font-size: #{$size}px;
+		line-height: #{$size}px;
+	}
+}
