@@ -16,7 +16,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   text-decoration: none;
 }
 
-/*==========  $Nav global setup  ==========*/
+/*==========  Global setup  ==========*/
 .tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
   list-style: none;
   margin: 0 0 9px 0;
@@ -31,7 +31,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   text-decoration: none;
 }
 
-/*==========  $Tabs setup  ==========*/
+/*==========  $Nav Tabs  ==========*/
 .tabs,
 .vertical-tabs {
   overflow: visible;
@@ -61,7 +61,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   padding: 6px 9px;
 }
 
-/*==========  $Tabs  ==========*/
+/*==========  Horizontal Tabs  ==========*/
 .tabs {
   border-bottom: 1px solid #dadada;
 }
@@ -83,7 +83,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-bottom-color: transparent;
 }
 
-/*==========  $Vertical tabs  ==========*/
+/*==========  Vertical-tabs  ==========*/
 .vertical-tabs {
   border-right: 1px solid #dadada;
   float: left;
@@ -109,7 +109,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-right-color: transparent;
 }
 
-/*==========  $Tabs content  ==========*/
+/*==========  Tabs content  ==========*/
 .tabs-content {
   display: block;
   margin: 0;
@@ -131,40 +131,32 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   display: block;
 }
 
-/*==========  $Horizontal-menu  ==========*/
+/*==========  $Nav Menus  ==========*/
+/*==========  Horizontal-menu  ==========*/
+.menu > li > a, .menu > li > a:link, .menu > li > a:visited, .horizontal-menu > li > a, .horizontal-menu > li > a:link, .horizontal-menu > li > a:visited, .vertical-menu > li > a, .vertical-menu > li > a:link, .vertical-menu > li > a:visited {
+  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
+  color: black;
+  padding: 6px 9px;
+}
+.menu > li > a:hover, .menu > li.active > a, .menu > li.active > a:link, .horizontal-menu > li > a:hover, .horizontal-menu > li.active > a, .horizontal-menu > li.active > a:link, .vertical-menu > li > a:hover, .vertical-menu > li.active > a, .vertical-menu > li.active > a:link {
+  background-color: #888888;
+  background-position: left -15px;
+  color: white;
+}
+
 .horizontal-menu > li {
   border-left: 1px solid #e5e5e5;
   display: inline-block;
   float: left;
 }
-.horizontal-menu > li > a, .horizontal-menu > li > a:link, .horizontal-menu > li > a:visited {
-  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
-  color: black;
-  padding: 6px 9px;
-}
-.horizontal-menu > li > a:hover, .horizontal-menu > li.active > a, .horizontal-menu > li.active > a:link {
-  background-color: #888888;
-  background-position: left -15px;
-  color: white;
-}
 
-/*==========  $Vertical-menu  ==========*/
+/*==========  Vertical-menu  ==========*/
 .vertical-menu > li {
   border-bottom: 1px solid #e5e5e5;
   float: none;
 }
-.vertical-menu > li > a, .vertical-menu > li > a:link, .vertical-menu > li > a:visited {
-  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
-  color: black;
-  padding: 6px 9px;
-}
-.vertical-menu > li > a:hover, .vertical-menu > li.active > a, .vertical-menu > li.active > a:link {
-  background-color: #888888;
-  background-position: left -15px;
-  color: white;
-}
 
-/*==========  $Horizontal-list  ==========*/
+/*==========  $Nav Lists  ==========*/
 .horizontal-list > li {
   border-left: 1px solid #e5e5e5;
   display: inline-block;
@@ -177,7 +169,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   padding: 0 9px;
 }
 
-/*==========  $Pagination  ==========*/
+/*==========  $Nav Pagination  ==========*/
 .pagination,
 .pager {
   clear: both;
@@ -251,7 +243,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   float: right;
 }
 
-/*==========  $Breadcrumbs  ==========*/
+/*==========  $Nav Breadcrumbs  ==========*/
 .breadcrumb {
   background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #dadada;

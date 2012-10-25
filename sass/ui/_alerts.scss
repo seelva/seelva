@@ -1,4 +1,4 @@
-/*==========  $Messages/Alerts  ==========*/
+/*==========  $UI Alerts/Messages  ==========*/
 .alert,
 .error,
 .guidelines,
@@ -19,36 +19,22 @@
 }
 
 @mixin alert-config($bg, $image, $border-color, $color) {
-	background-color: $bg; background-image: url(../images/icons/#{$image}.png); border-color: $border-color; color: $color;
+	background-color: $bg;
+	@if $image != '' { background-image: url(../images/icons/#{$image}.png); }
+	border-color: $border-color;
+	color: $color;
+
+	a { color: $color; }
 }
 
-.error {
-	@include alert-config($LavenderBlush, "cross", $Pink, $Crimson);
-
-	a { color:$Crimson; }
-}
-.guidelines {
-	@include alert-config($Ivory, "", $Cornsilk, $DimGray);
+.error            { @include alert-config( $LavenderBlush, "cross",       $Pink,          $Crimson ); }
+.info, .status    { @include alert-config( $LightCyan,     "information", $DarkTurquoise, $SteelBlue ); }
+.notice, .warning { @include alert-config( $LemonChiffon,  "error",       $Gold,          $GoldenRod ); }
+.success, .ok     { @include alert-config( $PaleGreen,     "tick",        $YellowGreen,   $OliveDrab ); }
+.guidelines       { @include alert-config( $Ivory,         "",            $Cornsilk,      $DimGray);
 
 	line-height: 130%;
 	margin-top: $baseUnit2;
 	padding: $baseUnit3 $baseUnit2;
 	text-shadow: 1px 1px 0 $White;
-
-	a { color:$GoldenRod; }
-}
-.info, .status {
-	@include alert-config($LightCyan, "information", $DarkTurquoise, $SteelBlue);
-
-	a { color:$SteelBlue; }
-}
-.notice, .warning {
-	@include alert-config($LemonChiffon, "error", $Gold, $GoldenRod);
-
-	a { color:$GoldenRod; }
-}
-.success, .ok {
-	@include alert-config($PaleGreen, "tick", $YellowGreen, $OliveDrab);
-
-	a { color:$OliveDrab; }
 }

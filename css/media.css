@@ -1,7 +1,7 @@
 /*==============================
 =            $Media            =
 ==============================*/
-/*==========  $images  ==========*/
+/*==========  $Media Images  ==========*/
 img {
   /* Make images responsive by default */
   max-width: 100%;
@@ -55,13 +55,14 @@ img.nofloat {
   margin-right: auto;
 }
 
-/*==========  $Video  ==========*/
-/*==========  $Audio  ==========*/
+/*==========  $Media Video  ==========*/
+/*==========  $Media Audio  ==========*/
 audio {
   width: 100%;
 }
 
-/*==========  $Captioned image  ==========*/
+/*==========  $Media Helpers  ==========*/
+/*==========  Captioned image  ==========*/
 .image-caption, .image-caption.alignleft, .image-caption.alignright, .image-caption.floatleft, .image-caption.floatright, .caption, .caption.alignleft, .caption.alignright, .caption.floatleft, .caption.floatright, figure.styled, figure.styled.alignleft, figure.styled.alignright, figure.styled.floatleft, figure.styled.floatright {
   background: #fafafa;
   border: 1px solid #f5f5f5;
@@ -95,7 +96,7 @@ audio {
   text-align: center;
 }
 
-/*==========  $Gallery  ==========*/
+/*==========  Gallery  ==========*/
 .gallery {
   overflow: hidden;
 }

@@ -1,4 +1,4 @@
-/*==========  $Helpers  ==========*/
+/*==========  $Forms Helpers  ==========*/
 @mixin status-field($bg, $border, $color) {
 	label {
 		color: $color;
@@ -15,6 +15,7 @@
 	}
 }
 
+/*==========  Wrappers  ==========*/
 .control-set {
 	clear: both;
 	float: none;
@@ -29,7 +30,6 @@
 	}
 }
 
-/*==========  Wrappers, Width, Columns  ==========*/
 .btn-row {
 	float: none;
 	margin-bottom: $baseUnit5;
@@ -37,7 +37,7 @@
 	width: auto;
 }
 
-/*==========  $Form helper classes  ==========*/
+/*==========  Helpers  ==========*/
 form {
 	.field-prefix, .field-suffix {
 		overflow: hidden; /* Clearfix */
@@ -101,45 +101,6 @@ form {
 		}
 	}
 
-	&.horizontal-fields div,
-	.horizontal-field {
-		&:before, &:after { content:""; display:table; clear: both; } & { zoom:1; }
-
-		label, span.label {
-			clear: none;
-			display: inline;
-			float: left;
-			width: 35%;
-		}
-
-		& > input[type="file"],
-		& > input[type="password"],
-		& > input[type="text"],
-		& > select,
-		& > textarea,
-		& > .control-set {
-			clear: none;
-			float: right;
-			width: 60%;
-		}
-
-		.field-prefix,
-		.field-suffix {
-			clear: none;
-			float: right;
-			width: 60%;
-
-			input {
-				width: auto;
-			}
-		}
-
-		.control-set label, .control-set span.label {
-			float: none;
-			width: auto;
-		}
-	}
-
 	.last-field { clear: right; float: right; margin-right: 0; }
 
 	.error-field   { @include status-field( $Snow,         $Pink,          $Crimson ); }
@@ -148,7 +109,45 @@ form {
 	.success-field { @include status-field( $Beige,        $YellowGreen,   $LimeGreen ); }
 }
 
-/*==========  $Search Form  ==========*/
+.horizontal-fields div,
+.horizontal-field {
+	&:before, &:after { content:""; display:table; clear: both; } & { zoom:1; }
+
+	label, span.label {
+		clear: none;
+		display: inline;
+		float: left;
+		width: 35%;
+	}
+
+	& > input[type="file"],
+	& > input[type="password"],
+	& > input[type="text"],
+	& > select,
+	& > textarea,
+	& > .control-set {
+		clear: none;
+		float: right;
+		width: 60%;
+	}
+
+	.field-prefix,
+	.field-suffix {
+		clear: none;
+		float: right;
+		width: 60%;
+
+		input {
+			width: auto;
+		}
+	}
+
+	.control-set label, .control-set span.label {
+		float: none;
+		width: auto;
+	}
+}
+
 .inline-fields {
 	line-height: 250%; /* This produces vertical spacing between inputs */
 
@@ -162,6 +161,7 @@ form {
 	}
 }
 
+/*==========  Search Form  ==========*/
 .search-form {
 	> div, > p {
 		clear: none;

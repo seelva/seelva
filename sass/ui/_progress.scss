@@ -1,4 +1,4 @@
-/*==========  $Progress bars  ==========*/
+/*==========  $UI Progressbars  ==========*/
 .progressbar,
 .progressbar-error,
 .progressbar-info,
@@ -43,4 +43,3 @@
 .progressbar-info    .progress-value { background-color: lighten( $DodgerBlue, 20% ); }
 .progressbar-notice  .progress-value { background-color: lighten( $Gold, 20% ); }
 .progressbar-success .progress-value { background-color: lighten( $YellowGreen, 20% ); }
-

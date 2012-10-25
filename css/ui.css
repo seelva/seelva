@@ -1,7 +1,7 @@
 /*===========================
 =            $UI            =
 ===========================*/
-/*==========  $Messages/Alerts  ==========*/
+/*==========  $UI Alerts/Messages  ==========*/
 .alert,
 .error,
 .guidelines,
@@ -38,20 +38,6 @@
   color: #e14049;
 }
 
-.guidelines {
-  background-color: #fffff0;
-  background-image: url(../images/icons/.png);
-  border-color: #fff6cc;
-  color: #555555;
-  line-height: 130%;
-  margin-top: 6px;
-  padding: 9px 6px;
-  text-shadow: 1px 1px 0 white;
-}
-.guidelines a {
-  color: #daa520;
-}
-
 .info, .status {
   background-color: #d9e8ff;
   background-image: url(../images/icons/information.png);
@@ -82,7 +68,20 @@
   color: #7b9712;
 }
 
-/*==========  $Progress bars  ==========*/
+.guidelines {
+  background-color: #fffff0;
+  border-color: #fff6cc;
+  color: #555555;
+  line-height: 130%;
+  margin-top: 6px;
+  padding: 9px 6px;
+  text-shadow: 1px 1px 0 white;
+}
+.guidelines a {
+  color: #555555;
+}
+
+/*==========  $UI Progressbars  ==========*/
 .progressbar,
 .progressbar-error,
 .progressbar-info,
@@ -150,7 +149,7 @@
   background-color: #dde6a8;
 }
 
-/*==========  $Close button  ==========*/
+/*==========  $UI Close button  ==========*/
 a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:focus {
   cursor: pointer;
   float: right;
@@ -160,7 +159,7 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
   top: -3px;
 }
 
-/*==========  $Buttonsets  ==========*/
+/*==========  $UI Helpers  ==========*/
 .btn-set {
   display: inline-block;
 }

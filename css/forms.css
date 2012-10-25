@@ -1,7 +1,7 @@
 /*==============================
 =            $Forms            =
 ==============================*/
-/*==========  $Main  ==========*/
+/*==========  $Forms Main  ==========*/
 form div, form p {
   clear: both;
   margin-bottom: 9px;
@@ -10,7 +10,7 @@ form div p {
   margin: 6px 0;
 }
 
-/*==========  $Info  ==========*/
+/*==========  $Forms Info  ==========*/
 fieldset {
   border: 0;
   margin: 0 0 15px 0;
@@ -36,7 +36,7 @@ label em, label .required, span.label em, span.label .required {
   color: #e14049;
 }
 
-/*==========  $Inputs  ==========*/
+/*==========  $Forms Controls  ==========*/
 input[type="checkbox"],
 input[type="radio"] {
   cursor: pointer;
@@ -164,7 +164,7 @@ select {
   padding: 3px;
 }
 
-/*==========  $Buttons  ==========*/
+/*==========  $Forms Buttons  ==========*/
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -371,7 +371,8 @@ a.button img {
   padding: 0;
 }
 
-/*==========  $Helpers  ==========*/
+/*==========  $Forms Helpers  ==========*/
+/*==========  Wrappers  ==========*/
 .control-set {
   clear: both;
   float: none;
@@ -386,7 +387,6 @@ a.button img {
   width: auto;
 }
 
-/*==========  Wrappers, Width, Columns  ==========*/
 .btn-row {
   float: none;
   margin-bottom: 15px;
@@ -394,7 +394,7 @@ a.button img {
   width: auto;
 }
 
-/*==========  $Form helper classes  ==========*/
+/*==========  Helpers  ==========*/
 form .field-prefix, form .field-suffix {
   overflow: hidden;
   /* Clearfix */
@@ -475,56 +475,6 @@ form .field-prefix.field-suffix button:last-child {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-form.horizontal-fields div:before, form.horizontal-fields div:after,
-form .horizontal-field:before,
-form .horizontal-field:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-form.horizontal-fields div,
-form .horizontal-field {
-  zoom: 1;
-}
-form.horizontal-fields div label, form.horizontal-fields div span.label,
-form .horizontal-field label,
-form .horizontal-field span.label {
-  clear: none;
-  display: inline;
-  float: left;
-  width: 35%;
-}
-form.horizontal-fields div > input[type="file"], form.horizontal-fields div > input[type="password"], form.horizontal-fields div > input[type="text"], form.horizontal-fields div > select, form.horizontal-fields div > textarea, form.horizontal-fields div > .control-set,
-form .horizontal-field > input[type="file"],
-form .horizontal-field > input[type="password"],
-form .horizontal-field > input[type="text"],
-form .horizontal-field > select,
-form .horizontal-field > textarea,
-form .horizontal-field > .control-set {
-  clear: none;
-  float: right;
-  width: 60%;
-}
-form.horizontal-fields div .field-prefix,
-form.horizontal-fields div .field-suffix,
-form .horizontal-field .field-prefix,
-form .horizontal-field .field-suffix {
-  clear: none;
-  float: right;
-  width: 60%;
-}
-form.horizontal-fields div .field-prefix input,
-form.horizontal-fields div .field-suffix input,
-form .horizontal-field .field-prefix input,
-form .horizontal-field .field-suffix input {
-  width: auto;
-}
-form.horizontal-fields div .control-set label, form.horizontal-fields div .control-set span.label,
-form .horizontal-field .control-set label,
-form .horizontal-field .control-set span.label {
-  float: none;
-  width: auto;
-}
 form .last-field {
   clear: right;
   float: right;
@@ -567,7 +517,57 @@ form .success-field input[type="file"], form .success-field input[type="password
   color: #4e9a06;
 }
 
-/*==========  $Search Form  ==========*/
+.horizontal-fields div:before, .horizontal-fields div:after,
+.horizontal-field:before,
+.horizontal-field:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.horizontal-fields div,
+.horizontal-field {
+  zoom: 1;
+}
+.horizontal-fields div label, .horizontal-fields div span.label,
+.horizontal-field label,
+.horizontal-field span.label {
+  clear: none;
+  display: inline;
+  float: left;
+  width: 35%;
+}
+.horizontal-fields div > input[type="file"], .horizontal-fields div > input[type="password"], .horizontal-fields div > input[type="text"], .horizontal-fields div > select, .horizontal-fields div > textarea, .horizontal-fields div > .control-set,
+.horizontal-field > input[type="file"],
+.horizontal-field > input[type="password"],
+.horizontal-field > input[type="text"],
+.horizontal-field > select,
+.horizontal-field > textarea,
+.horizontal-field > .control-set {
+  clear: none;
+  float: right;
+  width: 60%;
+}
+.horizontal-fields div .field-prefix,
+.horizontal-fields div .field-suffix,
+.horizontal-field .field-prefix,
+.horizontal-field .field-suffix {
+  clear: none;
+  float: right;
+  width: 60%;
+}
+.horizontal-fields div .field-prefix input,
+.horizontal-fields div .field-suffix input,
+.horizontal-field .field-prefix input,
+.horizontal-field .field-suffix input {
+  width: auto;
+}
+.horizontal-fields div .control-set label, .horizontal-fields div .control-set span.label,
+.horizontal-field .control-set label,
+.horizontal-field .control-set span.label {
+  float: none;
+  width: auto;
+}
+
 .inline-fields {
   line-height: 250%;
   /* This produces vertical spacing between inputs */
@@ -580,6 +580,7 @@ form .success-field input[type="file"], form .success-field input[type="password
   width: auto;
 }
 
+/*==========  Search Form  ==========*/
 .search-form > div, .search-form > p {
   clear: none;
   float: left;

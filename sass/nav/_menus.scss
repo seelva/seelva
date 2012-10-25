@@ -1,0 +1,35 @@
+/*==========  $Nav Menus  ==========*/
+/*==========  Horizontal-menu  ==========*/
+.menu, .horizontal-menu, .vertical-menu {
+	> li {
+		> a, > a:link, > a:visited {
+			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+			color: $Black;
+			padding: $baseUnit2 $baseUnit3;
+		}
+
+		> a:hover, &.active > a, &.active > a:link {
+			background: {
+				color: $Gray;
+				position: left -15px;
+			}
+			color: $White;
+		}
+	}
+}
+
+.horizontal-menu {
+	> li {
+		border-left: 1px solid $LightGray;
+		display: inline-block;
+		float: left;
+	}
+}
+
+/*==========  Vertical-menu  ==========*/
+.vertical-menu {
+	> li {
+		border-bottom: 1px solid $LightGray;
+		float: none;
+	}
+}

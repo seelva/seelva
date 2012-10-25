@@ -1,13 +1,18 @@
-/*==========  $Breadcrumbs  ==========*/
+/*==========  $Nav Breadcrumbs  ==========*/
 .breadcrumb {
 	background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 	border: 1px solid $Silver;
 	@include border-radius($baseUnit1);
 
 	span { display: block; }
+
 	> a { display: inline-block; }
+
 	a, a:link, a:visited, span { padding: $baseUnit2 0 $baseUnit2 $baseUnit3; }
+
 	a:after, a:link:after { content: " \00BB"; /* Adds an arrow character to every breadcrumb item*/ }
+
 	a:hover, .active a, .active a:link { color: $Black; }
+
 	.active a:after, .active a:link:after { content: ""; }
 }

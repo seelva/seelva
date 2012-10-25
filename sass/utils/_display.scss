@@ -1,4 +1,4 @@
-/*==========  $Hidden/invisible elements  ==========*/
+/*==========  $Utils Display  ==========*/
 /* Screen readers can see it */
 .invisible 	{ position: absolute !important; /* IE6, IE7 */ clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
  /* Screen readers can not see it */

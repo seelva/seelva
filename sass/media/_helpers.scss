@@ -1,4 +1,5 @@
-/*==========  $Captioned image  ==========*/
+/*==========  $Media Helpers  ==========*/
+/*==========  Captioned image  ==========*/
 .image-caption, .caption, figure.styled {
 	&, &.alignleft, &.alignright, &.floatleft, &.floatright {
 		background: $GhostWhite;
@@ -26,7 +27,7 @@
 	}
 }
 
-/*==========  $Gallery  ==========*/
+/*==========  Gallery  ==========*/
 .gallery {
 	overflow: hidden;
 
