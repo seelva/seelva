@@ -1,5 +1,5 @@
 /*==========  $Forms Helpers  ==========*/
-@mixin field-status($bg, $border, $color) {
+@mixin status-field($bg, $border, $color) {
 	label {
 		color: $color;
 	}
@@ -101,16 +101,16 @@ form {
 		}
 	}
 
-	.field-last { clear: right; float: right; margin-right: 0; }
+	.last-field { clear: right; float: right; margin-right: 0; }
 
-	.field-error   { @include field-status( $Snow,         $Pink,          $Crimson ); }
-	.field-info    { @include field-status( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
-	.field-notice  { @include field-status( $LemonChiffon, $Gold,          $GoldenRod ); }
-	.field-success { @include field-status( $Beige,        $YellowGreen,   $LimeGreen ); }
+	.error-field   { @include status-field( $Snow,         $Pink,          $Crimson ); }
+	.info-field    { @include status-field( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
+	.notice-field  { @include status-field( $LemonChiffon, $Gold,          $GoldenRod ); }
+	.success-field { @include status-field( $Beige,        $YellowGreen,   $LimeGreen ); }
 }
 
-.fields-horizontal div,
-.field-horizontal {
+.horizontal-fields div,
+.horizontal-field {
 	&:before, &:after { content:""; display:table; clear: both; } & { zoom:1; }
 
 	label, span.label {
@@ -148,7 +148,7 @@ form {
 	}
 }
 
-.fields-inline {
+.inline-fields {
 	line-height: 250%; /* This produces vertical spacing between inputs */
 
 	label {
@@ -162,7 +162,7 @@ form {
 }
 
 /*==========  Search Form  ==========*/
-.form-search {
+.search-form {
 	> div, > p {
 		clear: none;
 		float: left;

@@ -1,6 +1,6 @@
 /*==========  $Nav Menus  ==========*/
-/*==========  Menu-Horizontal  ==========*/
-.menu, .menu-horizontal, .menu-vertical {
+/*==========  Horizontal-menu  ==========*/
+.menu, .horizontal-menu, .vertical-menu {
 	> li {
 		> a, > a:link, > a:visited {
 			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
@@ -26,8 +26,8 @@
 	}
 }
 
-/*==========  Menu-Vertical  ==========*/
-.menu-vertical {
+/*==========  Vertical-menu  ==========*/
+.vertical-menu {
 	> li {
 		border-bottom: 1px solid $LightGray;
 		float: none;

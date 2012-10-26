@@ -475,117 +475,117 @@ form .field-prefix.field-suffix button:last-child {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-form .field-last {
+form .last-field {
   clear: right;
   float: right;
   margin-right: 0;
 }
-form .field-error label {
+form .error-field label {
   color: #e14049;
 }
-form .field-error input[type="file"],
-form .field-error input[type="password"],
-form .field-error input[type="text"],
-form .field-error select,
-form .field-error textarea {
+form .error-field input[type="file"],
+form .error-field input[type="password"],
+form .error-field input[type="text"],
+form .error-field select,
+form .error-field textarea {
   background: #fffafa;
   border-color: #ffc0cb;
   color: #e14049;
 }
-form .field-info label {
+form .info-field label {
   color: #4682b4;
 }
-form .field-info input[type="file"], form .field-info input[type="password"], form .field-info input[type="text"], form .field-info select, form .field-info textarea {
+form .info-field input[type="file"], form .info-field input[type="password"], form .info-field input[type="text"], form .info-field select, form .info-field textarea {
   background: #d9e8ff;
   border-color: #82d2df;
   color: #4682b4;
 }
-form .field-notice label {
+form .notice-field label {
   color: #daa520;
 }
-form .field-notice input[type="file"], form .field-notice input[type="password"], form .field-notice input[type="text"], form .field-notice select, form .field-notice textarea {
+form .notice-field input[type="file"], form .notice-field input[type="password"], form .notice-field input[type="text"], form .notice-field select, form .notice-field textarea {
   background: #fffacd;
   border-color: #ffd700;
   color: #daa520;
 }
-form .field-success label {
+form .success-field label {
   color: #4e9a06;
 }
-form .field-success input[type="file"], form .field-success input[type="password"], form .field-success input[type="text"], form .field-success select, form .field-success textarea {
+form .success-field input[type="file"], form .success-field input[type="password"], form .success-field input[type="text"], form .success-field select, form .success-field textarea {
   background: #f5f5dc;
   border-color: #becf59;
   color: #4e9a06;
 }
 
-.fields-horizontal div:before, .fields-horizontal div:after,
-.field-horizontal:before,
-.field-horizontal:after {
+.horizontal-fields div:before, .horizontal-fields div:after,
+.horizontal-field:before,
+.horizontal-field:after {
   content: "";
   display: table;
   clear: both;
 }
-.fields-horizontal div,
-.field-horizontal {
+.horizontal-fields div,
+.horizontal-field {
   zoom: 1;
 }
-.fields-horizontal div label, .fields-horizontal div span.label,
-.field-horizontal label,
-.field-horizontal span.label {
+.horizontal-fields div label, .horizontal-fields div span.label,
+.horizontal-field label,
+.horizontal-field span.label {
   clear: none;
   display: inline;
   float: left;
   width: 35%;
 }
-.fields-horizontal div > input[type="file"], .fields-horizontal div > input[type="password"], .fields-horizontal div > input[type="text"], .fields-horizontal div > select, .fields-horizontal div > textarea, .fields-horizontal div > .control-set,
-.field-horizontal > input[type="file"],
-.field-horizontal > input[type="password"],
-.field-horizontal > input[type="text"],
-.field-horizontal > select,
-.field-horizontal > textarea,
-.field-horizontal > .control-set {
+.horizontal-fields div > input[type="file"], .horizontal-fields div > input[type="password"], .horizontal-fields div > input[type="text"], .horizontal-fields div > select, .horizontal-fields div > textarea, .horizontal-fields div > .control-set,
+.horizontal-field > input[type="file"],
+.horizontal-field > input[type="password"],
+.horizontal-field > input[type="text"],
+.horizontal-field > select,
+.horizontal-field > textarea,
+.horizontal-field > .control-set {
   clear: none;
   float: right;
   width: 60%;
 }
-.fields-horizontal div .field-prefix,
-.fields-horizontal div .field-suffix,
-.field-horizontal .field-prefix,
-.field-horizontal .field-suffix {
+.horizontal-fields div .field-prefix,
+.horizontal-fields div .field-suffix,
+.horizontal-field .field-prefix,
+.horizontal-field .field-suffix {
   clear: none;
   float: right;
   width: 60%;
 }
-.fields-horizontal div .field-prefix input,
-.fields-horizontal div .field-suffix input,
-.field-horizontal .field-prefix input,
-.field-horizontal .field-suffix input {
+.horizontal-fields div .field-prefix input,
+.horizontal-fields div .field-suffix input,
+.horizontal-field .field-prefix input,
+.horizontal-field .field-suffix input {
   width: auto;
 }
-.fields-horizontal div .control-set label, .fields-horizontal div .control-set span.label,
-.field-horizontal .control-set label,
-.field-horizontal .control-set span.label {
+.horizontal-fields div .control-set label, .horizontal-fields div .control-set span.label,
+.horizontal-field .control-set label,
+.horizontal-field .control-set span.label {
   float: none;
   width: auto;
 }
 
-.fields-inline {
+.inline-fields {
   line-height: 250%;
   /* This produces vertical spacing between inputs */
 }
-.fields-inline label {
+.inline-fields label {
   display: inline-block;
 }
-.fields-inline input, .fields-inline select {
+.inline-fields input, .inline-fields select {
   display: inline-block;
   width: auto;
 }
 
 /*==========  Search Form  ==========*/
-.form-search > div, .form-search > p {
+.search-form > div, .search-form > p {
   clear: none;
   float: left;
 }
-.form-search input, .form-search label {
+.search-form input, .search-form label {
   float: left;
   margin-right: 3px;
   width: auto;
