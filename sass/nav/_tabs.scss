@@ -1,6 +1,6 @@
 /*==========  $Nav Tabs  ==========*/
 .tabs,
-.vertical-tabs {
+.tabs-vertical {
 	overflow: visible;
 	*zoom: 1;
 
@@ -44,8 +44,8 @@
 	}
 }
 
-/*==========  Vertical-tabs  ==========*/
-.vertical-tabs {
+/*==========  tabs-Vertical  ==========*/
+.tabs-vertical {
 	border-right: 1px solid $Silver;
 	float: left;
 	margin-right: $baseUnit3;

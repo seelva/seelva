@@ -24,7 +24,7 @@ img.styled {
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-img.light-styled, a img.light-styled {
+img.styled-light, a img.styled-light {
   border-width: 0;
   padding: 0;
   -webkit-border-radius: 6px;
@@ -123,12 +123,12 @@ audio {
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-.gallery.light-styled > div, .gallery.light-styled > li {
+.gallery.styled-light > div, .gallery.styled-light > li {
   background: transparent;
   border: 0;
   padding: 0;
 }
-.gallery.light-styled > div img, .gallery.light-styled > li img {
+.gallery.styled-light > div img, .gallery.styled-light > li img {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;

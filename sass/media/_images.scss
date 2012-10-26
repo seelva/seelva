@@ -17,7 +17,7 @@ img {
 		@include border-radius($baseUnit2);
 	}
 
-	&.light-styled, a &.light-styled {
+	&.styled-light, a &.styled-light {
 		border-width: 0;
 		padding: 0;
 		@include border-radius($baseUnit2);
