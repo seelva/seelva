@@ -20,6 +20,7 @@
 .nofloat 		{ float: none; }
 
 /* Text */
+.small          { font-size: 80%; }
 .big 			{ font-size: 125%; }
 .large 			{ font-size: 150%; }
 .loud 			{ color: $Crimson; }
@@ -27,6 +28,3 @@
 .capitalize 	{ text-transform: capitalize; }
 .lowercase 		{ text-transform: lowercase; }
 .uppercase 		{ text-transform: uppercase; }
-
-/* Help */
-.help 			{ font-size: 82%; }

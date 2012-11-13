@@ -3,25 +3,22 @@
 =========================================*\
 *
 * Project:                 seelva
-* Version:                 2.2.1
+* Version:                 3.0.0
 * URL:                     http://seelva.com/
-* Latest Edition (Y/M/D):  2012/10/08
+* Latest Edition (Y/M/D):  2012/11/09
 * Assigned to:             Hernan Silva
 *
 ==========================================*/
 
-@import "normalize.css"; 	/* Set of styles to homogenize defaults							*/
-@import "grid.css"; 		/* Grid helper 													*/
-@import "layout.css"; 		/* Layout and percentage-width elements 		 				*/
-@import "core.css"; 		/* Hyperlinks, Headings, Text, Lists, Tables 					*/
-@import "forms.css";		/* Forms and form-related helper classes 						*/
-@import "media.css";		/* Images, galleries, video and audio 							*/
-@import "nav.css"; 			/* Helper classes for menus, tabs, breadcrumbs and pagination 	*/
-@import "dropdown.css"; 	/* Helper classes for dropdown and flyout menus 				*/
-@import "ui.css";			/* Messages/Alerts, progressbars and button sets 				*/
-@import "utils.css";		/* Image replacement and other utils 							*/
-@import "icons.css";		/* Icons webfont css setup. Custom version of FontAwesome 		*/
+@import "print.css";		/* Print stylesheet                                        */
+@import "base.css"; 		/* Normalize, Grid helper, layout helpers                  */
+@import "core.css"; 		/* Hyperlinks, Headings, Text, Lists, Tables               */
+@import "forms.css";		/* Forms and form-related helpers                          */
+@import "media.css";		/* Images, video, audio, galleries                         */
+@import "nav.css"; 			/* Menus, tabs, breadcrumbs and pagination                 */
+@import "dropdown.css"; 	/* Helper classes for dropdown and flyout menus            */
+@import "ui.css";			/* Messages/Alerts, progressbars and button sets           */
+@import "utils.css";		/* Image replacement and other utils                       */
+@import "icons.css";		/* Icons webfont css setup. Custom version of FontAwesome  */
 
-@import "custom.css";		/* Your styles 													*/
-
-@import "print.css";		/* Print stylesheet												*/
+@import "custom.css";		/* Your styles                                             */

@@ -1,5 +1,28 @@
 /*==========  $Forms Helpers  ==========*/
-@mixin status-field($bg, $border, $color) {
+/*==========  Wrappers  ==========*/
+.form-actions {
+	float: none;
+	margin-bottom: $baseUnit5;
+	overflow: auto;
+	width: auto;
+}
+
+.control-group {
+	clear: both;
+	float: none;
+	margin: 0;
+
+	span.label { line-height: normal; }
+
+	label {
+		display: inline;
+		padding: 0;
+		width: auto;
+	}
+}
+
+/*==========  Form Fields  ==========*/
+@mixin field-status($bg, $border, $color) {
 	label {
 		color: $color;
 	}
@@ -15,103 +38,75 @@
 	}
 }
 
-/*==========  Wrappers  ==========*/
-.control-set {
-	clear: both;
-	float: none;
-	margin: 0;
+.field-error   { @include field-status( $Snow,         $Pink,          $Crimson ); }
+.field-info    { @include field-status( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
+.field-notice  { @include field-status( $LemonChiffon, $Gold,          $GoldenRod ); }
+.field-success { @include field-status( $Beige,        $YellowGreen,   $LimeGreen ); }
 
-	span.label { line-height: normal; }
+.field-prefix, .field-suffix {
+	overflow: hidden; /* Clearfix */
 
-	label {
-		display: inline;
-		padding: 0;
+	.label {
+		background: $GhostWhite;
+		border: 1px solid $Silver;
+		border-right-width: 0;
+		color: $DimGray;
+		float: left;
+		margin: 0;
+		padding: $baseUnit1 $baseUnit3;
+		text-shadow: 1px 1px 0 $White;
+	}
+
+	input,
+	select,
+	button {
+		border-right-width: 0;
+		clear: none;
+		float: left;
+		margin: 0;
+		position: relative;
 		width: auto;
-	}
-}
+		@include border-radius(0);
 
-.btn-row {
-	float: none;
-	margin-bottom: $baseUnit5;
-	overflow: auto;
-	width: auto;
-}
-
-/*==========  Helpers  ==========*/
-form {
-	.field-prefix, .field-suffix {
-		overflow: hidden; /* Clearfix */
-
-		.label {
-			background: $GhostWhite;
-			border: 1px solid $Silver;
-			border-right-width: 0;
-			color: $DimGray;
-			float: left;
-			margin: 0;
-			padding: $baseUnit1 $baseUnit3;
-			text-shadow: 1px 1px 0 $White;
-		}
-
-		input,
-		select,
-		button {
-			border-right-width: 0;
-			clear: none;
-			float: left;
-			margin: 0;
-			position: relative;
-			width: auto;
-			@include border-radius(0);
-
-			&:first-child {
-				@include border-radius($baseUnit1 0 0 $baseUnit1);
-			}
-
-			&:last-child {
-				border-right-width: 1px;
-				@include border-radius(0 $baseUnit1 $baseUnit1 0);
-			}
-		}
-	}
-
-	.field-prefix {
-		.label {
+		&:first-child {
 			@include border-radius($baseUnit1 0 0 $baseUnit1);
 		}
-	}
 
-	.field-suffix {
-		.label {
+		&:last-child {
 			border-right-width: 1px;
 			@include border-radius(0 $baseUnit1 $baseUnit1 0);
 		}
 	}
-
-	.field-prefix.field-suffix {
-		.label:first-child {
-			@include border-radius($baseUnit1 0 0 $baseUnit1);
-		}
-
-		.label:last-child,
-		input:last-child,
-		select:last-child,
-		button:last-child {
-			@include border-radius(0 $baseUnit1 $baseUnit1 0);
-		}
-	}
-
-	.last-field { clear: right; float: right; margin-right: 0; }
-
-	.error-field   { @include status-field( $Snow,         $Pink,          $Crimson ); }
-	.info-field    { @include status-field( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
-	.notice-field  { @include status-field( $LemonChiffon, $Gold,          $GoldenRod ); }
-	.success-field { @include status-field( $Beige,        $YellowGreen,   $LimeGreen ); }
 }
 
-.horizontal-fields div,
-.horizontal-field {
-	&:before, &:after { content:""; display:table; clear: both; } & { zoom:1; }
+.field-prefix {
+	.label {
+		@include border-radius($baseUnit1 0 0 $baseUnit1);
+	}
+}
+
+.field-suffix {
+	.label {
+		border-right-width: 1px;
+		@include border-radius(0 $baseUnit1 $baseUnit1 0);
+	}
+}
+
+.field-prefix.field-suffix {
+	.label:first-child {
+		@include border-radius($baseUnit1 0 0 $baseUnit1);
+	}
+
+	.label:last-child,
+	input:last-child,
+	select:last-child,
+	button:last-child {
+		@include border-radius(0 $baseUnit1 $baseUnit1 0);
+	}
+}
+
+.field-horizontal {
+	@include cf;
 
 	label, span.label {
 		clear: none;
@@ -125,7 +120,7 @@ form {
 	& > input[type="text"],
 	& > select,
 	& > textarea,
-	& > .control-set {
+	& > .control-group {
 		clear: none;
 		float: right;
 		width: 60%;
@@ -142,13 +137,18 @@ form {
 		}
 	}
 
-	.control-set label, .control-set span.label {
+	.control-group label, .control-group span.label {
 		float: none;
 		width: auto;
 	}
 }
 
-.inline-fields {
+/*==========  Form types  ==========*/
+.form-horizontal {
+	div { @extend .field-horizontal; }
+}
+
+.form-inline {
 	line-height: 250%; /* This produces vertical spacing between inputs */
 
 	label {
@@ -161,8 +161,7 @@ form {
 	}
 }
 
-/*==========  Search Form  ==========*/
-.search-form {
+.form-search {
 	> div, > p {
 		clear: none;
 		float: left;

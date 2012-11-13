@@ -1,4 +1,22 @@
 @import "compass/css3";
+@import "_mixins";
+
+// ###### Grid config
+$colAmount:   24;
+$colWidth:    20;
+$gutterWidth: 20;
+$gridType:    "both";
+
+// ###### Base units
+$baseUnit0:		1px;
+$baseUnit1:		3px;
+$baseUnit2:		$baseUnit1 * 2;
+$baseUnit3:		$baseUnit1 * 3;
+$baseUnit4:		$baseUnit1 * 4;
+$baseUnit5:		$baseUnit1 * 5;
+$baseUnit6:		$baseUnit1 * 6;
+$baseUnit7:		$baseUnit1 * 7;
+$baseUnit8:		$baseUnit1 * 8;
 
 // ###### Colors
 // Black to white
@@ -42,18 +60,6 @@ $Ivory: 		#FFFFF0;
 // Purple
 $Thistle: 		#f3ddff;
 $Lavender: 		#fdf9ff;
-
-// ###### Base units
-$baseUnit0:		1px;
-$baseUnit1:		3px;
-$baseUnit2:		$baseUnit1 * 2;
-$baseUnit3:		$baseUnit1 * 3;
-$baseUnit4:		$baseUnit1 * 4;
-$baseUnit5:		$baseUnit1 * 5;
-$baseUnit6:		$baseUnit1 * 6;
-$baseUnit7:		$baseUnit1 * 7;
-$baseUnit8:		$baseUnit1 * 8;
-
 
 // ###### Font Stacks
 // Basic stacks

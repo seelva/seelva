@@ -1,0 +1,45 @@
+/*==========  $Buttons helpers  ==========*/
+@mixin btn-status($bg, $border, $color, $darkenPercent) {
+	color: $color;
+
+	&:hover, &:focus {
+		background-color: $bg;
+		border-color: $border;
+	}
+
+	&:active {
+		@include box-shadow(inset 0 1px $baseUnit2 darken($bg, $darkenPercent), 0 1px 0 $WhiteSmoke);
+	}
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+button[type],
+a.btn,
+a.button {
+	&.btn-info    { @include btn-status( $LightCyan,     $DarkTurquoise, $SteelBlue, 40); }
+	&.btn-success { @include btn-status( $PaleGreen,     $YellowGreen,   $OliveDrab, 50); }
+	&.btn-error   { @include btn-status( $LavenderBlush, $Pink,          $Crimson,   60); }
+	&.btn-notice  { @include btn-status( $LemonChiffon,  $Gold,          $GoldenRod, 60); }
+}
+
+/*==========  Buttons group  ==========*/
+.btn-group {
+	display: inline-block;
+
+	input[type="button"], input[type="submit"], input[type="reset"], button, a.button {
+		float: left;
+		margin: 0;
+		@include border-radius(0);
+
+		&:first-child {
+			@include border-radius($baseUnit1 0 0 $baseUnit1);
+		}
+
+		&:last-child {
+			@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		}
+	}
+}

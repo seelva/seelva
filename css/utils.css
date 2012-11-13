@@ -111,7 +111,7 @@ hr.clear, hr.clearing {
 
 /*==========  $Selection styling  ==========*/
 ::-moz-selection, ::selection {
-  background: #f5f5dc;
+  background: beige;
   color: #7b9712;
   text-shadow: none;
 }
@@ -155,6 +155,10 @@ hr.clear, hr.clearing {
 }
 
 /* Text */
+.small {
+  font-size: 80%;
+}
+
 .big {
   font-size: 125%;
 }
@@ -181,11 +185,6 @@ hr.clear, hr.clearing {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-/* Help */
-.help {
-  font-size: 82%;
 }
 
 /*-----  End of $Utilities  ------*/

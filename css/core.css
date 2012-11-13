@@ -50,27 +50,27 @@ h1.styled, h2.styled, h3.styled, h4.styled, h5.styled, h6.styled {
   padding-bottom: 6px;
 }
 
-h1, .alpha {
+h1, .tera {
   font-size: 214%;
 }
 
-h2, .beta {
+h2, .giga {
   font-size: 192%;
 }
 
-h3, .gamma {
+h3, .mega {
   font-size: 171%;
 }
 
-h4, .delta {
+h4, .kilo {
   font-size: 150%;
 }
 
-h5, .epsilon {
+h5, .hecto {
   font-size: 128%;
 }
 
-h6, .zeta {
+h6, .deca {
   font-size: 107%;
 }
 
@@ -87,12 +87,12 @@ i, em {
   font-style: italic;
 }
 
-s, del {
-  text-decoration: line-through;
-}
-
 ins {
   text-decoration: underline;
+}
+
+s, del {
+  text-decoration: line-through;
 }
 
 acronym, abbr {
@@ -103,15 +103,15 @@ acronym[title], abbr[title] {
   cursor: help;
 }
 
-sub, sup {
+mark, .highlight {
+  background: gold;
+}
+
+small {
   font-size: 80%;
 }
 
-mark, .highlight {
-  background: #ffd700;
-}
-
-small, .small {
+sub, sup {
   font-size: 80%;
 }
 
@@ -131,16 +131,16 @@ blockquote:before, blockquote:after {
 blockquote p:last-child {
   margin-bottom: 0;
 }
-blockquote span, blockquote .credit {
+blockquote > span, blockquote .credit {
   font-size: 78%;
   font-style: italic;
   margin-bottom: 0;
 }
-blockquote span:before, blockquote .credit:before {
+blockquote > span:before, blockquote .credit:before {
   content: '\2013';
 }
 blockquote.styled {
-  background: #f5f5f5;
+  background: whitesmoke;
   border: 0;
   color: #555555;
   padding: 18px 0;
@@ -188,7 +188,7 @@ code, kbd, pre {
 }
 
 code {
-  background: #f5f5f5;
+  background: whitesmoke;
   border: 1px solid #eeeeee;
   line-height: 192%;
   padding: 2px 4px;
@@ -196,7 +196,7 @@ code {
 }
 
 kbd {
-  background: #f5f5f5;
+  background: whitesmoke;
   color: #555555;
   font-weight: bold;
   line-height: 192%;
@@ -323,7 +323,7 @@ dd {
 /*==========  $Core Tables  ==========*/
 table {
   border-collapse: separate;
-  border-right: 1px solid #f5f5f5;
+  border-right: 1px solid whitesmoke;
   border-top: 1px solid #e5e5e5;
   margin: 0 0 15px 0;
   width: 100%;
@@ -342,7 +342,7 @@ table caption {
 }
 
 th {
-  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left -292px;
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left -292px;
   border-bottom: 1px solid #e5e5e5;
   border-left: 1px solid #e5e5e5;
   font-weight: bold;
@@ -358,7 +358,7 @@ thead tr:first-child th:first-child {
   border-radius: 3px 0 0 0;
 }
 thead tr:last-child th:last-child {
-  border-right: 1px solid #f5f5f5;
+  border-right: 1px solid whitesmoke;
   -webkit-border-radius: 0 3px 0 0;
   -moz-border-radius: 0 3px 0 0;
   -ms-border-radius: 0 3px 0 0;
@@ -366,21 +366,21 @@ thead tr:last-child th:last-child {
   border-radius: 0 3px 0 0;
 }
 
-tr.odd, .zebra tr:nth-child(odd) {
+tr.odd, .table-zebra tr:nth-child(odd) {
   background: white;
 }
-tr.even, .zebra tr:nth-child(even) {
+tr.even, .table-zebra tr:nth-child(even) {
   background: #fafafa;
 }
 
 td {
-  border-bottom: 1px solid #f5f5f5;
-  border-left: 1px solid #f5f5f5;
+  border-bottom: 1px solid whitesmoke;
+  border-left: 1px solid whitesmoke;
   padding: 6px;
   vertical-align: top;
 }
 
-table.compact td, table.compact th {
+.table-compact td, .table-compact th {
   padding: 2px 6px;
 }
 
@@ -395,7 +395,7 @@ details {
   border-radius: 3px;
 }
 details summary {
-  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
   margin: 0;

@@ -17,45 +17,36 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /*==========  Global setup  ==========*/
-.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
+.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .list-horizontal, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
   list-style: none;
   margin: 0 0 9px 0;
-  overflow: hidden;
 }
-.tabs > li, .vertical-tabs > li, .horizontal-menu > li, .vertical-menu > li, .horizontal-list > li, .breadcrumb > li, .pagination > li, .pagination ul > li, .pager > li, .pager ul > li {
+.tabs > li, .tabs-vertical > li, .menu-horizontal > li, .menu-vertical > li, .list-horizontal > li, .breadcrumb > li, .pagination > li, .pagination ul > li, .nav-direction > li, .nav-direction ul > li {
   display: block;
   float: left;
 }
-.tabs > li > a, .vertical-tabs > li > a, .horizontal-menu > li > a, .vertical-menu > li > a, .horizontal-list > li > a, .breadcrumb > li > a, .pagination > li > a, .pagination ul > li > a, .pager > li > a, .pager ul > li > a {
+.tabs > li > a, .tabs-vertical > li > a, .menu-horizontal > li > a, .menu-vertical > li > a, .list-horizontal > li > a, .breadcrumb > li > a, .pagination > li > a, .pagination ul > li > a, .nav-direction > li > a, .nav-direction ul > li > a {
   display: block;
   text-decoration: none;
 }
 
 /*==========  $Nav Tabs  ==========*/
-.tabs,
-.vertical-tabs {
+.tabs, .tabs-vertical {
   overflow: visible;
   *zoom: 1;
 }
-.tabs:before, .tabs:after,
-.vertical-tabs:before,
-.vertical-tabs:after {
-  content: ' ';
+.tabs:before, .tabs:after, .tabs-vertical:before, .tabs-vertical:after {
+  content: " ";
   display: table;
 }
-.tabs:after,
-.vertical-tabs:after {
+.tabs:after, .tabs-vertical:after {
   clear: both;
 }
-.tabs > li,
-.vertical-tabs > li {
+.tabs > li, .tabs-vertical > li {
   position: relative;
 }
-.tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited,
-.vertical-tabs > li > a,
-.vertical-tabs > li > a:link,
-.vertical-tabs > li > a:visited {
-  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+.tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited, .tabs-vertical > li > a, .tabs-vertical > li > a:link, .tabs-vertical > li > a:visited {
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #e5e5e5;
   color: black;
   padding: 6px 9px;
@@ -83,27 +74,27 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-bottom-color: transparent;
 }
 
-/*==========  Vertical-tabs  ==========*/
-.vertical-tabs {
+/*==========  tabs-Vertical  ==========*/
+.tabs-vertical {
   border-right: 1px solid #dadada;
   float: left;
   margin-right: 9px;
   width: 120px;
 }
-.vertical-tabs > li {
+.tabs-vertical > li {
   float: none;
   left: 1px;
   margin-bottom: 3px;
   padding-left: 1px;
 }
-.vertical-tabs > li > a, .vertical-tabs > li > a:link, .vertical-tabs > li > a:visited {
+.tabs-vertical > li > a, .tabs-vertical > li > a:link, .tabs-vertical > li > a:visited {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -ms-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-.vertical-tabs > li > a:hover, .vertical-tabs > li.active > a, .vertical-tabs > li.active > a:link {
+.tabs-vertical > li > a:hover, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a:link {
   background-color: white;
   border: 1px solid #e5e5e5;
   border-right-color: transparent;
@@ -116,7 +107,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   *zoom: 1;
 }
 .tabs-content:before, .tabs-content:after {
-  content: ' ';
+  content: " ";
   display: table;
 }
 .tabs-content:after {
@@ -132,60 +123,60 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /*==========  $Nav Menus  ==========*/
-/*==========  Horizontal-menu  ==========*/
-.menu > li > a, .menu > li > a:link, .menu > li > a:visited, .horizontal-menu > li > a, .horizontal-menu > li > a:link, .horizontal-menu > li > a:visited, .vertical-menu > li > a, .vertical-menu > li > a:link, .vertical-menu > li > a:visited {
+.menu > li > a, .menu > li > a:link, .menu > li > a:visited, .menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-horizontal > li > a:visited, .menu-vertical > li > a, .menu-vertical > li > a:link, .menu-vertical > li > a:visited {
   background: #dadada url(../images/gradient-bg.png) repeat-x left top;
   color: black;
   padding: 6px 9px;
 }
-.menu > li > a:hover, .menu > li.active > a, .menu > li.active > a:link, .horizontal-menu > li > a:hover, .horizontal-menu > li.active > a, .horizontal-menu > li.active > a:link, .vertical-menu > li > a:hover, .vertical-menu > li.active > a, .vertical-menu > li.active > a:link {
+.menu > li > a:hover, .menu > li.active > a, .menu > li.active > a:link, .menu-horizontal > li > a:hover, .menu-horizontal > li.active > a, .menu-horizontal > li.active > a:link, .menu-vertical > li > a:hover, .menu-vertical > li.active > a, .menu-vertical > li.active > a:link {
   background-color: #888888;
   background-position: left -15px;
   color: white;
 }
 
-.horizontal-menu > li {
+/*==========  menu-Horizontal  ==========*/
+.menu-horizontal > li {
   border-left: 1px solid #e5e5e5;
   display: inline-block;
   float: left;
 }
 
-/*==========  Vertical-menu  ==========*/
-.vertical-menu > li {
+/*==========  menu-Vertical  ==========*/
+.menu-vertical > li {
   border-bottom: 1px solid #e5e5e5;
   float: none;
 }
 
 /*==========  $Nav Lists  ==========*/
-.horizontal-list > li {
+.list-horizontal > li {
   border-left: 1px solid #e5e5e5;
   display: inline-block;
   float: none;
 }
-.horizontal-list > li:first-child {
+.list-horizontal > li:first-child {
   border-left: 0;
 }
-.horizontal-list > li > a, .horizontal-list > li > a:link, .horizontal-list > li > a:visited {
+.list-horizontal > li > a, .list-horizontal > li > a:link, .list-horizontal > li > a:visited {
   padding: 0 9px;
 }
 
 /*==========  $Nav Pagination  ==========*/
 .pagination,
-.pager {
+.nav-direction {
   clear: both;
 }
 .pagination ul,
-.pager ul {
+.nav-direction ul {
   clear: both;
   margin: 0;
 }
 .pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited,
-.pager span,
-.pager li span,
-.pager a,
-.pager a:link,
-.pager a:visited {
-  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+.nav-direction span,
+.nav-direction li span,
+.nav-direction a,
+.nav-direction a:link,
+.nav-direction a:visited {
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #dadada;
   color: #555555;
   display: inline-block;
@@ -195,11 +186,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   text-shadow: 1px 1px 0 white;
 }
 .pagination .current, .pagination .current span, .pagination li.active a, .pagination li.active a:link, .pagination a:hover,
-.pager .current,
-.pager .current span,
-.pager li.active a,
-.pager li.active a:link,
-.pager a:hover {
+.nav-direction .current,
+.nav-direction .current span,
+.nav-direction li.active a,
+.nav-direction li.active a:link,
+.nav-direction a:hover {
   background-color: #dadada;
   color: black;
   text-decoration: none;
@@ -213,7 +204,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   float: left;
 }
 .pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   color: #dadada;
   text-decoration: none;
 }
@@ -228,24 +219,24 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-color: transparent;
 }
 
-/* Pager */
-.pager a, .pager a:link, .pager a:visited {
+/* nav-direction */
+.nav-direction a, .nav-direction a:link, .nav-direction a:visited {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-.pager li:first-child, .pager .prev, .pager .prev a, .pager .prev a:link {
+.nav-direction li:first-child, .nav-direction .prev, .nav-direction .prev a, .nav-direction .prev a:link {
   float: left;
 }
-.pager li:last-child, .pager .next, .pager .next a, .pager .prev a:link {
+.nav-direction li:last-child, .nav-direction .next, .nav-direction .next a, .nav-direction .prev a:link {
   float: right;
 }
 
 /*==========  $Nav Breadcrumbs  ==========*/
 .breadcrumb {
-  background: #f5f5f5 url(../images/gradient-bg.png) repeat-x left top;
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #dadada;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

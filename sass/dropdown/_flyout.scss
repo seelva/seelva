@@ -1,0 +1,10 @@
+.flyout {
+	@extend .dropdown;
+
+	position: relative;
+
+	.drop-content, > ul {
+		left: 100px;
+		top: 0;
+	}
+}

@@ -9,28 +9,4 @@ img {
 		border: 0;
 		vertical-align: bottom;
 	}
-
-	&.styled {
-		background: $GhostWhite url(../images/loading.gif) no-repeat center;
-		border: 1px solid $WhiteSmoke;
-		padding: $baseUnit2;
-		@include border-radius($baseUnit2);
-	}
-
-	&.light-styled, a &.light-styled {
-		border-width: 0;
-		padding: 0;
-		@include border-radius($baseUnit2);
-		@include single-box-shadow($DarkGray, 0, 0, $baseUnit2, 0, true);
-	}
-
-	&.unstyled, button &, a.button & {
-		background: transparent;
-		border-width: 0;
-		padding: 0;
-	}
-
-	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
-	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
-	&.nofloat 					{ display: block; margin-left: auto; margin-right: auto; }
 }

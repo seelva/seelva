@@ -4,6 +4,7 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
+a.btn,
 a.button {
 	background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
 	border: 1px solid $Silver {
@@ -47,48 +48,6 @@ a.button {
 		@include box-shadow(inset 0 1px $baseUnit2 $DarkGray, 0 1px 0 $WhiteSmoke);
 	}
 
-	/*! Neutral button */
-	&.neutral {
-		color: $SteelBlue;
-
-		&:hover, &:focus {
-			background-color: $LightCyan;
-			border-color: $DarkTurquoise;
-		}
-
-		&:active {
-			@include box-shadow(inset 0 1px $baseUnit2 darken($LightCyan, 40), 0 1px 0 $WhiteSmoke);
-		}
-	}
-
-	/*! Positive button */
-	&.positive {
-		color: $OliveDrab;
-
-		&:hover, &:focus {
-			background-color: $PaleGreen;
-			border-color: $YellowGreen;
-		}
-
-		&:active {
-			@include box-shadow(inset 0 1px $baseUnit2 darken($PaleGreen, 50), 0 1px 0 $WhiteSmoke);
-		}
-	}
-
-	/* Negative button */
-	&.negative {
-		color: $Crimson;
-
-		&:hover, &:focus {
-			background-color: $LavenderBlush;
-			border-color: $Pink;
-		}
-
-		&:active {
-			@include box-shadow(inset 0 1px $baseUnit2 darken($LavenderBlush, 60), 0 1px 0 $WhiteSmoke);
-		}
-	}
-
 	/* Disabled button */
 	&[disabled], &[disabled]:hover, &[disabled]:active {
 		background: $LightGray;
@@ -110,6 +69,7 @@ a.button {
 }
 
 button img,
+a.btn img,
 a.button img {
 	border: 0;
 	margin: 0;

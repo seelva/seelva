@@ -1,6 +1,6 @@
 /*==========  $Nav Pagination  ==========*/
 .pagination,
-.pager {
+.nav-direction {
 	clear: both;
 
 	ul { clear: both; margin: 0; }
@@ -27,7 +27,9 @@
 /* Full Pagination */
 .pagination {
 	li, ul li { float: left; }
+
 	span, li span, a, a:link, a:visited { float: left; }
+
 	.disabled, .disabled span, .disabled a, .disabled a:link {
 		background-color: $WhiteSmoke;
 		color: $Silver;
@@ -39,8 +41,8 @@
 	span { background: transparent; border-color: transparent; }
 }
 
-/* Pager */
-.pager {
+/* nav-direction */
+.nav-direction {
 	a, a:link, a:visited { @include border-radius($baseUnit1); }
 
 	li:first-child, .prev, .prev a, .prev a:link { float: left; }

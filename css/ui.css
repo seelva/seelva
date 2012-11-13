@@ -8,7 +8,7 @@
 .info, .ok,
 .notice, .warning,
 .status, .success {
-  background: #f5f5f5;
+  background: whitesmoke;
   background-position: 4px 1em;
   background-repeat: no-repeat;
   border: 1px solid #e5e5e5;
@@ -29,9 +29,9 @@
 }
 
 .error {
-  background-color: #fff0f5;
+  background-color: lavenderblush;
   background-image: url(../images/icons/cross.png);
-  border-color: #ffc0cb;
+  border-color: pink;
   color: #e14049;
 }
 .error a {
@@ -42,20 +42,20 @@
   background-color: #d9e8ff;
   background-image: url(../images/icons/information.png);
   border-color: #82d2df;
-  color: #4682b4;
+  color: steelblue;
 }
 .info a, .status a {
-  color: #4682b4;
+  color: steelblue;
 }
 
 .notice, .warning {
-  background-color: #fffacd;
+  background-color: lemonchiffon;
   background-image: url(../images/icons/error.png);
-  border-color: #ffd700;
-  color: #daa520;
+  border-color: gold;
+  color: goldenrod;
 }
 .notice a, .warning a {
-  color: #daa520;
+  color: goldenrod;
 }
 
 .success, .ok {
@@ -69,7 +69,7 @@
 }
 
 .guidelines {
-  background-color: #fffff0;
+  background-color: ivory;
   border-color: #fff6cc;
   color: #555555;
   line-height: 130%;
@@ -157,34 +157,6 @@ a.close, a.close:link, a.close:visited, a.close:hover a.close:active, a.close:fo
   position: relative;
   text-decoration: none;
   top: -3px;
-}
-
-/*==========  $UI Helpers  ==========*/
-.btn-set {
-  display: inline-block;
-}
-.btn-set input[type="button"], .btn-set input[type="submit"], .btn-set input[type="reset"], .btn-set button, .btn-set a.button {
-  float: left;
-  margin: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-.btn-set input[type="button"]:first-child, .btn-set input[type="submit"]:first-child, .btn-set input[type="reset"]:first-child, .btn-set button:first-child, .btn-set a.button:first-child {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -ms-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-.btn-set input[type="button"]:last-child, .btn-set input[type="submit"]:last-child, .btn-set input[type="reset"]:last-child, .btn-set button:last-child, .btn-set a.button:last-child {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
 }
 
 /*-----  End of $UI  ------*/

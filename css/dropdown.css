@@ -8,7 +8,7 @@
 *  Be aware that if you want to use dropdowns with touchscreen devices you
 *  should use a Javascript-based alternative.
 ****************************************************************************/
-.dropdown > a:after, .dropdown > a:link:after {
+.dropdown > a:after, .flyout > a:after, .dropdown > a:link:after, .flyout > a:link:after {
   /* Arrow for dropdown links */
   border: 4px solid transparent;
   border-top-color: #888888;
@@ -19,13 +19,13 @@
   text-align: right;
   vertical-align: middle;
 }
-.dropdown .drop-content, .dropdown > ul {
+.dropdown .drop-content, .flyout .drop-content, .dropdown > ul, .flyout > ul {
   /* Common styles for submenus */
   display: none;
   position: absolute;
   z-index: 100;
 }
-.dropdown .drop-content {
+.dropdown .drop-content, .flyout .drop-content {
   background: #dadada;
   padding: 9px;
   width: 230px;
@@ -35,7 +35,7 @@
   -o-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
 }
-.dropdown > ul {
+.dropdown > ul, .flyout > ul {
   list-style: none;
   margin: 0;
   max-width: 180px;
@@ -43,32 +43,32 @@
   padding: 0;
   zoom: 1;
 }
-.dropdown > ul > li {
-  border-left: 1px solid #f5f5f5;
+.dropdown > ul > li, .flyout > ul > li {
+  border-left: 1px solid whitesmoke;
   display: block;
   float: none;
 }
-.dropdown > ul > li > a, .dropdown > ul > li > a:link, .dropdown > ul > li > a:visited {
+.dropdown > ul > li > a, .flyout > ul > li > a, .dropdown > ul > li > a:link, .flyout > ul > li > a:link, .dropdown > ul > li > a:visited, .flyout > ul > li > a:visited {
   background: #e5e5e5;
   color: black;
   display: block;
   padding: 6px 9px;
   text-decoration: none;
 }
-.dropdown > ul > li > a:hover, .dropdown > ul > li.active > a, .dropdown > ul > li.active > a:link {
+.dropdown > ul > li > a:hover, .flyout > ul > li > a:hover, .dropdown > ul > li.active > a, .flyout > ul > li.active > a, .dropdown > ul > li.active > a:link, .flyout > ul > li.active > a:link {
   background: #888888;
   color: white;
 }
-.dropdown .dropdown > a:after, .dropdown .dropdown > a:link:after {
+.dropdown .dropdown > a:after, .flyout .dropdown > a:after, .dropdown .flyout > a:after, .flyout .flyout > a:after, .dropdown .dropdown > a:link:after, .flyout .dropdown > a:link:after, .dropdown .flyout > a:link:after, .flyout .flyout > a:link:after {
   /* Arrow for 2nd+ level dropdown links */
   border-left-color: #888888;
   border-top-color: transparent;
 }
-.dropdown .dropdown:hover > a:after, .dropdown .dropdown:hover > a:link:after, .dropdown .dropdown.active > a:after, .dropdown .dropdown.active > a:link:after {
+.dropdown .dropdown:hover > a:after, .flyout .dropdown:hover > a:after, .dropdown .flyout:hover > a:after, .flyout .flyout:hover > a:after, .dropdown .dropdown:hover > a:link:after, .flyout .dropdown:hover > a:link:after, .dropdown .flyout:hover > a:link:after, .flyout .flyout:hover > a:link:after, .dropdown .dropdown.active > a:after, .flyout .dropdown.active > a:after, .dropdown .active.flyout > a:after, .flyout .active.flyout > a:after, .dropdown .dropdown.active > a:link:after, .flyout .dropdown.active > a:link:after, .dropdown .active.flyout > a:link:after, .flyout .active.flyout > a:link:after {
   border-left-color: white;
   border-top-color: transparent;
 }
-.dropdown .dropdown > ul {
+.dropdown .dropdown > ul, .flyout .dropdown > ul, .dropdown .flyout > ul, .flyout .flyout > ul {
   /* 3rd+ Level submenu style */
   display: none;
   left: 100%;
@@ -76,22 +76,30 @@
   top: 6px;
   width: 100%;
 }
-.dropdown:hover > a:after, .dropdown:hover > a:link:after, .dropdown.active > a:after, .dropdown.active > a:link:after {
+.dropdown:hover > a:after, .flyout:hover > a:after, .dropdown:hover > a:link:after, .flyout:hover > a:link:after, .dropdown.active > a:after, .active.flyout > a:after, .dropdown.active > a:link:after, .active.flyout > a:link:after {
   border-top-color: white;
 }
-.dropdown:hover > ul, .dropdown ul a:hover ul, .dropdown:hover .drop-content {
+.dropdown:hover > ul, .flyout:hover > ul, .dropdown ul a:hover ul, .flyout ul a:hover ul, .dropdown:hover .drop-content, .flyout:hover .drop-content {
   display: block;
 }
-.dropdown ul :hover ul :hover ul {
+.dropdown ul :hover ul :hover ul, .flyout ul :hover ul :hover ul {
   display: block;
 }
-.dropdown.active ul li a, .dropdown.active ul li a:link, .dropdown .active ul li a, .dropdown .active ul li a:link {
+.dropdown.active ul li a, .active.flyout ul li a, .dropdown.active ul li a:link, .active.flyout ul li a:link, .dropdown .active ul li a, .flyout .active ul li a, .dropdown .active ul li a:link, .flyout .active ul li a:link {
   background: #e5e5e5;
   color: black;
 }
-.dropdown.active ul li a:hover, .dropdown .active ul li a:hover {
+.dropdown.active ul li a:hover, .active.flyout ul li a:hover, .dropdown .active ul li a:hover, .flyout .active ul li a:hover {
   background: #888888;
   color: white;
+}
+
+.flyout {
+  position: relative;
+}
+.flyout .drop-content, .flyout > ul {
+  left: 100px;
+  top: 0;
 }
 
 /*-----  End of $Dropdown and Flyout  ------*/

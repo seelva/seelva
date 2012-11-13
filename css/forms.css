@@ -18,7 +18,7 @@ fieldset {
 }
 
 legend {
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid whitesmoke;
   color: #555555;
   font-size: 128%;
   font-weight: normal;
@@ -170,10 +170,11 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
+a.btn,
 a.button {
   background: #e5e5e5 url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #dadada;
-  border-bottom-color: #a9a9a9;
+  border-bottom-color: darkgrey;
   color: #888888;
   cursor: pointer;
   display: inline-block;
@@ -193,16 +194,13 @@ a.button {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 0 0 #f5f5f5;
-  -moz-box-shadow: 0 1px 0 0 #f5f5f5;
-  box-shadow: 0 1px 0 0 #f5f5f5;
+  -webkit-box-shadow: 0 1px 0 0 whitesmoke;
+  -moz-box-shadow: 0 1px 0 0 whitesmoke;
+  box-shadow: 0 1px 0 0 whitesmoke;
   /* IE7 padding bugfix */
   overflow: visible;
   width: auto;
   /* Standard button */
-  /* Neutral button */
-  /* Positive button */
-  /* Negative button */
   /* Disabled button */
 }
 input[type="button"]:hover, input[type="button"]:focus,
@@ -214,6 +212,8 @@ button:hover,
 button:focus,
 button[type]:hover,
 button[type]:focus,
+a.btn:hover,
+a.btn:focus,
 a.button:hover,
 a.button:focus {
   background-position: 0 -292px;
@@ -225,109 +225,14 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 button:active,
 button[type]:active,
+a.btn:active,
 a.button:active {
   background-position: 0 bottom;
-  border-color: #888888 #a9a9a9 #dadada;
+  border-color: #888888 darkgrey #dadada;
   color: #888888;
-  -webkit-box-shadow: inset 0 1px 6px #a9a9a9, 0 1px 0 #f5f5f5;
-  -moz-box-shadow: inset 0 1px 6px #a9a9a9, 0 1px 0 #f5f5f5;
-  box-shadow: inset 0 1px 6px #a9a9a9, 0 1px 0 #f5f5f5;
-}
-input[type="button"].neutral,
-input[type="submit"].neutral,
-input[type="reset"].neutral,
-button.neutral,
-button[type].neutral,
-a.button.neutral {
-  color: #4682b4;
-}
-input[type="button"].neutral:hover, input[type="button"].neutral:focus,
-input[type="submit"].neutral:hover,
-input[type="submit"].neutral:focus,
-input[type="reset"].neutral:hover,
-input[type="reset"].neutral:focus,
-button.neutral:hover,
-button.neutral:focus,
-button[type].neutral:hover,
-button[type].neutral:focus,
-a.button.neutral:hover,
-a.button.neutral:focus {
-  background-color: #d9e8ff;
-  border-color: #82d2df;
-}
-input[type="button"].neutral:active,
-input[type="submit"].neutral:active,
-input[type="reset"].neutral:active,
-button.neutral:active,
-button[type].neutral:active,
-a.button.neutral:active {
-  -webkit-box-shadow: inset 0 1px 6px #0d6dff, 0 1px 0 #f5f5f5;
-  -moz-box-shadow: inset 0 1px 6px #0d6dff, 0 1px 0 #f5f5f5;
-  box-shadow: inset 0 1px 6px #0d6dff, 0 1px 0 #f5f5f5;
-}
-input[type="button"].positive,
-input[type="submit"].positive,
-input[type="reset"].positive,
-button.positive,
-button[type].positive,
-a.button.positive {
-  color: #7b9712;
-}
-input[type="button"].positive:hover, input[type="button"].positive:focus,
-input[type="submit"].positive:hover,
-input[type="submit"].positive:focus,
-input[type="reset"].positive:hover,
-input[type="reset"].positive:focus,
-button.positive:hover,
-button.positive:focus,
-button[type].positive:hover,
-button[type].positive:focus,
-a.button.positive:hover,
-a.button.positive:focus {
-  background-color: #edf2c4;
-  border-color: #becf59;
-}
-input[type="button"].positive:active,
-input[type="submit"].positive:active,
-input[type="reset"].positive:active,
-button.positive:active,
-button[type].positive:active,
-a.button.positive:active {
-  -webkit-box-shadow: inset 0 1px 6px #899621, 0 1px 0 #f5f5f5;
-  -moz-box-shadow: inset 0 1px 6px #899621, 0 1px 0 #f5f5f5;
-  box-shadow: inset 0 1px 6px #899621, 0 1px 0 #f5f5f5;
-}
-input[type="button"].negative,
-input[type="submit"].negative,
-input[type="reset"].negative,
-button.negative,
-button[type].negative,
-a.button.negative {
-  color: #e14049;
-}
-input[type="button"].negative:hover, input[type="button"].negative:focus,
-input[type="submit"].negative:hover,
-input[type="submit"].negative:focus,
-input[type="reset"].negative:hover,
-input[type="reset"].negative:focus,
-button.negative:hover,
-button.negative:focus,
-button[type].negative:hover,
-button[type].negative:focus,
-a.button.negative:hover,
-a.button.negative:focus {
-  background-color: #fff0f5;
-  border-color: #ffc0cb;
-}
-input[type="button"].negative:active,
-input[type="submit"].negative:active,
-input[type="reset"].negative:active,
-button.negative:active,
-button[type].negative:active,
-a.button.negative:active {
-  -webkit-box-shadow: inset 0 1px 6px #bd003f, 0 1px 0 #f5f5f5;
-  -moz-box-shadow: inset 0 1px 6px #bd003f, 0 1px 0 #f5f5f5;
-  box-shadow: inset 0 1px 6px #bd003f, 0 1px 0 #f5f5f5;
+  -webkit-box-shadow: inset 0 1px 6px darkgrey, 0 1px 0 whitesmoke;
+  -moz-box-shadow: inset 0 1px 6px darkgrey, 0 1px 0 whitesmoke;
+  box-shadow: inset 0 1px 6px darkgrey, 0 1px 0 whitesmoke;
 }
 input[type="button"][disabled], input[type="button"][disabled]:hover, input[type="button"][disabled]:active,
 input[type="submit"][disabled],
@@ -342,6 +247,9 @@ button[disabled]:active,
 button[type][disabled],
 button[type][disabled]:hover,
 button[type][disabled]:active,
+a.btn[disabled],
+a.btn[disabled]:hover,
+a.btn[disabled]:active,
 a.button[disabled],
 a.button[disabled]:hover,
 a.button[disabled]:active {
@@ -349,7 +257,7 @@ a.button[disabled]:active {
   border: 1px solid #dadada;
   color: #888888;
   cursor: default;
-  text-shadow: 1px 1px 0 #f5f5f5;
+  text-shadow: 1px 1px 0 whitesmoke;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -365,41 +273,268 @@ a.button[disabled]:active {
 }
 
 button img,
+a.btn img,
 a.button img {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/*==========  $Forms Helpers  ==========*/
-/*==========  Wrappers  ==========*/
-.control-set {
-  clear: both;
-  float: none;
-  margin: 0;
+/*==========  $Buttons helpers  ==========*/
+input[type="button"].btn-info,
+input[type="submit"].btn-info,
+input[type="reset"].btn-info,
+button.btn-info,
+button[type].btn-info,
+a.btn.btn-info,
+a.button.btn-info {
+  color: steelblue;
 }
-.control-set span.label {
-  line-height: normal;
+input[type="button"].btn-info:hover, input[type="button"].btn-info:focus,
+input[type="submit"].btn-info:hover,
+input[type="submit"].btn-info:focus,
+input[type="reset"].btn-info:hover,
+input[type="reset"].btn-info:focus,
+button.btn-info:hover,
+button.btn-info:focus,
+button[type].btn-info:hover,
+button[type].btn-info:focus,
+a.btn.btn-info:hover,
+a.btn.btn-info:focus,
+a.button.btn-info:hover,
+a.button.btn-info:focus {
+  background-color: #d9e8ff;
+  border-color: #82d2df;
 }
-.control-set label {
-  display: inline;
-  padding: 0;
-  width: auto;
+input[type="button"].btn-info:active,
+input[type="submit"].btn-info:active,
+input[type="reset"].btn-info:active,
+button.btn-info:active,
+button[type].btn-info:active,
+a.btn.btn-info:active,
+a.button.btn-info:active {
+  -webkit-box-shadow: inset 0 1px 6px #0d6dff, 0 1px 0 whitesmoke;
+  -moz-box-shadow: inset 0 1px 6px #0d6dff, 0 1px 0 whitesmoke;
+  box-shadow: inset 0 1px 6px #0d6dff, 0 1px 0 whitesmoke;
+}
+input[type="button"].btn-success,
+input[type="submit"].btn-success,
+input[type="reset"].btn-success,
+button.btn-success,
+button[type].btn-success,
+a.btn.btn-success,
+a.button.btn-success {
+  color: #7b9712;
+}
+input[type="button"].btn-success:hover, input[type="button"].btn-success:focus,
+input[type="submit"].btn-success:hover,
+input[type="submit"].btn-success:focus,
+input[type="reset"].btn-success:hover,
+input[type="reset"].btn-success:focus,
+button.btn-success:hover,
+button.btn-success:focus,
+button[type].btn-success:hover,
+button[type].btn-success:focus,
+a.btn.btn-success:hover,
+a.btn.btn-success:focus,
+a.button.btn-success:hover,
+a.button.btn-success:focus {
+  background-color: #edf2c4;
+  border-color: #becf59;
+}
+input[type="button"].btn-success:active,
+input[type="submit"].btn-success:active,
+input[type="reset"].btn-success:active,
+button.btn-success:active,
+button[type].btn-success:active,
+a.btn.btn-success:active,
+a.button.btn-success:active {
+  -webkit-box-shadow: inset 0 1px 6px #899621, 0 1px 0 whitesmoke;
+  -moz-box-shadow: inset 0 1px 6px #899621, 0 1px 0 whitesmoke;
+  box-shadow: inset 0 1px 6px #899621, 0 1px 0 whitesmoke;
+}
+input[type="button"].btn-error,
+input[type="submit"].btn-error,
+input[type="reset"].btn-error,
+button.btn-error,
+button[type].btn-error,
+a.btn.btn-error,
+a.button.btn-error {
+  color: #e14049;
+}
+input[type="button"].btn-error:hover, input[type="button"].btn-error:focus,
+input[type="submit"].btn-error:hover,
+input[type="submit"].btn-error:focus,
+input[type="reset"].btn-error:hover,
+input[type="reset"].btn-error:focus,
+button.btn-error:hover,
+button.btn-error:focus,
+button[type].btn-error:hover,
+button[type].btn-error:focus,
+a.btn.btn-error:hover,
+a.btn.btn-error:focus,
+a.button.btn-error:hover,
+a.button.btn-error:focus {
+  background-color: lavenderblush;
+  border-color: pink;
+}
+input[type="button"].btn-error:active,
+input[type="submit"].btn-error:active,
+input[type="reset"].btn-error:active,
+button.btn-error:active,
+button[type].btn-error:active,
+a.btn.btn-error:active,
+a.button.btn-error:active {
+  -webkit-box-shadow: inset 0 1px 6px #bd003f, 0 1px 0 whitesmoke;
+  -moz-box-shadow: inset 0 1px 6px #bd003f, 0 1px 0 whitesmoke;
+  box-shadow: inset 0 1px 6px #bd003f, 0 1px 0 whitesmoke;
+}
+input[type="button"].btn-notice,
+input[type="submit"].btn-notice,
+input[type="reset"].btn-notice,
+button.btn-notice,
+button[type].btn-notice,
+a.btn.btn-notice,
+a.button.btn-notice {
+  color: goldenrod;
+}
+input[type="button"].btn-notice:hover, input[type="button"].btn-notice:focus,
+input[type="submit"].btn-notice:hover,
+input[type="submit"].btn-notice:focus,
+input[type="reset"].btn-notice:hover,
+input[type="reset"].btn-notice:focus,
+button.btn-notice:hover,
+button.btn-notice:focus,
+button[type].btn-notice:hover,
+button[type].btn-notice:focus,
+a.btn.btn-notice:hover,
+a.btn.btn-notice:focus,
+a.button.btn-notice:hover,
+a.button.btn-notice:focus {
+  background-color: lemonchiffon;
+  border-color: gold;
+}
+input[type="button"].btn-notice:active,
+input[type="submit"].btn-notice:active,
+input[type="reset"].btn-notice:active,
+button.btn-notice:active,
+button[type].btn-notice:active,
+a.btn.btn-notice:active,
+a.button.btn-notice:active {
+  -webkit-box-shadow: inset 0 1px 6px #9a8b00, 0 1px 0 whitesmoke;
+  -moz-box-shadow: inset 0 1px 6px #9a8b00, 0 1px 0 whitesmoke;
+  box-shadow: inset 0 1px 6px #9a8b00, 0 1px 0 whitesmoke;
 }
 
-.btn-row {
+/*==========  Buttons group  ==========*/
+.btn-group {
+  display: inline-block;
+}
+.btn-group input[type="button"], .btn-group input[type="submit"], .btn-group input[type="reset"], .btn-group button, .btn-group a.button {
+  float: left;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.btn-group input[type="button"]:first-child, .btn-group input[type="submit"]:first-child, .btn-group input[type="reset"]:first-child, .btn-group button:first-child, .btn-group a.button:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.btn-group input[type="button"]:last-child, .btn-group input[type="submit"]:last-child, .btn-group input[type="reset"]:last-child, .btn-group button:last-child, .btn-group a.button:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/*==========  $Forms Helpers  ==========*/
+/*==========  Wrappers  ==========*/
+.form-actions {
   float: none;
   margin-bottom: 15px;
   overflow: auto;
   width: auto;
 }
 
-/*==========  Helpers  ==========*/
-form .field-prefix, form .field-suffix {
+.control-group {
+  clear: both;
+  float: none;
+  margin: 0;
+}
+.control-group span.label {
+  line-height: normal;
+}
+.control-group label {
+  display: inline;
+  padding: 0;
+  width: auto;
+}
+
+/*==========  Form Fields  ==========*/
+.field-error label {
+  color: #e14049;
+}
+.field-error input[type="file"],
+.field-error input[type="password"],
+.field-error input[type="text"],
+.field-error select,
+.field-error textarea {
+  background: snow;
+  border-color: pink;
+  color: #e14049;
+}
+
+.field-info label {
+  color: steelblue;
+}
+.field-info input[type="file"],
+.field-info input[type="password"],
+.field-info input[type="text"],
+.field-info select,
+.field-info textarea {
+  background: #d9e8ff;
+  border-color: #82d2df;
+  color: steelblue;
+}
+
+.field-notice label {
+  color: goldenrod;
+}
+.field-notice input[type="file"],
+.field-notice input[type="password"],
+.field-notice input[type="text"],
+.field-notice select,
+.field-notice textarea {
+  background: lemonchiffon;
+  border-color: gold;
+  color: goldenrod;
+}
+
+.field-success label {
+  color: #4e9a06;
+}
+.field-success input[type="file"],
+.field-success input[type="password"],
+.field-success input[type="text"],
+.field-success select,
+.field-success textarea {
+  background: beige;
+  border-color: #becf59;
+  color: #4e9a06;
+}
+
+.field-prefix, .field-suffix {
   overflow: hidden;
   /* Clearfix */
 }
-form .field-prefix .label, form .field-suffix .label {
+.field-prefix .label, .field-suffix .label {
   background: #fafafa;
   border: 1px solid #dadada;
   border-right-width: 0;
@@ -409,9 +544,11 @@ form .field-prefix .label, form .field-suffix .label {
   padding: 3px 9px;
   text-shadow: 1px 1px 0 white;
 }
-form .field-prefix input,
-form .field-prefix select,
-form .field-prefix button, form .field-suffix input, form .field-suffix select, form .field-suffix button {
+.field-prefix input,
+.field-prefix select,
+.field-prefix button, .field-suffix input,
+.field-suffix select,
+.field-suffix button {
   border-right-width: 0;
   clear: none;
   float: left;
@@ -424,168 +561,121 @@ form .field-prefix button, form .field-suffix input, form .field-suffix select, 
   -o-border-radius: 0;
   border-radius: 0;
 }
-form .field-prefix input:first-child,
-form .field-prefix select:first-child,
-form .field-prefix button:first-child, form .field-suffix input:first-child, form .field-suffix select:first-child, form .field-suffix button:first-child {
+.field-prefix input:first-child,
+.field-prefix select:first-child,
+.field-prefix button:first-child, .field-suffix input:first-child,
+.field-suffix select:first-child,
+.field-suffix button:first-child {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -ms-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-form .field-prefix input:last-child,
-form .field-prefix select:last-child,
-form .field-prefix button:last-child, form .field-suffix input:last-child, form .field-suffix select:last-child, form .field-suffix button:last-child {
+.field-prefix input:last-child,
+.field-prefix select:last-child,
+.field-prefix button:last-child, .field-suffix input:last-child,
+.field-suffix select:last-child,
+.field-suffix button:last-child {
   border-right-width: 1px;
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-}
-form .field-prefix .label {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -ms-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-form .field-suffix .label {
-  border-right-width: 1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-form .field-prefix.field-suffix .label:first-child {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  -ms-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-form .field-prefix.field-suffix .label:last-child,
-form .field-prefix.field-suffix input:last-child,
-form .field-prefix.field-suffix select:last-child,
-form .field-prefix.field-suffix button:last-child {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-form .last-field {
-  clear: right;
-  float: right;
-  margin-right: 0;
-}
-form .error-field label {
-  color: #e14049;
-}
-form .error-field input[type="file"],
-form .error-field input[type="password"],
-form .error-field input[type="text"],
-form .error-field select,
-form .error-field textarea {
-  background: #fffafa;
-  border-color: #ffc0cb;
-  color: #e14049;
-}
-form .info-field label {
-  color: #4682b4;
-}
-form .info-field input[type="file"], form .info-field input[type="password"], form .info-field input[type="text"], form .info-field select, form .info-field textarea {
-  background: #d9e8ff;
-  border-color: #82d2df;
-  color: #4682b4;
-}
-form .notice-field label {
-  color: #daa520;
-}
-form .notice-field input[type="file"], form .notice-field input[type="password"], form .notice-field input[type="text"], form .notice-field select, form .notice-field textarea {
-  background: #fffacd;
-  border-color: #ffd700;
-  color: #daa520;
-}
-form .success-field label {
-  color: #4e9a06;
-}
-form .success-field input[type="file"], form .success-field input[type="password"], form .success-field input[type="text"], form .success-field select, form .success-field textarea {
-  background: #f5f5dc;
-  border-color: #becf59;
-  color: #4e9a06;
 }
 
-.horizontal-fields div:before, .horizontal-fields div:after,
-.horizontal-field:before,
-.horizontal-field:after {
-  content: "";
+.field-prefix .label {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.field-suffix .label {
+  border-right-width: 1px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.field-prefix.field-suffix .label:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.field-prefix.field-suffix .label:last-child,
+.field-prefix.field-suffix input:last-child,
+.field-prefix.field-suffix select:last-child,
+.field-prefix.field-suffix button:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.field-horizontal, .form-horizontal div {
+  *zoom: 1;
+}
+.field-horizontal:before, .form-horizontal div:before, .field-horizontal:after, .form-horizontal div:after {
+  content: " ";
   display: table;
+}
+.field-horizontal:after, .form-horizontal div:after {
   clear: both;
 }
-.horizontal-fields div,
-.horizontal-field {
-  zoom: 1;
-}
-.horizontal-fields div label, .horizontal-fields div span.label,
-.horizontal-field label,
-.horizontal-field span.label {
+.field-horizontal label, .form-horizontal div label, .field-horizontal span.label, .form-horizontal div span.label {
   clear: none;
   display: inline;
   float: left;
   width: 35%;
 }
-.horizontal-fields div > input[type="file"], .horizontal-fields div > input[type="password"], .horizontal-fields div > input[type="text"], .horizontal-fields div > select, .horizontal-fields div > textarea, .horizontal-fields div > .control-set,
-.horizontal-field > input[type="file"],
-.horizontal-field > input[type="password"],
-.horizontal-field > input[type="text"],
-.horizontal-field > select,
-.horizontal-field > textarea,
-.horizontal-field > .control-set {
+.field-horizontal > input[type="file"], .form-horizontal div > input[type="file"], .field-horizontal > input[type="password"], .form-horizontal div > input[type="password"], .field-horizontal > input[type="text"], .form-horizontal div > input[type="text"], .field-horizontal > select, .form-horizontal div > select, .field-horizontal > textarea, .form-horizontal div > textarea, .field-horizontal > .control-group, .form-horizontal div > .control-group {
   clear: none;
   float: right;
   width: 60%;
 }
-.horizontal-fields div .field-prefix,
-.horizontal-fields div .field-suffix,
-.horizontal-field .field-prefix,
-.horizontal-field .field-suffix {
+.field-horizontal .field-prefix, .form-horizontal div .field-prefix,
+.field-horizontal .field-suffix,
+.form-horizontal div .field-suffix {
   clear: none;
   float: right;
   width: 60%;
 }
-.horizontal-fields div .field-prefix input,
-.horizontal-fields div .field-suffix input,
-.horizontal-field .field-prefix input,
-.horizontal-field .field-suffix input {
+.field-horizontal .field-prefix input, .form-horizontal div .field-prefix input,
+.field-horizontal .field-suffix input,
+.form-horizontal div .field-suffix input {
   width: auto;
 }
-.horizontal-fields div .control-set label, .horizontal-fields div .control-set span.label,
-.horizontal-field .control-set label,
-.horizontal-field .control-set span.label {
+.field-horizontal .control-group label, .form-horizontal div .control-group label, .field-horizontal .control-group span.label, .form-horizontal div .control-group span.label {
   float: none;
   width: auto;
 }
 
-.inline-fields {
+/*==========  Form types  ==========*/
+.form-inline {
   line-height: 250%;
   /* This produces vertical spacing between inputs */
 }
-.inline-fields label {
+.form-inline label {
   display: inline-block;
 }
-.inline-fields input, .inline-fields select {
+.form-inline input, .form-inline select {
   display: inline-block;
   width: auto;
 }
 
-/*==========  Search Form  ==========*/
-.search-form > div, .search-form > p {
+.form-search > div, .form-search > p {
   clear: none;
   float: left;
 }
-.search-form input, .search-form label {
+.form-search input, .form-search label {
   float: left;
   margin-right: 3px;
   width: auto;

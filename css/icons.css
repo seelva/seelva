@@ -116,7 +116,8 @@ a [class*=" icon-"] {
 }
 
 .btn [class^="icon-"],
-.btn [class*=" icon-"], .nav-tabs [class^="icon-"], .nav-tabs [class*=" icon-"] {
+.btn [class*=" icon-"], .nav-tabs [class^="icon-"],
+.nav-tabs [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
   line-height: .9em;
 }

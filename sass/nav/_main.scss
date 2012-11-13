@@ -17,10 +17,9 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /*==========  Global setup  ==========*/
-.tabs, .vertical-tabs, .horizontal-menu, .vertical-menu, .horizontal-list, .breadcrumb, .pagination, .pagination ul, .pager, .pager ul {
+.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .list-horizontal, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
 	@include nav;
 	margin: 0 0 $baseUnit3 0;
-	overflow: hidden;
 
 	> li {
 		@include nav-li;

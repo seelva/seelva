@@ -47,8 +47,8 @@ thead {
 }
 
 tr {
-	&.odd, .zebra &:nth-child(odd) 	{ background: $White; }
-	&.even, .zebra &:nth-child(even) { background: $GhostWhite; }
+	&.odd, .table-zebra &:nth-child(odd) 	{ background: $White; }
+	&.even, .table-zebra &:nth-child(even) { background: $GhostWhite; }
 }
 td {
 	border: {
@@ -58,4 +58,4 @@ td {
 	padding: $baseUnit2;
 	vertical-align: top;
 }
-table.compact td, table.compact th { padding: #{$baseUnit1 - 1} $baseUnit2; }
+.table-compact td, .table-compact th { padding: #{$baseUnit1 - 1} $baseUnit2; }
