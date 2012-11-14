@@ -20,9 +20,9 @@ img {
 		padding: 0;
 	}
 
-	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
-	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
-	&.nofloat 					{ display: block; margin-left: auto; margin-right: auto; }
+	&.alignleft, &.floatleft   { float: left; margin-right: $baseUnit3; }
+	&.alignright, &.floatright { float: right; margin-left: $baseUnit3; }
+	&.nofloat                  { display: block; margin-left: auto; margin-right: auto; }
 }
 
 /*==========  Captioned image  ==========*/
@@ -37,8 +37,8 @@ img {
 		@include border-radius($baseUnit2);
 	}
 
-	&.alignleft, &.floatleft 	{ float: left; margin-right: $baseUnit3; }
-	&.alignright, &.floatright 	{ float: right; margin-left: $baseUnit3; }
+	&.alignleft, &.floatleft   { float: left; margin-right: $baseUnit3; }
+	&.alignright, &.floatright { float: right; margin-left: $baseUnit3; }
 	& img {
 		background: transparent;
 		border-width: 0;
@@ -61,20 +61,16 @@ img {
 		background: $GhostWhite;
 		border: 1px solid $WhiteSmoke;
 		float: left;
-		margin: 0 20px 20px 0;
+		margin: 0 10px 20px;
 		padding: $baseUnit2;
 		text-align: center;
 		@include border-radius($baseUnit2);
 
-		a {
-			display: inline-block;
-		}
+		a { display: inline-block; }
 	}
 
 	&.styled {
-		> div, > li {
-			@include border-radius($baseUnit2);
-		}
+		> div, > li { @include border-radius($baseUnit2); }
 	}
 
 	&.light-styled {
@@ -83,9 +79,7 @@ img {
 			border: 0;
 			padding: 0;
 
-			img {
-				@include border-radius($baseUnit2);
-			}
+			img { @include border-radius($baseUnit2); }
 		}
 	}
 }

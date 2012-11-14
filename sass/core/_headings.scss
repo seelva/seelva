@@ -11,11 +11,13 @@ h1, h2, h3, h4, h5, h6 {
 	.subtitle {
 		color: $Gray;
 		font-size: 80%;
+		line-height: 100%;
 	}
 
 	&.styled {
 		border-bottom: 1px solid $Gray;
-		padding-bottom: $baseUnit2;
+		margin: 0 0 0.3em 0;
+		padding-bottom: 0.2em;
 	}
 }
 

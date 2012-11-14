@@ -7,6 +7,4 @@
 
 /* Micro clearfix */
 /* Source: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf {
-	@include cf;
-}
+.cf { @include cf; }

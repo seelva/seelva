@@ -19,17 +19,13 @@ $contentWidth: ($colAmount * $colWidth) + ( ($colAmount - 1) * $gutterWidth);
 	width: auto;
 }
 
-.row {
-	@include cf;
-}
+.row { @include cf; }
 
 /* The last column in a row gets automatically floated to the right */
 .row > div:last-child {
 	@include omega;
 
-	&[class^="suffix"], &[class*=" suffix"] {
-		float: left;
-	}
+	&[class^="suffix"], &[class*=" suffix"] { float: left; }
 }
 /* Useful in fixed-width grids only */
 .grid-guides { background: $White url(http://griddle.it/#{$contentWidth}-#{$colAmount}-#{$colWidth}?color=edf2c4&text=7b9712) repeat-y center top; }
@@ -38,10 +34,6 @@ $contentWidth: ($colAmount * $colWidth) + ( ($colAmount - 1) * $gutterWidth);
 form {
 	[class^="unit-"], [class*=" unit-"] { clear: none; }
 }
-
-.alpha { @include alpha; }
-
-.omega { @include omega; }
 
 /*==========  $Relative-width classes  ==========*/
 .half-width, .one-half,

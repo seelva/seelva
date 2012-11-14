@@ -51,9 +51,7 @@
 		margin-bottom: $baseUnit1;
 		padding-left: 1px;
 
-		> a, > a:link, > a:visited {
-			@include border-radius($baseUnit1 0 0 $baseUnit1);
-		}
+		> a, > a:link, > a:visited { @include border-radius($baseUnit1 0 0 $baseUnit1); }
 
 		> a:hover, &.active > a, &.active > a:link {
 			background-color: $White;

@@ -925,17 +925,6 @@ form [class^="unit-"], form [class*=" unit-"] {
   clear: none;
 }
 
-.alpha {
-  clear: left;
-  float: left;
-}
-
-.omega {
-  clear: right;
-  float: right;
-  margin-right: 0;
-}
-
 /*==========  $Relative-width classes  ==========*/
 .half-width, .one-half, .two-fourths, .three-sixths,
 .one-third,

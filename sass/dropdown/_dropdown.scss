@@ -14,8 +14,11 @@
 	.drop-content, > ul {
 		/* Common styles for submenus */
 		display: none;
+		padding: 3px 0;
 		position: absolute;
 		z-index: 100;
+
+		@include border-radius($baseUnit3);
 	}
 
 	.drop-content {
@@ -82,14 +85,10 @@
 	}
 
 	&:hover, &.active {
-		> a:after, > a:link:after {
-			border-top-color: $White;
-		}
+		> a:after, > a:link:after { border-top-color: $White; }
 	}
 
-	&:hover > ul, ul a:hover ul, &:hover .drop-content {
-		display: block;
-	}
+	&:hover > ul, ul a:hover ul, &:hover .drop-content { display: block; }
 
 	ul :hover ul :hover ul { display: block; }
 

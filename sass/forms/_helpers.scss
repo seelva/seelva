@@ -23,9 +23,7 @@
 
 /*==========  Form Fields  ==========*/
 @mixin field-status($bg, $border, $color) {
-	label {
-		color: $color;
-	}
+	label { color: $color; }
 
 	input[type="file"],
 	input[type="password"],
@@ -68,9 +66,7 @@
 		width: auto;
 		@include border-radius(0);
 
-		&:first-child {
-			@include border-radius($baseUnit1 0 0 $baseUnit1);
-		}
+		&:first-child { @include border-radius($baseUnit1 0 0 $baseUnit1); }
 
 		&:last-child {
 			border-right-width: 1px;
@@ -80,9 +76,7 @@
 }
 
 .field-prefix {
-	.label {
-		@include border-radius($baseUnit1 0 0 $baseUnit1);
-	}
+	.label { @include border-radius($baseUnit1 0 0 $baseUnit1); }
 }
 
 .field-suffix {
@@ -93,9 +87,7 @@
 }
 
 .field-prefix.field-suffix {
-	.label:first-child {
-		@include border-radius($baseUnit1 0 0 $baseUnit1);
-	}
+	.label:first-child { @include border-radius($baseUnit1 0 0 $baseUnit1); }
 
 	.label:last-child,
 	input:last-child,
@@ -132,9 +124,7 @@
 		float: right;
 		width: 60%;
 
-		input {
-			width: auto;
-		}
+		input { width: auto; }
 	}
 
 	.control-group label, .control-group span.label {
@@ -151,9 +141,7 @@
 .form-inline {
 	line-height: 250%; /* This produces vertical spacing between inputs */
 
-	label {
-		display: inline-block;
-	}
+	label { display: inline-block; }
 
 	input, select {
 		display: inline-block;

@@ -17,15 +17,23 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /*==========  Global setup  ==========*/
-.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .list-horizontal, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
+.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
   list-style: none;
+  *zoom: 1;
   margin: 0 0 9px 0;
 }
-.tabs > li, .tabs-vertical > li, .menu-horizontal > li, .menu-vertical > li, .list-horizontal > li, .breadcrumb > li, .pagination > li, .pagination ul > li, .nav-direction > li, .nav-direction ul > li {
+.tabs:before, .tabs:after, .tabs-vertical:before, .tabs-vertical:after, .menu-horizontal:before, .menu-horizontal:after, .menu-vertical:before, .menu-vertical:after, .breadcrumb:before, .breadcrumb:after, .pagination:before, .pagination:after, .pagination ul:before, .pagination ul:after, .nav-direction:before, .nav-direction:after, .nav-direction ul:before, .nav-direction ul:after {
+  content: " ";
+  display: table;
+}
+.tabs:after, .tabs-vertical:after, .menu-horizontal:after, .menu-vertical:after, .breadcrumb:after, .pagination:after, .pagination ul:after, .nav-direction:after, .nav-direction ul:after {
+  clear: both;
+}
+.tabs > li, .tabs-vertical > li, .menu-horizontal > li, .menu-vertical > li, .breadcrumb > li, .pagination > li, .pagination ul > li, .nav-direction > li, .nav-direction ul > li {
   display: block;
   float: left;
 }
-.tabs > li > a, .tabs-vertical > li > a, .menu-horizontal > li > a, .menu-vertical > li > a, .list-horizontal > li > a, .breadcrumb > li > a, .pagination > li > a, .pagination ul > li > a, .nav-direction > li > a, .nav-direction ul > li > a {
+.tabs > li > a, .tabs-vertical > li > a, .menu-horizontal > li > a, .menu-vertical > li > a, .breadcrumb > li > a, .pagination > li > a, .pagination ul > li > a, .nav-direction > li > a, .nav-direction ul > li > a {
   display: block;
   text-decoration: none;
 }
@@ -145,19 +153,6 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .menu-vertical > li {
   border-bottom: 1px solid #e5e5e5;
   float: none;
-}
-
-/*==========  $Nav Lists  ==========*/
-.list-horizontal > li {
-  border-left: 1px solid #e5e5e5;
-  display: inline-block;
-  float: none;
-}
-.list-horizontal > li:first-child {
-  border-left: 0;
-}
-.list-horizontal > li > a, .list-horizontal > li > a:link, .list-horizontal > li > a:visited {
-  padding: 0 9px;
 }
 
 /*==========  $Nav Pagination  ==========*/

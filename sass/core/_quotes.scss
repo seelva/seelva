@@ -1,5 +1,4 @@
 /*==========  $Core Quotes  ==========*/
-
 blockquote {
 	border-left: 1px solid $LightGray;
 	font: {
@@ -11,13 +10,9 @@ blockquote {
 	padding-left: $baseUnit2;
 	quotes: none;
 
-	&:before, &:after {
-		content: none;
-	}
+	&:before, &:after { content: none; }
 
-	p:last-child {
-		margin-bottom: 0;
-	}
+	p:last-child { margin-bottom: 0; }
 
 	> span, .credit {
 		font: {
@@ -26,9 +21,7 @@ blockquote {
 		}
 		margin-bottom: 0;
 
-		&:before {
-			content: '\2013';
-		}
+		&:before { content: '\2013'; }
 	}
 
 	&.styled {
@@ -53,13 +46,9 @@ blockquote {
 		p {
 			margin: 0 $baseUnit6 1em #{$baseUnit6 * 2};
 
-			&:first-child {
-				margin-top: -40px;
-			}
+			&:first-child { margin-top: -40px; }
 
-			&:last-child {
-				margin-bottom: 0;
-			}
+			&:last-child { margin-bottom: 0; }
 		}
 	}
 }
@@ -68,6 +57,6 @@ cite, q {
 	font-style: italic;
 	quotes: '"' '"' "'" "'";
 
-	&:after 	{ content: open-quote; }
-	&:before 	{ content: close-quote; }
+	&:after  { content: close-quote; }
+	&:before { content: open-quote; }
 }

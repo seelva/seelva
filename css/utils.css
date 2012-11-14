@@ -116,6 +116,18 @@ hr.clear, hr.clearing {
   text-shadow: none;
 }
 
+/*==========  $Utils Semantic  ==========*/
+.alpha {
+  clear: left;
+  float: left;
+}
+
+.omega {
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+
 /*==========  $Utils Unsemantic  ==========*/
 /**
 *

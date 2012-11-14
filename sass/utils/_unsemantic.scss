@@ -9,22 +9,22 @@
 **/
 
 /* Alignment */
-.alignleft 		{ text-align: left; }
-.aligncenter 	{ text-align: center; }
-.alignright 	{ text-align: right; }
-.alignjust 		{ text-align: justify; }
+.alignleft   { text-align: left; }
+.aligncenter { text-align: center; }
+.alignright  { text-align: right; }
+.alignjust   { text-align: justify; }
 
 /* Floating */
-.floatleft 		{ float: left; }
-.floatright 	{ float: right; }
-.nofloat 		{ float: none; }
+.floatleft   { float: left; }
+.floatright  { float: right; }
+.nofloat     { float: none; }
 
 /* Text */
-.small          { font-size: 80%; }
-.big 			{ font-size: 125%; }
-.large 			{ font-size: 150%; }
-.loud 			{ color: $Crimson; }
-.quiet 			{ color: $LightGray; }
-.capitalize 	{ text-transform: capitalize; }
-.lowercase 		{ text-transform: lowercase; }
-.uppercase 		{ text-transform: uppercase; }
+.small       { font-size: 80%; }
+.big         { font-size: 125%; }
+.large       { font-size: 150%; }
+.loud        { color: $Crimson; }
+.quiet       { color: $LightGray; }
+.capitalize  { text-transform: capitalize; }
+.lowercase   { text-transform: lowercase; }
+.uppercase   { text-transform: uppercase; }

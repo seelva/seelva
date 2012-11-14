@@ -22,8 +22,14 @@
 .dropdown .drop-content, .flyout .drop-content, .dropdown > ul, .flyout > ul {
   /* Common styles for submenus */
   display: none;
+  padding: 3px 0;
   position: absolute;
   z-index: 100;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
 }
 .dropdown .drop-content, .flyout .drop-content {
   background: #dadada;

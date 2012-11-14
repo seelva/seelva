@@ -4,9 +4,7 @@ input[type="radio"] {
 	cursor: pointer;
 	margin: 0;
 
-	&:focus {
-		outline-color: $OliveDrab;
-	}
+	&:focus { outline-color: $OliveDrab; }
 }
 
 input[type=""],
@@ -46,21 +44,13 @@ textarea {
 		outline-color: $OliveDrab;
 	}
 
-	&[readonly] {
-		background-color: $GhostWhite;
-	}
+	&[readonly] { background-color: $GhostWhite; }
 
 	&[disabled] {
 		background-color: $LightGray;
 		color: $Gray;
 	}
 }
-
-input[type="search"] {
-	-webkit-appearance: textfield;
-}
-
-input[type="range"] {}
 
 input.image,
 input[type="image"] {
@@ -71,9 +61,7 @@ input[type="image"] {
 
 textarea {
 	height: 8em;
-	overflow: auto;
 	resize: vertical;
-	vertical-align: top;
 }
 
 select {
