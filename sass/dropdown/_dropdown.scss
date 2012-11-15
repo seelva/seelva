@@ -18,7 +18,7 @@
 		position: absolute;
 		z-index: 100;
 
-		@include border-radius($baseUnit3);
+		@include border-radius($radius3);
 	}
 
 	.drop-content {
@@ -26,7 +26,7 @@
 		padding: $baseUnit3;
 		width: 230px;
 
-		@include border-radius( 0 0 $baseUnit2 $baseUnit2 );
+		@include border-radius( 0 0 $radius2 $radius2 );
 	}
 
 	> ul {

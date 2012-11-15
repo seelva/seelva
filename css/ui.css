@@ -308,7 +308,7 @@ a.button.btn-notice:active {
 .info, .ok,
 .notice, .warning,
 .status, .success {
-  background: whitesmoke;
+  background-color: whitesmoke;
   background-position: 4px 1em;
   background-repeat: no-repeat;
   border: 1px solid #e5e5e5;

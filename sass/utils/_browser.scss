@@ -1,5 +1,5 @@
 /*==========  $Resizable elements  ==========*/
-.resizable { resize: both; overflow: auto; }
+.resizable { overflow: auto; resize: both; }
 
 /*==========  $Selection styling  ==========*/
 ::-moz-selection, ::selection { background: $Beige; color: $OliveDrab; text-shadow: none; }

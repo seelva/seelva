@@ -56,10 +56,10 @@ hr.clear, hr.clearing {
 /*==========  $Utils Display  ==========*/
 /* Screen readers can see it */
 .invisible {
-  position: absolute !important;
-  /* IE6, IE7 */
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  /* IE6, IE7 */
 }
 
 /* Screen readers can not see it */
@@ -99,14 +99,14 @@ hr.clear, hr.clearing {
 }
 
 .accessibility {
-  position: absolute;
   left: -5000em;
+  position: absolute;
 }
 
 /*==========  $Resizable elements  ==========*/
 .resizable {
-  resize: both;
   overflow: auto;
+  resize: both;
 }
 
 /*==========  $Selection styling  ==========*/

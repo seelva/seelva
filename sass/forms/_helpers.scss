@@ -66,34 +66,34 @@
 		width: auto;
 		@include border-radius(0);
 
-		&:first-child { @include border-radius($baseUnit1 0 0 $baseUnit1); }
+		&:first-child { @include border-radius($radius1 0 0 $radius1); }
 
 		&:last-child {
 			border-right-width: 1px;
-			@include border-radius(0 $baseUnit1 $baseUnit1 0);
+			@include border-radius(0 $radius1 $radius1 0);
 		}
 	}
 }
 
 .field-prefix {
-	.label { @include border-radius($baseUnit1 0 0 $baseUnit1); }
+	.label { @include border-radius($radius1 0 0 $radius1); }
 }
 
 .field-suffix {
 	.label {
 		border-right-width: 1px;
-		@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		@include border-radius(0 $radius1 $radius1 0);
 	}
 }
 
 .field-prefix.field-suffix {
-	.label:first-child { @include border-radius($baseUnit1 0 0 $baseUnit1); }
+	.label:first-child { @include border-radius($radius1 0 0 $radius1); }
 
 	.label:last-child,
 	input:last-child,
 	select:last-child,
 	button:last-child {
-		@include border-radius(0 $baseUnit1 $baseUnit1 0);
+		@include border-radius(0 $radius1 $radius1 0);
 	}
 }
 

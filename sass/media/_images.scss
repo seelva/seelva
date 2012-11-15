@@ -1,8 +1,8 @@
 /*==========  $Media Images  ==========*/
 img {
 	/* Make images responsive by default */
-	max-width: 100%;
 	height: auto;
+	max-width: 100%;
 
 	&[width], &[height] { display: inline-block; }
 	&, a & {

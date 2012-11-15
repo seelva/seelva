@@ -2,7 +2,7 @@
 .breadcrumb {
 	background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 	border: 1px solid $Silver;
-	@include border-radius($baseUnit1);
+	@include border-radius($radius1);
 
 	span { display: block; }
 

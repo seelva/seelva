@@ -32,9 +32,9 @@ a.button {
 		margin: 0;
 		@include border-radius(0);
 
-		&:first-child { @include border-radius($baseUnit1 0 0 $baseUnit1); }
+		&:first-child { @include border-radius($radius1 0 0 $radius1); }
 
-		&:last-child  { @include border-radius(0 $baseUnit1 $baseUnit1 0); }
+		&:last-child  { @include border-radius(0 $radius1 $radius1 0); }
 	}
 }
 

@@ -4,13 +4,13 @@ img {
 		background: $GhostWhite url(../images/loading.gif) no-repeat center;
 		border: 1px solid $WhiteSmoke;
 		padding: $baseUnit2;
-		@include border-radius($baseUnit2);
+		@include border-radius($radius2);
 	}
 
 	&.light-styled, a &.light-styled {
 		border-width: 0;
 		padding: 0;
-		@include border-radius($baseUnit2);
+		@include border-radius($radius2);
 		@include single-box-shadow($DarkGray, 0, 0, $baseUnit2, 0, true);
 	}
 
@@ -34,7 +34,7 @@ img {
 		margin-bottom: $baseUnit3;
 		padding: $baseUnit2;
 		text-align: center;
-		@include border-radius($baseUnit2);
+		@include border-radius($radius2);
 	}
 
 	&.alignleft, &.floatleft   { float: left; margin-right: $baseUnit3; }
@@ -64,13 +64,13 @@ img {
 		margin: 0 10px 20px;
 		padding: $baseUnit2;
 		text-align: center;
-		@include border-radius($baseUnit2);
+		@include border-radius($radius2);
 
 		a { display: inline-block; }
 	}
 
 	&.styled {
-		> div, > li { @include border-radius($baseUnit2); }
+		> div, > li { @include border-radius($radius2); }
 	}
 
 	&.light-styled {
@@ -79,7 +79,7 @@ img {
 			border: 0;
 			padding: 0;
 
-			img { @include border-radius($baseUnit2); }
+			img { @include border-radius($radius2); }
 		}
 	}
 }

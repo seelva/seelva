@@ -15,15 +15,14 @@ kbd {
 	color: $DimGray;
 	font-weight: bold;
 	text-transform: capitalize;
-
 	@include box-shadow($Silver 0 2px 0, $DimGray 0 2px 2px);
-	@include border-radius($baseUnit1);
+	@include border-radius($radius1);
 }
 pre {
 	display: block;
 	margin: 0 0 $baseUnit3 0;
 	padding: $baseUnit2;
-	@include border-radius($baseUnit1);
+	@include border-radius($radius1);
 }
 pre code {
 	background: transparent;

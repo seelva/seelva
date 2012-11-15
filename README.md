@@ -1,4 +1,7 @@
 seelva
 ======
 
-CSS Framework.
+About
+=====
+
+Seelva is a CSS and HTML Framework built with SASS and Compass.

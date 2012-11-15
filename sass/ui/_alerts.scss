@@ -5,7 +5,8 @@
 .info, .ok,
 .notice, .warning,
 .status, .success {
-	background: $WhiteSmoke {
+	background: {
+		color: $WhiteSmoke;
 		position: 4px 1em;
 		repeat: no-repeat;
 	}

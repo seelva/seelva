@@ -3,7 +3,7 @@ details {
 	background: $GhostWhite;
 	border: 1px solid $LightGray;
 
-	@include border-radius($baseUnit1);
+	@include border-radius($radius1);
 
 	summary {
 		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
@@ -13,7 +13,7 @@ details {
 		padding: 0 $baseUnit2;
 		text-align: left;
 
-		@include border-radius($baseUnit1 $baseUnit1 0 0);
+		@include border-radius($radius1 $radius1 0 0);
 
 		&:focus {
 		// TODO: Use variable instead of hex color

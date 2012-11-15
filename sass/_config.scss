@@ -8,6 +8,7 @@ $gutterWidth: 20;
 $gridType:    "both";
 
 // ###### Base units
+// Px unit
 $baseUnit0:		1px;
 $baseUnit1:		3px;
 $baseUnit2:		$baseUnit1 * 2;
@@ -17,6 +18,12 @@ $baseUnit5:		$baseUnit1 * 5;
 $baseUnit6:		$baseUnit1 * 6;
 $baseUnit7:		$baseUnit1 * 7;
 $baseUnit8:		$baseUnit1 * 8;
+
+// Border radius
+$radius1: 3px;
+$radius2: 6px;
+$radius3: 9px;
+$radius4: 12px;
 
 // ###### Colors
 // Black to white

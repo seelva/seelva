@@ -27,13 +27,14 @@
 		> a, > a:link, > a:visited {
 			border-bottom-width: 0;
 
-			@include border-radius($baseUnit1 $baseUnit1 0 0);
+			@include border-radius($radius1 $radius1 0 0);
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
 			background-color: $White;
-			border: 1px solid $LightGray;
-			border-bottom-color: transparent;
+			border: 1px solid $LightGray {
+				bottom-color: transparent;
+			};
 		}
 	}
 }
@@ -51,12 +52,13 @@
 		margin-bottom: $baseUnit1;
 		padding-left: 1px;
 
-		> a, > a:link, > a:visited { @include border-radius($baseUnit1 0 0 $baseUnit1); }
+		> a, > a:link, > a:visited { @include border-radius($radius1 0 0 $radius1); }
 
 		> a:hover, &.active > a, &.active > a:link {
 			background-color: $White;
-			border: 1px solid $LightGray;
-			border-right-color: transparent;
+			border: 1px solid $LightGray {
+				right-color: transparent;
+			};
 		}
 	}
 }

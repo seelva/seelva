@@ -21,12 +21,14 @@ a.button {
 	line-height: 100%;
 	margin: 0 $baseUnit2 0 0;
 	padding: #{$baseUnit2 - 1} $baseUnit3;/*! For links */
-	text-decoration: none;
-	text-shadow: 0 1px 0 $White;
+	text: {
+		decoration: none;
+		shadow: 0 1px 0 $White;
+	};
 	white-space: nowrap;
 	word-wrap: normal;
 
-	@include border-radius($baseUnit1);
+	@include border-radius($radius1);
 	@include single-box-shadow($WhiteSmoke, 0, 1px, 0, 0);
 
 	/* IE7 padding bugfix */

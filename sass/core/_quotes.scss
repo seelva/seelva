@@ -29,7 +29,7 @@ blockquote {
 		border: 0;
 		color: $DimGray;
 		padding: $baseUnit6 0;
-		@include border-radius($baseUnit2);
+		@include border-radius($radius2);
 
 		&:before {
 			color: $Silver;
