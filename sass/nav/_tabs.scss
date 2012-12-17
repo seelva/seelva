@@ -25,8 +25,6 @@
 		top: 1px;
 
 		> a, > a:link, > a:visited {
-			border-bottom-width: 0;
-
 			@include border-radius($radius1 $radius1 0 0);
 		}
 

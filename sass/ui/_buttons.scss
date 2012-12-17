@@ -4,8 +4,8 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
-a.btn,
-a.button {
+a.btn, a.btn:link,
+a.button, a.button:link {
 	background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
 	border: 1px solid $Silver {
 		bottom-color: $DarkGray;
@@ -40,6 +40,11 @@ a.button {
 		background-position: 0 -292px;
 		color: $DimGray;
 		outline-color: $OliveDrab;
+	}
+
+	&:focus {
+		outline-width: thin;
+		outline-style: auto;
 	}
 
 	&:active {

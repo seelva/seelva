@@ -47,7 +47,7 @@ textarea {
 	&[readonly] { background-color: $GhostWhite; }
 
 	&[disabled] {
-		background-color: $LightGray;
+		background: $LightGray;
 		color: $Gray;
 	}
 }

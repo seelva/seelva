@@ -11,7 +11,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   display: block;
   float: left;
 }
-.nav > li > a {
+.nav > li > a, .nav > li > a:link {
   display: block;
   text-decoration: none;
 }
@@ -33,9 +33,12 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   display: block;
   float: left;
 }
-.tabs > li > a, .tabs-vertical > li > a, .menu-horizontal > li > a, .menu-vertical > li > a, .breadcrumb > li > a, .pagination > li > a, .pagination ul > li > a, .nav-direction > li > a, .nav-direction ul > li > a {
+.tabs > li > a, .tabs > li > a:link, .tabs-vertical > li > a, .tabs-vertical > li > a:link, .menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-vertical > li > a, .menu-vertical > li > a:link, .breadcrumb > li > a, .breadcrumb > li > a:link, .pagination > li > a, .pagination > li > a:link, .pagination ul > li > a, .pagination ul > li > a:link, .nav-direction > li > a, .nav-direction > li > a:link, .nav-direction ul > li > a, .nav-direction ul > li > a:link {
   display: block;
   text-decoration: none;
+}
+.tabs > li > a:focus, .tabs-vertical > li > a:focus, .menu-horizontal > li > a:focus, .menu-vertical > li > a:focus, .breadcrumb > li > a:focus, .pagination > li > a:focus, .pagination ul > li > a:focus, .nav-direction > li > a:focus, .nav-direction ul > li > a:focus {
+  outline: thin auto #4e9a06;
 }
 
 /*==========  $Nav Tabs  ==========*/
@@ -69,7 +72,6 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   top: 1px;
 }
 .tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited {
-  border-bottom-width: 0;
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   -ms-border-radius: 3px 3px 0 0;
@@ -131,12 +133,12 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /*==========  $Nav Menus  ==========*/
-.menu > li > a, .menu > li > a:link, .menu > li > a:visited, .menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-horizontal > li > a:visited, .menu-vertical > li > a, .menu-vertical > li > a:link, .menu-vertical > li > a:visited {
+.menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-horizontal > li > a:visited, .menu-vertical > li > a, .menu-vertical > li > a:link, .menu-vertical > li > a:visited {
   background: #dadada url(../images/gradient-bg.png) repeat-x left top;
   color: black;
   padding: 6px 9px;
 }
-.menu > li > a:hover, .menu > li.active > a, .menu > li.active > a:link, .menu-horizontal > li > a:hover, .menu-horizontal > li.active > a, .menu-horizontal > li.active > a:link, .menu-vertical > li > a:hover, .menu-vertical > li.active > a, .menu-vertical > li.active > a:link {
+.menu-horizontal > li > a:hover, .menu-horizontal > li.active > a, .menu-horizontal > li.active > a:link, .menu-vertical > li > a:hover, .menu-vertical > li.active > a, .menu-vertical > li.active > a:link {
   background-color: #888888;
   background-position: left -15px;
   color: white;
@@ -192,7 +194,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 
 /* Full Pagination */
-.pagination li, .pagination ul li {
+.pagination li {
   float: left;
 }
 .pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited {

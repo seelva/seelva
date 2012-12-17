@@ -7,8 +7,8 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
-a.btn,
-a.button {
+a.btn, a.btn:link,
+a.button, a.button:link {
   background: #e5e5e5 url(../images/gradient-bg.png) repeat-x left top;
   border: 1px solid #dadada;
   border-bottom-color: darkgrey;
@@ -50,20 +50,30 @@ button:focus,
 button[type]:hover,
 button[type]:focus,
 a.btn:hover,
-a.btn:focus,
+a.btn:focus, a.btn:link:hover, a.btn:link:focus,
 a.button:hover,
-a.button:focus {
+a.button:focus, a.button:link:hover, a.button:link:focus {
   background-position: 0 -292px;
   color: #555555;
   outline-color: #7b9712;
+}
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+button:focus,
+button[type]:focus,
+a.btn:focus, a.btn:link:focus,
+a.button:focus, a.button:link:focus {
+  outline-width: thin;
+  outline-style: auto;
 }
 input[type="button"]:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 button:active,
 button[type]:active,
-a.btn:active,
-a.button:active {
+a.btn:active, a.btn:link:active,
+a.button:active, a.button:link:active {
   background-position: 0 bottom;
   border-color: #888888 darkgrey #dadada;
   color: #888888;
@@ -86,10 +96,10 @@ button[type][disabled]:hover,
 button[type][disabled]:active,
 a.btn[disabled],
 a.btn[disabled]:hover,
-a.btn[disabled]:active,
+a.btn[disabled]:active, a.btn:link[disabled], a.btn:link[disabled]:hover, a.btn:link[disabled]:active,
 a.button[disabled],
 a.button[disabled]:hover,
-a.button[disabled]:active {
+a.button[disabled]:active, a.button:link[disabled], a.button:link[disabled]:hover, a.button:link[disabled]:active {
   background: #e5e5e5;
   border: 1px solid #dadada;
   color: #888888;
