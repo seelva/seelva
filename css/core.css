@@ -345,7 +345,11 @@ table caption {
 }
 
 th {
-  background: whitesmoke url(../images/gradient-bg.png) repeat-x left -292px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #f5f5f5));
+  background-image: -webkit-linear-gradient(#fafafa, #f5f5f5);
+  background-image: -moz-linear-gradient(#fafafa, #f5f5f5);
+  background-image: -o-linear-gradient(#fafafa, #f5f5f5);
+  background-image: linear-gradient(#fafafa, #f5f5f5);
   border-bottom: 1px solid #e5e5e5;
   border-left: 1px solid #e5e5e5;
   font-weight: bold;
@@ -398,7 +402,11 @@ details {
   border-radius: 3px;
 }
 details summary {
-  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(#fafafa, #e5e5e5);
+  background-image: -moz-linear-gradient(#fafafa, #e5e5e5);
+  background-image: -o-linear-gradient(#fafafa, #e5e5e5);
+  background-image: linear-gradient(#fafafa, #e5e5e5);
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
   margin: 0;

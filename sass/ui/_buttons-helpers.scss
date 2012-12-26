@@ -3,7 +3,12 @@
 	color: $color;
 
 	&:hover, &:focus {
-		background-color: $bg;
+		@if $fullCSS3 {
+			@include default_gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
+		}
+		@else {
+			background-color: $bg;
+		}
 		border-color: $border;
 	}
 
@@ -15,8 +20,8 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
-a.btn,
-a.button {
+a.btn, a.btn:link,
+a.button, a.button:link {
 	&.btn-info    { @include btn-status( $LightCyan,     $DarkTurquoise, $SteelBlue, 40); }
 	&.btn-success { @include btn-status( $PaleGreen,     $YellowGreen,   $OliveDrab, 50); }
 	&.btn-error   { @include btn-status( $LavenderBlush, $Pink,          $Crimson,   60); }
@@ -27,7 +32,7 @@ a.button {
 .btn-group {
 	display: inline-block;
 
-	input[type="button"], input[type="submit"], input[type="reset"], button, a.button {
+	input[type="button"], input[type="submit"], input[type="reset"], button, a.button, a.button:link {
 		float: left;
 		margin: 0;
 		@include border-radius(0);

@@ -57,7 +57,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   position: relative;
 }
 .tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited, .tabs-vertical > li > a, .tabs-vertical > li > a:link, .tabs-vertical > li > a:visited {
-  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(#fafafa, #e5e5e5);
+  background-image: -moz-linear-gradient(#fafafa, #e5e5e5);
+  background-image: -o-linear-gradient(#fafafa, #e5e5e5);
+  background-image: linear-gradient(#fafafa, #e5e5e5);
   border: 1px solid #e5e5e5;
   color: black;
   padding: 6px 9px;
@@ -79,7 +83,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-radius: 3px 3px 0 0;
 }
 .tabs > li > a:hover, .tabs > li.active > a, .tabs > li.active > a:link {
-  background-color: white;
+  background: white;
   border: 1px solid #e5e5e5;
   border-bottom-color: transparent;
 }
@@ -89,7 +93,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-right: 1px solid #dadada;
   float: left;
   margin-right: 9px;
-  width: 120px;
+  width: 10em;
 }
 .tabs-vertical > li {
   float: none;
@@ -105,7 +109,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   border-radius: 3px 0 0 3px;
 }
 .tabs-vertical > li > a:hover, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a:link {
-  background-color: white;
+  background: white;
   border: 1px solid #e5e5e5;
   border-right-color: transparent;
 }
@@ -134,13 +138,20 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /*==========  $Nav Menus  ==========*/
 .menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-horizontal > li > a:visited, .menu-vertical > li > a, .menu-vertical > li > a:link, .menu-vertical > li > a:visited {
-  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #dadada));
+  background-image: -webkit-linear-gradient(#fafafa, #dadada);
+  background-image: -moz-linear-gradient(#fafafa, #dadada);
+  background-image: -o-linear-gradient(#fafafa, #dadada);
+  background-image: linear-gradient(#fafafa, #dadada);
   color: black;
   padding: 6px 9px;
 }
 .menu-horizontal > li > a:hover, .menu-horizontal > li.active > a, .menu-horizontal > li.active > a:link, .menu-vertical > li > a:hover, .menu-vertical > li.active > a, .menu-vertical > li.active > a:link {
-  background-color: #888888;
-  background-position: left -15px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a9a9a9), color-stop(100%, #888888));
+  background-image: -webkit-linear-gradient(#a9a9a9, #888888);
+  background-image: -moz-linear-gradient(#a9a9a9, #888888);
+  background-image: -o-linear-gradient(#a9a9a9, #888888);
+  background-image: linear-gradient(#a9a9a9, #888888);
   color: white;
 }
 
@@ -173,7 +184,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .nav-direction a,
 .nav-direction a:link,
 .nav-direction a:visited {
-  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(#fafafa, #e5e5e5);
+  background-image: -moz-linear-gradient(#fafafa, #e5e5e5);
+  background-image: -o-linear-gradient(#fafafa, #e5e5e5);
+  background-image: linear-gradient(#fafafa, #e5e5e5);
   border: 1px solid #dadada;
   color: #555555;
   display: inline-block;
@@ -188,7 +203,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .nav-direction li.active a,
 .nav-direction li.active a:link,
 .nav-direction a:hover {
-  background-color: #dadada;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #a9a9a9));
+  background-image: -webkit-linear-gradient(#eeeeee, #a9a9a9);
+  background-image: -moz-linear-gradient(#eeeeee, #a9a9a9);
+  background-image: -o-linear-gradient(#eeeeee, #a9a9a9);
+  background-image: linear-gradient(#eeeeee, #a9a9a9);
   color: black;
   text-decoration: none;
 }
@@ -201,7 +220,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   float: left;
 }
 .pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
-  background-color: whitesmoke;
+  background: whitesmoke;
   color: #dadada;
   text-decoration: none;
 }
@@ -233,7 +252,11 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 /*==========  $Nav Breadcrumbs  ==========*/
 .breadcrumb {
-  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #f5f5f5));
+  background-image: -webkit-linear-gradient(#fafafa, #f5f5f5);
+  background-image: -moz-linear-gradient(#fafafa, #f5f5f5);
+  background-image: -o-linear-gradient(#fafafa, #f5f5f5);
+  background-image: linear-gradient(#fafafa, #f5f5f5);
   border: 1px solid #dadada;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

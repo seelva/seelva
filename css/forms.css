@@ -63,7 +63,9 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  background: white url(../images/txt-bg.png) repeat-x left top;
+  -webkit-box-shadow: 0 2px 6px #eeeeee inset;
+  -moz-box-shadow: 0 2px 6px #eeeeee inset;
+  box-shadow: 0 2px 6px #eeeeee inset;
   border: 1px solid #dadada;
   border-top-width: 2px;
   font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;

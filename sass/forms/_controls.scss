@@ -24,7 +24,12 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-	background: $White url(../images/txt-bg.png) repeat-x left top;
+	@if $fullCSS3 {
+		@include box-shadow(0 2px 6px $Gainsboro inset);
+	}
+	@else {
+		background: $White url(../images/txt-bg.png) repeat-x left top;
+	}
 	border: 1px solid $Silver {
 		top-width: 2px;
 	}

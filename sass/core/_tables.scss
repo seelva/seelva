@@ -22,7 +22,12 @@ table {
 	}
 }
 th {
-	background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
+	@if $fullCSS3 {
+		@include default_gradient($GhostWhite, $WhiteSmoke);
+	}
+	@else {
+		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
+	}
 	border: {
 		bottom: 1px solid $LightGray;
 		left: 1px solid $LightGray;

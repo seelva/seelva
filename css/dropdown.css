@@ -32,7 +32,7 @@
   border-radius: 9px;
 }
 .dropdown .drop-content, .flyout .drop-content {
-  background: #dadada;
+  background: #eeeeee;
   padding: 9px;
   width: 230px;
   -webkit-border-radius: 0 0 6px 6px;

@@ -1,6 +1,11 @@
 /*==========  $Nav Breadcrumbs  ==========*/
 .breadcrumb {
-	background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+	@if $fullCSS3 {
+		@include default_gradient($GhostWhite, $WhiteSmoke);
+	}
+	@else {
+		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+	}
 	border: 1px solid $Silver;
 	@include border-radius($radius1);
 

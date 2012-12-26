@@ -8,7 +8,12 @@
 		position: relative;
 
 		> a, > a:link, > a:visited {
-			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+			@if $fullCSS3 {
+				@include default_gradient();
+			}
+			@else {
+				background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+			}
 			border: 1px solid $LightGray;
 			color: $Black;
 			padding: $baseUnit2 $baseUnit3;
@@ -29,7 +34,7 @@
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			background-color: $White;
+			background: $White;
 			border: 1px solid $LightGray {
 				bottom-color: transparent;
 			};
@@ -42,7 +47,7 @@
 	border-right: 1px solid $Silver;
 	float: left;
 	margin-right: $baseUnit3;
-	width: 120px;
+	width: 10em;
 
 	> li {
 		float: none;
@@ -53,7 +58,7 @@
 		> a, > a:link, > a:visited { @include border-radius($radius1 0 0 $radius1); }
 
 		> a:hover, &.active > a, &.active > a:link {
-			background-color: $White;
+			background: $White;
 			border: 1px solid $LightGray {
 				right-color: transparent;
 			};

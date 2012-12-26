@@ -2,15 +2,25 @@
 .menu-horizontal, .menu-vertical {
 	> li {
 		> a, > a:link, > a:visited {
-			background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+			@if $fullCSS3 {
+				@include default_gradient($GhostWhite, $Silver);
+			}
+			@else {
+				background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+			}
 			color: $Black;
 			padding: $baseUnit2 $baseUnit3;
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			background: {
-				color: $Gray;
-				position: left -15px;
+			@if $fullCSS3 {
+				@include default_gradient($DarkGray, $Gray);
+			}
+			@else {
+				background: {
+					color: $Gray;
+					position: left -15px;
+				}
 			}
 			color: $White;
 		}
