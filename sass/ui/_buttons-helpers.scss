@@ -3,6 +3,8 @@
 	color: $color;
 
 	&:hover, &:focus {
+		color: darken( $color, 10% );
+
 		@if $fullCSS3 {
 			@include default_gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
 		}
@@ -20,12 +22,23 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
-a.btn, a.btn:link,
-a.button, a.button:link {
+.btn,
+.button {
 	&.btn-info    { @include btn-status( $LightCyan,     $DarkTurquoise, $SteelBlue, 40); }
 	&.btn-success { @include btn-status( $PaleGreen,     $YellowGreen,   $OliveDrab, 50); }
 	&.btn-error   { @include btn-status( $LavenderBlush, $Pink,          $Crimson,   60); }
 	&.btn-notice  { @include btn-status( $LemonChiffon,  $Gold,          $GoldenRod, 60); }
+
+	&.btn-unstyled {
+		&, &:hover, &:focus, &:active {
+			background: transparent;
+			border-color: transparent;
+			font-weight: normal;
+			text-decoration: underline;
+
+			@include box-shadow(0 0 0 transparent);
+		}
+	}
 }
 
 /*==========  Buttons group  ==========*/

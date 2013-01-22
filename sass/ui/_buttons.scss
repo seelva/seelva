@@ -4,8 +4,8 @@ input[type="submit"],
 input[type="reset"],
 button,
 button[type],
-a.btn, a.btn:link,
-a.button, a.button:link {
+.btn, .btn:link,
+.button, .button:link {
 	@if $fullCSS3 {
 		@include default_gradient();
 	}
@@ -91,8 +91,8 @@ a.button, a.button:link {
 }
 
 button img,
-a.btn img,
-a.button img {
+.btn img,
+.button img {
 	border: 0;
 	margin: 0;
 	padding: 0;

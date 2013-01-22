@@ -15,8 +15,6 @@
 
 	a, a:link, a:visited, span { padding: $baseUnit2 0 $baseUnit2 $baseUnit3; }
 
-	a:after, a:link:after { content: " \00BB"; /* Adds an arrow character to every breadcrumb item*/ }
-
 	a:hover, .active a, .active a:link { color: $Black; }
 
 	.active a:after, .active a:link:after { content: ""; }
