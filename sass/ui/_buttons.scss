@@ -24,8 +24,7 @@ button[type],
 		weight: bold;
 	}
 	line-height: 100%;
-	margin: 0 $baseUnit2 0 0;
-	padding: #{$baseUnit2 - 1} $baseUnit3;/*! For links */
+	padding: #{$baseUnit2 - 1} $baseUnit3; /*! For links */
 	text: {
 		decoration: none;
 		shadow: 0 1px 0 $White;
@@ -39,9 +38,26 @@ button[type],
 	/* IE7 padding bugfix */
 	overflow: visible;
 	width: auto;
+}
 
+// visited state, for links only
+.btn:visited, .button:visited { color: $DimGray; }
+
+// Other button's states
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+button[type],
+.btn, .btn:link,
+.button, .button:link {
 	/*! Standard button */
-	&:hover, &:focus {
+	&:focus {
+		outline-width: thin;
+		outline-style: auto;
+	}
+
+	 &:focus, &:hover {
 		@if $fullCSS3 {
 			@include default_gradient($GhostWhite, $Silver);
 		}
@@ -50,11 +66,6 @@ button[type],
 		}
 		color: $DimGray;
 		outline-color: $OliveDrab;
-	}
-
-	&:focus {
-		outline-width: thin;
-		outline-style: auto;
 	}
 
 	&:active {
@@ -71,7 +82,7 @@ button[type],
 	}
 
 	/* Disabled button */
-	&[disabled], &[disabled]:hover, &[disabled]:active {
+	&[disabled], &[disabled]:hover, &[disabled]:active, &.disabled {
 		background: $LightGray;
 		border: 1px solid $Silver;
 		color: $Gray;
@@ -81,7 +92,7 @@ button[type],
 	}
 }
 
-/* Fixing a NASTY bug in Firefox where input's line-height does not work */
+/*! Fixes a NASTY bug in Firefox where input's line-height does not work */
 @-moz-document url-prefix() {
 	input[type="button"],
 	input[type="submit"],
@@ -90,6 +101,7 @@ button[type],
 	}
 }
 
+/*! Removes box-model related styles from images inside buttons */
 button img,
 .btn img,
 .button img {

@@ -6,6 +6,7 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 */
 .nav {
   list-style: none;
+  margin: 0 0 9px 0;
 }
 .nav > li {
   display: block;
@@ -19,8 +20,8 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 /*==========  Global setup  ==========*/
 .tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
   list-style: none;
-  *zoom: 1;
   margin: 0 0 9px 0;
+  *zoom: 1;
 }
 .tabs:before, .tabs:after, .tabs-vertical:before, .tabs-vertical:after, .menu-horizontal:before, .menu-horizontal:after, .menu-vertical:before, .menu-vertical:after, .breadcrumb:before, .breadcrumb:after, .pagination:before, .pagination:after, .pagination ul:before, .pagination ul:after, .nav-direction:before, .nav-direction:after, .nav-direction ul:before, .nav-direction ul:after {
   content: " ";

@@ -2,7 +2,7 @@
 Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 */
 
-@mixin nav 		{ list-style: none; }
+@mixin nav 		{ list-style: none; margin: 0 0 $baseUnit3 0; }
 @mixin nav-li 	{ display: block; float: left; }
 @mixin nav-li-a { display: block; text-decoration: none; }
 
@@ -20,7 +20,6 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 .tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
 	@include nav;
 	@include cf;
-	margin: 0 0 $baseUnit3 0;
 
 	> li {
 		@include nav-li;
