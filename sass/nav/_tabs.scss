@@ -16,7 +16,7 @@
 			}
 			border: 1px solid $LightGray;
 			color: $Black;
-			padding: $baseUnit2 $baseUnit3;
+			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
 		}
 	}
 }
@@ -46,7 +46,7 @@
 .tabs-vertical {
 	border-right: 1px solid $Silver;
 	float: left;
-	margin-right: $baseUnit3;
+	margin-right: #{$baseUnit1 * 3};
 	width: 10em;
 
 	> li {

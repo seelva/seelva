@@ -6,8 +6,8 @@
 .progressbar-success {
 	background: $GhostWhite;
 	border: 1px solid $Silver;
-	height: $baseUnit7;
-	margin: $baseUnit2 0;
+	height: #{$baseUnit1 * 7};
+	margin: #{$baseUnit1 * 2} 0;
 	overflow: hidden;
 	position: relative;
 	text-shadow:1px 1px 0 $White;
@@ -23,7 +23,7 @@
 			background: $Silver url(../images/gradient-bg.png) repeat-x left -12px;
 		}
 		float: left;
-		height: $baseUnit7 - 1;
+		height: #{$baseUnit1 * 7 - 1};
 		@include border-radius($radius3);
 	}
 

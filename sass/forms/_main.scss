@@ -2,17 +2,17 @@
 form {
 	div, p {
 		clear: both;
-		margin-bottom: $baseUnit3;
+		margin-bottom: #{$baseUnit1 * 3};
 	}
 
 	div {
-		p { margin: $baseUnit2 0; }
+		p { margin: #{$baseUnit1 * 2} 0; }
 	}
 }
 
 fieldset {
 	border: 0;
-	margin: 0 0 $baseUnit5 0;
+	margin: 0 0 #{$baseUnit1 * 5} 0;
 	padding: 0;
 
 }
@@ -24,13 +24,13 @@ legend {
 		size: 128%;
 		weight: normal;
 	}
-	margin: 0 0 $baseUnit2 0;
-	padding: 0 0 $baseUnit2 0;
+	margin: 0 0 #{$baseUnit1 * 2} 0;
+	padding: 0 0 #{$baseUnit1 * 2} 0;
 	width: 100%;
 }
 
 label, span.label {
-	display: inline-block;
+	display: block;
 	line-height: 130%;
 	padding: #{$baseUnit1 + 1} 0;
 

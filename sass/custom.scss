@@ -18,29 +18,7 @@ body {
 .holder { /*! override default holder style */ }
 
 #header { /*! header style */ }
-	#logo { float: left; }
 
-	#site-name {
-		clear: right;
-		font: {
-			family: $fstack-segoe;
-			size: 214%;
-		}
-		line-height: 120%;
-		margin-bottom: 20px;
-	}
-	#slogan {
-		float: left;
-		width: 350px;
-	}
-
-#main-nav {
-	.horizontal-menu { margin-bottom: 0; }
-}
-
-#primary {
-	/*! primary style */
-	.holder { /*! override default holder style */ }
-}
+#primary { /*! primary style */ }
 
 /*-----  End of $Custom  ------*/

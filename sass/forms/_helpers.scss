@@ -2,7 +2,7 @@
 /*==========  Wrappers  ==========*/
 .form-actions {
 	float: none;
-	margin-bottom: $baseUnit5;
+	margin-bottom: #{$baseUnit1 * 5};
 	overflow: auto;
 	width: auto;
 }
@@ -51,7 +51,7 @@
 		color: $DimGray;
 		float: left;
 		margin: 0;
-		padding: $baseUnit1 $baseUnit3;
+		padding: $baseUnit1 #{$baseUnit1 * 3};
 		text-shadow: 1px 1px 0 $White;
 	}
 

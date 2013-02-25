@@ -5,7 +5,7 @@ table {
 		right: 1px solid $WhiteSmoke;
 		top: 1px solid $LightGray;
 	}
-	margin: 0 0 $baseUnit5 0;
+	margin: 0 0 #{$baseUnit1 * 5} 0;
 	width: 100%;
 
 	// Border top radius
@@ -33,7 +33,7 @@ th {
 		left: 1px solid $LightGray;
 	}
 	font-weight: bold;
-	padding: $baseUnit2;
+	padding: #{$baseUnit1 * 2};
 	text-align: left;
 }
 
@@ -60,9 +60,9 @@ td {
 		bottom: 1px solid $WhiteSmoke;
 		left: 1px solid $WhiteSmoke;
 	}
-	padding: $baseUnit2;
+	padding: #{$baseUnit1 * 2};
 	vertical-align: top;
 }
 .table-compact {
-	td, th { padding: #{$baseUnit1 - 1} $baseUnit2; }
+	td, th { padding: #{$baseUnit1 - 1} #{$baseUnit1 * 2}; }
 }

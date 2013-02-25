@@ -24,7 +24,7 @@ button[type],
 		weight: bold;
 	}
 	line-height: 100%;
-	padding: #{$baseUnit2 - 1} $baseUnit3; /*! For links */
+	padding: #{$baseUnit1 * 2 - 1} #{$baseUnit1 * 3}; /*! For links */
 	text: {
 		decoration: none;
 		shadow: 0 1px 0 $White;
@@ -78,7 +78,7 @@ button[type],
 		border-color: $Gray $DarkGray $Silver;
 		color: $Gray;
 
-		@include box-shadow(inset 0 1px $baseUnit2 $DarkGray, 0 1px 0 $WhiteSmoke);
+		@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $DarkGray, 0 1px 0 $WhiteSmoke);
 	}
 
 	/* Disabled button */

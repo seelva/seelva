@@ -6,8 +6,8 @@ blockquote {
 		style: italic;
 	}
 	line-height: 150%;
-	margin: $baseUnit2 $baseUnit5 1em $baseUnit5;
-	padding-left: $baseUnit2;
+	margin: #{$baseUnit1 * 2} #{$baseUnit1 * 5} 1em #{$baseUnit1 * 5};
+	padding-left: #{$baseUnit1 * 2};
 	quotes: none;
 
 	&:before, &:after { content: none; }
@@ -28,7 +28,7 @@ blockquote {
 		background: $WhiteSmoke;
 		border: 0;
 		color: $DimGray;
-		padding: $baseUnit6 0;
+		padding: #{$baseUnit1 * 6} 0;
 		@include border-radius($radius2);
 
 		&:before {
@@ -40,11 +40,11 @@ blockquote {
 				weight: bold;
 			}
 			line-height: 40px;
-			padding-left: $baseUnit3;
+			padding-left: #{$baseUnit1 * 3};
 		}
 
 		p {
-			margin: 0 $baseUnit6 1em #{$baseUnit6 * 2};
+			margin: 0 #{$baseUnit1 * 6} 1em #{$baseUnit1 * 12};
 
 			&:first-child { margin-top: -40px; }
 

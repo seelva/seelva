@@ -1,6 +1,6 @@
 /*==========  $Core Lists  ==========*/
 ul, ol {
-	margin: 0 0 $baseUnit5 $baseUnit8;
+	margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
 	padding: 0;
 
 	ul, ol { margin-bottom: 0; }
@@ -20,7 +20,7 @@ ul, ol {
 	&.ulatin      { list-style-type: upper-latin }
 	&.uroman      { list-style-type: upper-roman }
 
-	&.styled, &.unstyled { list-style-type: none; margin-left: $baseUnit3; }
+	&.styled, &.unstyled { list-style-type: none; margin-left: #{$baseUnit1 * 3}; }
 	&.styled li {
 		background: url(../images/bullet.png) no-repeat 0 6px;
 		padding-left: 16px;
@@ -32,7 +32,7 @@ ul, ol {
 		> li {
 			border-left: 1px solid $LightGray;
 			display: inline-block;
-			padding-left: $baseUnit2;
+			padding-left: #{$baseUnit1 * 2};
 			padding-right: $baseUnit1;
 
 			&:first-child { border-left: 0; }
@@ -41,7 +41,7 @@ ul, ol {
 }
 
 ol {
-	li { margin: 0 0 0 $baseUnit3; }
+	li { margin: 0 0 0 #{$baseUnit1 * 3}; }
 }
 
 /* Values not allowed in CSS2.1, re-allowed in CSS3 */
@@ -55,7 +55,7 @@ ul.kata-iroha 	{list-style-type: katakana-iroha}
 */
 
 dl {
-	margin: 0 0 $baseUnit5 $baseUnit8;
+	margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
 	padding: 0;
 }
 dt {
@@ -64,6 +64,6 @@ dt {
 	padding: 0;
 }
 dd {
-	margin: 0 0 0 $baseUnit3;
+	margin: 0 0 0 #{$baseUnit1 * 3};
 	padding: 0;
 }
