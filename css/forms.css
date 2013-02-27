@@ -161,6 +161,9 @@ select {
   cursor: pointer;
   padding: 3px;
 }
+select[disabled] {
+  cursor: default;
+}
 
 /*==========  $Forms Helpers  ==========*/
 /*==========  Wrappers  ==========*/

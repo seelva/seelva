@@ -73,4 +73,6 @@ textarea {
 select {
 	cursor: pointer;
 	padding: $baseUnit1;
+
+	&[disabled] { cursor: default; }
 }
