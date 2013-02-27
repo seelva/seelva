@@ -6,7 +6,7 @@ Seelva is a CSS and HTML Framework built with SASS and Compass.
 
 ### Current version ###
 
-#### 3.1.0 ####
+#### 3.2.0 ####
 
 ### Authors / Lead developers ###
 
