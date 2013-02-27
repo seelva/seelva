@@ -1,10 +1,10 @@
 html { font-size: 100.01%; }
 
 body {
-	color: $Black;
+	color: $textColor;
 	font: {
-		family: $fstack-helvetica;
-		size: 0.875em;
+		family: $fstack-body;
+		size: $textSize;
 	}
-	line-height: 1.5em;
+	line-height: $textLineHeight;
 }

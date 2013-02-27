@@ -23,7 +23,7 @@
 
 	.drop-content {
 		background: $Gainsboro;
-		padding: $baseUnit3;
+		padding: #{$baseUnit1 * 3};
 		width: 230px;
 
 		@include border-radius( 0 0 $radius2 $radius2 );
@@ -46,7 +46,7 @@
 				background: $LightGray;
 				color: $Black;
 				display: block;
-				padding: $baseUnit2 $baseUnit3;
+				padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
 				text-decoration: none;
 			}
 			> a:hover, &.active > a, &.active > a:link {
@@ -79,7 +79,7 @@
 			display: none;
 			left: 100%;
 			position: absolute;
-			top: $baseUnit2;
+			top: #{$baseUnit1 * 2};
 			width: 100%;
 		}
 	}

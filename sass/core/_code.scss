@@ -7,7 +7,7 @@ code, kbd, pre {
 code, kbd {
 	font-size: 85.7%;
 	line-height: 192%;
-	padding: #{$baseUnit1 - 1} #{$baseUnit2 - 1};
+	padding: #{$baseUnit1 - 1} #{$baseUnit1 * 2 - 1};
 	white-space: pre;
 }
 code, pre { border: 1px solid $Gainsboro; }
@@ -20,8 +20,8 @@ kbd {
 }
 pre {
 	display: block;
-	margin: 0 0 $baseUnit3 0;
-	padding: $baseUnit2;
+	margin: 0 0 #{$baseUnit1 * 3} 0;
+	padding: #{$baseUnit1 * 2};
 	@include border-radius($radius1);
 }
 pre code {

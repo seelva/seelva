@@ -7,7 +7,7 @@ html {
 
 body {
   color: black;
-  font-family: Helvetica, Geneva, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875em;
   line-height: 1.5em;
 }
@@ -438,6 +438,11 @@ hr {
 
 br {
   clear: both;
+}
+
+/*==========  $Misc  ==========*/
+:focus {
+  outline-color: #4e9a06;
 }
 
 /*-----  End of $Core  ------*/

@@ -110,7 +110,13 @@ hr.clear, hr.clearing {
 }
 
 /*==========  $Selection styling  ==========*/
-::-moz-selection, ::selection {
+::-moz-selection {
+  background: beige;
+  color: #7b9712;
+  text-shadow: none;
+}
+
+::selection {
   background: beige;
   color: #7b9712;
   text-shadow: none;

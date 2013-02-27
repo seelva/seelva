@@ -2,4 +2,5 @@
 .resizable { overflow: auto; resize: both; }
 
 /*==========  $Selection styling  ==========*/
-::-moz-selection, ::selection { background: $Beige; color: $OliveDrab; text-shadow: none; }
+::-moz-selection { background: $Beige; color: $OliveDrab; text-shadow: none; }
+::selection      { background: $Beige; color: $OliveDrab; text-shadow: none; }

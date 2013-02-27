@@ -27,7 +27,7 @@ legend {
 }
 
 label, span.label {
-  display: inline-block;
+  display: block;
   line-height: 130%;
   padding: 4px 0;
 }
@@ -140,6 +140,9 @@ select[disabled],
 textarea[disabled] {
   background: #e5e5e5;
   color: #888888;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 input.image,
@@ -157,6 +160,9 @@ textarea {
 select {
   cursor: pointer;
   padding: 3px;
+}
+select[disabled] {
+  cursor: default;
 }
 
 /*==========  $Forms Helpers  ==========*/

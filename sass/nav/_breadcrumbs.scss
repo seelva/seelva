@@ -13,7 +13,7 @@
 
 	> a { display: inline-block; }
 
-	a, a:link, a:visited, span { padding: $baseUnit2 0 $baseUnit2 $baseUnit3; }
+	a, a:link, a:visited, span { padding: #{$baseUnit1 * 2} 0 #{$baseUnit1 * 2} #{$baseUnit1 * 3}; }
 
 	a:hover, .active a, .active a:link { color: $Black; }
 

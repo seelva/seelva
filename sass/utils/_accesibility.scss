@@ -12,7 +12,7 @@
 		color: $White;
 		display: block;
 		left: -200%;
-		padding: $baseUnit2 0;
+		padding: #{$baseUnit1 * 2} 0;
 		position: absolute;
 		width: 100%;
 		z-index: 2;

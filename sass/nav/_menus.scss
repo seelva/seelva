@@ -9,7 +9,7 @@
 				background: $Silver url(../images/gradient-bg.png) repeat-x left top;
 			}
 			color: $Black;
-			padding: $baseUnit2 $baseUnit3;
+			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
 		}
 
 		> a:hover, &.active > a, &.active > a:link {

@@ -54,6 +54,7 @@ textarea {
 	&[disabled] {
 		background: $LightGray;
 		color: $Gray;
+		@include box-shadow(none);
 	}
 }
 
@@ -72,4 +73,6 @@ textarea {
 select {
 	cursor: pointer;
 	padding: $baseUnit1;
+
+	&[disabled] { cursor: default; }
 }
