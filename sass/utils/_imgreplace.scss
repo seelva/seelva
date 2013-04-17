@@ -1,2 +1,2 @@
 /*==========  $Utils Image replacement  ==========*/
-.imgreplace { display: block; text-indent: -5000em; }
+.imgreplace { @include imgreplace; }

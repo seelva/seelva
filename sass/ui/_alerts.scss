@@ -14,7 +14,6 @@
 	color: $Gray;
 	margin-bottom: #{$baseUnit1 * 5};
 	padding: #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 *8};
-	text-shadow: 1px 1px 0 $White;
 
 	a { background: none; margin: 0; padding: 0; }
 }
@@ -37,5 +36,4 @@
 	line-height: 130%;
 	margin-top: #{$baseUnit1 * 2};
 	padding: #{$baseUnit1 * 3} #{$baseUnit1 * 2};
-	text-shadow: 1px 1px 0 $White;
 }

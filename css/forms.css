@@ -39,11 +39,10 @@ label em, label .required, span.label em, span.label .required {
 input[type="checkbox"],
 input[type="radio"] {
   cursor: pointer;
-  margin: 0;
 }
 input[type="checkbox"]:focus,
 input[type="radio"]:focus {
-  outline-color: #7b9712;
+  outline-color: #4e9a06;
 }
 
 input[type=""],
@@ -69,8 +68,6 @@ textarea {
   border: 1px solid #dadada;
   border-top-width: 2px;
   font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
-  font-size: 100%;
-  margin: 0;
   padding: 3px;
   width: 100%;
   -webkit-border-radius: 3px;
@@ -99,8 +96,8 @@ input[type="url"]:focus,
 input[type="week"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #7b9712;
-  outline-color: #7b9712;
+  border-color: #4e9a06;
+  outline-color: #4e9a06;
 }
 input[type=""][readonly],
 input[type="file"][readonly],
@@ -170,8 +167,15 @@ select[disabled] {
 .form-actions {
   float: none;
   margin-bottom: 15px;
-  overflow: auto;
   width: auto;
+  *zoom: 1;
+}
+.form-actions:before, .form-actions:after {
+  content: " ";
+  display: table;
+}
+.form-actions:after {
+  clear: both;
 }
 
 .control-group {
@@ -192,9 +196,7 @@ select[disabled] {
 .field-error label {
   color: #e14049;
 }
-.field-error input[type="file"],
-.field-error input[type="password"],
-.field-error input[type="text"],
+.field-error input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 .field-error select,
 .field-error textarea {
   background: snow;
@@ -205,9 +207,7 @@ select[disabled] {
 .field-info label {
   color: steelblue;
 }
-.field-info input[type="file"],
-.field-info input[type="password"],
-.field-info input[type="text"],
+.field-info input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 .field-info select,
 .field-info textarea {
   background: #d9e8ff;
@@ -218,9 +218,7 @@ select[disabled] {
 .field-notice label {
   color: goldenrod;
 }
-.field-notice input[type="file"],
-.field-notice input[type="password"],
-.field-notice input[type="text"],
+.field-notice input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 .field-notice select,
 .field-notice textarea {
   background: lemonchiffon;
@@ -231,9 +229,7 @@ select[disabled] {
 .field-success label {
   color: #4e9a06;
 }
-.field-success input[type="file"],
-.field-success input[type="password"],
-.field-success input[type="text"],
+.field-success input:not([type="button"]):not([type="reset"]):not([type="submit"]),
 .field-success select,
 .field-success textarea {
   background: beige;
@@ -253,14 +249,21 @@ select[disabled] {
   float: left;
   margin: 0;
   padding: 3px 9px;
-  text-shadow: 1px 1px 0 white;
+}
+.field-prefix .label:last-child, .field-suffix .label:last-child {
+  border-left-width: 0;
+  border-right-width: 1px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
 }
 .field-prefix input,
 .field-prefix select,
 .field-prefix button, .field-suffix input,
 .field-suffix select,
 .field-suffix button {
-  border-right-width: 0;
   clear: none;
   float: left;
   margin: 0;
@@ -283,18 +286,6 @@ select[disabled] {
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-.field-prefix input:last-child,
-.field-prefix select:last-child,
-.field-prefix button:last-child, .field-suffix input:last-child,
-.field-suffix select:last-child,
-.field-suffix button:last-child {
-  border-right-width: 1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  -ms-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
 
 .field-prefix .label {
   -webkit-border-radius: 3px 0 0 3px;
@@ -302,6 +293,15 @@ select[disabled] {
   -ms-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
+}
+.field-prefix input,
+.field-prefix select,
+.field-prefix button {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .field-suffix .label {
@@ -312,15 +312,41 @@ select[disabled] {
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-
-.field-prefix.field-suffix .label:first-child {
+.field-suffix input,
+.field-suffix select,
+.field-suffix button {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   -ms-border-radius: 3px 0 0 3px;
   -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-.field-prefix.field-suffix .label:last-child,
+
+.field-prefix.field-suffix .label {
+  border-right-width: 0;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.field-prefix.field-suffix .label:last-child {
+  border-right-width: 1px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.field-prefix.field-suffix input,
+.field-prefix.field-suffix select,
+.field-prefix.field-suffix button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
 .field-prefix.field-suffix input:last-child,
 .field-prefix.field-suffix select:last-child,
 .field-prefix.field-suffix button:last-child {
@@ -347,7 +373,7 @@ select[disabled] {
   float: left;
   width: 35%;
 }
-.field-horizontal > input[type="file"], .form-horizontal div > input[type="file"], .field-horizontal > input[type="password"], .form-horizontal div > input[type="password"], .field-horizontal > input[type="text"], .form-horizontal div > input[type="text"], .field-horizontal > select, .form-horizontal div > select, .field-horizontal > textarea, .form-horizontal div > textarea, .field-horizontal > .control-group, .form-horizontal div > .control-group {
+.field-horizontal > input:not([type="radio"]):not([type="checkbox"]), .form-horizontal div > input:not([type="radio"]):not([type="checkbox"]), .field-horizontal > select, .form-horizontal div > select, .field-horizontal > textarea, .form-horizontal div > textarea, .field-horizontal > .control-group, .form-horizontal div > .control-group {
   clear: none;
   float: right;
   width: 60%;

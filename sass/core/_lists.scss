@@ -3,7 +3,8 @@ ul, ol {
 	margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
 	padding: 0;
 
-	ul, ol { margin-bottom: 0; }
+	/* Remove vertical spacing from nested lists. */
+	li > & {margin-bottom: 0; }
 
 	&.armenian    { list-style-type: armenian }
 	&.circle      { list-style-type: circle }

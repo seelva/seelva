@@ -9,9 +9,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;
 
 	.subtitle {
-		color: $Gray;
 		font-size: 80%;
 		line-height: 100%;
+
+		opacity: 0.6;
+		filter: alpha(opacity = 60);
 	}
 
 	&.styled {
@@ -21,9 +23,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1, .tera  { font-size: 214%; }
-h2, .giga  { font-size: 192%; }
-h3, .mega  { font-size: 171%; }
-h4, .kilo  { font-size: 150%; }
-h5, .hecto { font-size: 128%; }
-h6, .deca  { font-size: 107%; }
+h1, .tera  { font-size: $h1-size; }
+h2, .giga  { font-size: $h2-size; }
+h3, .mega  { font-size: $h3-size; }
+h4, .kilo  { font-size: $h4-size; }
+h5, .hecto { font-size: $h5-size; }
+h6, .deca  { font-size: $h6-size; }

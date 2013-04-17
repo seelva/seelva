@@ -3,10 +3,10 @@ img {
 	/* Make images responsive by default */
 	height: auto;
 	max-width: 100%;
+	vertical-align: bottom;
 
 	&[width], &[height] { display: inline-block; }
-	&, a & {
-		border: 0;
-		vertical-align: bottom;
-	}
+
+	/* Images inside figure */
+	figure > & { display: block; }
 }

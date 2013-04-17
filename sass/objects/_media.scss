@@ -1,0 +1,40 @@
+/*=======================================
+=            $Object - Media            =
+=======================================*/
+
+/**
+*
+* Media object as per stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+*
+**/
+
+.media {
+    display: block;
+    @include cf;
+}
+
+.media-img {
+    float: left;
+    margin-right: 1em;
+}
+
+/* Reversed image location (right instead of left). */
+.media-img--rev {
+    float: right;
+    margin-left: 1em;
+}
+
+.media-img img,
+.media-img--rev img {
+    display: block;
+}
+
+.media-body {
+    overflow: hidden;
+
+	&, & > :last-child {
+	    margin-bottom: 0;
+	}
+}
+
+/*-----  End of $Object - Media  ------*/

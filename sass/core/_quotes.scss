@@ -55,7 +55,6 @@ blockquote {
 
 cite, q {
 	font-style: italic;
-	quotes: '"' '"' "'" "'";
 
 	&:after  { content: close-quote; }
 	&:before { content: open-quote; }

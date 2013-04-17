@@ -10,7 +10,6 @@
 	margin: #{$baseUnit1 * 2} 0;
 	overflow: hidden;
 	position: relative;
-	text-shadow:1px 1px 0 $White;
 
 	@include border-radius($radius3);
 	@include box-sizing(border-box);
@@ -37,7 +36,6 @@
 		position: absolute;
 		text: {
 			align: center;
-			shadow: 1px 1px 1px $White;
 		}
 		top: 0;
 		width: 100%;
