@@ -21,8 +21,8 @@ details {
 		@include border-radius($radius1 $radius1 0 0);
 
 		&:focus {
-		border-color: $OliveDrab;
-		outline-color: $OliveDrab;
+		border-color: $brand-main;
+		outline-color: $brand-main;
 		}
 	}
 
@@ -39,10 +39,9 @@ details {
 hr {
 	clear: both;
 	color: $Gray;
-	height: 0;
 }
 
 br { clear: both; }
 
 /*==========  $Misc  ==========*/
-:focus { outline-color: $LimeGreen; }
+:focus { outline-color: $brand-main; }

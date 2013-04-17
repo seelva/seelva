@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
 <!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
@@ -51,6 +50,12 @@
 	<title>Demo - seelva CSS / (X)HTML Framework</title>
 
 	<link rel="stylesheet" type="text/css" href="css/master.css" />
+
+	<!-- Register the new HTML5 tags in older IE versions -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script>window.shim || document.write('<script src="js/libs/html5.js"><\/script>')</script>
+	<![endif]-->
 </head>
 
 <body class="frontpage front">
@@ -69,6 +74,12 @@
 						<h1 id="site-name"><a href="http://www.seelva.com/" title="seelva CSS / (X)HTML Framework">seelva</a></h1>
 						<div id="slogan">CSS / (x)HTML Framework</div>
 					</div>
+				</div>
+			</div>
+
+			<div id="primary" class="section">
+				<div class="holder">
+
 				</div>
 			</div>
 		</div>

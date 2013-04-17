@@ -111,14 +111,14 @@ hr.clear, hr.clearing {
 
 /*==========  $Selection styling  ==========*/
 ::-moz-selection {
-  background: beige;
-  color: #7b9712;
+  background: #4e9a06;
+  color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: beige;
-  color: #7b9712;
+  background: #4e9a06;
+  color: white;
   text-shadow: none;
 }
 
@@ -190,7 +190,8 @@ hr.clear, hr.clearing {
 }
 
 .quiet {
-  color: #e5e5e5;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .capitalize {

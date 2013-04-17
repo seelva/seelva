@@ -1,4 +1,22 @@
-v3.0
+v3.3.0
+====================
+New
+	Added OOCSS 'media' and 'stats' objects
+	Added button styles classes: 'btn-small', 'btn-medium', 'btn-large', 'btn-huge', 'btn-alpha', 'btn-beta', 'btn-gamma', 'btn-full' and 'btn-natural'
+
+Fixes
+	Fixed prefix and suffix form fields styling
+	Fixed FontAwesome empty rules
+	Added correct media type to imported stylesheets at master.css
+	Removed core styles already present in normalize.css
+	Removed key.png icon, not used
+
+Improvements
+	Replaced seelva color with brand-color variable in UI elements
+	Added heading sizes to variables
+	Code cleanup in index-html5.html
+
+v3.0.0
 ====================
 New
 	seelva now has modules and components instead of just modules

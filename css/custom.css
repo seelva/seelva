@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  /* Body style */
+  color: black;
 }
 .ie6 body, .ie7 body {
   font-size: 82%;

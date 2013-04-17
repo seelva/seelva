@@ -3,8 +3,9 @@
 .form-actions {
 	float: none;
 	margin-bottom: #{$baseUnit1 * 5};
-	overflow: auto;
 	width: auto;
+
+	@include cf;
 }
 
 .control-group {
@@ -25,9 +26,7 @@
 @mixin field-status($bg, $border, $color) {
 	label { color: $color; }
 
-	input[type="file"],
-	input[type="password"],
-	input[type="text"],
+	input:not( [type="button"] ):not( [type="reset"] ):not( [type="submit"] ), // target all inputs but buttons
 	select,
 	textarea {
 		background: $bg;
@@ -52,13 +51,17 @@
 		float: left;
 		margin: 0;
 		padding: $baseUnit1 #{$baseUnit1 * 3};
-		text-shadow: 1px 1px 0 $White;
+
+		&:last-child {
+			border-left-width: 0;
+			border-right-width: 1px;
+			@include border-radius(0 $radius1 $radius1 0);
+		}
 	}
 
 	input,
 	select,
 	button {
-		border-right-width: 0;
 		clear: none;
 		float: left;
 		margin: 0;
@@ -67,16 +70,17 @@
 		@include border-radius(0);
 
 		&:first-child { @include border-radius($radius1 0 0 $radius1); }
-
-		&:last-child {
-			border-right-width: 1px;
-			@include border-radius(0 $radius1 $radius1 0);
-		}
 	}
 }
 
 .field-prefix {
 	.label { @include border-radius($radius1 0 0 $radius1); }
+
+	input,
+	select,
+	button {
+		@include border-radius(0 $radius1 $radius1 0);
+	}
 }
 
 .field-suffix {
@@ -84,16 +88,33 @@
 		border-right-width: 1px;
 		@include border-radius(0 $radius1 $radius1 0);
 	}
+
+	input,
+	select,
+	button {
+		@include border-radius($radius1 0 0 $radius1);
+	}
 }
 
 .field-prefix.field-suffix {
-	.label:first-child { @include border-radius($radius1 0 0 $radius1); }
+	.label {
+		border-right-width: 0;
+		@include border-radius($radius1 0 0 $radius1);
 
-	.label:last-child,
-	input:last-child,
-	select:last-child,
-	button:last-child {
-		@include border-radius(0 $radius1 $radius1 0);
+		&:last-child {
+			border-right-width: 1px;
+			@include border-radius(0 $radius1 $radius1 0);
+		}
+	}
+
+	input,
+	select,
+	button {
+		@include border-radius(0);
+
+		&:last-child {
+			@include border-radius(0 $radius1 $radius1 0);
+		}
 	}
 }
 
@@ -107,9 +128,7 @@
 		width: 35%;
 	}
 
-	& > input[type="file"],
-	& > input[type="password"],
-	& > input[type="text"],
+	& > input:not([type="radio"]):not([type="checkbox"]), // target all but radios and checks
 	& > select,
 	& > textarea,
 	& > .control-group {

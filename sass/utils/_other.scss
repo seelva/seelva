@@ -29,7 +29,7 @@
 .big         { font-size: 125%; }
 .large       { font-size: 150%; }
 .loud        { color: $Crimson; }
-.quiet       { color: $LightGray; }
+.quiet       { opacity: 0.5; filter: alpha(opacity = 50); }
 .capitalize  { text-transform: capitalize; }
 .lowercase   { text-transform: lowercase; }
 .uppercase   { text-transform: uppercase; }

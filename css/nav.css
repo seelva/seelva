@@ -196,7 +196,6 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
   margin: 0;
   padding: 3px 9px;
   text-decoration: none;
-  text-shadow: 1px 1px 0 white;
 }
 .pagination .current, .pagination .current span, .pagination li.active a, .pagination li.active a:link, .pagination a:hover,
 .nav-direction .current,

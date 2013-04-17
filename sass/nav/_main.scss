@@ -26,6 +26,6 @@ Source: http://csswizardry.com/2011/09/the-nav-abstraction/
 
 		> a, > a:link { @include nav-li-a; }
 
-		> a:focus { outline: thin auto $LimeGreen; }
+		> a:focus { outline: thin auto $brand-main; }
 	}
 }

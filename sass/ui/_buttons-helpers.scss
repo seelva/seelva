@@ -36,7 +36,7 @@ button[type],
 	&.btn-error   { @include btn-status( $LavenderBlush, $Pink,          $Crimson,   60); }
 	&.btn-notice  { @include btn-status( $LemonChiffon,  $Gold,          $GoldenRod, 60); }
 
-	/*==========  $btn modifiers  ==========*/
+	// *==========  $btn modifiers  ==========*/
 	// Source: http://csswizardry.com/beautons/
 	// $sizes
 	&.btn-small  { @include btn-size( 0.5em, 0.75 ); }

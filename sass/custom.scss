@@ -6,7 +6,7 @@
 html { /* HTML style */ }
 
 body {
-	/* Body style */
+	color: $textColor;
 
 	.ie6 &, .ie7 & { font-size: 82%; line-height: 1.12em; }
 }

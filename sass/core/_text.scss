@@ -1,13 +1,10 @@
 /*==========  $Core Text  ==========*/
 p, address       { margin: 0 0 1em 0; }
-i, em            { font-style: italic; }
-ins              { text-decoration: underline; }
-s, del           { text-decoration: line-through; }
 mark, .highlight { background: $Gold; }
-sub, sup         { font-size: 80%; }
 acronym, abbr    {
-	border-bottom: 1px dotted $LimeGreen;
-	letter-spacing: 2px;
-
-	&[title] { cursor: help; }
+	&[title] {
+		border-bottom: 1px dotted $brand-main;
+		cursor: help;
+		letter-spacing: 2px;
+	}
 }

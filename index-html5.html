@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
-<!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html class="ie6" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
 
 <head>
 	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
@@ -50,6 +49,12 @@
 	<title>Demo - seelva CSS / (X)HTML Framework</title>
 
 	<link rel="stylesheet" href="css/master.css" />
+
+	<!-- Register the new HTML5 tags in older IE versions -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script>window.shim || document.write('<script src="js/libs/html5.js"><\/script>')</script>
+	<![endif]-->
 </head>
 
 <body class="frontpage front">
@@ -58,58 +63,26 @@
 	</div>
 	<div id="outer">
 		<div id="wrapper">
-			<header>
+			<header id="header" class="section">
 				<div class="holder">
 					<div class="branding">
 						<div id="logo">
-							<a href="http://www.home.com"
+							<a href="http://www.seelva.com/"
 							title="seelva CSS / (X)HTML Framework"><img src="images/logo.png" alt="Logo" /></a>
 						</div>
 						<hgroup>
-							<h1 id="site-name"><a href="http://www.home.com" title="seelva CSS / (X)HTML Framework">seelva</a></h1>
+							<h1 id="site-name"><a href="http://www.seelva.com/" title="seelva CSS / (X)HTML Framework">seelva</a></h1>
 							<div id="slogan">CSS / (x)HTML Framework</div>
 						</hgroup>
-
 					</div>
 				</div>
 			</header>
 
-			<nav>
+			<div id="primary" class="section">
 				<div class="holder">
-					<ul class="horizontal-menu">
-						<li class="active"><a href="index.html" title="Link 1">Welcome</a></li>
-						<li><a href="#" title="Link 2">Fake link</a></li>
-						<li><a href="#" title="Link 3">Another fake link</a></li>
-					</ul>
-				</div>
-			</nav>
 
-			<div id="primary">
-				<div class="holder">
-					<div id="main-content" class="unit16">
-						<a name="main-content" class="accessibility" role="main">Main Content</a>
-						<article>
-							<p>Your content here</p>
-						</article>
-					</div>
-					<aside class="sidebar unit8 last-col">
-						<h2>Navigation</h2>
-						<ul class="vertical-menu">
-							<li class="active"><a href="index.html" title="Link 1">Welcome</a></li>
-							<li><a href="#" title="Link 2">Fake link</a></li>
-							<li><a href="#" title="Link 3">Another fake link</a></li>
-						</ul>
-					</aside>
 				</div>
 			</div>
-
-			<footer>
-				<div class="holder">
-					<p>
-						<a href="http://www.seelva.com/">seelva</a>
-					</p>
-				</div>
-			</footer>
 		</div>
 	</div>
 
@@ -120,12 +93,6 @@
 	<!--[if lt IE 7 ]>
 		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
-
-	<!-- Register the new HTML5 tags in older IE versions -->
-	<!--[if lt IE 9]>
-		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<script>window.shim || document.write('<script src="js/libs/html5.js"><\/script>')</script>
 	<![endif]-->
 
 </body>

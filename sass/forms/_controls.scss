@@ -2,9 +2,8 @@
 input[type="checkbox"],
 input[type="radio"] {
 	cursor: pointer;
-	margin: 0;
 
-	&:focus { outline-color: $OliveDrab; }
+	&:focus { outline-color: $brand-main; }
 }
 
 input[type=""],
@@ -35,9 +34,7 @@ textarea {
 	}
 	font: {
 		family: $fstack-verdana;
-		size: 100%;
 	}
-	margin: 0;
 	padding: $baseUnit1;
 	width: 100%;
 
@@ -45,8 +42,8 @@ textarea {
 	@include box-sizing(border-box);
 
 	&:focus {
-		border-color: $OliveDrab;
-		outline-color: $OliveDrab;
+		border-color: $brand-main;
+		outline-color: $brand-main;
 	}
 
 	&[readonly] { background-color: $GhostWhite; }

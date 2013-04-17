@@ -52,6 +52,21 @@
 
 	<link rel="stylesheet" type="text/css" href="css/master.css" />
 
+	<style type="text/css">
+		/* Styles that apply to this page only, they are not part of seelva */
+		#logo {
+			float: left;
+			margin-right: 20px;
+		}
+
+		.page-title {
+			clear: right;
+			float: left;
+			line-height: 200%;
+			margin-bottom: 0;
+		}
+	</style>
+
 </head>
 
 <body class="inside page">
@@ -67,8 +82,7 @@
 							<a href="http://www.seelva.com/"
 							title="seelva CSS / (X)HTML Framework"><img src="images/logo.png" alt="Logo" /></a>
 						</div>
-						<div id="site-name"><a href="http://www.seelva.com/" title="seelva CSS / (X)HTML Framework">seelva</a></div>
-						<div id="slogan">CSS / (x)HTML Framework</div>
+						<h1 class="page-title">Demo page</h1>
 					</div>
 				</div>
 			</div>
@@ -76,8 +90,6 @@
 			<div id="primary">
 				<div class="holder">
 					<div id="main-content">
-						<h1>Tags showcase</h1>
-
 						<a name="main-content" class="accessibility">Main Content</a>
 						<h2>Core</h2>
 
@@ -493,7 +505,7 @@
 										<input id="textfield_disabled" type="text" name="textfield_disabled" value="Disabled textfield" disabled />
 									</div>
 									<div>
-										<label for="passwd">Password <em>*</em></label>
+										<label for="passwd">Password</label>
 										<input id="passwd" type="password" name="passwd" value="password" />
 									</div>
 									<div>
@@ -538,7 +550,7 @@
 										</div>
 									</div>
 									<div>
-										<span class="label">Checkboxes list <em>*</em></span>
+										<span class="label">Checkboxes list</span>
 										<div class="control-group">
 											<input name="check2" id="check1" value="approved" type="checkbox" /> <label for="check1">Some Option 1</label> <br />
 											<input name="check2" id="check2" value="pending" type="checkbox" /> <label for="check2">Some Option 2</label> <br />
@@ -599,7 +611,7 @@
 						integrate clicks-and-mortar technology through future-proof systems.</p>
 						<p class="notice">This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.</p>
 						<p class="success closable">This is a paragraph with class="success" and <a href="http://www.something.com">a link</a>. <a class="btn-close">&times;</a></p>
-						<p class="guidelines">This is a paragraph with class="notice" and <a href="http://www.something.com">a link</a>.</p>
+						<p class="guidelines">This is a paragraph with class="guidelines" and <a href="http://www.something.com">a link</a>.</p>
 
 						<h3>Progress bars</h3>
 						<p>Default (<code>.progressbar</code>)</p>
@@ -732,15 +744,15 @@
 
 										<div class="drop-content">
 											<p class="giga">Registro</p>
-									        <form name="registerform" id="registerform" action="" method="post">
+									        <form name="registerform1" id="registerform1" action="#" method="post">
 												<p class="registration-intro-msg">Este es un modulo de registro r&aacute;pido para hacer preguntas y/o comentarios, si deseas <strong>ACCEDER AL CONTENIDO PREMIUM</strong> debes realizar el registro completo.</p>
 
 												<div>
-													<label for="user_login">Epic 1 <em>*</em></label>
+													<label for="user_login">Epic 1</label>
 													<input type="text" name="user_login" id="user_login" value="" />
 												</div>
 												<div>
-													<label for="user_email">Epic 1 <em>*</em></label>
+													<label for="user_email">Epic 1</label>
 													<input type="text" name="user_email" id="user_email" value="" />
 												</div>
 
@@ -756,9 +768,7 @@
 												</div>
 
 												<div class="submit">
-													<input type="submit" name="wp-submit" id="wp-submit" value="Enviar" />
-													<input type="hidden" name="redirect_to" value="" />
-													<input type="hidden" name="instance" value="" />
+													<input type="submit" name="submit2" id="submit2" />
 												</div>
 											</form>
 
@@ -801,33 +811,31 @@
 
 										<div class="drop-content">
 											<p class="giga">Registro</p>
-									        <form name="registerform" id="registerform" action="" method="post">
+									        <form name="registerform2" id="registerform2" action="#" method="post">
 												<p class="registration-intro-msg">Este es un modulo de registro r&aacute;pido para hacer preguntas y/o comentarios, si deseas <strong>ACCEDER AL CONTENIDO PREMIUM</strong> debes realizar el registro completo.</p>
 
 												<div>
-													<label for="user_login">Epic 1 <em>*</em></label>
-													<input type="text" name="user_login" id="user_login" value="" />
+													<label for="user_login2">Epic 1</label>
+													<input type="text" name="user_login2" id="user_login2" value="" />
 												</div>
 												<div>
-													<label for="user_email">Epic 1 <em>*</em></label>
-													<input type="text" name="user_email" id="user_email" value="" />
+													<label for="user_email2">Epic 1</label>
+													<input type="text" name="user_email2" id="user_email2" value="" />
 												</div>
 
 
 												<div>
-													<label for="pass1">Epic 1 </label>
-													<input type="password" name="pass1" id="pass1" size="16" value="" autocomplete="off" />
+													<label for="pass3">Epic 1 </label>
+													<input type="password" name="pass3" id="pass3" size="16" value="" autocomplete="off" />
 												</div>
 
 												<div>
-													<label for="pass1">Epic 1 </label>
-													<input type="password" name="pass2" id="pass2" size="16" value="" autocomplete="off" />
+													<label for="pass4">Epic 1 </label>
+													<input type="password" name="pass4" id="pass4" size="16" value="" autocomplete="off" />
 												</div>
 
 												<div class="submit">
-													<input type="submit" name="wp-submit" id="wp-submit" value="Enviar" />
-													<input type="hidden" name="redirect_to" value="" />
-													<input type="hidden" name="instance" value="" />
+													<input type="submit" name="submit3" id="submit3" />
 												</div>
 											</form>
 

@@ -6,13 +6,14 @@ img {
   /* Make images responsive by default */
   height: auto;
   max-width: 100%;
+  vertical-align: bottom;
+  /* Images inside figure */
 }
 img[width], img[height] {
   display: inline-block;
 }
-img, a img {
-  border: 0;
-  vertical-align: bottom;
+figure > img {
+  display: block;
 }
 
 /*==========  $Media Audio  ==========*/
