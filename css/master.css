@@ -3,23 +3,23 @@
 =========================================*\
 *
 * Project:                 seelva
-* Version:                 3.3.0
+* Version:                 3.3.1
 * URL:                     http://seelva.com/
-* Latest Edition (Y/M/D):  2013/04/17
-* Assigned to:             Hernán Silva, @hachesilva
+* Latest Edition (Y/M/D):  2013/05/18
+* Assigned to:             Hernan Silva, @hachesilva
 *
 /*---------------------------------------*/
 
-@import "print.css" print;       /* Print stylesheet                                        */
-@import "base.css" screen;       /* Normalize, Grid helper, layout helpers                  */
-@import "core.css" screen;       /* Hyperlinks, Headings, Text, Lists, Tables               */
-@import "forms.css" screen;      /* Forms and form-related helpers                          */
-@import "media.css" screen;      /* Images, video, audio, galleries                         */
-@import "nav.css" screen;        /* Menus, tabs, breadcrumbs and pagination                 */
-@import "dropdown.css" screen;   /* Helper classes for dropdown and flyout menus            */
-@import "ui.css" screen;         /* Messages/Alerts, progressbars and button sets           */
-@import "utils.css" screen;      /* Image replacement and other utils                       */
-@import "icons.css" screen;      /* Icons webfont css setup. Custom version of FontAwesome  */
-@import "objects.css" screen;    /* OOCSS objects, as per @stubbornella and @csswizardry    */
+@import "print.css";      /* Print stylesheet                                        */
+@import "base.css";       /* Normalize, Grid helper, layout helpers                  */
+@import "core.css";       /* Hyperlinks, Headings, Text, Lists, Tables               */
+@import "forms.css";      /* Forms and form-related helpers                          */
+@import "media.css";      /* Images, video, audio, galleries                         */
+@import "nav.css";        /* Menus, tabs, breadcrumbs and pagination                 */
+@import "dropdown.css";   /* Helper classes for dropdown and flyout menus            */
+@import "ui.css";         /* Messages/Alerts, progressbars and button sets           */
+@import "utils.css";      /* Image replacement and other utils                       */
+@import "icons.css";      /* Icons webfont css setup. Custom version of FontAwesome  */
+@import "objects.css";    /* OOCSS objects, as per @stubbornella and @csswizardry    */
 
-@import "custom.css" screen;     /* Your styles                                             */
+@import "custom.css";     /* Your styles                                             */

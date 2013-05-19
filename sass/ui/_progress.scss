@@ -15,7 +15,7 @@
 	@include box-sizing(border-box);
 
 	.progress-value {
-		@if $fullCSS3 {
+		@if $fullCSS3 == true {
 			@include default_gradient($WhiteSmoke, $Silver);
 		}
 		@else {
@@ -43,7 +43,7 @@
 }
 
 @mixin progress_colorize($bg, $percent: 20%) {
-	@if $fullCSS3 {
+	@if $fullCSS3 == true {
 		@include default_gradient( lighten($bg, $percent), $bg );
 	}
 	@else {

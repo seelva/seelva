@@ -45,6 +45,22 @@
 }
 
 /*-----  End of $Object - Media  ------*/
+/* nav abstraction object
+Source: http://csswizardry.com/2011/09/the-nav-abstraction/
+*/
+.nav {
+  list-style: none;
+  margin: 0 0 9px 0;
+}
+.nav > li {
+  display: block;
+  float: left;
+}
+.nav > li > a, .nav > li > a:link {
+  display: block;
+  text-decoration: none;
+}
+
 /*=====================================
 =            $Object- Stat            =
 =====================================*/

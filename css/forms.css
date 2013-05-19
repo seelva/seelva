@@ -36,30 +36,22 @@ label em, label .required, span.label em, span.label .required {
 }
 
 /*==========  $Forms Controls  ==========*/
-input[type="checkbox"],
-input[type="radio"] {
-  cursor: pointer;
-}
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
-  outline-color: #4e9a06;
-}
-
+input:not([type]),
 input[type=""],
-input[type="file"],
-input[type="password"],
-input[type="text"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+input[type=file],
+input[type=password],
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week],
 select,
 textarea {
   -webkit-box-shadow: 0 2px 6px #eeeeee inset;
@@ -79,60 +71,63 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+input:not([type]):focus,
 input[type=""]:focus,
-input[type="file"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus,
+input[type=file]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
 select:focus,
 textarea:focus {
   border-color: #4e9a06;
   outline-color: #4e9a06;
 }
+input:not([type])[readonly],
 input[type=""][readonly],
-input[type="file"][readonly],
-input[type="password"][readonly],
-input[type="text"][readonly],
-input[type="date"][readonly],
-input[type="datetime"][readonly],
-input[type="datetime-local"][readonly],
-input[type="email"][readonly],
-input[type="month"][readonly],
-input[type="number"][readonly],
-input[type="search"][readonly],
-input[type="tel"][readonly],
-input[type="time"][readonly],
-input[type="url"][readonly],
-input[type="week"][readonly],
+input[type=file][readonly],
+input[type=password][readonly],
+input[type=text][readonly],
+input[type=date][readonly],
+input[type=datetime][readonly],
+input[type=datetime-local][readonly],
+input[type=email][readonly],
+input[type=month][readonly],
+input[type=number][readonly],
+input[type=search][readonly],
+input[type=tel][readonly],
+input[type=time][readonly],
+input[type=url][readonly],
+input[type=week][readonly],
 select[readonly],
 textarea[readonly] {
   background-color: #fafafa;
 }
+input:not([type])[disabled],
 input[type=""][disabled],
-input[type="file"][disabled],
-input[type="password"][disabled],
-input[type="text"][disabled],
-input[type="date"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="email"][disabled],
-input[type="month"][disabled],
-input[type="number"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled],
-input[type="week"][disabled],
+input[type=file][disabled],
+input[type=password][disabled],
+input[type=text][disabled],
+input[type=date][disabled],
+input[type=datetime][disabled],
+input[type=datetime-local][disabled],
+input[type=email][disabled],
+input[type=month][disabled],
+input[type=number][disabled],
+input[type=search][disabled],
+input[type=tel][disabled],
+input[type=time][disabled],
+input[type=url][disabled],
+input[type=week][disabled],
 select[disabled],
 textarea[disabled] {
   background: #e5e5e5;
@@ -142,8 +137,17 @@ textarea[disabled] {
   box-shadow: none;
 }
 
+input[type=checkbox],
+input[type=radio] {
+  cursor: pointer;
+}
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+  outline-color: #4e9a06;
+}
+
 input.image,
-input[type="image"] {
+input[type=image] {
   border: 0;
   height: auto;
   width: auto;
@@ -196,7 +200,7 @@ select[disabled] {
 .field-error label {
   color: #e14049;
 }
-.field-error input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+.field-error input:not([type=button]):not([type=reset]):not([type=submit]),
 .field-error select,
 .field-error textarea {
   background: snow;
@@ -207,7 +211,7 @@ select[disabled] {
 .field-info label {
   color: steelblue;
 }
-.field-info input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+.field-info input:not([type=button]):not([type=reset]):not([type=submit]),
 .field-info select,
 .field-info textarea {
   background: #d9e8ff;
@@ -218,7 +222,7 @@ select[disabled] {
 .field-notice label {
   color: goldenrod;
 }
-.field-notice input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+.field-notice input:not([type=button]):not([type=reset]):not([type=submit]),
 .field-notice select,
 .field-notice textarea {
   background: lemonchiffon;
@@ -229,7 +233,7 @@ select[disabled] {
 .field-success label {
   color: #4e9a06;
 }
-.field-success input:not([type="button"]):not([type="reset"]):not([type="submit"]),
+.field-success input:not([type=button]):not([type=reset]):not([type=submit]),
 .field-success select,
 .field-success textarea {
   background: beige;
@@ -373,7 +377,7 @@ select[disabled] {
   float: left;
   width: 35%;
 }
-.field-horizontal > input:not([type="radio"]):not([type="checkbox"]), .form-horizontal div > input:not([type="radio"]):not([type="checkbox"]), .field-horizontal > select, .form-horizontal div > select, .field-horizontal > textarea, .form-horizontal div > textarea, .field-horizontal > .control-group, .form-horizontal div > .control-group {
+.field-horizontal > input:not([type=radio]):not([type=checkbox]), .form-horizontal div > input:not([type=radio]):not([type=checkbox]), .field-horizontal > select, .form-horizontal div > select, .field-horizontal > textarea, .form-horizontal div > textarea, .field-horizontal > .control-group, .form-horizontal div > .control-group {
   clear: none;
   float: right;
   width: 60%;

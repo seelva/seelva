@@ -1,3 +1,15 @@
+v3.3.1
+====================
+Fixes
+	Regresion of webkit-file-button styling, made buttons look wrong in IE and Firefox
+	Merged selectors for buttons states (default, hover, focus, disabled)
+	Moved nav object from nav/main to objects/nav
+	Fixed styles for inputs with no type
+	Fixed CSS3 switch for legacy browsers
+
+Updates
+	Updated normalize.css to v2.1.2
+
 v3.3.0
 ====================
 New

@@ -28,7 +28,7 @@ table {
 [rowspan="1"] { vertical-align: top; }
 
 th {
-	@if $fullCSS3 {
+	@if $fullCSS3 == true {
 		@include default_gradient($GhostWhite, $WhiteSmoke);
 	}
 	@else {

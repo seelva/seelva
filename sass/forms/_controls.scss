@@ -1,29 +1,23 @@
 /*==========  $Forms Controls  ==========*/
-input[type="checkbox"],
-input[type="radio"] {
-	cursor: pointer;
-
-	&:focus { outline-color: $brand-main; }
-}
-
+input:not([type]),
 input[type=""],
-input[type="file"],
-input[type="password"],
-input[type="text"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+input[type=file],
+input[type=password],
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week],
 select,
 textarea {
-	@if $fullCSS3 {
+	@if $fullCSS3 == true {
 		@include box-shadow(0 2px 6px $Gainsboro inset);
 	}
 	@else {
@@ -55,8 +49,15 @@ textarea {
 	}
 }
 
+input[type=checkbox],
+input[type=radio] {
+	cursor: pointer;
+
+	&:focus { outline-color: $brand-main; }
+}
+
 input.image,
-input[type="image"] {
+input[type=image] {
 	border: 0;
 	height: auto;
 	width: auto;

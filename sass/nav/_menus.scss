@@ -2,7 +2,7 @@
 .menu-horizontal, .menu-vertical {
 	> li {
 		> a, > a:link, > a:visited {
-			@if $fullCSS3 {
+			@if $fullCSS3 == true {
 				@include default_gradient($GhostWhite, $Silver);
 			}
 			@else {
@@ -13,7 +13,7 @@
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			@if $fullCSS3 {
+			@if $fullCSS3 == true {
 				@include default_gradient($DarkGray, $Gray);
 			}
 			@else {

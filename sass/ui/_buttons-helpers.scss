@@ -5,7 +5,7 @@
 	&:focus, &:hover {
 		color: darken( $color, 10% );
 
-		@if $fullCSS3 {
+		@if $fullCSS3 == true {
 			@include default_gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
 		}
 		@else {

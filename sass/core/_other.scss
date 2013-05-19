@@ -6,7 +6,7 @@ details {
 	@include border-radius($radius1);
 
 	summary {
-		@if $fullCSS3 {
+		@if $fullCSS3 == true {
 			@include default_gradient();
 		}
 		@else {

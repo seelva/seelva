@@ -26,7 +26,7 @@
 @mixin field-status($bg, $border, $color) {
 	label { color: $color; }
 
-	input:not( [type="button"] ):not( [type="reset"] ):not( [type="submit"] ), // target all inputs but buttons
+	input:not( [type=button] ):not( [type=reset] ):not( [type=submit] ), // target all inputs but buttons
 	select,
 	textarea {
 		background: $bg;
@@ -128,7 +128,7 @@
 		width: 35%;
 	}
 
-	& > input:not([type="radio"]):not([type="checkbox"]), // target all but radios and checks
+	& > input:not([type=radio]):not([type=checkbox]), // target all but radios and checks
 	& > select,
 	& > textarea,
 	& > .control-group {
