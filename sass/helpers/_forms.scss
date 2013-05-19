@@ -1,0 +1,182 @@
+/*==========  $Forms Helpers  ==========*/
+/*==========  Wrappers  ==========*/
+.form-actions {
+	float: none;
+	margin-bottom: #{$baseUnit1 * 5};
+	width: auto;
+
+	@include cf;
+}
+
+.control-group {
+	clear: both;
+	float: none;
+	margin: 0;
+
+	span.label { line-height: normal; }
+
+	label {
+		display: inline;
+		padding: 0;
+		width: auto;
+	}
+}
+
+/*==========  Form Fields  ==========*/
+@mixin field-status($bg, $border, $color) {
+	label { color: $color; }
+
+	input:not( [type="button"] ):not( [type="reset"] ):not( [type="submit"] ), // target all inputs but buttons
+	select,
+	textarea {
+		background: $bg;
+		border-color:$border;
+		color: $color;
+	}
+}
+
+.field-error   { @include field-status( $Snow,         $Pink,          $Crimson ); }
+.field-info    { @include field-status( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
+.field-notice  { @include field-status( $LemonChiffon, $Gold,          $GoldenRod ); }
+.field-success { @include field-status( $Beige,        $YellowGreen,   $LimeGreen ); }
+
+.field-prefix, .field-suffix {
+	overflow: hidden; /* Clearfix */
+
+	.label {
+		background: $GhostWhite;
+		border: 1px solid $Silver;
+		border-right-width: 0;
+		color: $DimGray;
+		float: left;
+		margin: 0;
+		padding: $baseUnit1 #{$baseUnit1 * 3};
+
+		&:last-child {
+			border-left-width: 0;
+			border-right-width: 1px;
+			@include border-radius(0 $radius1 $radius1 0);
+		}
+	}
+
+	input,
+	select,
+	button {
+		clear: none;
+		float: left;
+		margin: 0;
+		position: relative;
+		width: auto;
+		@include border-radius(0);
+
+		&:first-child { @include border-radius($radius1 0 0 $radius1); }
+	}
+}
+
+.field-prefix {
+	.label { @include border-radius($radius1 0 0 $radius1); }
+
+	input,
+	select,
+	button {
+		@include border-radius(0 $radius1 $radius1 0);
+	}
+}
+
+.field-suffix {
+	.label {
+		border-right-width: 1px;
+		@include border-radius(0 $radius1 $radius1 0);
+	}
+
+	input,
+	select,
+	button {
+		@include border-radius($radius1 0 0 $radius1);
+	}
+}
+
+.field-prefix.field-suffix {
+	.label {
+		border-right-width: 0;
+		@include border-radius($radius1 0 0 $radius1);
+
+		&:last-child {
+			border-right-width: 1px;
+			@include border-radius(0 $radius1 $radius1 0);
+		}
+	}
+
+	input,
+	select,
+	button {
+		@include border-radius(0);
+
+		&:last-child {
+			@include border-radius(0 $radius1 $radius1 0);
+		}
+	}
+}
+
+.field-horizontal {
+	@include cf;
+
+	label, span.label {
+		clear: none;
+		display: inline;
+		float: left;
+		width: 35%;
+	}
+
+	& > input:not([type="radio"]):not([type="checkbox"]), // target all but radios and checks
+	& > select,
+	& > textarea,
+	& > .control-group {
+		clear: none;
+		float: right;
+		width: 60%;
+	}
+
+	.field-prefix,
+	.field-suffix {
+		clear: none;
+		float: right;
+		width: 60%;
+
+		input { width: auto; }
+	}
+
+	.control-group label, .control-group span.label {
+		float: none;
+		width: auto;
+	}
+}
+
+/*==========  Form types  ==========*/
+.form-horizontal {
+	div { @extend .field-horizontal; }
+}
+
+.form-inline {
+	line-height: 250%; /* This produces vertical spacing between inputs */
+
+	label { display: inline-block; }
+
+	input, select {
+		display: inline-block;
+		width: auto;
+	}
+}
+
+.form-search {
+	> div, > p {
+		clear: none;
+		float: left;
+	}
+
+	input, label {
+		float: left;
+		margin-right: $baseUnit1;
+		width: auto;
+	}
+}

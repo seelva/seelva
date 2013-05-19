@@ -1,0 +1,20 @@
+echo "";
+echo "/*========================================";
+echo "=             Seelva compiler            =";
+echo "========================================*/";
+
+echo "***** Start compiling";
+
+echo "***** Compiling print.css - compact";
+compass compile --css-dir=css sass/print.scss --output-style compact --force;
+echo "";
+
+echo "***** Compiling base.css  - compact";
+compass compile --css-dir=css sass/base.scss --output-style compact --force;
+echo "";
+
+echo "***** Start watching your project (compass watch)";
+echo "";
+
+echo "/*-----  End of Seelva compiler  ------*/";
+

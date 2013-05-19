@@ -1,0 +1,80 @@
+$contentWidth: ($colAmount * $colWidth) + ( ($colAmount - 1) * $gutterWidth);
+
+/*==========  $Layout  ==========*/
+
+.section {
+	clear: both;
+	width: 100%;
+}
+
+.holder {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: #{ $gutterWidth / 2 }px;
+	width: #{$contentWidth}px;
+}
+
+.holder-fluid {
+	padding: 0 10px;
+	width: auto;
+}
+
+.row { @include cf; }
+
+/* The last column in a row gets automatically floated to the right */
+.row > div:last-child {
+	@include omega;
+
+	&[class^="suffix"], &[class*=" suffix"] { float: left; }
+}
+/* Useful in fixed-width grids only */
+.grid-guides { background: $White url(http://griddle.it/#{$contentWidth}-#{$colAmount}-#{$colWidth}?color=edf2c4&text=7b9712) repeat-y center top; }
+
+/* Fix units inside forms */
+form {
+	[class^="unit-"], [class*=" unit-"] { clear: none; }
+}
+
+/*==========  $Relative-width classes  ==========*/
+.half-width, .one-half,
+  .one-third,
+  .two-thirds,
+  .one-fourth,
+  .two-fourths,
+.three-fourths,
+  .one-fifth,
+  .two-fifths,
+.three-fifths,
+ .four-fifths,
+  .one-sixth,
+  .two-sixths,
+.three-sixths,
+ .four-sixths,
+ .five-sixths  {
+	clear: none;
+	float: left;
+	margin-right: 1%;
+}
+
+.full-width    { width: 100.0%; clear: both; }
+
+.half-width,
+.one-half      { width: 49.50%; clear: none; }
+
+  .one-third   { width: 32.50%; }
+  .two-thirds  { width: 66.58%; }
+
+  .one-fourth  { width: 24.25%; }
+  .two-fourths { @extend .one-half; }
+.three-fourths { width: 74.50%; }
+
+  .one-fifth   { width: 19.20%; }
+  .two-fifths  { width: 39.50%; }
+.three-fifths  { width: 59.50%; }
+ .four-fifths  { width: 79.50%; }
+
+  .one-sixth   { width: 15.82%; }
+  .two-sixths  { @extend .one-third; }
+.three-sixths  { @extend .one-half; }
+ .four-sixths  { @extend .two-thirds; }
+ .five-sixths  { width: 83.00%; }

@@ -1,0 +1,43 @@
+/***************************************************************************
+*  WARNING:
+*  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
+*  These modules use mouse-over and mouse-out events to display submenus.
+*  Be aware that if you want to use dropdowns with touchscreen devices you
+*  should use a Javascript-based alternative.
+****************************************************************************/
+/*===============================
+=            $Custom            =
+===============================*/
+html {
+  /* HTML style */
+}
+
+body {
+  color: black;
+}
+.ie6 body, .ie7 body {
+  font-size: 82%;
+  line-height: 1.12em;
+}
+
+#outer {
+  /* Outer style */
+}
+
+#wrapper {
+  /* Wrapper style */
+}
+
+.holder {
+  /* override default holder style */
+}
+
+#header {
+  /* header style */
+}
+
+#primary {
+  /* primary style */
+}
+
+/*-----  End of $Custom  ------*/

@@ -1,0 +1,70 @@
+/*==========  $Core Lists  ==========*/
+ul, ol {
+	margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
+	padding: 0;
+
+	/* Remove vertical spacing from nested lists. */
+	li > & {margin-bottom: 0; }
+
+	&.armenian    { list-style-type: armenian }
+	&.circle      { list-style-type: circle }
+	&.decimal     { list-style-type: decimal }
+	&.decimalzero { list-style-type: decimal-leading-zero }
+	&.disc        { list-style-type: disc }
+	&.georgian    { list-style-type: georgian }
+	&.lalpha      { list-style-type: lower-alpha }
+	&.lgreek      { list-style-type: lower-greek }
+	&.llatin      { list-style-type: lower-latin }
+	&.lroman      { list-style-type: lower-roman }
+	&.square      { list-style-type: square }
+	&.ualpha      { list-style-type: upper-alpha }
+	&.ulatin      { list-style-type: upper-latin }
+	&.uroman      { list-style-type: upper-roman }
+
+	&.styled, &.unstyled { list-style-type: none; margin-left: #{$baseUnit1 * 3}; }
+	&.styled li {
+		background: url(../images/bullet.png) no-repeat 0 6px;
+		padding-left: 16px;
+	}
+
+	&.horizontal {
+		margin-left: 0;
+
+		> li {
+			border-left: 1px solid $LightGray;
+			display: inline-block;
+			padding-left: #{$baseUnit1 * 2};
+			padding-right: $baseUnit1;
+
+			&:first-child { border-left: 0; }
+		}
+	}
+}
+
+ol {
+	li { margin: 0 0 0 #{$baseUnit1 * 3}; }
+}
+
+/* Values not allowed in CSS2.1, re-allowed in CSS3 */
+/*
+ul.hebrew 		{list-style-type: hebrew}
+ul.cideo 		{list-style-type: cjk-ideographic}
+ul.hira 		{list-style-type: hiragana}
+ul.kata 		{list-style-type: katakana}
+ul.hira-iroha 	{list-style-type: hiragana-iroha}
+ul.kata-iroha 	{list-style-type: katakana-iroha}
+*/
+
+dl {
+	margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
+	padding: 0;
+}
+dt {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+dd {
+	margin: 0 0 0 #{$baseUnit1 * 3};
+	padding: 0;
+}

@@ -1,0 +1,334 @@
+/***************************************************************************
+*  WARNING:
+*  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
+*  These modules use mouse-over and mouse-out events to display submenus.
+*  Be aware that if you want to use dropdowns with touchscreen devices you
+*  should use a Javascript-based alternative.
+****************************************************************************/
+/*===================================
+=              $Objects             =
+===================================*/
+/*==========  $UI Alerts/Messages  ==========*/
+.alert,
+.error,
+.guidelines,
+.info, .ok,
+.notice, .warning,
+.status, .success {
+  background-color: whitesmoke;
+  background-position: 4px 1em;
+  background-repeat: no-repeat;
+  border: 1px solid #e5e5e5;
+  color: #888888;
+  margin-bottom: 15px;
+  padding: 9px 9px 9px 24px;
+}
+.alert a,
+.error a,
+.guidelines a,
+.info a, .ok a,
+.notice a, .warning a,
+.status a, .success a {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  background-color: lavenderblush;
+  background-image: url(../images/icons/cross.png);
+  border-color: pink;
+  color: #e14049;
+}
+.error a {
+  color: #e14049;
+}
+
+.info, .status {
+  background-color: #d9e8ff;
+  background-image: url(../images/icons/information.png);
+  border-color: #82d2df;
+  color: steelblue;
+}
+.info a, .status a {
+  color: steelblue;
+}
+
+.notice, .warning {
+  background-color: lemonchiffon;
+  background-image: url(../images/icons/error.png);
+  border-color: gold;
+  color: goldenrod;
+}
+.notice a, .warning a {
+  color: goldenrod;
+}
+
+.success, .ok {
+  background-color: #edf2c4;
+  background-image: url(../images/icons/tick.png);
+  border-color: #becf59;
+  color: #7b9712;
+}
+.success a, .ok a {
+  color: #7b9712;
+}
+
+.guidelines {
+  background-color: ivory;
+  border-color: #fff6cc;
+  color: #555555;
+  line-height: 130%;
+  margin-top: 6px;
+  padding: 9px 6px;
+}
+.guidelines a {
+  color: #555555;
+}
+
+.dropdown > a:after, .flyout > a:after, .dropdown > a:link:after, .flyout > a:link:after {
+  /* Arrow for dropdown links */
+  border: 4px solid transparent;
+  border-top-color: #888888;
+  content: " ";
+  display: inline-block;
+  line-height: 100%;
+  margin-left: 4px;
+  text-align: right;
+  vertical-align: middle;
+}
+.dropdown .drop-content, .flyout .drop-content, .dropdown > ul, .flyout > ul {
+  /* Common styles for submenus */
+  display: none;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 100;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+}
+.dropdown .drop-content, .flyout .drop-content {
+  background: #eeeeee;
+  padding: 9px;
+  width: 230px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+.dropdown > ul, .flyout > ul {
+  list-style: none;
+  margin: 0;
+  max-width: 180px;
+  min-width: 150px;
+  padding: 0;
+  zoom: 1;
+}
+.dropdown > ul > li, .flyout > ul > li {
+  border-left: 1px solid whitesmoke;
+  display: block;
+  float: none;
+}
+.dropdown > ul > li > a, .flyout > ul > li > a, .dropdown > ul > li > a:link, .flyout > ul > li > a:link, .dropdown > ul > li > a:visited, .flyout > ul > li > a:visited {
+  background: #e5e5e5;
+  color: black;
+  display: block;
+  padding: 6px 9px;
+  text-decoration: none;
+}
+.dropdown > ul > li > a:hover, .flyout > ul > li > a:hover, .dropdown > ul > li.active > a, .flyout > ul > li.active > a, .dropdown > ul > li.active > a:link, .flyout > ul > li.active > a:link {
+  background: #888888;
+  color: white;
+}
+.dropdown .dropdown > a:after, .flyout .dropdown > a:after, .dropdown .flyout > a:after, .flyout .flyout > a:after, .dropdown .dropdown > a:link:after, .flyout .dropdown > a:link:after, .dropdown .flyout > a:link:after, .flyout .flyout > a:link:after {
+  /* Arrow for 2nd+ level dropdown links */
+  border-left-color: #888888;
+  border-top-color: transparent;
+}
+.dropdown .dropdown:hover > a:after, .flyout .dropdown:hover > a:after, .dropdown .flyout:hover > a:after, .flyout .flyout:hover > a:after, .dropdown .dropdown:hover > a:link:after, .flyout .dropdown:hover > a:link:after, .dropdown .flyout:hover > a:link:after, .flyout .flyout:hover > a:link:after, .dropdown .dropdown.active > a:after, .flyout .dropdown.active > a:after, .dropdown .active.flyout > a:after, .flyout .active.flyout > a:after, .dropdown .dropdown.active > a:link:after, .flyout .dropdown.active > a:link:after, .dropdown .active.flyout > a:link:after, .flyout .active.flyout > a:link:after {
+  border-left-color: white;
+  border-top-color: transparent;
+}
+.dropdown .dropdown > ul, .flyout .dropdown > ul, .dropdown .flyout > ul, .flyout .flyout > ul {
+  /* 3rd+ Level submenu style */
+  display: none;
+  left: 100%;
+  position: absolute;
+  top: 6px;
+  width: 100%;
+}
+.dropdown:hover > a:after, .flyout:hover > a:after, .dropdown:hover > a:link:after, .flyout:hover > a:link:after, .dropdown.active > a:after, .active.flyout > a:after, .dropdown.active > a:link:after, .active.flyout > a:link:after {
+  border-top-color: white;
+}
+.dropdown:hover > ul, .flyout:hover > ul, .dropdown ul a:hover ul, .flyout ul a:hover ul, .dropdown:hover .drop-content, .flyout:hover .drop-content {
+  display: block;
+}
+.dropdown ul :hover ul :hover ul, .flyout ul :hover ul :hover ul {
+  display: block;
+}
+.dropdown.active ul li a, .active.flyout ul li a, .dropdown.active ul li a:link, .active.flyout ul li a:link, .dropdown .active ul li a, .flyout .active ul li a, .dropdown .active ul li a:link, .flyout .active ul li a:link {
+  background: #e5e5e5;
+  color: black;
+}
+.dropdown.active ul li a:hover, .active.flyout ul li a:hover, .dropdown .active ul li a:hover, .flyout .active ul li a:hover {
+  background: #888888;
+  color: white;
+}
+
+.flyout {
+  position: relative;
+}
+.flyout .drop-content, .flyout > ul {
+  left: 100px;
+  top: 0;
+}
+
+/*==========  $Object - Media  ==========*/
+/**
+* Media object as per stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+*
+**/
+.media {
+  display: block;
+  *zoom: 1;
+}
+.media:before, .media:after {
+  content: " ";
+  display: table;
+}
+.media:after {
+  clear: both;
+}
+
+.media-img {
+  float: left;
+  margin-right: 1em;
+}
+
+/* Reversed image location (right instead of left). */
+.media-img--rev {
+  float: right;
+  margin-left: 1em;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+.media-body, .media-body > :last-child {
+  margin-bottom: 0;
+}
+
+/*==========  $Object - Nav  ==========*/
+/**
+* nav abstraction object as per http://csswizardry.com/2011/09/the-nav-abstraction/
+*/
+.nav {
+  list-style: none;
+  margin: 0 0 9px 0;
+}
+.nav > li {
+  display: block;
+  float: left;
+}
+.nav > li > a, .nav > li > a:link {
+  display: block;
+  text-decoration: none;
+}
+
+/*==========  $UI Progressbars  ==========*/
+.progressbar,
+.progressbar-error,
+.progressbar-info,
+.progressbar-notice,
+.progressbar-success {
+  background: #fafafa;
+  border: 1px solid #dadada;
+  height: 21px;
+  margin: 6px 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.progressbar .progress-value,
+.progressbar-error .progress-value,
+.progressbar-info .progress-value,
+.progressbar-notice .progress-value,
+.progressbar-success .progress-value {
+  background: #dadada url(../images/gradient-bg.png) repeat-x left -12px;
+  float: left;
+  height: 20px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+}
+.progressbar .progress-text,
+.progressbar-error .progress-text,
+.progressbar-info .progress-text,
+.progressbar-notice .progress-text,
+.progressbar-success .progress-text {
+  color: #555555;
+  font-size: 14px;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.progressbar-error .progress-value {
+  background-color: #f9dadc;
+}
+
+.progressbar-info .progress-value {
+  background-color: #e5f2ff;
+}
+
+.progressbar-notice .progress-value {
+  background-color: #ffe766;
+}
+
+.progressbar-success .progress-value {
+  background-color: #dde6a8;
+}
+
+/*==========  $Object - Stat  ==========*/
+.stat-group {
+  *zoom: 1;
+}
+.stat-group:before, .stat-group:after {
+  content: " ";
+  display: table;
+}
+.stat-group:after {
+  clear: both;
+}
+
+.stat {
+  display: inline-block;
+}
+
+.stat-title,
+.stat-value {
+  clear: both;
+  display: block;
+}
+
+/*-------  End of $Objects  -------*/

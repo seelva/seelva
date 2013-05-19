@@ -1,0 +1,59 @@
+@mixin progress_colorize($bg, $percent: 20%) {
+	@if $fullCSS3 {
+		@include default_gradient( lighten($bg, $percent), $bg );
+	}
+	@else {
+		background-color: lighten( $bg, $percent );
+	}
+}
+
+@if $useProgress == true {
+	/*==========  $UI Progressbars  ==========*/
+	.progressbar,
+	.progressbar-error,
+	.progressbar-info,
+	.progressbar-notice,
+	.progressbar-success {
+		background: $GhostWhite;
+		border: 1px solid $Silver;
+		height: #{$baseUnit1 * 7};
+		margin: #{$baseUnit1 * 2} 0;
+		overflow: hidden;
+		position: relative;
+
+		@include border-radius($radius3);
+		@include box-sizing(border-box);
+
+		.progress-value {
+			@if $fullCSS3 {
+				@include default_gradient($WhiteSmoke, $Silver);
+			}
+			@else {
+				background: $Silver url(../images/gradient-bg.png) repeat-x left -12px;
+			}
+			float: left;
+			height: #{$baseUnit1 * 7 - 1};
+			@include border-radius($radius3);
+		}
+
+		.progress-text {
+			color: $DimGray;
+			font: {
+				size: 14px;
+				weight: bold;
+			}
+			left: 0;
+			position: absolute;
+			text: {
+				align: center;
+			}
+			top: 0;
+			width: 100%;
+		}
+	}
+
+	.progressbar-error   .progress-value { @include progress_colorize( $Crimson, 35% ); }
+	.progressbar-info    .progress-value { @include progress_colorize( $DodgerBlue, 35% ); }
+	.progressbar-notice  .progress-value { @include progress_colorize( $Gold ); }
+	.progressbar-success .progress-value { @include progress_colorize( $YellowGreen ); }
+}

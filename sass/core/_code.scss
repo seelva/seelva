@@ -1,0 +1,29 @@
+/*==========  $Core Code  ==========*/
+code, kbd, pre {
+	background: $GhostWhite;
+	font-family: $fstack-code;
+	_font-family: $fstack-code;
+}
+code, kbd {
+	font-size: 85.7%;
+	line-height: 192%;
+	padding: #{$baseUnit1 - 1} #{$baseUnit1 * 2 - 1};
+	white-space: pre;
+}
+code, pre { border: 1px solid $Gainsboro; }
+kbd, pre { @include border-radius($radius1); }
+kbd {
+	color: $DimGray;
+	font-weight: bold;
+	text-transform: capitalize;
+	@include box-shadow($Silver 0 2px 0, $DimGray 0 2px 2px);
+}
+pre {
+	margin: 0 0 #{$baseUnit1 * 3} 0;
+	padding: #{$baseUnit1 * 2};
+}
+pre code {
+	background: transparent;
+	border: 0;
+	padding: 0;
+}

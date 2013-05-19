@@ -1,0 +1,47 @@
+/*==========  $Core Details/Summary  ==========*/
+details {
+	background: $GhostWhite;
+	border: 1px solid $LightGray;
+
+	@include border-radius($radius1);
+
+	summary {
+		@if $fullCSS3 {
+			@include default_gradient();
+		}
+		@else {
+			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+		}
+		border-bottom: 1px solid $LightGray;
+		cursor: pointer;
+		margin: 0;
+		padding: 0 #{$baseUnit1 * 2};
+		text-align: left;
+
+		@include border-radius($radius1 $radius1 0 0);
+
+		&:focus {
+		border-color: $brand-main;
+		outline-color: $brand-main;
+		}
+	}
+
+	> div {
+		padding: #{$baseUnit1 * 2};
+	}
+
+	&[open] summary {
+		border-color: $Silver;
+	}
+}
+
+/*==========  $Core Rulers / line breaks  ==========*/
+hr {
+	clear: both;
+	color: $Gray;
+}
+
+br { clear: both; }
+
+/*==========  $Misc  ==========*/
+:focus { outline-color: $brand-main; }

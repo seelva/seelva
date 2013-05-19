@@ -1,0 +1,106 @@
+@if $useButtons == true {
+	/*==========  $Forms Buttons  ==========*/
+	input[type=button],
+	input[type=submit],
+	input[type=reset],
+	input[type=color],
+	button,
+	button[type],
+	.btn, .btn:link,
+	.button, .button:link {
+		@if $fullCSS3 {
+			@include default_gradient();
+		}
+		@else {
+			background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
+		}
+		border: 1px solid $Silver {
+			bottom-color: $DarkGray;
+		}
+		color: $Gray;
+		display: inline-block;
+		font: {
+			family: $fstack-buttons;
+			weight: bold;
+		}
+		line-height: 100%;
+		padding: #{$baseUnit1 * 2 - 1} #{$baseUnit1 * 3}; /*! For links */
+		text: {
+			decoration: none;
+		};
+		white-space: nowrap;
+		word-wrap: normal;
+
+		@include border-radius($radius1);
+		@include single-box-shadow($WhiteSmoke, 0, 1px, 0, 0);
+
+		/* IE7 padding bugfix */
+		overflow: visible;
+		width: auto;
+
+		// Standard button
+		&:focus {
+			outline-width: thin;
+			outline-style: auto;
+		}
+
+		 &:focus, &:hover {
+			@if $fullCSS3 {
+				@include default_gradient($GhostWhite, $Silver);
+			}
+			@else {
+				background-position: 0 -292px;
+			}
+			color: $DimGray;
+			outline-color: $brand-main;
+		}
+
+		&:active {
+			@if $fullCSS3 {
+				@include default_gradient($LightGray, $GhostWhite);
+			}
+			@else {
+				background-position: 0 bottom;
+			}
+			border-color: $Gray $DarkGray $Silver;
+			color: $Gray;
+
+			@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $DarkGray, 0 1px 0 $WhiteSmoke);
+		}
+
+		// Disabled button
+		&[disabled], &[disabled]:hover, &[disabled]:active, &.disabled {
+			background: $LightGray;
+			border: 1px solid $Silver;
+			color: $Gray;
+			cursor: default;
+			@include single-box-shadow(none);
+		}
+	}
+
+	input[type=color] {
+		height: 45px;
+		width: 45px;
+	}
+
+	// visited state, for links only
+	.btn:visited, .button:visited { color: $DimGray; }
+
+	/*! Fixes a NASTY bug in Firefox where input's line-height does not work */
+	@-moz-document url-prefix() {
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"] {
+			height: 1.9em;
+		}
+	}
+
+	/*! Removes box-model related styles from images inside buttons */
+	button img,
+	.btn img,
+	.button img {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+}

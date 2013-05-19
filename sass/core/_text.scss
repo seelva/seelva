@@ -1,0 +1,10 @@
+/*==========  $Core Text  ==========*/
+p, address       { margin: 0 0 1em 0; }
+mark, .highlight { background: $Gold; }
+acronym, abbr    {
+	&[title] {
+		border-bottom: 1px dotted $brand-main;
+		cursor: help;
+		letter-spacing: 2px;
+	}
+}

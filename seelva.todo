@@ -1,0 +1,35 @@
+ ☐ Drop legacy compatibility (images as bg)
+ ☐ Use BEM styling
+ ☐ Create a better grid system
+ ☐ Ad solid buttons
+
+ @mixin btn-status-solid($bg, $border, $color, $darkenPercent) {
+  color: $color;
+  @include default_gradient( lighten( $bg, 1%), darken( $bg, 1% ) );
+  border-color: $border;
+  text-shadow: 0 1px 1px darken($bg, $darkenPercent);
+
+  &:focus, &:hover {
+    color: darken( $color, 10% );
+
+    @if $fullCSS3 {
+      @include default_gradient( lighten( $bg, 2%), darken( $bg, 2% ) );
+    }
+    @else {
+      background-color: $bg;
+    }
+  }
+
+  &:active { @include box-shadow(inset 0 1px #{$baseUnit1 * 3} darken($bg, $darkenPercent), 0 1px 0 transparent); }
+}
+
+
+Removed body color due to normalize html color
+Removed border setting from media/images, already present in normalize
+Removed margin from radios and checkboxes, already present in normalize
+Removed hr height from core/main, already present in normalize
+Removed quotes from cite and q in core/quotes, already present in normalize
+Removed fontsize and margin from input, select and textarea in forms/controls, already set in normalize
+Removed fontsize from buttons in ui/buttons, already set in normalize
+Removed cursor pointer in ui/buttons, already set in normalize
+Removed text-shadow from almost all elements, not a useful feature and not the most flexible one

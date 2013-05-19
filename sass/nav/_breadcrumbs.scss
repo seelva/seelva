@@ -1,0 +1,21 @@
+/*==========  $Nav Breadcrumbs  ==========*/
+.breadcrumb {
+	@if $fullCSS3 {
+		@include default_gradient($GhostWhite, $WhiteSmoke);
+	}
+	@else {
+		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+	}
+	border: 1px solid $Silver;
+	@include border-radius($radius1);
+
+	span { display: block; }
+
+	> a { display: inline-block; }
+
+	a, a:link, a:visited, span { padding: #{$baseUnit1 * 2} 0 #{$baseUnit1 * 2} #{$baseUnit1 * 3}; }
+
+	a:hover, .active a, .active a:link { color: $Black; }
+
+	.active a:after, .active a:link:after { content: ""; }
+}

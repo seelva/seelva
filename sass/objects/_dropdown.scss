@@ -1,0 +1,107 @@
+@if $useDropdown == true {
+	.dropdown {
+		> a:after, > a:link:after {
+			/* Arrow for dropdown links */
+			border: 4px solid transparent;
+			border-top-color: $Gray;
+			content: " ";
+			display: inline-block;
+			line-height: 100%;
+			margin-left: 4px;
+			text-align: right;
+			vertical-align: middle;
+		}
+
+		.drop-content, > ul {
+			/* Common styles for submenus */
+			display: none;
+			padding: 3px 0;
+			position: absolute;
+			z-index: 100;
+
+			@include border-radius($radius3);
+		}
+
+		.drop-content {
+			background: $Gainsboro;
+			padding: #{$baseUnit1 * 3};
+			width: 230px;
+
+			@include border-radius( 0 0 $radius2 $radius2 );
+		}
+
+		> ul {
+			list-style: none;
+			margin: 0;
+			max-width: 180px;
+			min-width: 150px;
+			padding: 0;
+			zoom: 1;
+
+			> li {
+				border-left: 1px solid $WhiteSmoke;
+				display: block;
+				float: none;
+
+				> a, > a:link, > a:visited {
+					background: $LightGray;
+					color: $Black;
+					display: block;
+					padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
+					text-decoration: none;
+				}
+				> a:hover, &.active > a, &.active > a:link {
+					background: $Gray;
+					color: $White;
+				}
+			}
+		}
+
+		.dropdown {
+			> a:after, > a:link:after {
+				/* Arrow for 2nd+ level dropdown links */
+				border: {
+					left-color: $Gray;
+					top-color: transparent;
+				}
+			}
+
+			&:hover, &.active {
+				> a:after, > a:link:after {
+					border: {
+						left-color: $White;
+						top-color: transparent;
+					}
+				}
+			}
+
+			> ul {
+				/* 3rd+ Level submenu style */
+				display: none;
+				left: 100%;
+				position: absolute;
+				top: #{$baseUnit1 * 2};
+				width: 100%;
+			}
+		}
+
+		&:hover, &.active {
+			> a:after, > a:link:after { border-top-color: $White; }
+		}
+
+		&:hover > ul, ul a:hover ul, &:hover .drop-content { display: block; }
+
+		ul :hover ul :hover ul { display: block; }
+
+		&.active, .active {
+			ul li a, ul li a:link {
+				background: $LightGray;
+				color: $Black;
+			}
+			ul li a:hover {
+				background: $Gray;
+				color: $White;
+			}
+		}
+	}
+}

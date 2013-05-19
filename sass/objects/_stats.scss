@@ -1,0 +1,14 @@
+@if $useStats == true {
+	/*==========  $Object - Stat  ==========*/
+	.stat-group {
+	    @include cf;
+	}
+
+	.stat { display: inline-block; }
+
+	.stat-title,
+	.stat-value {
+	    clear: both;
+	    display: block;
+	}
+}

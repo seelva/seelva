@@ -1,0 +1,66 @@
+/***************************************************************************
+*  WARNING:
+*  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
+*  These modules use mouse-over and mouse-out events to display submenus.
+*  Be aware that if you want to use dropdowns with touchscreen devices you
+*  should use a Javascript-based alternative.
+****************************************************************************/
+/*==============================
+=            $Print            =
+==============================*/
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .imgreplace a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid gray;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+}
+/*-----  End of $Print  ------*/

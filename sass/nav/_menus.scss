@@ -1,0 +1,45 @@
+/*==========  $Nav Menus  ==========*/
+.menu-horizontal, .menu-vertical {
+	> li {
+		> a, > a:link, > a:visited {
+			@if $fullCSS3 {
+				@include default_gradient($GhostWhite, $Silver);
+			}
+			@else {
+				background: $Silver url(../images/gradient-bg.png) repeat-x left top;
+			}
+			color: $Black;
+			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
+		}
+
+		> a:hover, &.active > a, &.active > a:link {
+			@if $fullCSS3 {
+				@include default_gradient($DarkGray, $Gray);
+			}
+			@else {
+				background: {
+					color: $Gray;
+					position: left -15px;
+				}
+			}
+			color: $White;
+		}
+	}
+}
+
+/*==========  menu-Horizontal  ==========*/
+.menu-horizontal {
+	> li {
+		border-left: 1px solid $LightGray;
+		display: inline-block;
+		float: left;
+	}
+}
+
+/*==========  menu-Vertical  ==========*/
+.menu-vertical {
+	> li {
+		border-bottom: 1px solid $LightGray;
+		float: none;
+	}
+}

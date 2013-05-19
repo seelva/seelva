@@ -1,0 +1,110 @@
+@mixin btn-status($bg, $border, $color, $darkenPercent) {
+	color: $color;
+
+	&:focus, &:hover {
+		color: darken( $color, 10% );
+
+		@if $fullCSS3 {
+			@include default_gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
+		}
+		@else {
+			background-color: $bg;
+		}
+
+		border-color: $border;
+	}
+
+	&:active { @include box-shadow(inset 0 1px #{$baseUnit1 * 2} darken($bg, $darkenPercent), 0 1px 0 $WhiteSmoke); }
+}
+
+@mixin btn-size($padding, $line-height) {
+	line-height: $line-height;
+	padding-left: $padding;
+	padding-right: $padding;
+}
+
+@if $useButtonsHelpers == true {
+	/*==========  $Buttons helpers  ==========*/
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	button[type],
+	.btn,
+	.button {
+		&.btn-info    { @include btn-status( $LightCyan,     $DarkTurquoise, $SteelBlue, 40); }
+		&.btn-success { @include btn-status( $PaleGreen,     $YellowGreen,   $OliveDrab, 50); }
+		&.btn-error   { @include btn-status( $LavenderBlush, $Pink,          $Crimson,   60); }
+		&.btn-notice  { @include btn-status( $LemonChiffon,  $Gold,          $GoldenRod, 60); }
+
+		// *==========  $btn modifiers  ==========*/
+		// Source: http://csswizardry.com/beautons/
+		// $sizes
+		&.btn-small  { @include btn-size( 0.5em, 0.75 ); }
+		&.btn-medium { @include btn-size( 1.5em, 1.5 ); }
+		&.btn-large  { @include btn-size( 2em,   2 ); }
+		&.btn-huge   { @include btn-size( 2.5em, 4 ); }
+
+		// $font-sizes
+		&.btn-alpha { font-size: 0.75em; }
+		&.btn-beta  { font-size: 1.28em; }
+		&.btn-gamma { font-size: 1.50em; }
+
+		// Buttons with the appearance of a link
+		&.btn-unstyled {
+			&, &:hover, &:focus, &:active {
+				background: transparent;
+				border-color: transparent;
+				font-weight: normal;
+				text-decoration: underline;
+
+				@include box-shadow(0 0 0 transparent);
+			}
+		}
+
+		// These buttons will fill the entirety of their container.
+		&.btn-full {
+			padding-right: 0;
+			padding-left: 0;
+			text-align: center;
+			width: 100%;
+		}
+
+		// Make the button inherit sizing from its parent.
+		&.btn-natural {
+			font-size :inherit;
+			line-height: inherit;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+		}
+	}
+
+	/*==========  Buttons group  ==========*/
+	.btn-group {
+		display: inline-block;
+		vertical-align: middle;
+
+		input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .button, .button:link {
+			float: left;
+			margin: 0;
+			border-right-width: 0;
+			@include border-radius(0);
+
+			&:first-child { @include border-radius($radius1 0 0 $radius1); }
+
+			&:last-child  { @include border-radius(0 $radius1 $radius1 0); border-right-width: 1px; }
+		}
+	}
+
+	/*==========  Close button  ==========*/
+	.btn-close {
+		&, &:link, &:visited, &:hover, &:active, &:focus {
+			cursor: pointer;
+			float: right;
+			font-weight: bold;
+			position: relative;
+			text-decoration: none;
+			top: -#{$baseUnit1};
+		}
+	}
+}

@@ -1,0 +1,93 @@
+v4.0.0
+====================
+New
+	Added modules switches to use just what it is needed
+
+Fixes
+	Regresion of webkit-file-button styling, made buttons look wrong in IE, even IE9
+	Moved nav object from nav/main to objects/nav
+
+
+v3.3.1
+====================
+Fixes
+	Regresion of webkit-file-button styling, made buttons look wrong in IE, even IE9
+	Moved nav object from nav/main to objects/nav
+
+v3.3.0
+====================
+New
+	Added OOCSS 'media' and 'stats' objects
+	Added button styles classes: 'btn-small', 'btn-medium', 'btn-large', 'btn-huge', 'btn-alpha', 'btn-beta', 'btn-gamma', 'btn-full' and 'btn-natural'
+
+Fixes
+	Fixed prefix and suffix form fields styling
+	Fixed FontAwesome empty rules
+	Added correct media type to imported stylesheets at master.css
+	Removed core styles already present in normalize.css
+	Removed key.png icon, not used
+
+Improvements
+	Replaced seelva color with brand-color variable in UI elements
+	Added heading sizes to variables
+	Code cleanup in index-html5.html
+
+v3.0.0
+====================
+New
+	seelva now has modules and components instead of just modules
+	Added semantic classes to headings / core.scss
+	Added 'notice' and 'info' formfields / forms.scss
+	Added 'form-horizontal' class to forms.scss
+	Added 'field-inline' class to forms.scss
+	Added fluid grid to base.scss
+	Added .alpha and .omega classes for first and last element in any scope (grid, forms).
+
+Changes
+	Renamed 'inline-field' to 'field-horizontal' to better represent it's functionality / forms.scss
+	Renamed button classes from .neutral, .positive and .negative to .btn-neutral, .btn-positive and .btn-negative / forms.scss
+	Renamed .zebra and .compact table classes to .table-zebra and .table-compact / core.scss
+	Renamed .unitbg to .grid-guides, it had nothing to do with grid units
+	Renamed grid units to separate the number with a dash (e.g. .unit12 becomes .unit-12)
+	Renamed progressbars, were '-negative', '-neutral' and '-positive', became '-error', '-info', '-success'. Added '-notice' / ui.scss
+	Removed .bordercol class, same result should be achieved using custom styling
+	Removed documentation from demo.html
+	Removed/Deprecated .last-col and .last-field classes. Use .omega instead.
+	Dropped IE6 support in grid.css
+	Moved .list-horizontal from nav.scss to core.scss and renamed it .horizontal
+
+Improvements
+	Prefixed or suffixed form fields now accept buttons or inputs as prefixes or suffixes / forms.scss
+	Images are now 'responsive' by default
+	Almost all common default settings are editable from _config.css
+	Massive code refactoring
+	All files have distinctive comment headings
+
+Fixes
+	Removed hacks and fixes for several elements from core.scss and forms.scss, they are already present in normalize.css
+	Removed text-decoration from links / core.scss
+	Removed form controls' extra borders / forms.scss
+	Replaced tabs clearfix with micro-clearfix / nav.scss
+	Removed unnecesary styles from custom.scss
+
+v2.2.1
+====================
+Moved some properties to a single selector at grid.css
+Added micro clearfix to utils. Closes #3
+Minor improvements in demo.html. Closes #5, closes $4
+
+v.2.1.3
+====================
+Replaced reset.css with the much nicer normalize.css
+Edited definition terms and definition descriptions to style not only
+definition lists but HTML5 dialogs too
+Deleted tt tag from demo.html because it is now obsolete
+Moved mark and .highlighted styles from utils.css to core.css
+Removed fixes from core.css, were already present in normalize.css
+Fixed ol (ordered lists) padding in core.css, was hiding numerals for
+long lists
+Added new header and footer comments to each file
+Deleted underline class from utils.css, not the right place, not the
+most awesome piece of code
+Added viewport meta to HTML files
+Replaced characters with HTML entities in demo.html

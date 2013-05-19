@@ -1,0 +1,268 @@
+/***************************************************************************
+*  WARNING:
+*  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
+*  These modules use mouse-over and mouse-out events to display submenus.
+*  Be aware that if you want to use dropdowns with touchscreen devices you
+*  should use a Javascript-based alternative.
+****************************************************************************/
+/*===================================
+=            $Navigation            =
+===================================*/
+/*==========  $Object - Nav  ==========*/
+/**
+* nav abstraction object as per http://csswizardry.com/2011/09/the-nav-abstraction/
+*/
+.nav {
+  list-style: none;
+  margin: 0 0 9px 0;
+}
+.nav > li {
+  display: block;
+  float: left;
+}
+.nav > li > a, .nav > li > a:link {
+  display: block;
+  text-decoration: none;
+}
+
+/*==========  Global setup  ==========*/
+.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
+  list-style: none;
+  margin: 0 0 9px 0;
+  *zoom: 1;
+}
+.tabs:before, .tabs:after, .tabs-vertical:before, .tabs-vertical:after, .menu-horizontal:before, .menu-horizontal:after, .menu-vertical:before, .menu-vertical:after, .breadcrumb:before, .breadcrumb:after, .pagination:before, .pagination:after, .pagination ul:before, .pagination ul:after, .nav-direction:before, .nav-direction:after, .nav-direction ul:before, .nav-direction ul:after {
+  content: " ";
+  display: table;
+}
+.tabs:after, .tabs-vertical:after, .menu-horizontal:after, .menu-vertical:after, .breadcrumb:after, .pagination:after, .pagination ul:after, .nav-direction:after, .nav-direction ul:after {
+  clear: both;
+}
+.tabs > li, .tabs-vertical > li, .menu-horizontal > li, .menu-vertical > li, .breadcrumb > li, .pagination > li, .pagination ul > li, .nav-direction > li, .nav-direction ul > li {
+  display: block;
+  float: left;
+}
+.tabs > li > a, .tabs > li > a:link, .tabs-vertical > li > a, .tabs-vertical > li > a:link, .menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-vertical > li > a, .menu-vertical > li > a:link, .breadcrumb > li > a, .breadcrumb > li > a:link, .pagination > li > a, .pagination > li > a:link, .pagination ul > li > a, .pagination ul > li > a:link, .nav-direction > li > a, .nav-direction > li > a:link, .nav-direction ul > li > a, .nav-direction ul > li > a:link {
+  display: block;
+  text-decoration: none;
+}
+.tabs > li > a:focus, .tabs-vertical > li > a:focus, .menu-horizontal > li > a:focus, .menu-vertical > li > a:focus, .breadcrumb > li > a:focus, .pagination > li > a:focus, .pagination ul > li > a:focus, .nav-direction > li > a:focus, .nav-direction ul > li > a:focus {
+  outline: thin auto #4e9a06;
+}
+
+/*==========  $Nav Tabs  ==========*/
+.tabs, .tabs-vertical {
+  overflow: visible;
+  *zoom: 1;
+}
+.tabs:before, .tabs:after, .tabs-vertical:before, .tabs-vertical:after {
+  content: " ";
+  display: table;
+}
+.tabs:after, .tabs-vertical:after {
+  clear: both;
+}
+.tabs > li, .tabs-vertical > li {
+  position: relative;
+}
+.tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited, .tabs-vertical > li > a, .tabs-vertical > li > a:link, .tabs-vertical > li > a:visited {
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  border: 1px solid #e5e5e5;
+  color: black;
+  padding: 6px 9px;
+}
+
+/*==========  Horizontal Tabs  ==========*/
+.tabs {
+  border-bottom: 1px solid #dadada;
+}
+.tabs > li {
+  margin-right: 3px;
+  top: 1px;
+}
+.tabs > li > a, .tabs > li > a:link, .tabs > li > a:visited {
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+.tabs > li > a:hover, .tabs > li.active > a, .tabs > li.active > a:link {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-bottom-color: transparent;
+}
+
+/*==========  tabs-Vertical  ==========*/
+.tabs-vertical {
+  border-right: 1px solid #dadada;
+  float: left;
+  margin-right: 9px;
+  width: 10em;
+}
+.tabs-vertical > li {
+  float: none;
+  left: 1px;
+  margin-bottom: 3px;
+  padding-left: 1px;
+}
+.tabs-vertical > li > a, .tabs-vertical > li > a:link, .tabs-vertical > li > a:visited {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.tabs-vertical > li > a:hover, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a:link {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-right-color: transparent;
+}
+
+/*==========  Tabs content  ==========*/
+.tabs-content {
+  display: block;
+  margin: 0;
+  *zoom: 1;
+}
+.tabs-content:before, .tabs-content:after {
+  content: " ";
+  display: table;
+}
+.tabs-content:after {
+  clear: both;
+}
+.tabs-content > li, .tabs-content > div {
+  display: none;
+  height: 1%;
+  overflow: auto;
+}
+.tabs-content > li.active, .tabs-content > div.active {
+  display: block;
+}
+
+/*==========  $Nav Menus  ==========*/
+.menu-horizontal > li > a, .menu-horizontal > li > a:link, .menu-horizontal > li > a:visited, .menu-vertical > li > a, .menu-vertical > li > a:link, .menu-vertical > li > a:visited {
+  background: #dadada url(../images/gradient-bg.png) repeat-x left top;
+  color: black;
+  padding: 6px 9px;
+}
+.menu-horizontal > li > a:hover, .menu-horizontal > li.active > a, .menu-horizontal > li.active > a:link, .menu-vertical > li > a:hover, .menu-vertical > li.active > a, .menu-vertical > li.active > a:link {
+  background-color: #888888;
+  background-position: left -15px;
+  color: white;
+}
+
+/*==========  menu-Horizontal  ==========*/
+.menu-horizontal > li {
+  border-left: 1px solid #e5e5e5;
+  display: inline-block;
+  float: left;
+}
+
+/*==========  menu-Vertical  ==========*/
+.menu-vertical > li {
+  border-bottom: 1px solid #e5e5e5;
+  float: none;
+}
+
+/*==========  $Nav Pagination  ==========*/
+.pagination,
+.nav-direction {
+  clear: both;
+}
+.pagination ul,
+.nav-direction ul {
+  clear: both;
+  margin: 0;
+}
+.pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited,
+.nav-direction span,
+.nav-direction li span,
+.nav-direction a,
+.nav-direction a:link,
+.nav-direction a:visited {
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  border: 1px solid #dadada;
+  color: #555555;
+  display: inline-block;
+  margin: 0;
+  padding: 3px 9px;
+  text-decoration: none;
+}
+.pagination .current, .pagination .current span, .pagination li.active a, .pagination li.active a:link, .pagination a:hover,
+.nav-direction .current,
+.nav-direction .current span,
+.nav-direction li.active a,
+.nav-direction li.active a:link,
+.nav-direction a:hover {
+  background-color: #dadada;
+  color: black;
+  text-decoration: none;
+}
+
+/* Full Pagination */
+.pagination li {
+  float: left;
+}
+.pagination span, .pagination li span, .pagination a, .pagination a:link, .pagination a:visited {
+  float: left;
+}
+.pagination .disabled, .pagination .disabled span, .pagination .disabled a, .pagination .disabled a:link {
+  background: whitesmoke;
+  color: #dadada;
+  text-decoration: none;
+}
+.pagination li a, .pagination li a:link, .pagination li a:visited {
+  border-left-width: 0;
+}
+.pagination li:first-child a, .pagination li:first-child a:link, .pagination li:first-child a:visited {
+  border-left-width: 1px;
+}
+.pagination span {
+  background: transparent;
+  border-color: transparent;
+}
+
+/* nav-direction */
+.nav-direction a, .nav-direction a:link, .nav-direction a:visited {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.nav-direction li:first-child, .nav-direction .prev, .nav-direction .prev a, .nav-direction .prev a:link {
+  float: left;
+}
+.nav-direction li:last-child, .nav-direction .next, .nav-direction .next a, .nav-direction .prev a:link {
+  float: right;
+}
+
+/*==========  $Nav Breadcrumbs  ==========*/
+.breadcrumb {
+  background: whitesmoke url(../images/gradient-bg.png) repeat-x left top;
+  border: 1px solid #dadada;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.breadcrumb span {
+  display: block;
+}
+.breadcrumb > a {
+  display: inline-block;
+}
+.breadcrumb a, .breadcrumb a:link, .breadcrumb a:visited, .breadcrumb span {
+  padding: 6px 0 6px 9px;
+}
+.breadcrumb a:hover, .breadcrumb .active a, .breadcrumb .active a:link {
+  color: black;
+}
+.breadcrumb .active a:after, .breadcrumb .active a:link:after {
+  content: "";
+}
+
+/*-----  End of $Navigation  ------*/

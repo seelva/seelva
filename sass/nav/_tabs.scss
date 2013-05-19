@@ -1,0 +1,78 @@
+/*==========  $Nav Tabs  ==========*/
+.tabs, .tabs-vertical {
+	overflow: visible;
+
+	@include cf;
+
+	> li {
+		position: relative;
+
+		> a, > a:link, > a:visited {
+			@if $fullCSS3 {
+				@include default_gradient();
+			}
+			@else {
+				background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+			}
+			border: 1px solid $LightGray;
+			color: $Black;
+			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
+		}
+	}
+}
+
+/*==========  Horizontal Tabs  ==========*/
+.tabs {
+	border-bottom: 1px solid $Silver;
+
+	> li {
+		margin-right: $baseUnit1;
+		top: 1px;
+
+		> a, > a:link, > a:visited {
+			@include border-radius($radius1 $radius1 0 0);
+		}
+
+		> a:hover, &.active > a, &.active > a:link {
+			background: $White;
+			border: 1px solid $LightGray {
+				bottom-color: transparent;
+			};
+		}
+	}
+}
+
+/*==========  tabs-Vertical  ==========*/
+.tabs-vertical {
+	border-right: 1px solid $Silver;
+	float: left;
+	margin-right: #{$baseUnit1 * 3};
+	width: 10em;
+
+	> li {
+		float: none;
+		left: 1px;
+		margin-bottom: $baseUnit1;
+		padding-left: 1px;
+
+		> a, > a:link, > a:visited { @include border-radius($radius1 0 0 $radius1); }
+
+		> a:hover, &.active > a, &.active > a:link {
+			background: $White;
+			border: 1px solid $LightGray {
+				right-color: transparent;
+			};
+		}
+	}
+}
+
+/*==========  Tabs content  ==========*/
+.tabs-content {
+	display: block;
+	margin: 0;
+
+	@include cf;
+
+	> li, > div { display: none; height: 1%; overflow: auto; }
+	> li.active, > div.active { display: block; }
+}

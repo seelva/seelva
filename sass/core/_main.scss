@@ -1,0 +1,9 @@
+html { font-size: 100.01%; }
+
+body {
+	font: {
+		family: $fstack-body;
+		size: $textSize;
+	}
+	line-height: $textLineHeight;
+}

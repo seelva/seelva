@@ -1,0 +1,111 @@
+@if $useForms == true {
+	/*==========  $Forms Main  ==========*/
+	form {
+		div, p {
+			clear: both;
+			margin-bottom: #{$baseUnit1 * 3};
+		}
+
+		div p { margin: #{$baseUnit1 * 2} 0; }
+	}
+
+	fieldset {
+		border: 0;
+		margin: 0 0 #{$baseUnit1 * 5} 0;
+		padding: 0;
+
+	}
+
+	legend {
+		border-bottom: 1px solid $WhiteSmoke;
+		color: $DimGray;
+		font: {
+			size: 128%;
+			weight: normal;
+		}
+		margin: 0 0 #{$baseUnit1 * 2} 0;
+		padding: 0 0 #{$baseUnit1 * 2} 0;
+		width: 100%;
+	}
+
+	label, span.label {
+		display: block;
+		line-height: 130%;
+		padding: #{$baseUnit1 + 1} 0;
+
+		em, .required { color: $Crimson; }
+	}
+
+	/*==========  $Forms Controls  ==========*/
+	input:not([type]),
+	input[type=date],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=email],
+	input[type=file],
+	input[type=month],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=tel],
+	input[type=text],
+	input[type=time],
+	input[type=url],
+	input[type=week],
+	select,
+	textarea {
+		@if $legacySupport == false {
+			background: $White url(../images/txt-bg.png) repeat-x left top;
+		}
+
+		@include box-shadow(0 2px 6px $Gainsboro inset);
+		border: 1px solid $Silver {
+			top-width: 2px;
+		}
+		font-family: $fstack-forms;
+		padding: $baseUnit1;
+		width: 100%;
+
+		@include border-radius($radius1);
+		@include box-sizing(border-box);
+
+		&:focus {
+			border-color: $brand-main;
+			outline-color: $brand-main;
+		}
+
+		&[readonly] { background-color: $GhostWhite; }
+
+		&[disabled] {
+			background: $LightGray;
+			color: $Gray;
+			@include box-shadow(none);
+		}
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		cursor: pointer;
+
+		&:focus { outline-color: $brand-main; }
+	}
+
+	input[type=image],
+	input.image {
+		border: 0;
+		height: auto;
+		width: auto;
+	}
+
+	textarea {
+		height: 8em;
+		resize: vertical;
+	}
+
+	select {
+		cursor: pointer;
+		padding: $baseUnit1;
+
+		&[disabled] { cursor: default; }
+	}
+}

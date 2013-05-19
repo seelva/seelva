@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 7 ]>	<html class="ie7" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 8 ]>	<html class="ie8" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 9 ]>	<html class="ie9" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta http-equiv="Content-Type"
+		  content="text/html; charset=UTF-8" />
+	<meta name="resource-type"
+		  content="document" />
+	<meta name="revisit-after"
+		  content="1" />
+	<meta name="classification"
+		  content="Website classification" />
+	<meta name="description"
+		  content="Website description" />
+	<meta name="MSSmartTagsPreventParsing"
+		  content="TRUE" />
+	<meta name="keywords"
+		  content="" />
+	<meta name="robots"
+		  content="ALL" />
+	<meta name="distribution"
+		  content="Global" />
+	<meta name="rating"
+		  content="Safe For Kids" />
+	<meta name="copyright"
+		  content="" />
+	<meta name="author"
+		  content="Hern&aacute;n Silva for C&oacute;digoSelecto" />
+	<meta name="language"
+		  content="English" />
+	<meta name="doc-type"
+		  content="Web Page" />
+	<meta name="doc-class"
+		  content="Completed" />
+	<meta name="doc-rights"
+		  content="Public" />
+	<meta name="viewport"
+		  content="width=device-width" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="author" href="humans.txt" />
+
+	<title>Demo - seelva CSS / (X)HTML Framework</title>
+
+	<link rel="stylesheet" type="text/css" href="css/master.css" />
+
+	<style type="text/css">
+		/* Styles that apply to this page only, they are not part of seelva */
+		#logo {
+			float: left;
+			margin-right: 20px;
+		}
+
+		.page-title {
+			clear: right;
+			float: left;
+			line-height: 200%;
+			margin-bottom: 0;
+		}
+	</style>
+
+</head>
+
+<body class="inside page">
+	<div id="skip-links">
+		<a id="skiplink" href="#main-content">Skip to main content (Press Enter)</a>
+	</div>
+	<div id="outer">
+		<div id="wrapper">
+			<div id="header" class="section">
+				<div class="holder">
+					<div class="branding">
+						<div id="logo">
+							<a href="http://www.seelva.com/"
+							title="seelva CSS / (X)HTML Framework"><img src="images/logo.png" alt="Logo" /></a>
+						</div>
+						<h1 class="page-title">Demo page</h1>
+					</div>
+				</div>
+			</div>
+
+			<div id="primary">
+				<div class="holder">
+					<div id="main-content">
+						<a name="main-content" class="accessibility">Main Content</a>
+
+						<h2 id="section-forms">Forms</h2>
+
+						<form action="#" method="post">
+
+							<fieldset>
+								<legend>Control groups</legend>
+								<div>
+									<span class="label">Control group</span>
+									<div class="control-group">
+										<input name="check1" id="approved" value="1" type="checkbox" />	<label for="approved">Approved</label>
+										<input name="check1" id="pending" value="1" type="checkbox" /> <label for="pending">Pending</label>
+										<input name="check1" id="actives" value="1" type="checkbox" /> <label for="actives">Active</label>
+									</div>
+								</div>
+								<div class="field-horizontal">
+									<span class="label">Horizontal-inline control group</span>
+									<div class="control-group">
+										<input name="radio1" id="radio1" value="1" type="radio" /> <label for="radio1">Option 1</label>
+										<input name="radio1" id="radio2" value="1" type="radio" /> <label for="radio2">Option 2</label>
+										<input name="radio1" id="radio3" value="1" type="radio" /> <label for="radio3">Option 3</label>
+									</div>
+								</div>
+								<div class="field-horizontal">
+									<span class="label">Horizontal control group</span>
+									<div class="control-group">
+										<input name="check2" id="check1" value="approved" type="checkbox" /> <label for="check1">Some Option 1</label> <br />
+										<input name="check2" id="check2" value="pending" type="checkbox" /> <label for="check2">Some Option 2</label> <br />
+										<input name="check2" id="check3" value="actives" type="checkbox" /> <label for="check3">Some Option 3</label> <br />
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend>Fields statuses</legend>
+								<div class="field-error"><label>Status error</label><input type="text" /></div>
+								<div class="field-info"><label>Status info</label><input type="password" /></div>
+								<div class="field-notice"><label>Status notice</label><input type="date" /></div>
+								<div class="field-success"><label>Status success</label> <textarea></textarea></div>
+							</fieldset>
+
+							<fieldset>
+								<legend>Field prefix and suffix</legend>
+								<div class="field-prefix">
+									<label>Prefix</label>
+									<span class="label">$</span>
+									<input type="text" />
+								</div>
+								<div class="field-suffix">
+									<label>Suffix</label>
+									<input type="text" />
+									<span class="label">Kw/h</span>
+								</div>
+								<div class="field-suffix field-prefix">
+									<label>Suffix and prefix</label>
+									<span class="label">$</span>
+									<input type="text" />
+									<span class="label">Kw/h</span>
+								</div>
+								<div class="field-suffix field-prefix">
+									<label>Suffix and prefix</label>
+									<label for="url-field" class="label">http://</label>
+									<input type="text" id="url-field" />
+									<button>Go</button>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<legend>Field horizontal</legend>
+								<div><label>Regular field</label><input type="text" /></div>
+								<div class="field-horizontal"><label>Horizontal field</label><input type="text" /></div>
+							</fieldset>
+
+							<fieldset class="form-horizontal">
+								<legend>Form horizontal</legend>
+								<div>
+									<label for="textfield">Textfield <em>*</em></label>
+									<input id="textfield" type="text" name="textfield" value="" />
+								</div>
+								<div>
+									<label for="textfield_readonly">Textfield readonly</label>
+									<input id="textfield_readonly" type="text" name="textfield_readonly" value="Read only textfield" readonly />
+								</div>
+								<div>
+									<label for="textfield_disabled">Textfield disabled</label>
+									<input id="textfield_disabled" type="text" name="textfield_disabled" value="Disabled textfield" disabled />
+								</div>
+								<div>
+									<label for="passwd">Password</label>
+									<input id="passwd" type="password" name="passwd" value="password" />
+								</div>
+								<div>
+									<label for="select">Select</label>
+									<select name="select" id="select">
+										<optgroup label="Select your gender&hellip;">
+											<option value="male">Male</option>
+											<option value="female">Female</option>
+										</optgroup>
+									</select>
+								</div>
+								<div>
+									<label for="file">File</label>
+									<input id="file" type="file" name="file" />
+								</div>
+								<div>
+									<label for="number">Number input</label>
+									<input type="number" id="number" min="0" max="10" value="5" />
+								</div>
+								<div>
+									<label for="date">Date input</label>
+									<input type="date" id="date" value="1987-07-29" />
+								</div>
+								<div>
+									<label for="textarea">Textarea</label>
+									<textarea id="textarea" name="textarea" cols="30" rows="4"></textarea>
+								</div>
+								<div>
+									<span class="label">Checkboxes</span>
+									<div class="control-group">
+										<input name="check1" id="approved" value="1" type="checkbox" />	<label for="approved">Approved</label>
+										<input name="check1" id="pending" value="1" type="checkbox" /> <label for="pending">Pending</label>
+										<input name="check1" id="actives" value="1" type="checkbox" /> <label for="actives">Active</label>
+									</div>
+								</div>
+								<div>
+									<span class="label">Radio buttons</span>
+									<div class="control-group">
+										<input name="radio1" id="radio1" value="1" type="radio" /> <label for="radio1">Option 1</label>
+										<input name="radio1" id="radio2" value="1" type="radio" /> <label for="radio2">Option 2</label>
+										<input name="radio1" id="radio3" value="1" type="radio" /> <label for="radio3">Option 3</label>
+									</div>
+								</div>
+								<div>
+									<span class="label">Checkboxes list</span>
+									<div class="control-group">
+										<input name="check2" id="check1" value="approved" type="checkbox" /> <label for="check1">Some Option 1</label> <br />
+										<input name="check2" id="check2" value="pending" type="checkbox" /> <label for="check2">Some Option 2</label> <br />
+										<input name="check2" id="check3" value="actives" type="checkbox" /> <label for="check3">Some Option 3</label> <br />
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="form-inline">
+								<legend>Inline form</legend>
+								<p>
+									<label for="name">Hello, my name is</label> <input type="text" id="name" /> and my
+									<label for="lastname">lastname is</label> <input type="text" id="lastname" />.
+								</p>
+								<p>
+									I would like to ask for the <label for="ticket">ticket #</label> <input type="text" id="ticket" />
+								</p>
+							</fieldset>
+
+							<fieldset class="form-search">
+								<legend>Search form</legend>
+								<div>
+									<label for="search-input">Search </label>
+									<input placeholder="Search" type="text" id="search-input" name="search-input">
+								</div>
+								<div class="form-actions">
+									<input type="submit" value="Search" />
+								</div>
+							</fieldset>
+						</form>
+
+<!--- ************* End Forms ************* -->
+
+						<h2>Objects</h2>
+						<h3><em>Media</em> object</h3>
+						<div class="media">
+							<div class="media-img"><img src="http://placehold.it/350x100.png" alt="Dummy img" /></div>
+							<div class="media-body">
+								<p>Globally formulate backend convergence rather than virtual deliverables.
+									Monotonectally provide access to synergistic best practices without strategic channels.
+									Quickly visualize cost effective core competencies and worldwide leadership. Uniquely
+									utilize interoperable interfaces through stand-alone processes. Seamlessly synergize
+									client-centric content for equity invested best practices. Seamlessly leverage other's
+									sustainable applications before goal-oriented relationships. Authoritatively.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-img"><img src="http://placehold.it/350x100.png" alt="Dummy img" /></div>
+							<div class="media-body">
+								<p>Globally formulate backend convergence rather than virtual deliverables.
+									Monotonectally provide access to synergistic best practices without strategic channels.
+									Quickly visualize cost effective core competencies and worldwide leadership. Uniquely
+									utilize interoperable interfaces through stand-alone processes. Seamlessly synergize
+									client-centric content for equity invested best practices. Seamlessly leverage other's
+									sustainable applications before goal-oriented relationships. Authoritatively.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-img--rev"><img src="http://placehold.it/350x100.png" alt="Dummy img" /></div>
+							<div class="media-body">
+								<p>Globally formulate backend convergence rather than virtual deliverables. Monotonectally
+									provide access to synergistic best practices without strategic channels. Quickly visualize
+									cost effective core competencies and worldwide leadership.</p>
+								<p>Uniquely utilize interoperable interfaces through stand-alone processes. Seamlessly
+									synergize client-centric content for equity invested best practices. Seamlessly leverage
+									other's sustainable applications before goal-oriented relationships.</p>
+							</div>
+						</div>
+
+						<h3><em>Stat</em> object</h3>
+						<div class="stat-group">
+							<div class="stat">
+								<div class="stat-title">Weight</div>
+								<div class="stat-value">1200</div>
+							</div>
+							<div class="stat">
+								<div class="stat-title">Height</div>
+								<div class="stat-value">200</div>
+							</div>
+							<div class="stat">
+								<div class="stat-title">Width</div>
+								<div class="stat-value">400</div>
+							</div>
+							<div class="stat">
+								<div class="stat-title">Depth</div>
+								<div class="stat-value">200</div>
+							</div>
+						</div>
+
+<!--- ************* End Forms ************* -->
+
+						<h2>UI</h2>
+						<h3>Buttons</h3>
+						<div class="row">
+							<div class="unit-8">
+								<p><input type="button" value="Button small" class="btn-small" /></p>
+								<p><button type="button" class="btn-medium">Button medium</button></p>
+								<p><a href="#c" class="button btn-large">Button large</a></p>
+								<p><input type="submit" value="Button huge" class="btn-huge" /></p>
+							</div>
+							<div class="unit-8">
+								<p><button type="reset" class="btn-alpha">Button alpha</button></p>
+								<p><input type="button" value="Button beta" class="btn-beta" /></p>
+								<p><a href="#c" class="button btn-gamma">Button gamma</a></p>
+								<p><a href="#c" class="button btn-full">Button full</a></p>
+
+							</div>
+							<div class="unit-8 omega">
+								<p><button type="button" class="btn-info btn-small">Button</button></p>
+								<p><input type="reset" value="Button" class="btn-error btn-medium btn-alpha" /></p>
+								<p><a href="#a" class="button btn-notice btn-large btn-beta">Button</a></p>
+								<p><input type="submit" value="Button" class="btn-success btn-huge btn-gamma" /></p>
+								<p><a href="#a" class="button btn-notice btn-small btn-alpha btn-full">Button</a></p>
+							</div>
+						</div>
+						<div>
+							<p>There it comes a great <input type="button" value="Input type button" class="btn-info btn-unstyled btn-natural" /> and you didn't noticed it.</p>
+							<p>Here you have another with a <span class="large">large font <button type="button" class="btn-natural btn-error">Button type button</button> Monotonectally extend</span> alternative web-readiness.</p>
+							<p><a href="#a" class="btn btn-notice btn-natural">Class btn-notice</a></p>
+						</div>
+
+						<h2>Other</h2>
+						<h3>Resizable elements (Take a look at the lower-right corner)</h3>
+						<div class="resizable" style="border: 1px solid red;">
+							<span class="large">This is a div with class resizable. Border added to see resize effect.</span>
+							Continually communicate resource sucking bandwidth without turnkey e-services. Energistically brand customized leadership skills before cutting-edge resources. Competently initiate interactive relationships whereas business markets. Quickly pontificate leveraged vortals and seamless ROI. Credibly network market-driven channels with high standards in functionalities.
+						</div>
+
+						<h3>Invisible elements</h3>
+						<h4>Hidden visually</h4>
+						<h5 class="invisible">Hidden title</h5>
+						<h4>Invisible to DOM</h4>
+						<h5 class="hidden">Yup, hidden too</h5>
+
+						<h3>Text alignment</h3>
+						<div class="row">
+							<div class="unit-6 alignleft">
+								<h4>Left</h4>
+								Holisticly embrace focused applications through pandemic processes.
+								Quickly synergize installed base leadership skills and high-quality paradigms. Seamlessly grow
+								quality intellectual capital for resource-leveling technology. Compellingly transform team
+								building "outside the box".
+							</div>
+							<div class="unit-6 alignright">
+								<h4>Right</h4>
+								Holisticly embrace focused applications through pandemic processes.
+								Quickly synergize installed base leadership skills and high-quality paradigms. Seamlessly grow
+								quality intellectual capital for resource-leveling technology. Compellingly transform team
+								building "outside the box".
+							</div>
+							<div class="unit-6 aligncenter">
+								<h4>Center</h4>
+								Holisticly embrace focused applications through pandemic processes.
+								Quickly synergize installed base leadership skills and high-quality paradigms. Seamlessly grow
+								quality intellectual capital for resource-leveling technology. Compellingly transform team
+								building "outside the box".
+							</div>
+							<div class="unit-6 alignjust">
+								<h4>Justified</h4>
+								Holisticly embrace focused applications through pandemic processes.
+								Quickly synergize installed base leadership skills and high-quality paradigms. Seamlessly grow
+								quality intellectual capital for resource-leveling technology. Compellingly transform team
+								building "outside the box".
+							</div>
+						</div>
+
+						<h3>Floated elements</h3>
+						<div>
+							<p class="floatleft" style="border: 1px solid red;">Paragraph floated left with dummy text to make it bulky.</p>
+							<p>Regular paragraph, no classes added to this.</p>
+						</div>
+						<div>
+							<p class="floatright" style="border: 1px solid red;">Paragraph floated to the right with dummy text to make it bulky.</p>
+							<p>Regular paragraph, no classes added to this.</p>
+						</div>
+
+						<h3>Other classes</h3>
+						<p>
+							<span class="small">Text with <em>small</em> class</span><br />
+							<span class="big">Text with <em>big</em> class</span><br />
+							<span class="large">Text with <em>large</em> class</span><br />
+							<span class="loud">Text with <em>loud</em> class</span><br />
+							<span class="quiet">Text with <em>quiet</em> class</span><br />
+							<span class="capitalize">Text with <em>capitalize</em> class</span><br />
+							<span class="lowercase">Text with <em>lowercase</em> class</span><br />
+							<span class="uppercase">Text with <em>uppercase</em> class</span><br />
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/custom.scripts.js"></script>
+
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7 ]>
+		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+</body>
+</html>
