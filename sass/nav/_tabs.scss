@@ -8,12 +8,11 @@
 		position: relative;
 
 		> a, > a:link, > a:visited {
-			@if $fullCSS3 {
-				@include default_gradient();
-			}
-			@else {
+			@if $legacySupport == true {
 				background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 			}
+			@include default_gradient();
+
 			border: 1px solid $LightGray;
 			color: $Black;
 			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};

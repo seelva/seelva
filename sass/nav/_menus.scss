@@ -2,26 +2,24 @@
 .menu-horizontal, .menu-vertical {
 	> li {
 		> a, > a:link, > a:visited {
-			@if $fullCSS3 {
-				@include default_gradient($GhostWhite, $Silver);
-			}
-			@else {
+			@if $legacySupport == true {
 				background: $Silver url(../images/gradient-bg.png) repeat-x left top;
 			}
+			@include default_gradient($GhostWhite, $Silver);
+
 			color: $Black;
 			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
 		}
 
 		> a:hover, &.active > a, &.active > a:link {
-			@if $fullCSS3 {
-				@include default_gradient($DarkGray, $Gray);
-			}
-			@else {
+			@if $legacySupport == true {
 				background: {
 					color: $Gray;
 					position: left -15px;
 				}
 			}
+			@include default_gradient($DarkGray, $Gray);
+
 			color: $White;
 		}
 	}

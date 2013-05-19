@@ -1,10 +1,8 @@
 @mixin progress_colorize($bg, $percent: 20%) {
-	@if $fullCSS3 {
-		@include default_gradient( lighten($bg, $percent), $bg );
-	}
-	@else {
+	@if $legacySupport == true {
 		background-color: lighten( $bg, $percent );
 	}
+	@include default_gradient( lighten($bg, $percent), $bg );
 }
 
 @if $useProgress == true {
@@ -25,12 +23,11 @@
 		@include box-sizing(border-box);
 
 		.progress-value {
-			@if $fullCSS3 {
-				@include default_gradient($WhiteSmoke, $Silver);
-			}
-			@else {
+			@if $legacySupport == true {
 				background: $Silver url(../images/gradient-bg.png) repeat-x left -12px;
 			}
+			@include default_gradient($WhiteSmoke, $Silver);
+
 			float: left;
 			height: #{$baseUnit1 * 7 - 1};
 			@include border-radius($radius3);

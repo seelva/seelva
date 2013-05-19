@@ -6,14 +6,13 @@
 @import "_config/mixins";
 
 // *==========  $Grid Config  ==========*/
-$colAmount:   24;
-$colWidth:    20;
-$gutterWidth: 20;
+$colAmount:   24; // How many columns should the grid have?
+$colWidth:    20; // What is the width of each column? In px
+$gutterWidth: 20; // Separation between columns, In px
 $gridType:    "both"; // Options are: fixed, fluid, both
 
-// *==========  $Features enabling  ==========*/
+// *==========  $Features  ==========*/
 // Legacy browser support
-$fullCSS3: false; // REPLACE WITH legacySupport
 $legacySupport: false; // For instance, this uses fallback techniques to cover some IE5 - IE8 styling
 
 // Modules
@@ -23,15 +22,15 @@ $useBase:               true;
 	$useForms:          true;
 	$useButtons:        true;
 $useCore:               true;
-$useNav:                true;
+$useNav:                true; // !**************** Duplicated
 $useIcons:              true;
 $useObjects:            true;
 	$useAlerts:         true;
-	$useDropdown:       true;
-	$useFlyout:         true;
-	$useMedia:          true;
+	$useDropdown:       true; // READ WARNING!
+	$useFlyout:         true; // READ wARNING!
+	$useMedia:          true; // Duplicated
 	$useProgress:       true;
-	$useNav:            true;
+	$useNav:            true; // !**************** Duplicated
 	$useStats:          true;
 $useHelpers:            true;
 	$useAccesibility:   true;
@@ -41,26 +40,24 @@ $useHelpers:            true;
 	$useDisplay:        true;
 	$useFormsHelpers:   true;
 	$useImgreplace:     true;
-	$useMedia:          true;
+	$useMedia:          true; // !**************** Duplicated
 	$useOther:          true;
 
-/***************************************************************************
-*  WARNING:
-*  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
-*  These modules use mouse-over and mouse-out events to display submenus.
-*  Be aware that if you want to use dropdowns with touchscreen devices you
-*  should use a Javascript-based alternative.
-****************************************************************************/
-$useDropdown: true;
-$useFlyout:   true;
+// /***************************************************************************
+// *  WARNING:
+// *  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
+// *  These modules use mouse-over and mouse-out events to display submenus.
+// *  Be aware that if you want to use dropdowns with touchscreen devices you
+// *  should use a Javascript-based alternative.
+// ****************************************************************************/
 
 // *==========  $Custom Colors  ==========*/
 // Brand Colors
-$brand-main:    $LimeGreen;
-$brand-error:   $Crimson;
-$brand-info:    $SteelBlue;
-$brand-notice:  $GoldenRod;
-$brand-success: $LimeGreen;
+$brand-main:      $LimeGreen;
+$brand-error:     $Crimson;
+$brand-info:      $SteelBlue;
+$brand-notice:    $GoldenRod;
+$brand-success:   $LimeGreen;
 
 // *==========  $Custom Fonts stacks  ==========*/
 // Default stacks
@@ -77,15 +74,14 @@ $fstack-buttons:  $fstack-helvetica;
 
 // *==========  $Text properties  ==========*/
 // Text color
-$textColor:         $Black; // REPLACE WITH bodyColor
-$bodyColor:         $Black;
+$textColor:       $Black;
 
-$textSize:          0.875em;
-$textLineHeight:    1.5em;
+$textSize:        0.875em;
+$textLineHeight:  1.5em;
 
-$h1-size:           294%;
-$h2-size:           192%;
-$h3-size:           171%;
-$h4-size:           150%;
-$h5-size:           128%;
-$h6-size:           107%;
+$h1-size:         294%;
+$h2-size:         192%;
+$h3-size:         171%;
+$h4-size:         150%;
+$h5-size:         128%;
+$h6-size:         107%;

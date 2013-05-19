@@ -8,12 +8,11 @@
 	button[type],
 	.btn, .btn:link,
 	.button, .button:link {
-		@if $fullCSS3 {
-			@include default_gradient();
-		}
-		@else {
+		@if $legacySupport == true {
 			background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
 		}
+		@include default_gradient();
+
 		border: 1px solid $Silver {
 			bottom-color: $DarkGray;
 		}
@@ -45,23 +44,21 @@
 		}
 
 		 &:focus, &:hover {
-			@if $fullCSS3 {
-				@include default_gradient($GhostWhite, $Silver);
-			}
-			@else {
+			@if $legacySupport == true {
 				background-position: 0 -292px;
 			}
+			@include default_gradient($GhostWhite, $Silver);
+
 			color: $DimGray;
 			outline-color: $brand-main;
 		}
 
 		&:active {
-			@if $fullCSS3 {
-				@include default_gradient($LightGray, $GhostWhite);
-			}
-			@else {
+			@if $legacySupport == true {
 				background-position: 0 bottom;
 			}
+			@include default_gradient($LightGray, $GhostWhite);
+
 			border-color: $Gray $DarkGray $Silver;
 			color: $Gray;
 
@@ -79,8 +76,8 @@
 	}
 
 	input[type=color] {
-		height: 45px;
-		width: 45px;
+		height: 25px;
+		width: 25px;
 	}
 
 	// visited state, for links only

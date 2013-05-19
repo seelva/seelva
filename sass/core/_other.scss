@@ -6,12 +6,11 @@ details {
 	@include border-radius($radius1);
 
 	summary {
-		@if $fullCSS3 {
-			@include default_gradient();
-		}
-		@else {
+		@if $legacySupport == true {
 			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 		}
+		@include default_gradient();
+
 		border-bottom: 1px solid $LightGray;
 		cursor: pointer;
 		margin: 0;

@@ -6,12 +6,11 @@
 	ul { clear: both; margin: 0; }
 
 	span, li span, a, a:link, a:visited {
-		@if $fullCSS3 {
-			@include default_gradient();
-		}
-		@else {
+		@if $legacySupport == true {
 			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
 		}
+		@include default_gradient();
+
 		border: 1px solid $Silver;
 		color: $DimGray;
 		display: inline-block;
@@ -22,12 +21,11 @@
 		}
 	}
 	.current, .current span, li.active a, li.active a:link, a:hover {
-		@if $fullCSS3 {
-			@include default_gradient($Gainsboro, $DarkGray);
-		}
-		@else {
+		@if $legacySupport == true {
 			background-color: $Silver;
 		}
+		@include default_gradient($Gainsboro, $DarkGray);
+
 		color: $Black;
 		text-decoration: none;
 	}

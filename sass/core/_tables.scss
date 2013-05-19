@@ -28,12 +28,11 @@ table {
 [rowspan="1"] { vertical-align: top; }
 
 th {
-	@if $fullCSS3 {
-		@include default_gradient($GhostWhite, $WhiteSmoke);
-	}
-	@else {
+	@if $legacySupport == true {
 		background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
 	}
+	@include default_gradient($GhostWhite, $WhiteSmoke);
+
 	border: {
 		bottom: 1px solid $LightGray;
 		left: 1px solid $LightGray;

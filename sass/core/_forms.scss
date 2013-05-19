@@ -10,14 +10,15 @@
 	}
 
 	fieldset {
-		border: 0;
+//		border: 0;
+		border-color: $Silver;
 		margin: 0 0 #{$baseUnit1 * 5} 0;
-		padding: 0;
+//		padding: 0;
 
 	}
 
 	legend {
-		border-bottom: 1px solid $WhiteSmoke;
+//		border-bottom: 1px solid $WhiteSmoke;
 		color: $DimGray;
 		font: {
 			size: 128%;
@@ -25,7 +26,7 @@
 		}
 		margin: 0 0 #{$baseUnit1 * 2} 0;
 		padding: 0 0 #{$baseUnit1 * 2} 0;
-		width: 100%;
+//		width: 100%;
 	}
 
 	label, span.label {
@@ -88,6 +89,10 @@
 		cursor: pointer;
 
 		&:focus { outline-color: $brand-main; }
+
+		+ label {
+			display: inline-block;
+		}
 	}
 
 	input[type=image],
