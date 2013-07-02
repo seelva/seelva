@@ -1,15 +1,25 @@
 @import "../objects/_nav";
+@if $useNav == true {
+	/*==========  Global setup  ==========*/
 
-/*==========  Global setup  ==========*/
-.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
-	@include nav;
-	@include cf;
+	/**
+	
+		TODO:
+		- Dynamically remove clases not used in this global setting
+	
+	**/
+	
 
-	> li {
-		@include nav-li;
+	.tabs, .tabs-vertical, .menu-horizontal, .menu-vertical, .breadcrumb, .pagination, .pagination ul, .nav-direction, .nav-direction ul {
+		@include nav;
+		@include cf;
 
-		> a, > a:link { @include nav-li-a; }
+		> li {
+			@include nav-li;
 
-		> a:focus { outline: thin auto $brand-main; }
+			> a, > a:link { @include nav-li-a; }
+
+			> a:focus { outline: thin auto $brand-main; }
+		}
 	}
 }

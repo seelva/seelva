@@ -5,51 +5,66 @@
 @import "_config/fonts";
 @import "_config/mixins";
 
-// *==========  $Grid Config  ==========*/
-$colAmount:   24; // How many columns should the grid have?
-$colWidth:    20; // What is the width of each column? In px
-$gutterWidth: 20; // Separation between columns, In px
-$gridType:    "both"; // Options are: fixed, fluid, both
-
 // *==========  $Features  ==========*/
-// Legacy browser support
-$legacySupport: false; // For instance, this uses fallback techniques to cover some IE5 - IE8 styling
+// Enable or disable legacy browser support. This will use fallback
+// techniques to cover IE5-IE8 styling
+$legacySupport: false;
 
-// Modules
+// /*==========  $Modules  ==========*/
+// Enable or disable modules depending on your needs
 $usePrint:              true;
 $useNormalize:          true;
 $useBase:               true;
-	$useForms:          true;
-	$useButtons:        true;
+	$useGrid:           true;
+	$useLayout:         true;
 $useCore:               true;
-$useNav:                true; // !**************** Duplicated
-$useIcons:              true;
-$useObjects:            true;
-	$useAlerts:         true;
-	$useDropdown:       true; // READ WARNING!
-	$useFlyout:         true; // READ wARNING!
-	$useMedia:          true; // Duplicated
-	$useProgress:       true;
-	$useNav:            true; // !**************** Duplicated
-	$useStats:          true;
+	$styleButtons:      true;
+	$styleCode:         true;
+	$styleForms:        true;
+	$styleHeadings:     true;
+	$styleLists:        true;
+	$styleQuotes:       true;
+	$styleTables:       true;
+$useNav:                true;
+	$useBreadcrumbs:    true;
+	$useMenus:          true;
+	$usePagination:     true;
+	$useTabs:           true;
 $useHelpers:            true;
 	$useAccesibility:   true;
 	$useBrowser:        true;
 	$useButtonsHelpers: true;
+	$useClearfix:       true;
 	$useClearing:       true;
 	$useDisplay:        true;
 	$useFormsHelpers:   true;
 	$useImgreplace:     true;
-	$useMedia:          true; // !**************** Duplicated
-	$useOther:          true;
+	$useMediaHelpers:   true;
+	$useOtherHelpers:   true;
+$useObjects:            true;
+	$useAlerts:         true;
+	$useDropdown:       true; // READ WARNING BELOW!
+	$useFlyout:         true; // READ wARNING BELOW!
+	$useMediaObj:       true;
+	$useProgress:       true;
+	$useNavObj:         true;
+	$useStats:          true;
+$useIcons:              true;
 
 // /***************************************************************************
 // *  WARNING:
-// *  Seelva's CSS dropdowns and flyouts DO NOT WORK with touchscreen devices.
+// *  Seelva's dropdown and flyout objects DO NOT WORK with touchscreen devices.
 // *  These modules use mouse-over and mouse-out events to display submenus.
 // *  Be aware that if you want to use dropdowns with touchscreen devices you
 // *  should use a Javascript-based alternative.
 // ****************************************************************************/
+
+// *==========  $Grid Config  ==========*/
+// If grid module is enabled, these settings modifies the grid:
+$colAmount:   24;     // How many columns should the grid have?
+$colWidth:    20;     // What is the width of each column? In px
+$gutterWidth: 20;     // Separation between columns, In px
+$gridType:    "both"; // Should the grid be fluid, fixed, or both?
 
 // *==========  $Custom Colors  ==========*/
 // Brand Colors

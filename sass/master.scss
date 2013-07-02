@@ -12,13 +12,13 @@
 *
 /*!---------------------------------------*/
 
-@if $usePrint == true     { @import "print.css" print; }       // Print stylesheet
-@if $useNormalize == true { @import "normalize.css" screen; }  // Fixes bugs across web browsers
-@if $useBase == true      { @import "base.css" screen; }       // Normalize, Grid helper, layout helpers
-@if $useCore == true      { @import "core.css" screen; }       // Hyperlinks, Headings, Text, Lists, Tables
-@if $useNav == true       { @import "nav.css" screen; }        // Menus, tabs, breadcrumbs and pagination
-@if $useHelpers == true   { @import "helpers.css" screen; }      // Image replacement and other utils
-@if $useObjects == true   { @import "objects.css" screen; }    // OOCSS objects, as per @stubbornella and @csswizardry
-@if $useIcons == true     { @import "icons.css" screen; }      // Icons webfont css setup. Custom version of FontAwesome
+@import "print.css" print;       // Print stylesheet
+@import "normalize.css" screen;  // Fixes bugs across web browsers
+@import "base.css" screen;       // Normalize, Grid helper, layout helpers
+@import "core.css" screen;       // Hyperlinks, Headings, Text, Lists, Tables
+@import "nav.css" screen;        // Menus, tabs, breadcrumbs and pagination
+@import "helpers.css" screen;    // Image replacement and other utils
+@import "objects.css" screen;    // OOCSS objects, as per @stubbornella and @csswizardry
+@import "icons.css" screen;      // Icons webfont css setup. Custom version of FontAwesome
 
 @import "custom.css" screen;     // Your styles

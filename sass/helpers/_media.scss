@@ -1,83 +1,85 @@
-/*==========  $Media Helpers  ==========*/
-img {
-	&.styled {
-		background: $GhostWhite url(../images/loading.gif) no-repeat center;
-		border: 1px solid $WhiteSmoke;
-		padding: #{$baseUnit1 * 2};
-		@include border-radius($radius2);
-	}
-
-	&.light-styled, a &.light-styled {
-		border-width: 0;
-		padding: 0;
-		@include border-radius($radius2);
-		@include single-box-shadow($DarkGray, 0, 0, #{$baseUnit1 * 2}, 0, true);
-	}
-
-	&.unstyled, button &, a.button & {
-		background: transparent;
-		border-width: 0;
-		padding: 0;
-	}
-}
-
-/*==========  Captioned image  ==========*/
-.image-caption, .caption, figure.styled {
-	background: $GhostWhite;
-	border: 1px solid $WhiteSmoke;
-	display: inline-block;
-	margin-bottom: #{$baseUnit1 * 3};
-	padding: #{$baseUnit1 * 2};
-	text-align: center;
-	@include border-radius($radius2);
-
+@if $useHelpers == true and $useMediaHelpers == true {
+	/*==========  $Media Helpers  ==========*/
 	img {
-		background: transparent;
-		border-width: 0;
-		margin: 0;
-		padding: 0;
+		&.styled {
+			background: $GhostWhite url(../images/loading.gif) no-repeat center;
+			border: 1px solid $WhiteSmoke;
+			padding: #{$baseUnit1 * 2};
+			@include border-radius($radius2);
+		}
+
+		&.light-styled, a &.light-styled {
+			border-width: 0;
+			padding: 0;
+			@include border-radius($radius2);
+			@include single-box-shadow($DarkGray, 0, 0, #{$baseUnit1 * 2}, 0, true);
+		}
+
+		&.unstyled, button &, a.button & {
+			background: transparent;
+			border-width: 0;
+			padding: 0;
+		}
 	}
 
-	.caption-text {
-		font-style: italic;
-		margin-bottom: 0;
-		text-align: center;
-	}
-}
-
-/*==========  $floated Images  ==========*/
-img, .image-caption, .caption, figure.styled {
-	&.alignleft, &.floatleft   { float: left; margin-right: #{$baseUnit1 * 3}; }
-	&.alignright, &.floatright { float: right; margin-left: #{$baseUnit1 * 3}; }
-}
-
-/*==========  Gallery  ==========*/
-.gallery {
-	overflow: hidden;
-
-	> div, > li {
+	/*==========  Captioned image  ==========*/
+	.image-caption, .caption, figure.styled {
 		background: $GhostWhite;
 		border: 1px solid $WhiteSmoke;
-		float: left;
-		margin: 0 10px 20px;
+		display: inline-block;
+		margin-bottom: #{$baseUnit1 * 3};
 		padding: #{$baseUnit1 * 2};
 		text-align: center;
 		@include border-radius($radius2);
 
-		a { display: inline-block; }
-	}
-
-	&.styled {
-		> div, > li { @include border-radius($radius2); }
-	}
-
-	&.light-styled {
-		> div, > li {
+		img {
 			background: transparent;
-			border: 0;
+			border-width: 0;
+			margin: 0;
 			padding: 0;
+		}
 
-			img { @include border-radius($radius2); }
+		.caption-text {
+			font-style: italic;
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
+
+	/*==========  $floated Images  ==========*/
+	img, .image-caption, .caption, figure.styled {
+		&.alignleft, &.floatleft   { float: left; margin-right: #{$baseUnit1 * 3}; }
+		&.alignright, &.floatright { float: right; margin-left: #{$baseUnit1 * 3}; }
+	}
+
+	/*==========  Gallery  ==========*/
+	.gallery {
+		overflow: hidden;
+
+		> div, > li {
+			background: $GhostWhite;
+			border: 1px solid $WhiteSmoke;
+			float: left;
+			margin: 0 10px 20px;
+			padding: #{$baseUnit1 * 2};
+			text-align: center;
+			@include border-radius($radius2);
+
+			a { display: inline-block; }
+		}
+
+		&.styled {
+			> div, > li { @include border-radius($radius2); }
+		}
+
+		&.light-styled {
+			> div, > li {
+				background: transparent;
+				border: 0;
+				padding: 0;
+
+				img { @include border-radius($radius2); }
+			}
 		}
 	}
 }

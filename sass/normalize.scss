@@ -1,3 +1,6 @@
+@import "config";
+
+@if $useNormalize == true {
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -400,3 +403,4 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+} // close @iff statement

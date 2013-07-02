@@ -1,58 +1,60 @@
-/*==========  $Nav Pagination  ==========*/
-.pagination,
-.nav-direction {
-	clear: both;
+@if $useNav == true and $usePagination == true {
+	/*==========  $Nav Pagination  ==========*/
+	.pagination,
+	.nav-direction {
+		clear: both;
 
-	ul { clear: both; margin: 0; }
+		ul { clear: both; margin: 0; }
 
-	span, li span, a, a:link, a:visited {
-		@if $legacySupport == true {
-			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+		span, li span, a, a:link, a:visited {
+			@if $legacySupport == true {
+				background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+			}
+			@include default_gradient();
+
+			border: 1px solid $Silver;
+			color: $DimGray;
+			display: inline-block;
+			margin: 0;
+			padding: $baseUnit1 #{$baseUnit1 * 3};
+			text: {
+				decoration: none;
+			}
 		}
-		@include default_gradient();
+		.current, .current span, li.active a, li.active a:link, a:hover {
+			@if $legacySupport == true {
+				background-color: $Silver;
+			}
+			@include default_gradient($Gainsboro, $DarkGray);
 
-		border: 1px solid $Silver;
-		color: $DimGray;
-		display: inline-block;
-		margin: 0;
-		padding: $baseUnit1 #{$baseUnit1 * 3};
-		text: {
-			decoration: none;
+			color: $Black;
+			text-decoration: none;
 		}
 	}
-	.current, .current span, li.active a, li.active a:link, a:hover {
-		@if $legacySupport == true {
-			background-color: $Silver;
+
+	/* Full Pagination */
+	.pagination {
+		li { float: left; }
+
+		span, li span, a, a:link, a:visited { float: left; }
+
+		.disabled, .disabled span, .disabled a, .disabled a:link {
+			background: $WhiteSmoke;
+			color: $Silver;
+			text-decoration: none;
 		}
-		@include default_gradient($Gainsboro, $DarkGray);
 
-		color: $Black;
-		text-decoration: none;
-	}
-}
-
-/* Full Pagination */
-.pagination {
-	li { float: left; }
-
-	span, li span, a, a:link, a:visited { float: left; }
-
-	.disabled, .disabled span, .disabled a, .disabled a:link {
-		background: $WhiteSmoke;
-		color: $Silver;
-		text-decoration: none;
+		li a, li a:link, li a:visited { border-left-width: 0; }
+		li:first-child a, li:first-child a:link, li:first-child a:visited { border-left-width: 1px; }
+		span { background: transparent; border-color: transparent; }
 	}
 
-	li a, li a:link, li a:visited { border-left-width: 0; }
-	li:first-child a, li:first-child a:link, li:first-child a:visited { border-left-width: 1px; }
-	span { background: transparent; border-color: transparent; }
-}
+	/* nav-direction */
+	.nav-direction {
+		a, a:link, a:visited { @include border-radius($radius1); }
 
-/* nav-direction */
-.nav-direction {
-	a, a:link, a:visited { @include border-radius($radius1); }
+		li:first-child, .prev, .prev a, .prev a:link { float: left; }
 
-	li:first-child, .prev, .prev a, .prev a:link { float: left; }
-
-	li:last-child, .next, .next a, .prev a:link { float: right; }
+		li:last-child, .next, .next a, .prev a:link { float: right; }
+	}
 }

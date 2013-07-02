@@ -1,31 +1,32 @@
-/*==========  $Core Headings  ==========*/
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	font: {
-		family: $fstack-headings;
-		weight: normal;
+@if $useCore == true and $styleHeadings == true {
+	/*==========  $Core Headings  ==========*/
+	h1, h2, h3, h4, h5, h6 {
+		clear: both;
+		font: {
+			family: $fstack-headings;
+			weight: normal;
+		}
+		line-height: 120%;
+		margin: 0 0 0.5em 0;
+
+		.subtitle {
+			font-size: 80%;
+			line-height: 100%;
+
+			opacity: 0.6;
+			filter: alpha(opacity = 60);
+		}
+
+		&.styled {
+			border-bottom: 1px solid $Gray;
+			margin: 0 0 0.3em 0;
+			padding-bottom: 0.2em;
+		}
 	}
-	line-height: 120%;
-	margin: 0 0 0.5em 0;
 
-	.subtitle {
-		font-size: 80%;
-		line-height: 100%;
-
-		opacity: 0.6;
-		filter: alpha(opacity = 60);
-	}
-
-	&.styled {
-		border-bottom: 1px solid $Gray;
-		margin: 0 0 0.3em 0;
-		padding-bottom: 0.2em;
-	}
-}
-
-h1, .tera  { font-size: $h1-size; }
-h2, .giga  { font-size: $h2-size; }
-h3, .mega  { font-size: $h3-size; }
-h4, .kilo  { font-size: $h4-size; }
-h5, .hecto { font-size: $h5-size; }
-h6, .deca  { font-size: $h6-size; }
+	h1, .tera  { font-size: $h1-size; }
+	h2, .giga  { font-size: $h2-size; }
+	h3, .mega  { font-size: $h3-size; }
+	h4, .kilo  { font-size: $h4-size; }
+	h5, .hecto { font-size: $h5-size; }
+	h6, .deca  { font-size: $h6-size; }}

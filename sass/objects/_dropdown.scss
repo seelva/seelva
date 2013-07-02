@@ -1,4 +1,4 @@
-@if $useDropdown == true {
+@if $useObjects == true and $useDropdown == true {
 	.dropdown {
 		> a:after, > a:link:after {
 			/* Arrow for dropdown links */

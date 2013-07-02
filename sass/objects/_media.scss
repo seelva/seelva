@@ -1,4 +1,4 @@
-@if $useMedia == true {
+@if $useObjects == true and $useMediaObj == true {
 	/*==========  $Object - Media  ==========*/
 	/**
 	* Media object as per stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code

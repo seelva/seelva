@@ -1,4 +1,4 @@
-@if $useForms == true {
+@if $useCore == true and $styleForms == true {
 	/*==========  $Forms Main  ==========*/
 	form {
 		div, p {

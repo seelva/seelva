@@ -1,70 +1,72 @@
-$contentWidth: ($colAmount * $colWidth) + ( ($colAmount - 1) * $gutterWidth);
+@if $useBase == true and $useGrid == true {
+	$contentWidth: ($colAmount * $colWidth) + ( ($colAmount - 1) * $gutterWidth);
+	
+	@if $gridType == "fixed" or $gridType == "both" {
+		/*==========  $Grid - Fixed width  ==========*/
+		/*!*
+		*
+		* Config.
+		*
+		* No. of Columns:  #{$colAmount};
+		* Column width:    #{$colWidth}px;
+		* Gutter width:    #{$gutterWidth}px;
+		* Content width:   #{$contentWidth}px;
+		*
+		**/
 
-@if $gridType == "fixed" or $gridType == "both" {
-	/*==========  $Grid - Fixed width  ==========*/
-	/*!*
-	*
-	* Config.
-	*
-	* No. of Columns:  #{$colAmount};
-	* Column width:    #{$colWidth}px;
-	* Gutter width:    #{$gutterWidth}px;
-	* Content width:   #{$contentWidth}px;
-	*
-	**/
-
-	[class^="unit-"], [class*=" unit-"] {
-		float: left;
-		margin-right: #{$gutterWidth}px;
-	}
-	/* Columns width */
-	@for $i from 1 through ($colAmount - 1) {
-		.unit-#{$i} { width: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) - $gutterWidth }px; }
-	}
-	.unit-#{$colAmount} { width: #{ ( $colWidth * $colAmount ) + ( $gutterWidth * $colAmount ) - $gutterWidth }px; margin-right: 0; }
-
-	/* Prefixes */
-	@for $i from 1 through ($colAmount - 1) {
-		.prefix-#{$i} { margin-left: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) }px; }
-	}
-
-	/* Suffixes */
-	@for $i from 1 through ($colAmount - 1) {
-		.suffix-#{$i} { margin-right: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) }px; }
-	}
-}
-
-@if $gridType == "fluid" or $gridType == "both" {
-	/*==========  $Grid - Fluid width  ==========*/
-	/*!*
-	*
-	* Config.
-	*
-	* No. of Columns:          #{$colAmount};
-	* Percentual column width: #{ percentage($colWidth / $contentWidth) };
-	* Percentual gutter width: #{ percentage($gutterWidth / $contentWidth) };
-	*
-	**/
-
-	.holder-fluid {
 		[class^="unit-"], [class*=" unit-"] {
 			float: left;
-			margin-right: percentage( $gutterWidth / $contentWidth );
+			margin-right: #{$gutterWidth}px;
 		}
-		// Columns width
+		/* Columns width */
 		@for $i from 1 through ($colAmount - 1) {
-			.unit-#{$i} { width: percentage( (( $colWidth * $i ) + ( $gutterWidth * $i ) - $gutterWidth) / $contentWidth ); }
+			.unit-#{$i} { width: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) - $gutterWidth }px; }
 		}
-		.unit-#{$colAmount} { width: percentage( (( $colWidth * $colAmount ) + ( $gutterWidth * $colAmount ) - $gutterWidth) / $contentWidth ); margin-right: 0; }
+		.unit-#{$colAmount} { width: #{ ( $colWidth * $colAmount ) + ( $gutterWidth * $colAmount ) - $gutterWidth }px; margin-right: 0; }
 
-		// Prefixes
+		/* Prefixes */
 		@for $i from 1 through ($colAmount - 1) {
-			.prefix-#{$i} { margin-left: percentage( ( ( $colWidth * $i ) + ( $gutterWidth * $i ) ) / $contentWidth ); }
+			.prefix-#{$i} { margin-left: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) }px; }
 		}
 
-		// Suffixes
+		/* Suffixes */
 		@for $i from 1 through ($colAmount - 1) {
-			.suffix-#{$i} { margin-right: percentage( ( ( $colWidth * $i ) + ( $gutterWidth * $i ) ) / $contentWidth ); }
+			.suffix-#{$i} { margin-right: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) }px; }
+		}
+	}
+
+	@if $gridType == "fluid" or $gridType == "both" {
+		/*==========  $Grid - Fluid width  ==========*/
+		/*!*
+		*
+		* Config.
+		*
+		* No. of Columns:          #{$colAmount};
+		* Percentual column width: #{ percentage($colWidth / $contentWidth) };
+		* Percentual gutter width: #{ percentage($gutterWidth / $contentWidth) };
+		*
+		**/
+
+		.holder-fluid {
+			[class^="unit-"], [class*=" unit-"] {
+				float: left;
+				margin-right: percentage( $gutterWidth / $contentWidth );
+			}
+			// Columns width
+			@for $i from 1 through ($colAmount - 1) {
+				.unit-#{$i} { width: percentage( (( $colWidth * $i ) + ( $gutterWidth * $i ) - $gutterWidth) / $contentWidth ); }
+			}
+			.unit-#{$colAmount} { width: percentage( (( $colWidth * $colAmount ) + ( $gutterWidth * $colAmount ) - $gutterWidth) / $contentWidth ); margin-right: 0; }
+
+			// Prefixes
+			@for $i from 1 through ($colAmount - 1) {
+				.prefix-#{$i} { margin-left: percentage( ( ( $colWidth * $i ) + ( $gutterWidth * $i ) ) / $contentWidth ); }
+			}
+
+			// Suffixes
+			@for $i from 1 through ($colAmount - 1) {
+				.suffix-#{$i} { margin-right: percentage( ( ( $colWidth * $i ) + ( $gutterWidth * $i ) ) / $contentWidth ); }
+			}
 		}
 	}
 }

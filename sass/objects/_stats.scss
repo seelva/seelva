@@ -1,4 +1,4 @@
-@if $useStats == true {
+@if $useObjects == true and $useStats == true {
 	/*==========  $Object - Stat  ==========*/
 	.stat-group {
 	    @include cf;

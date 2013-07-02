@@ -1,31 +1,33 @@
-/*==========  $Utils Accesibility  ==========*/
-#skip-links {
-	clear: both;
-	list-style: none;
-	margin: 0;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-
-	a, a:link, a:visited {
-		background: $brand-main;
-		color: $White;
-		display: block;
-		left: -200%;
-		padding: #{$baseUnit1 * 2} 0;
+@if $useHelpers == true and $useAccesibility == true {
+	/*==========  $Utils Accesibility  ==========*/
+	#skip-links {
+		clear: both;
+		list-style: none;
+		margin: 0;
 		position: absolute;
-		width: 100%;
-		z-index: 2;
-	}
-
-	a:active, a:focus {
-		left: 0;
 		text-align: center;
-		z-index: 100;
-	}
-}
+		width: 100%;
 
-.accessibility {
-	left: -5000em;
-	position: absolute;
+		a, a:link, a:visited {
+			background: $brand-main;
+			color: $White;
+			display: block;
+			left: -200%;
+			padding: #{$baseUnit1 * 2} 0;
+			position: absolute;
+			width: 100%;
+			z-index: 2;
+		}
+
+		a:active, a:focus {
+			left: 0;
+			text-align: center;
+			z-index: 100;
+		}
+	}
+
+	.accessibility {
+		left: -5000em;
+		position: absolute;
+	}
 }

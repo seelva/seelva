@@ -5,7 +5,7 @@
 	@include default_gradient( lighten($bg, $percent), $bg );
 }
 
-@if $useProgress == true {
+@if $useObjects == true and $useProgress == true {
 	/*==========  $UI Progressbars  ==========*/
 	.progressbar,
 	.progressbar-error,

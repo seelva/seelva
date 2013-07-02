@@ -1,4 +1,4 @@
-@if $useFlyout == true {
+@if $useObjects == true and $useFlyout == true {
 	.flyout {
 		@extend .dropdown;
 

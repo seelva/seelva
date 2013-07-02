@@ -1,10 +1,12 @@
-/*==========  $Utils Clearfix  ==========*/
-/* Standard clearfix. */
-/* Source: http://www.contentwithstyle.co.uk/content/a-css-framework */
-* html .clearfix { height: 1%; } /* IE6 */
-*:first-child + html .clearfix { min-height: 1%; } /* IE7 */
-.clearfix:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+@if $useHelpers == true and $useClearfix == true {
+	/*==========  $Utils Clearfix  ==========*/
+	/* Standard clearfix. */
+	/* Source: http://www.contentwithstyle.co.uk/content/a-css-framework */
+	* html .clearfix { height: 1%; } /* IE6 */
+	*:first-child + html .clearfix { min-height: 1%; } /* IE7 */
+	.clearfix:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
 
-/* Micro clearfix */
-/* Source: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf { @include cf; }
+	/* Micro clearfix */
+	/* Source: http://nicolasgallagher.com/micro-clearfix-hack/ */
+	.cf { @include cf; }
+}

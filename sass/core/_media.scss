@@ -1,15 +1,17 @@
-/*==========  $Media Images  ==========*/
-img {
-	/* Make images responsive by default */
-	height: auto;
-	max-width: 100%;
-	vertical-align: bottom;
+@if $useCore == true {
+	/*==========  $Media Images  ==========*/
+	img {
+		/* Make images responsive by default */
+		height: auto;
+		max-width: 100%;
+		vertical-align: bottom;
 
-	&[width], &[height] { display: inline-block; }
+		&[width], &[height] { display: inline-block; }
 
-	/* Images inside figure */
-	figure > & { display: block; }
+		/* Images inside figure */
+		figure > & { display: block; }
+	}
+
+	/*==========  $Media Audio  ==========*/
+	audio { width: 100%; }
 }
-
-/*==========  $Media Audio  ==========*/
-audio { width: 100%; }

@@ -1,7 +1,10 @@
-/*==========  $Resizable elements  ==========*/
-.resizable { overflow: auto; resize: both; }
-
-/*==========  $Selection styling  ==========*/
 @mixin selection { background: $brand-main; color: $White; text-shadow: none; }
-::-moz-selection { @include selection; }
-::selection      { @include selection; }
+
+@if $useHelpers == true and $useBrowser == true {
+	/*==========  $Resizable elements  ==========*/
+	.resizable { overflow: auto; resize: both; }
+
+	/*==========  $Selection styling  ==========*/
+	::-moz-selection { @include selection; }
+	::selection      { @include selection; }
+}

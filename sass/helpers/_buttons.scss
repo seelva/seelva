@@ -21,7 +21,7 @@
 	padding-right: $padding;
 }
 
-@if $useButtonsHelpers == true {
+@if $useHelpers == true and $useButtonsHelpers == true {
 	/*==========  $Buttons helpers  ==========*/
 	input[type="button"],
 	input[type="submit"],

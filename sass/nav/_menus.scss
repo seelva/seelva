@@ -1,43 +1,45 @@
-/*==========  $Nav Menus  ==========*/
-.menu-horizontal, .menu-vertical {
-	> li {
-		> a, > a:link, > a:visited {
-			@if $legacySupport == true {
-				background: $Silver url(../images/gradient-bg.png) repeat-x left top;
-			}
-			@include default_gradient($GhostWhite, $Silver);
-
-			color: $Black;
-			padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
-		}
-
-		> a:hover, &.active > a, &.active > a:link {
-			@if $legacySupport == true {
-				background: {
-					color: $Gray;
-					position: left -15px;
+@if $useNav == true and $useMenus == true {
+	/*==========  $Nav Menus  ==========*/
+	.menu-horizontal, .menu-vertical {
+		> li {
+			> a, > a:link, > a:visited {
+				@if $legacySupport == true {
+					background: $Silver url(../images/gradient-bg.png) repeat-x left top;
 				}
-			}
-			@include default_gradient($DarkGray, $Gray);
+				@include default_gradient($GhostWhite, $Silver);
 
-			color: $White;
+				color: $Black;
+				padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
+			}
+
+			> a:hover, &.active > a, &.active > a:link {
+				@if $legacySupport == true {
+					background: {
+						color: $Gray;
+						position: left -15px;
+					}
+				}
+				@include default_gradient($DarkGray, $Gray);
+
+				color: $White;
+			}
 		}
 	}
-}
 
-/*==========  menu-Horizontal  ==========*/
-.menu-horizontal {
-	> li {
-		border-left: 1px solid $LightGray;
-		display: inline-block;
-		float: left;
+	/*==========  menu-Horizontal  ==========*/
+	.menu-horizontal {
+		> li {
+			border-left: 1px solid $LightGray;
+			display: inline-block;
+			float: left;
+		}
 	}
-}
 
-/*==========  menu-Vertical  ==========*/
-.menu-vertical {
-	> li {
-		border-bottom: 1px solid $LightGray;
-		float: none;
+	/*==========  menu-Vertical  ==========*/
+	.menu-vertical {
+		> li {
+			border-bottom: 1px solid $LightGray;
+			float: none;
+		}
 	}
 }

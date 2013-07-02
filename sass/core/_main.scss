@@ -1,9 +1,11 @@
-html { font-size: 100.01%; }
+@if $useCore == true {
+	html { font-size: 100.01%; }
 
-body {
-	font: {
-		family: $fstack-body;
-		size: $textSize;
+	body {
+		font: {
+			family: $fstack-body;
+			size: $textSize;
+		}
+		line-height: $textLineHeight;
 	}
-	line-height: $textLineHeight;
 }

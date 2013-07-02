@@ -1,46 +1,48 @@
-/*==========  $Core Details/Summary  ==========*/
-details {
-	background: $GhostWhite;
-	border: 1px solid $LightGray;
+@if $useCore == true {
+	/*==========  $Core Details/Summary  ==========*/
+	details {
+		background: $GhostWhite;
+		border: 1px solid $LightGray;
 
-	@include border-radius($radius1);
+		@include border-radius($radius1);
 
-	summary {
-		@if $legacySupport == true {
-			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+		summary {
+			@if $legacySupport == true {
+				background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
+			}
+			@include default_gradient();
+
+			border-bottom: 1px solid $LightGray;
+			cursor: pointer;
+			margin: 0;
+			padding: 0 #{$baseUnit1 * 2};
+			text-align: left;
+
+			@include border-radius($radius1 $radius1 0 0);
+
+			&:focus {
+			border-color: $brand-main;
+			outline-color: $brand-main;
+			}
 		}
-		@include default_gradient();
 
-		border-bottom: 1px solid $LightGray;
-		cursor: pointer;
-		margin: 0;
-		padding: 0 #{$baseUnit1 * 2};
-		text-align: left;
+		> div {
+			padding: #{$baseUnit1 * 2};
+		}
 
-		@include border-radius($radius1 $radius1 0 0);
-
-		&:focus {
-		border-color: $brand-main;
-		outline-color: $brand-main;
+		&[open] summary {
+			border-color: $Silver;
 		}
 	}
 
-	> div {
-		padding: #{$baseUnit1 * 2};
+	/*==========  $Core Rulers / line breaks  ==========*/
+	hr {
+		clear: both;
+		color: $Gray;
 	}
 
-	&[open] summary {
-		border-color: $Silver;
-	}
+	br { clear: both; }
+
+	/*==========  $Misc  ==========*/
+	:focus { outline-color: $brand-main; }
 }
-
-/*==========  $Core Rulers / line breaks  ==========*/
-hr {
-	clear: both;
-	color: $Gray;
-}
-
-br { clear: both; }
-
-/*==========  $Misc  ==========*/
-:focus { outline-color: $brand-main; }

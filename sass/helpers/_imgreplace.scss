@@ -1,2 +1,4 @@
-/*==========  $Utils Image replacement  ==========*/
-.imgreplace { @include imgreplace; }
+@if $useHelpers == true and $useImgreplace == true {
+	/*==========  $Utils Image replacement  ==========*/
+	.imgreplace { @include imgreplace; }
+}

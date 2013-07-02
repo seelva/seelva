@@ -1,13 +1,15 @@
-/*==========  $Utils Clearing  ==========*/
-.clear { clear: both; display: block; }
-hr.clear, hr.clearing {
-	background: transparent;
-	border: 0;
-	clear: both;
-	color: $White;
-	float: none;
-	height: 0;
-	margin: 0;
-	visibility: hidden;
-	width: 100%;
+@if $useHelpers == true and $useClearing == true {
+	/*==========  $Utils Clearing  ==========*/
+	.clear { clear: both; display: block; }
+	hr.clear, hr.clearing {
+		background: transparent;
+		border: 0;
+		clear: both;
+		color: $White;
+		float: none;
+		height: 0;
+		margin: 0;
+		visibility: hidden;
+		width: 100%;
+	}
 }
