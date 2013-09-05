@@ -16,7 +16,7 @@
   }
 
   .holder-fluid {
-    padding: 0 10px;
+    max-width: #{$contentWidth}px;
     width: auto;
   }
 
@@ -79,4 +79,35 @@
   .three-sixths  { @extend .one-half; }
    .four-sixths  { @extend .two-thirds; }
    .five-sixths  { width: 83.00%; }
+
+
+   $devices: 'palm', 'lap', 'portable';
+
+
+	@each $size in $devices {
+		@include media-query($size) {
+		  .#{$size}-full-width    { width: 100.0%; clear: both; }
+
+		  .#{$size}-half-width,
+		  .#{$size}-one-half      { width: 49.50%; clear: none; }
+
+		    .#{$size}-one-third   { width: 32.50%; }
+		    .#{$size}-two-thirds  { width: 66.58%; }
+
+		    .#{$size}-one-fourth  { width: 24.25%; }
+		    .#{$size}-two-fourths { @extend .#{$size}-one-half; }
+		  .#{$size}-three-fourths { width: 74.50%; }
+
+		    .#{$size}-one-fifth   { width: 19.20%; }
+		    .#{$size}-two-fifths  { width: 39.50%; }
+		  .#{$size}-three-fifths  { width: 59.50%; }
+		   .#{$size}-four-fifths  { width: 79.50%; }
+
+		    .#{$size}-one-sixth   { width: 15.82%; }
+		    .#{$size}-two-sixths  { @extend .#{$size}-one-third; }
+		  .#{$size}-three-sixths  { @extend .#{$size}-one-half; }
+		   .#{$size}-four-sixths  { @extend .#{$size}-two-thirds; }
+		   .#{$size}-five-sixths  { width: 83.00%; }
+		}
+	}
 }

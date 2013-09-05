@@ -37,3 +37,81 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+// Apply styles to all buttons
+@mixin button() {
+	input[type=button],
+	input[type=submit],
+	input[type=reset],
+	input[type=color],
+	button,
+	button[type],
+	.btn, .btn:link,
+	.button, .button:link {
+		@content;
+	}
+}
+
+// Select all text-based inputs
+@mixin form-text() {
+	input:not([type]),
+	input[type=date],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=email],
+	input[type=file],
+	input[type=month],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=tel],
+	input[type=text],
+	input[type=time],
+	input[type=url],
+	input[type=week],
+	select,
+	textarea {
+		@content;
+	}
+}
+
+// Select all option inputs
+@mixin form-options() {
+	input[type=checkbox],
+	input[type=radio] {
+		@content;
+	}
+}
+
+// Breakpoints
+$lap-start:         481px!default;
+$desk-start:        960px!default;
+$desk-wide-start:   1200px!default;
+$palm-end:          $lap-start - 1px;
+$lap-end:           $desk-start - 1px;
+
+@mixin media-query($media-query){
+    @if $media-query == palm{
+        @media only screen and (max-width:$palm-end) { @content; }
+    }
+
+    @if $media-query == lap{
+        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+    }
+
+    @if $media-query == lap-and-up{
+        @media only screen and (min-width:$lap-start) { @content; }
+    }
+
+    @if $media-query == portable{
+        @media only screen and (max-width:$lap-end) { @content; }
+    }
+
+    @if $media-query == desk{
+        @media only screen and (min-width:$desk-start) { @content; }
+    }
+
+    @if $media-query == desk-wide{
+        @media only screen and (min-width: $desk-wide-start) { @content; }
+    }
+}

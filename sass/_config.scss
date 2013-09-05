@@ -10,6 +10,16 @@
 // techniques to cover IE5-IE8 styling
 $legacySupport: false;
 
+// *==========  Variables  ==========*/
+// Px unit
+$baseUnit1: 3px;
+
+// Border radius
+$radius1: 3px;
+$radius2: 6px;
+$radius3: 9px;
+
+
 // /*==========  $Modules  ==========*/
 // Enable or disable modules depending on your needs
 $usePrint:              true;

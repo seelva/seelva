@@ -7,20 +7,20 @@
 		/* Remove vertical spacing from nested lists. */
 		li > & {margin-bottom: 0; }
 
-		&.armenian    { list-style-type: armenian }
-		&.circle      { list-style-type: circle }
-		&.decimal     { list-style-type: decimal }
-		&.decimalzero { list-style-type: decimal-leading-zero }
-		&.disc        { list-style-type: disc }
-		&.georgian    { list-style-type: georgian }
-		&.lalpha      { list-style-type: lower-alpha }
-		&.lgreek      { list-style-type: lower-greek }
-		&.llatin      { list-style-type: lower-latin }
-		&.lroman      { list-style-type: lower-roman }
-		&.square      { list-style-type: square }
-		&.ualpha      { list-style-type: upper-alpha }
-		&.ulatin      { list-style-type: upper-latin }
-		&.uroman      { list-style-type: upper-roman }
+		&.armenian    { list-style-type: armenian; }
+		&.circle      { list-style-type: circle; }
+		&.decimal     { list-style-type: decimal; }
+		&.decimalzero { list-style-type: decimal-leading-zero; }
+		&.disc        { list-style-type: disc; }
+		&.georgian    { list-style-type: georgian; }
+		&.lalpha      { list-style-type: lower-alpha; }
+		&.lgreek      { list-style-type: lower-greek; }
+		&.llatin      { list-style-type: lower-latin; }
+		&.lroman      { list-style-type: lower-roman; }
+		&.square      { list-style-type: square; }
+		&.ualpha      { list-style-type: upper-alpha; }
+		&.ulatin      { list-style-type: upper-latin; }
+		&.uroman      { list-style-type: upper-roman; }
 
 		&.styled, &.unstyled { list-style-type: none; margin-left: #{$baseUnit1 * 3}; }
 		&.styled li {
@@ -48,12 +48,12 @@
 
 	/* Values not allowed in CSS2.1, re-allowed in CSS3 */
 	/*
-	ul.hebrew 		{list-style-type: hebrew}
-	ul.cideo 		{list-style-type: cjk-ideographic}
-	ul.hira 		{list-style-type: hiragana}
-	ul.kata 		{list-style-type: katakana}
-	ul.hira-iroha 	{list-style-type: hiragana-iroha}
-	ul.kata-iroha 	{list-style-type: katakana-iroha}
+	ul.hebrew 		{ list-style-type: hebrew; }
+	ul.cideo 		{ list-style-type: cjk-ideographic; }
+	ul.hira 		{ list-style-type: hiragana; }
+	ul.kata 		{ list-style-type: katakana; }
+	ul.hira-iroha 	{ list-style-type: hiragana-iroha; }
+	ul.kata-iroha 	{ list-style-type: katakana-iroha; }
 	*/
 
 	dl {
@@ -68,4 +68,5 @@
 	dd {
 		margin: 0 0 0 #{$baseUnit1 * 3};
 		padding: 0;
-	}}
+	}
+}

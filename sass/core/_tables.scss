@@ -3,7 +3,7 @@
 	table {
 		border: {
 			collapse: separate;
-			right: 1px solid $WhiteSmoke;
+			right: 1px solid $LightGray;
 			top: 1px solid $LightGray;
 		}
 		margin: 0 0 #{$baseUnit1 * 5} 0;
@@ -50,8 +50,6 @@
 		}
 
 		tr:last-child th:last-child {
-			border-right: 1px solid $WhiteSmoke;
-
 			// Border topright
 			@include border-radius(0 $radius1 0 0);
 		}
@@ -63,8 +61,8 @@
 	}
 	td {
 		border: {
-			bottom: 1px solid $WhiteSmoke;
-			left: 1px solid $WhiteSmoke;
+			bottom: 1px solid $LightGray;
+			left: 1px solid $LightGray;
 		}
 		padding: #{$baseUnit1 * 2};
 		vertical-align: top;

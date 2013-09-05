@@ -19,7 +19,6 @@
 
 	legend {
 //		border-bottom: 1px solid $WhiteSmoke;
-		color: $DimGray;
 		font: {
 			size: 128%;
 			weight: normal;
@@ -38,28 +37,14 @@
 	}
 
 	/*==========  $Forms Controls  ==========*/
-	input:not([type]),
-	input[type=date],
-	input[type=datetime],
-	input[type=datetime-local],
-	input[type=email],
-	input[type=file],
-	input[type=month],
-	input[type=number],
-	input[type=password],
-	input[type=search],
-	input[type=tel],
-	input[type=text],
-	input[type=time],
-	input[type=url],
-	input[type=week],
-	select,
-	textarea {
+	@include form-text() {
 		@if $legacySupport == false {
 			background: $White url(../images/txt-bg.png) repeat-x left top;
 		}
 
 		@include box-shadow(0 2px 6px $Gainsboro inset);
+		@include border-radius($radius1);
+		@include box-sizing(border-box);
 		border: 1px solid $Silver {
 			top-width: 2px;
 		}
@@ -67,8 +52,6 @@
 		padding: $baseUnit1;
 		width: 100%;
 
-		@include border-radius($radius1);
-		@include box-sizing(border-box);
 
 		&:focus {
 			border-color: $brand-main;
@@ -78,14 +61,13 @@
 		&[readonly] { background-color: $GhostWhite; }
 
 		&[disabled] {
+			@include box-shadow(none);
 			background: $LightGray;
 			color: $Gray;
-			@include box-shadow(none);
 		}
 	}
 
-	input[type=checkbox],
-	input[type=radio] {
+	@include form-options() {
 		cursor: pointer;
 
 		&:focus { outline-color: $brand-main; }

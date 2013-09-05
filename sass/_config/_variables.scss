@@ -1,10 +1,9 @@
 // *==========  $Units  ==========*/
 // Px unit
-$baseUnit0: 1px;
-$baseUnit1: 3px;
+$baseUnit0: 1px !default;
+$baseUnit1: 3px !default;
 
 // Border radius
-$radius1: 3px;
-$radius2: 6px;
-$radius3: 9px;
-$radius4: 12px;
+$radius1: 3px !default;
+$radius2: 6px !default;
+$radius3: 9px !default;

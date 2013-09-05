@@ -1,36 +1,19 @@
 /*===============================
 =            $Custom            =
 ===============================*/
-html {
-  /* HTML style */
-}
+html { /* HTML style */ }
 
-body {
-  color: black;
-}
-.ie6 body, .ie7 body {
-  font-size: 82%;
-  line-height: 1.12em;
-}
+body { color: black; }
+.ie6 body, .ie7 body { font-size: 82%; line-height: 1.12em; }
 
-#outer {
-  /* Outer style */
-}
+#outer { /*! Outer style */ }
 
-#wrapper {
-  /* Wrapper style */
-}
+#wrapper { /*! Wrapper style */ }
 
-.holder {
-  /* override default holder style */
-}
+.holder { /*! override default holder style */ }
 
-#header {
-  /* header style */
-}
+#header { /*! header style */ }
 
-#primary {
-  /* primary style */
-}
+#primary { /*! primary style */ }
 
 /*-----  End of $Custom  ------*/
