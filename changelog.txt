@@ -1,11 +1,26 @@
 v4.0.0
 ====================
 New
-	Added modules switches to use just what it is needed
+	seelva gone full HTML5: doctype, tags, attributes
+	Added modules and features switches to _config.scss file
+	Added .form-field helper class
+	Added mq() mixin to create media-queries
+	Added 'state' argument to buttons() mixin to control the state to style
+	Added vendor() mixin to prepend vendor prefixes
+	Added legacy-bg() mixin to reduce ammount of code needed to create a fallback background for legacy browsers
+
 
 Fixes
 	Regresion of webkit-file-button styling, made buttons look wrong in IE, even IE9
 	Moved nav object from nav/main to objects/nav
+	Form divs and paragraphs get no margin by default
+	Removed type attribute from html5 script tag
+	Removed hgroup element from index.html due to W3C dropping it out the spec
+	Replaced Google Chromeframe script with Browserhappy prompt for IE8- users
+
+Changes
+	Updated html5shim to v3.7.0
+	Updated normalize to v2.1.3
 
 
 v3.3.1

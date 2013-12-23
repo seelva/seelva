@@ -1,9 +1,118 @@
-// *==========  $Units  ==========*/
+/*=================================================
+=            $seelva default variables            =
+=================================================*/
+
+@import "compass/css3";
+
+@import "colors";
+@import "fonts";
+
+// /*==========  $Features  ==========*/
+// Enable or disable legacy browser support.
+// Uses fallback techniques to style some elements in IE5-IE8
+$legacySupport:       false!default;
+
+// /*==========  $Modules  ==========*/
+// Enable or disable modules depending on your needs
+$usePrint:            true!default;
+$useNormalize:        true!default;
+$useBase:             true!default;
+  $useGrid:           true!default;
+  $useLayout:         true!default;
+$useCore:             true!default;
+  $styleButtons:      true!default;
+  $styleCode:         true!default;
+  $styleForms:        true!default;
+  $styleHeadings:     true!default;
+  $styleLists:        true!default;
+  $styleQuotes:       true!default;
+  $styleTables:       true!default;
+$useNav:              true!default;
+  $useBreadcrumbs:    true!default;
+  $useMenus:          true!default;
+  $usePagination:     true!default;
+  $useTabs:           true!default;
+$useHelpers:          true!default;
+  $useAccesibility:   true!default;
+  $useBrowser:        true!default;
+  $useButtonsHelpers: true!default;
+  $useClearfix:       true!default;
+  $useClearing:       true!default;
+  $useDisplay:        true!default;
+  $useFormsHelpers:   true!default;
+  $useImgreplace:     true!default;
+  $useMediaHelpers:   true!default;
+  $useOtherHelpers:   true!default;
+$useObjects:          true!default;
+  $useAlerts:         true!default;
+  $useDropdown:       true!default; // READ WARNING BELOW!
+  $useFlyout:         true!default; // READ wARNING BELOW!
+  $useMediaObj:       true!default;
+  $useProgress:       true!default;
+  $useNavObj:         true!default;
+  $useStats:          true!default;
+$useIcons:            true!default;
+
+// /*************************************************************************
+// *  WARNING:
+// *  Seelva's dropdown and flyout objects *DO NOT WORK* with touchscreen
+// *  devices because they use the ':hover' pseudo-class to display submenus.
+// *  Be aware that if you want to use dropdowns with touchscreen devices you
+// *  should use a Javascript-based alternative.
+// **************************************************************************/
+
+// /*====  $Media-queries Config  ====*/
+// Device widths
+$lap-start:           481px!default;   // All sizes below are 'palm', all above 'lap-and-up'
+$desk-start:          960px!default;   // All sizes below are 'portable' devices
+$desk-wide-start:     1200px!default;  
+
+// /*=========  $Grid Config  =========*/
+// If grid module is enabled, these settings modifies the grid:
+$colAmount:           24!default;     // How many columns should the grid have?
+$colWidth:            20!default;     // What is the width of each column? In px
+$gutterWidth:         20!default;     // Separation between columns, In px
+$gridType:            "both"!default; // Should the grid be fluid, fixed, or both?
+
+// /*========  $Custom Colors  ========*/
+// Brand Colors
+$brand-main:          $LimeGreen!default;
+$brand-error:         $Crimson!default;
+$brand-info:          $SteelBlue!default;
+$brand-notice:        $GoldenRod!default;
+$brand-success:       $LimeGreen!default;
+
+// /*=========  $Font config  =========*/
+// Default stacks
+$fstack-sans:         $fstack-helvetica!default;
+$fstack-serif:        $fstack-cambria!default;
+$fstack-mono:         $fstack-consolas!default;
+
+// Custom stacks
+$fstack-body:         $fstack-helvetica!default;
+$fstack-headings:     $fstack-segoe!default;
+$fstack-code:         $fstack-consolas!default;
+$fstack-forms:        $fstack-helvetica!default;
+$fstack-buttons:      $fstack-helvetica!default;
+
+// /*=======  $Text properties  =======*/
+$textColor:           $Black!default;
+
+$textSize:            0.875em!default;
+$textLineHeight:      1.5em!default;
+
+$h1-size:             294%!default;
+$h2-size:             192%!default;
+$h3-size:             171%!default;
+$h4-size:             150%!default;
+$h5-size:             128%!default;
+$h6-size:             107%!default;
+
+// /*==========  $Variables  ==========*/
 // Px unit
-$baseUnit0: 1px !default;
-$baseUnit1: 3px !default;
+$baseUnit1:           3px!default;
 
 // Border radius
-$radius1: 3px !default;
-$radius2: 6px !default;
-$radius3: 9px !default;
+$radius1:             3px!default;
+$radius2:             6px!default;
+$radius3:             9px!default;

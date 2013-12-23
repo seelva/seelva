@@ -1,6 +1,10 @@
 @if $useHelpers == true and $useClearing == true {
 	/*==========  $Utils Clearing  ==========*/
-	.clear { clear: both; display: block; }
+	.clear {
+		clear: both;
+		display: block;
+	}
+
 	hr.clear, hr.clearing {
 		background: transparent;
 		border: 0;

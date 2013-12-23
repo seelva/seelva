@@ -5,108 +5,114 @@
 @import "_config/fonts";
 @import "_config/mixins";
 
-// *==========  $Features  ==========*/
-// Enable or disable legacy browser support. This will use fallback
-// techniques to cover IE5-IE8 styling
-$legacySupport: false;
-
-// *==========  Variables  ==========*/
-// Px unit
-$baseUnit1: 3px;
-
-// Border radius
-$radius1: 3px;
-$radius2: 6px;
-$radius3: 9px;
-
+// /*==========  $Features  ==========*/
+// Enable or disable legacy browser support.
+// Uses fallback techniques to style some elements in IE5-IE8
+$legacySupport:       false;
 
 // /*==========  $Modules  ==========*/
 // Enable or disable modules depending on your needs
-$usePrint:              true;
-$useNormalize:          true;
-$useBase:               true;
-	$useGrid:           true;
-	$useLayout:         true;
-$useCore:               true;
-	$styleButtons:      true;
-	$styleCode:         true;
-	$styleForms:        true;
-	$styleHeadings:     true;
-	$styleLists:        true;
-	$styleQuotes:       true;
-	$styleTables:       true;
-$useNav:                true;
-	$useBreadcrumbs:    true;
-	$useMenus:          true;
-	$usePagination:     true;
-	$useTabs:           true;
-$useHelpers:            true;
-	$useAccesibility:   true;
-	$useBrowser:        true;
-	$useButtonsHelpers: true;
-	$useClearfix:       true;
-	$useClearing:       true;
-	$useDisplay:        true;
-	$useFormsHelpers:   true;
-	$useImgreplace:     true;
-	$useMediaHelpers:   true;
-	$useOtherHelpers:   true;
-$useObjects:            true;
-	$useAlerts:         true;
-	$useDropdown:       true; // READ WARNING BELOW!
-	$useFlyout:         true; // READ wARNING BELOW!
-	$useMediaObj:       true;
-	$useProgress:       true;
-	$useNavObj:         true;
-	$useStats:          true;
-$useIcons:              true;
+$usePrint:            true;
+$useNormalize:        true;
+$useBase:             true;
+  $useGrid:           true;
+  $useLayout:         true;
+$useCore:             true;
+  $styleButtons:      true;
+  $styleCode:         true;
+  $styleForms:        true;
+  $styleHeadings:     true;
+  $styleLists:        true;
+  $styleMedia:        true;
+  $styleQuotes:       true;
+  $styleTables:       true;
+$useNav:              true;
+  $useBreadcrumbs:    true;
+  $useMenus:          true;
+  $usePagination:     true;
+  $useTabs:           true;
+$useHelpers:          true;
+  $useAccesibility:   true;
+  $useBrowser:        true;
+  $useButtonsHelpers: true;
+  $useClearfix:       true;
+  $useClearing:       true;
+  $useDisplay:        true;
+  $useFormsHelpers:   true;
+  $useImgreplace:     true;
+  $useMediaHelpers:   true;
+  $useOtherHelpers:   true;
+$useObjects:          true;
+  $useAlerts:         true;
+  $useDropdown:       true; // READ WARNING BELOW!
+  $useFlyout:         true; // READ wARNING BELOW!
+  $useMediaObj:       true;
+  $useProgress:       true;
+  $useNavObj:         true;
+  $useStats:          true;
+$useIcons:            true;
 
-// /***************************************************************************
+// /*************************************************************************
 // *  WARNING:
-// *  Seelva's dropdown and flyout objects DO NOT WORK with touchscreen devices.
-// *  These modules use mouse-over and mouse-out events to display submenus.
+// *  Seelva's dropdown and flyout objects *DO NOT WORK* with touchscreen
+// *  devices because they use the ':hover' pseudo-class to display submenus.
 // *  Be aware that if you want to use dropdowns with touchscreen devices you
 // *  should use a Javascript-based alternative.
-// ****************************************************************************/
+// **************************************************************************/
 
-// *==========  $Grid Config  ==========*/
+// /*====  $Media-queries Config  ====*/
+// Device widths
+$lap-start:           481px;   // All sizes below are 'palm', all above 'lap-and-up'
+$desk-start:          960px;   // All sizes below are 'portable' devices
+$desk-wide-start:     1200px;  
+
+// /*=========  $Grid Config  =========*/
 // If grid module is enabled, these settings modifies the grid:
-$colAmount:   24;     // How many columns should the grid have?
-$colWidth:    20;     // What is the width of each column? In px
-$gutterWidth: 20;     // Separation between columns, In px
-$gridType:    "both"; // Should the grid be fluid, fixed, or both?
+$colAmount:           24;     // How many columns should the grid have?
+$colWidth:            20;     // What is the width of each column? In px
+$gutterWidth:         20;     // Separation between columns, In px
+$gridType:            "both"; // Should the grid be fluid, fixed, or both?
 
-// *==========  $Custom Colors  ==========*/
+// /*========  $Custom Colors  ========*/
 // Brand Colors
-$brand-main:      $LimeGreen;
-$brand-error:     $Crimson;
-$brand-info:      $SteelBlue;
-$brand-notice:    $GoldenRod;
-$brand-success:   $LimeGreen;
+$brand-error:         $Crimson;
+$brand-info:          $SteelBlue;
+$brand-notice:        $GoldenRod;
+$brand-success:       $LimeGreen;
 
-// *==========  $Custom Fonts stacks  ==========*/
+$brand-main:          $LimeGreen;
+
+// /*=========  $Font config  =========*/
 // Default stacks
-$fstack-sans:     $fstack-helvetica;
-$fstack-serif:    $fstack-cambria;
-$fstack-mono:     $fstack-consolas;
+$fstack-sans:         $fstack-helvetica;
+$fstack-serif:        $fstack-cambria;
+$fstack-mono:         $fstack-consolas;
 
 // Custom stacks
-$fstack-body:     $fstack-helvetica;
-$fstack-headings: $fstack-segoe;
-$fstack-code:     $fstack-consolas;
-$fstack-forms:    $fstack-helvetica;
-$fstack-buttons:  $fstack-helvetica;
+$fstack-body:         $fstack-helvetica;
+$fstack-headings:     $fstack-segoe;
+$fstack-code:         $fstack-consolas;
+$fstack-forms:        $fstack-helvetica;
+$fstack-buttons:      $fstack-helvetica;
 
-// *==========  $Text properties  ==========*/
-// Text color
-$textColor:       $Black;
+// /*=======  $Text properties  =======*/
+$textColor:           $Black;
 
-$textSize:        0.875em;
-$textLineHeight:  1.5em;
+$textSize:            0.875em;
+$textLineHeight:      1.5em;
 
-$h1-size:         294%;
-$h2-size:         192%;
-$h3-size:         171%;
-$h4-size:         150%;
-$h5-size:         128%;
-$h6-size:         107%;
+$h1-size:             294%;
+$h2-size:             192%;
+$h3-size:             171%;
+$h4-size:             150%;
+$h5-size:             128%;
+$h6-size:             107%;
+
+// /*==========  $Variables  ==========*/
+// Px unit
+$baseUnit1:           3px;
+
+// Border radius
+$radius1:             3px;
+$radius2:             6px;
+$radius3:             9px;

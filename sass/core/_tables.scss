@@ -1,6 +1,7 @@
 @if $useCore == true and $styleTables == true {
 	/*==========  $Core Tables  ==========*/
 	table {
+		@include border-radius($radius1 $radius1 0 0);
 		border: {
 			collapse: separate;
 			right: 1px solid $LightGray;
@@ -8,9 +9,6 @@
 		}
 		margin: 0 0 #{$baseUnit1 * 5} 0;
 		width: 100%;
-
-		// Border top radius
-		@include border-radius($radius1 $radius1 0 0);
 
 		caption {
 			font: {
@@ -29,11 +27,8 @@
 	[rowspan="1"] { vertical-align: top; }
 
 	th {
-		@if $legacySupport == true {
-			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left -292px;
-		}
-		@include default_gradient($GhostWhite, $WhiteSmoke);
-
+		@if $legacySupport == true { @include legacy-bg($WhiteSmoke, '-292px'); }
+		@include default-gradient($GhostWhite, $WhiteSmoke);
 		border: {
 			bottom: 1px solid $LightGray;
 			left: 1px solid $LightGray;
@@ -44,15 +39,8 @@
 	}
 
 	thead {
-		tr:first-child th:first-child {
-			// Border topleft
-			@include border-radius($radius1 0 0 0);
-		}
-
-		tr:last-child th:last-child {
-			// Border topright
-			@include border-radius(0 $radius1 0 0);
-		}
+		tr:first-child th:first-child { @include border-radius($radius1 0 0 0); }
+		tr:last-child th:last-child   { @include border-radius(0 $radius1 0 0); }
 	}
 
 	tr {

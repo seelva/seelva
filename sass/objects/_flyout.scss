@@ -1,7 +1,6 @@
 @if $useObjects == true and $useFlyout == true {
 	.flyout {
 		@extend .dropdown;
-
 		position: relative;
 
 		.drop-content, > ul {

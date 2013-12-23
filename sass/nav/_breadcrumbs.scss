@@ -1,22 +1,21 @@
 @if $useNav == true and $useBreadcrumbs == true {
 	/*==========  $Nav Breadcrumbs  ==========*/
 	.breadcrumb {
-		@if $legacySupport == true {
-			background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
-		}
-		@include default_gradient($GhostWhite, $WhiteSmoke);
-
-		border: 1px solid $Silver;
+		@if $legacySupport == true { @include legacy-bg(); }
+		@include default-gradient($GhostWhite, $WhiteSmoke);
 		@include border-radius($radius1);
+		border: 1px solid $Silver;
 
 		span { display: block; }
 
-		> a { display: inline-block; }
+		> a, > a:link { display: inline-block; }
 
 		a, a:link, a:visited, span { padding: #{$baseUnit1 * 2} 0 #{$baseUnit1 * 2} #{$baseUnit1 * 3}; }
 
 		a:hover, .active a, .active a:link { color: $Black; }
 
-		.active a:after, .active a:link:after { content: ""; }
+		.active a, .active a:link {
+			&:after { content: ""; }
+		}
 	}
 }

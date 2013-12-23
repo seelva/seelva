@@ -2,17 +2,17 @@
 	/*==========  $Media Helpers  ==========*/
 	img {
 		&.styled {
+			@include border-radius($radius2);
 			background: $GhostWhite url(../images/loading.gif) no-repeat center;
 			border: 1px solid $WhiteSmoke;
 			padding: #{$baseUnit1 * 2};
-			@include border-radius($radius2);
 		}
 
 		&.light-styled, a &.light-styled {
-			border-width: 0;
-			padding: 0;
 			@include border-radius($radius2);
 			@include single-box-shadow($DarkGray, 0, 0, #{$baseUnit1 * 2}, 0, true);
+			border-width: 0;
+			padding: 0;
 		}
 
 		&.unstyled, button &, a.button & {
@@ -24,13 +24,13 @@
 
 	/*==========  Captioned image  ==========*/
 	.image-caption, .caption, figure.styled {
+		@include border-radius($radius2);
 		background: $GhostWhite;
 		border: 1px solid $WhiteSmoke;
 		display: inline-block;
 		margin-bottom: #{$baseUnit1 * 3};
 		padding: #{$baseUnit1 * 2};
 		text-align: center;
-		@include border-radius($radius2);
 
 		img {
 			background: transparent;
@@ -57,15 +57,15 @@
 		overflow: hidden;
 
 		> div, > li {
+			@include border-radius($radius2);
 			background: $GhostWhite;
 			border: 1px solid $WhiteSmoke;
 			float: left;
 			margin: 0 10px 20px;
 			padding: #{$baseUnit1 * 2};
 			text-align: center;
-			@include border-radius($radius2);
 
-			a { display: inline-block; }
+			a, a:link { display: inline-block; }
 		}
 
 		&.styled {

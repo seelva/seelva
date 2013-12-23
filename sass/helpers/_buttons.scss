@@ -2,14 +2,10 @@
 	color: $color;
 
 	&:focus, &:hover {
-		color: darken( $color, 10% );
-
-		@if $legacySupport == true {
-			background-color: $bg;
-		}
-		@include default_gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
-
+		@if $legacySupport == true { background-color: $bg; }
+		@include default-gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
 		border-color: $border;
+		color: darken( $color, 10% );
 	}
 
 	&:active { @include box-shadow(inset 0 1px #{$baseUnit1 * 2} darken($bg, $darkenPercent), 0 1px 0 $WhiteSmoke); }
@@ -17,8 +13,10 @@
 
 @mixin btn-size($padding, $line-height) {
 	line-height: $line-height;
-	padding-left: $padding;
-	padding-right: $padding;
+	padding: {
+		left: $padding;
+		right: $padding;
+	}
 }
 
 @if $useHelpers == true and $useButtonsHelpers == true {
@@ -51,19 +49,20 @@
 		// Buttons with the appearance of a link
 		&.btn-unstyled {
 			&, &:hover, &:focus, &:active {
+				@include box-shadow(0 0 0 transparent);
 				background: transparent;
 				border-color: transparent;
 				font-weight: normal;
 				text-decoration: underline;
-
-				@include box-shadow(0 0 0 transparent);
 			}
 		}
 
 		// These buttons will fill the entirety of their container.
 		&.btn-full {
-			padding-right: 0;
-			padding-left: 0;
+			padding: {
+				right: 0;
+				left: 0;
+			}
 			text-align: center;
 			width: 100%;
 		}
@@ -72,8 +71,10 @@
 		&.btn-natural {
 			font-size :inherit;
 			line-height: inherit;
-			padding-left: 0.5em;
-			padding-right: 0.5em;
+			padding: {
+				left: 0.5em;
+				right: 0.5em;
+			}
 		}
 	}
 
@@ -83,10 +84,10 @@
 		vertical-align: middle;
 
 		input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .button, .button:link {
+			@include border-radius(0);
 			float: left;
 			margin: 0;
 			border-right-width: 0;
-			@include border-radius(0);
 
 			&:first-child { @include border-radius($radius1 0 0 $radius1); }
 

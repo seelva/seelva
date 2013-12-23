@@ -13,21 +13,19 @@
 		}
 
 		.drop-content, > ul {
+			@include border-radius($radius3);
 			/* Common styles for submenus */
 			display: none;
 			padding: 3px 0;
 			position: absolute;
 			z-index: 100;
-
-			@include border-radius($radius3);
 		}
 
 		.drop-content {
+			@include border-radius( 0 0 $radius2 $radius2 );
 			background: $Gainsboro;
 			padding: #{$baseUnit1 * 3};
 			width: 230px;
-
-			@include border-radius( 0 0 $radius2 $radius2 );
 		}
 
 		> ul {

@@ -1,10 +1,10 @@
 @if $useCore == true and $styleForms == true {
 	/*==========  $Forms Main  ==========*/
 	form {
-		div, p {
+		/* div, p {
 			clear: both;
 			margin-bottom: #{$baseUnit1 * 3};
-		}
+		} */
 
 		div p { margin: #{$baseUnit1 * 2} 0; }
 	}
@@ -38,20 +38,16 @@
 
 	/*==========  $Forms Controls  ==========*/
 	@include form-text() {
-		@if $legacySupport == false {
-			background: $White url(../images/txt-bg.png) repeat-x left top;
-		}
-
+		@if $legacySupport == true { background: $White url(../images/txt-bg.png) repeat-x left top; }
 		@include box-shadow(0 2px 6px $Gainsboro inset);
-		@include border-radius($radius1);
 		@include box-sizing(border-box);
+		@include border-radius($radius1);
 		border: 1px solid $Silver {
 			top-width: 2px;
 		}
 		font-family: $fstack-forms;
 		padding: $baseUnit1;
 		width: 100%;
-
 
 		&:focus {
 			border-color: $brand-main;
@@ -72,9 +68,7 @@
 
 		&:focus { outline-color: $brand-main; }
 
-		+ label {
-			display: inline-block;
-		}
+		+ label { display: inline-block; }
 	}
 
 	input[type=image],

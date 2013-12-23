@@ -1,19 +1,15 @@
 @if $useNav == true and $useTabs == true {
 	/*==========  $Nav Tabs  ==========*/
 	.tabs, .tabs-vertical {
-		overflow: visible;
-
 		@include cf;
+		overflow: visible;
 
 		> li {
 			position: relative;
 
 			> a, > a:link, > a:visited {
-				@if $legacySupport == true {
-					background: $WhiteSmoke url(../images/gradient-bg.png) repeat-x left top;
-				}
-				@include default_gradient();
-
+				@if $legacySupport == true { @include legacy-bg(); }
+				@include default-gradient();
 				border: 1px solid $LightGray;
 				color: $Black;
 				padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
@@ -29,9 +25,7 @@
 			margin-right: $baseUnit1;
 			top: 1px;
 
-			> a, > a:link, > a:visited {
-				@include border-radius($radius1 $radius1 0 0);
-			}
+			> a, > a:link, > a:visited { @include border-radius($radius1 $radius1 0 0); }
 
 			> a:hover, &.active > a, &.active > a:link {
 				background: $White;
@@ -68,10 +62,9 @@
 
 	/*==========  Tabs content  ==========*/
 	.tabs-content {
+		@include cf;
 		display: block;
 		margin: 0;
-
-		@include cf;
 
 		> li, > div { display: none; height: 1%; overflow: auto; }
 		> li.active, > div.active { display: block; }

@@ -4,7 +4,7 @@
 	border-color: $border-color;
 	color: $color;
 
-	a { color: $color; }
+	a, a:link { color: $color; }
 }
 
 @if $useObjects == true and $useAlerts == true {
@@ -17,15 +17,15 @@
 	.status, .success {
 		background: {
 			color: $WhiteSmoke;
-			position: 4px 1em;
 			repeat: no-repeat;
+			position: 4px 1em;
 		}
 		border: 1px solid $LightGray;
 		color: $Gray;
 		margin-bottom: #{$baseUnit1 * 5};
 		padding: #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 *8};
 
-		a { background: none; margin: 0; padding: 0; }
+		a, a:link { background: none; margin: 0; padding: 0; }
 	}
 
 

@@ -1,24 +1,27 @@
 @mixin field-status($bg, $border, $color) {
 	label { color: $color; }
 
-	input:not( [type="button"] ):not( [type="reset"] ):not( [type="submit"] ), // target all inputs but buttons
-	select,
-	textarea {
+	%field-status {
 		background: $bg;
 		border-color:$border;
 		color: $color;
 	}
+
+	// Select all form elements except buttons
+	@include form-text()    { @extend %field-status; }
+	@include form-options() { @extend %field-status; }
 }
 
 @if $useHelpers == true and $useFormsHelpers == true {
 	/*==========  $Forms Helpers  ==========*/
 	/*==========  Wrappers  ==========*/
+	.form-field { margin-bottom: #{$baseUnit1 * 3}; }
+
 	.form-actions {
+		@include cf;
 		float: none;
 		margin-bottom: #{$baseUnit1 * 5};
 		width: auto;
-
-		@include cf;
 	}
 
 	.control-group {
@@ -36,7 +39,6 @@
 	}
 
 	/*==========  Form Fields  ==========*/
-
 	.field-error   { @include field-status( $Snow,         $Pink,          $Crimson ); }
 	.field-info    { @include field-status( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
 	.field-notice  { @include field-status( $LemonChiffon, $Gold,          $GoldenRod ); }
@@ -55,21 +57,21 @@
 			padding: $baseUnit1 #{$baseUnit1 * 3};
 
 			&:last-child {
+				@include border-radius(0 $radius1 $radius1 0);
 				border-left-width: 0;
 				border-right-width: 1px;
-				@include border-radius(0 $radius1 $radius1 0);
 			}
 		}
 
 		input,
 		select,
 		button {
+			@include border-radius(0);
 			clear: none;
 			float: left;
 			margin: 0;
 			position: relative;
 			width: auto;
-			@include border-radius(0);
 
 			&:first-child { @include border-radius($radius1 0 0 $radius1); }
 		}
@@ -87,8 +89,8 @@
 
 	.field-suffix {
 		.label {
-			border-right-width: 1px;
 			@include border-radius(0 $radius1 $radius1 0);
+			border-right-width: 1px;
 		}
 
 		input,
@@ -100,12 +102,12 @@
 
 	.field-prefix.field-suffix {
 		.label {
-			border-right-width: 0;
 			@include border-radius($radius1 0 0 $radius1);
+			border-right-width: 0;
 
 			&:last-child {
-				border-right-width: 1px;
 				@include border-radius(0 $radius1 $radius1 0);
+				border-right-width: 1px;
 			}
 		}
 
@@ -114,9 +116,7 @@
 		button {
 			@include border-radius(0);
 
-			&:last-child {
-				@include border-radius(0 $radius1 $radius1 0);
-			}
+			&:last-child { @include border-radius(0 $radius1 $radius1 0); }
 		}
 	}
 

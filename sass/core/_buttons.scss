@@ -1,12 +1,9 @@
 @if $useCore == true and $styleButtons == true {
 	/*==========  $Buttons  ==========*/
-	@include button() {
-		@if $legacySupport == true {
-			background: $LightGray url(../images/gradient-bg.png) repeat-x left top;
-		}
-		@include default_gradient();
+	@include button('normal') {
+		@if $legacySupport == true { @include legacy-bg($LightGray); }
+		@include default-gradient();
 		@include border-radius($radius1);
-
 		border: 1px solid $Silver {
 			bottom-color: $DarkGray;
 		}
@@ -18,72 +15,61 @@
 		}
 		line-height: 100%;
 		padding: #{$baseUnit1 * 2 - 1} #{$baseUnit1 * 3}; /*! For links */
-		text: {
-			decoration: none;
-		};
+		text-decoration: none;
 		white-space: nowrap;
 		word-wrap: normal;
 
 		/* IE7 padding bugfix */
 		overflow: visible;
 		width: auto;
-
-		// Standard button
-		&:focus {
-			outline-width: thin;
-			outline-style: auto;
-		}
-
-		 &:focus, &:hover {
-			@if $legacySupport == true {
-				background-position: 0 -292px;
-			}
-			@include default_gradient($GhostWhite, $Silver);
-
-			color: $DimGray;
-			outline-color: $brand-main;
-		}
-
-		&:active {
-			@if $legacySupport == true {
-				background-position: 0 bottom;
-			}
-			@include default_gradient($LightGray, $GhostWhite);
-			@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $DarkGray, 0 1px 0 $WhiteSmoke);
-
-			border-color: $Gray $DarkGray $Silver;
-			color: $Gray;
-
-		}
-
-		// Disabled button
-		&[disabled], &[disabled]:hover, &[disabled]:active, &.disabled {
-			@include single-box-shadow(none);
-			background: $LightGray;
-			border: 1px solid $Silver;
-			color: $Gray;
-			cursor: default;
-		}
 	}
 
+	@include button('focus') {
+		@if $legacySupport == true { background-position: 0 -292px; }
+		@include default-gradient($GhostWhite, $Silver);
+		color: $DimGray;
+		outline: thin auto $brand-main;
+	}
+
+	@include button('hover') {
+		@if $legacySupport == true { background-position: 0 -292px; }
+		@include default-gradient($GhostWhite, $Silver);
+		color: $DimGray;
+		outline-color: $brand-main;
+	}
+
+	@include button('active') {
+		@if $legacySupport == true { background-position: 0 bottom; }
+		@include default-gradient($LightGray, $GhostWhite);
+		@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $DarkGray, 0 1px 0 $WhiteSmoke);
+		border-color: $Gray $DarkGray $Silver;
+		color: $Gray;
+	}
+
+	@include button('disabled') {
+		@include single-box-shadow(none);
+		background: $LightGray;
+		border: 1px solid $Silver;
+		color: $Gray;
+		cursor: default;
+	}
+
+	// input[type=color] is considered a button due to it's appearance
 	input[type=color] {
 		height: 25px;
 		width: 25px;
 	}
 
-	// visited state, for links only
-	.btn:visited, .button:visited { color: $DimGray; }
-
 	/*! Fixes a NASTY bug in Firefox where input's line-height does not work */
 	@-moz-document url-prefix() {
-		input[type="button"],
-		input[type="submit"],
-		input[type="reset"] {
+		input[type=button],
+		input[type=submit],
+		input[type=reset] {
 			height: 1.9em;
 		}
 	}
 
-	/*! Removes box-model related styles from images inside buttons */
+	/*! Removes box-model-related styles from images inside buttons */
 	button img,
 	.btn img,
 	.button img {

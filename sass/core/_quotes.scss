@@ -26,11 +26,11 @@
 		}
 
 		&.styled {
+			@include border-radius($radius2);
 			background: $WhiteSmoke;
 			border: 0;
 			color: $DimGray;
 			padding: #{$baseUnit1 * 6} 0;
-			@include border-radius($radius2);
 
 			&:before {
 				color: $Silver;

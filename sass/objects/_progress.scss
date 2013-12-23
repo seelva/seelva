@@ -1,8 +1,6 @@
 @mixin progress_colorize($bg, $percent: 20%) {
-	@if $legacySupport == true {
-		background-color: lighten( $bg, $percent );
-	}
-	@include default_gradient( lighten($bg, $percent), $bg );
+	@if $legacySupport == true { background-color: lighten( $bg, $percent ); }
+	@include default-gradient( lighten($bg, $percent), $bg );
 }
 
 @if $useObjects == true and $useProgress == true {
@@ -12,6 +10,8 @@
 	.progressbar-info,
 	.progressbar-notice,
 	.progressbar-success {
+		@include border-radius($radius3);
+		@include box-sizing(border-box);
 		background: $GhostWhite;
 		border: 1px solid $Silver;
 		height: #{$baseUnit1 * 7};
@@ -19,18 +19,12 @@
 		overflow: hidden;
 		position: relative;
 
-		@include border-radius($radius3);
-		@include box-sizing(border-box);
-
 		.progress-value {
-			@if $legacySupport == true {
-				background: $Silver url(../images/gradient-bg.png) repeat-x left -12px;
-			}
-			@include default_gradient($WhiteSmoke, $Silver);
-
+			@include border-radius($radius3);
+			@if $legacySupport == true { @include legacy-bg($Silver, '-12px'); }
+			@include default-gradient($WhiteSmoke, $Silver);
 			float: left;
 			height: #{$baseUnit1 * 7 - 1};
-			@include border-radius($radius3);
 		}
 
 		.progress-text {
@@ -41,9 +35,7 @@
 			}
 			left: 0;
 			position: absolute;
-			text: {
-				align: center;
-			}
+			text-align: center;
 			top: 0;
 			width: 100%;
 		}

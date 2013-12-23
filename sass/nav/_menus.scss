@@ -3,10 +3,8 @@
 	.menu-horizontal, .menu-vertical {
 		> li {
 			> a, > a:link, > a:visited {
-				@if $legacySupport == true {
-					background: $Silver url(../images/gradient-bg.png) repeat-x left top;
-				}
-				@include default_gradient($GhostWhite, $Silver);
+				@if $legacySupport == true { @include legacy-bg($Silver); }
+				@include default-gradient($GhostWhite, $Silver);
 
 				color: $Black;
 				padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
@@ -19,7 +17,7 @@
 						position: left -15px;
 					}
 				}
-				@include default_gradient($DarkGray, $Gray);
+				@include default-gradient($DarkGray, $Gray);
 
 				color: $White;
 			}

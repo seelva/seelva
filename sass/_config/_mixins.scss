@@ -1,3 +1,4 @@
+/*==========  $Common patterns  ==========*/
 // Image replacement
 @mixin imgreplace {
 	display: block;
@@ -25,11 +26,6 @@
 	margin-right: 0;
 }
 
-// Creates a vertical gradient
-@mixin default_gradient($start: $GhostWhite, $stop: $LightGray) {
-	@include background-image(linear-gradient($start, $stop));
-}
-
 // Visually truncate text from an elment
 @mixin truncate($truncation-boundary) {
     max-width: $truncation-boundary;
@@ -38,17 +34,72 @@
     white-space: nowrap;
 }
 
-// Apply styles to all buttons
-@mixin button() {
-	input[type=button],
-	input[type=submit],
-	input[type=reset],
-	input[type=color],
-	button,
-	button[type],
-	.btn, .btn:link,
-	.button, .button:link {
-		@content;
+// /*==========  $Butons and forms  ==========*/
+// Select all buttons
+@mixin button($state: 'normal') {
+	@if $state == 'normal' {
+		input[type=button],
+		input[type=submit],
+		input[type=reset],
+		input[type=color],
+		button,
+		button[type],
+		.btn, .btn:link, .btn:visited,
+		.button, .button:link, .button {
+			@content;
+		}
+	}
+	@else if $state == 'focus' {
+		input[type=button]:focus,
+		input[type=submit]:focus,
+		input[type=reset]:focus,
+		input[type=color]:focus,
+		button:focus,
+		button[type]:focus,
+		.btn:focus,
+		.button:focus {
+			@content;
+		}
+	}
+	@else if $state == 'hover' {
+		input[type=button]:hover,
+		input[type=submit]:hover,
+		input[type=reset]:hover,
+		input[type=color]:hover,
+		button:hover,
+		button[type]:hover,
+		.btn:hover,
+		.button:hover {
+			@content;
+		}
+	}
+	@else if $state == 'active' {
+		input[type=button]:active,
+		input[type=submit]:active,
+		input[type=reset]:active,
+		input[type=color]:active,
+		button:active,
+		button[type]:active,
+		.btn:active,
+		.button:active {
+			@content;
+		}
+	}
+	@else if $state == 'disabled' {
+		input[type=button][disabled],
+		input[type=submit][disabled],
+		input[type=reset][disabled],
+		input[type=color][disabled],
+		button[disabled],
+		button[type][disabled],
+		.btn.disabled,
+		.button.disabled {
+			&,
+			&:hover,
+			&:active {
+				@content;
+			}
+		}
 	}
 }
 
@@ -83,14 +134,12 @@
 	}
 }
 
+// /*==========  $Media-queries  ==========*/
 // Breakpoints
-$lap-start:         481px!default;
-$desk-start:        960px!default;
-$desk-wide-start:   1200px!default;
-$palm-end:          $lap-start - 1px;
-$lap-end:           $desk-start - 1px;
+$palm-end: $lap-start - 1px;
+$lap-end:  $desk-start - 1px;
 
-@mixin media-query($media-query){
+@mixin mq($media-query){
     @if $media-query == palm{
         @media only screen and (max-width:$palm-end) { @content; }
     }
@@ -114,4 +163,24 @@ $lap-end:           $desk-start - 1px;
     @if $media-query == desk-wide{
         @media only screen and (min-width: $desk-wide-start) { @content; }
     }
+}
+
+/*==========  $Other  ==========*/
+// Create a vendor prefixer
+@mixin vendor($property, $value...){
+  -webkit-#{$property}:$value;
+     -moz-#{$property}:$value;
+      -ms-#{$property}:$value;
+       -o-#{$property}:$value;
+          #{$property}:$value;
+}
+
+// Creates a vertical gradient
+@mixin default-gradient($start: $GhostWhite, $stop: $LightGray) {
+	@include background-image(linear-gradient($start, $stop));
+}
+
+// Creates a fallback background for legacy browsers
+@mixin legacy-bg($color: $WhiteSmoke, $posY: 'top') {
+	background: $color url(../images/gradient-bg.png) repeat-x left $posY;
 }

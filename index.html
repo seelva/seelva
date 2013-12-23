@@ -1,14 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
 
-<head profile="http://gmpg.org/xfn/11">
+<head>
 	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-	<meta http-equiv="Content-Type"
-		  content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8" />
 	<meta name="resource-type"
 		  content="document" />
 	<meta name="revisit-after"
@@ -49,7 +48,7 @@
 
 	<title>Demo - seelva CSS / (X)HTML Framework</title>
 
-	<link rel="stylesheet" type="text/css" href="css/master.css" />
+	<link rel="stylesheet" href="css/master.css" />
 
 	<!-- Register the new HTML5 tags in older IE versions -->
 	<!--[if lt IE 9]>
@@ -59,12 +58,16 @@
 </head>
 
 <body class="frontpage front">
+	<!-- When using legacy IE browsers, suggest user to use a moder one -->
+	<!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 	<div id="skip-links">
 		<a id="skiplink" href="#main-content">Skip to main content (Press Enter)</a>
 	</div>
 	<div id="outer">
 		<div id="wrapper">
-			<div id="header" class="section">
+			<header id="header" class="section">
 				<div class="holder">
 					<div class="branding">
 						<div id="logo">
@@ -75,24 +78,16 @@
 						<div id="slogan">CSS / (x)HTML Framework</div>
 					</div>
 				</div>
-			</div>
+			</header>
 
-			<div id="primary" class="section">
+			<section id="primary" class="section">
 				<div class="holder">
 
 				</div>
-			</div>
+			</section>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/custom.scripts.js"></script>
-
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 7 ]>
-		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
-
+	<script src="js/custom.scripts.js"></script>
 </body>
 </html>

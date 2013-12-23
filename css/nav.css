@@ -1,3 +1,8 @@
+/*=================================================
+=            $seelva default variables            =
+=================================================*/
+/*==========  $Common patterns  ==========*/
+/*==========  $Other  ==========*/
 /*===================================
 =            $Navigation            =
 ===================================*/
@@ -24,7 +29,7 @@
 .tabs > li > a:focus, .tabs-vertical > li > a:focus, .menu-horizontal > li > a:focus, .menu-vertical > li > a:focus, .breadcrumb > li > a:focus, .pagination > li > a:focus, .pagination ul > li > a:focus, .nav-direction > li > a:focus, .nav-direction ul > li > a:focus { outline: thin auto #4e9a06; }
 
 /*==========  $Nav Tabs  ==========*/
-.tabs, .tabs-vertical { overflow: visible; *zoom: 1; }
+.tabs, .tabs-vertical { *zoom: 1; overflow: visible; }
 .tabs:before, .tabs:after, .tabs-vertical:before, .tabs-vertical:after { content: " "; display: table; }
 .tabs:after, .tabs-vertical:after { clear: both; }
 .tabs > li, .tabs-vertical > li { position: relative; }
@@ -43,7 +48,7 @@
 .tabs-vertical > li > a:hover, .tabs-vertical > li.active > a, .tabs-vertical > li.active > a:link { background: white; border: 1px solid #e5e5e5; border-right-color: transparent; }
 
 /*==========  Tabs content  ==========*/
-.tabs-content { display: block; margin: 0; *zoom: 1; }
+.tabs-content { *zoom: 1; display: block; margin: 0; }
 .tabs-content:before, .tabs-content:after { content: " "; display: table; }
 .tabs-content:after { clear: both; }
 .tabs-content > li, .tabs-content > div { display: none; height: 1%; overflow: auto; }
@@ -79,9 +84,9 @@
 .nav-direction li:last-child, .nav-direction .next, .nav-direction .next a, .nav-direction .prev a:link { float: right; }
 
 /*==========  $Nav Breadcrumbs  ==========*/
-.breadcrumb { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #f5f5f5)); background-image: -webkit-linear-gradient(#fafafa, #f5f5f5); background-image: -moz-linear-gradient(#fafafa, #f5f5f5); background-image: -o-linear-gradient(#fafafa, #f5f5f5); background-image: linear-gradient(#fafafa, #f5f5f5); border: 1px solid #dadada; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+.breadcrumb { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #f5f5f5)); background-image: -webkit-linear-gradient(#fafafa, #f5f5f5); background-image: -moz-linear-gradient(#fafafa, #f5f5f5); background-image: -o-linear-gradient(#fafafa, #f5f5f5); background-image: linear-gradient(#fafafa, #f5f5f5); -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #dadada; }
 .breadcrumb span { display: block; }
-.breadcrumb > a { display: inline-block; }
+.breadcrumb > a, .breadcrumb > a:link { display: inline-block; }
 .breadcrumb a, .breadcrumb a:link, .breadcrumb a:visited, .breadcrumb span { padding: 6px 0 6px 9px; }
 .breadcrumb a:hover, .breadcrumb .active a, .breadcrumb .active a:link { color: black; }
 .breadcrumb .active a:after, .breadcrumb .active a:link:after { content: ""; }

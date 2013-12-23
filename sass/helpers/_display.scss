@@ -1,7 +1,12 @@
 @if $useHelpers == true and $useDisplay == true {
 	/*==========  $Utils Display  ==========*/
 	/* Screen readers can see it */
-	.invisible { clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); position: absolute !important; /* IE6, IE7 */ }
+	.invisible {
+		clip: rect(1px 1px 1px 1px);
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute !important; /* IE6, IE7 */
+	}
+	
 	 /* Screen readers can not see it */
-	.hidden    { display: none; }
+	.hidden { display: none; }
 }

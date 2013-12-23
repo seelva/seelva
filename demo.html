@@ -1,15 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
 
-<!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 7 ]>	<html class="ie7" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 8 ]>	<html class="ie8" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if IE 9 ]>	<html class="ie9" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en"> <!--<![endif]-->
-
-<head profile="http://gmpg.org/xfn/11">
+<head>
 	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-	<meta http-equiv="Content-Type"
-		  content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8" />
 	<meta name="resource-type"
 		  content="document" />
 	<meta name="revisit-after"
@@ -31,7 +29,7 @@
 	<meta name="copyright"
 		  content="" />
 	<meta name="author"
-		  content="Hern&aacute;n Silva for C&oacute;digoSelecto" />
+		  content="Hern&aacute;n Silva" />
 	<meta name="language"
 		  content="English" />
 	<meta name="doc-type"
@@ -50,7 +48,7 @@
 
 	<title>Demo - seelva CSS / (X)HTML Framework</title>
 
-	<link rel="stylesheet" type="text/css" href="css/master.css" />
+	<link rel="stylesheet" href="css/master.css" />
 
 	<style type="text/css">
 		/* Styles that apply to this page only, they are not part of seelva */
@@ -67,15 +65,24 @@
 		}
 	</style>
 
+	<!-- Register the new HTML5 tags in older IE versions -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script>window.shim || document.write('<script src="js/libs/html5.js"><\/script>')</script>
+	<![endif]-->
 </head>
 
 <body class="inside page">
+	<!-- When using legacy IE browsers, suggest user to use a moder one -->
+	<!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 	<div id="skip-links">
 		<a id="skiplink" href="#main-content">Skip to main content (Press Enter)</a>
 	</div>
 	<div id="outer">
 		<div id="wrapper">
-			<div id="header" class="section">
+			<header id="header" class="section">
 				<div class="holder">
 					<div class="branding">
 						<div id="logo">
@@ -85,7 +92,7 @@
 						<h1 class="page-title">Demo page</h1>
 					</div>
 				</div>
-			</div>
+			</header>
 
 			<div id="primary">
 				<div class="holder">
@@ -520,23 +527,23 @@
 						<form action="#" method="post">
 							<fieldset>
 								<legend>Fieldset with legend</legend>
-									<div>
+									<div class="form-field">
 										<label for="textfield">Textfield <em>*</em></label>
 										<input id="textfield" type="text" name="textfield" value="" />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="textfield_readonly">Textfield readonly</label>
 										<input id="textfield_readonly" type="text" name="textfield_readonly" value="Read only textfield" readonly />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="textfield_disabled">Textfield disabled</label>
 										<input id="textfield_disabled" type="text" name="textfield_disabled" value="Disabled textfield" disabled />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="passwd">Password</label>
 										<input id="passwd" type="password" name="passwd" value="password" />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="select">Select</label>
 										<select name="select" id="select">
 											<optgroup label="Select your gender&hellip;">
@@ -545,23 +552,23 @@
 											</optgroup>
 										</select>
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="file">File</label>
 										<input id="file" type="file" name="file" />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="number">Number input</label>
 										<input type="number" id="number" min="0" max="10" value="5" />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="date">Date input</label>
 										<input type="date" id="date" value="1987-07-29" />
 									</div>
-									<div>
+									<div class="form-field">
 										<label for="textarea">Textarea</label>
 										<textarea id="textarea" name="textarea" cols="30" rows="4"></textarea>
 									</div>
-									<div>
+									<div class="form-field">
 										<span class="label">Checkboxes</span>
 										<div class="control-group">
 											<input name="check1" id="approved" value="1" type="checkbox" />	<label for="approved">Approved</label>
@@ -569,7 +576,7 @@
 											<input name="check1" id="actives" value="1" type="checkbox" /> <label for="actives">Active</label>
 										</div>
 									</div>
-									<div>
+									<div class="form-field">
 										<span class="label">Radio buttons</span>
 										<div class="control-group">
 											<input name="radio1" id="radio1" value="1" type="radio" /> <label for="radio1">Option 1</label>
@@ -577,7 +584,7 @@
 											<input name="radio1" id="radio3" value="1" type="radio" /> <label for="radio3">Option 3</label>
 										</div>
 									</div>
-									<div>
+									<div class="form-field">
 										<span class="label">Checkboxes list</span>
 										<div class="control-group">
 											<input name="check2" id="check1" value="approved" type="checkbox" /> <label for="check1">Some Option 1</label> <br />
@@ -1251,14 +1258,6 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/custom.scripts.js"></script>
-
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 7 ]>
-		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
-
+	<script src="js/custom.scripts.js"></script>
 </body>
 </html>

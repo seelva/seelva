@@ -46,16 +46,6 @@
 		li { margin: 0 0 0 #{$baseUnit1 * 3}; }
 	}
 
-	/* Values not allowed in CSS2.1, re-allowed in CSS3 */
-	/*
-	ul.hebrew 		{ list-style-type: hebrew; }
-	ul.cideo 		{ list-style-type: cjk-ideographic; }
-	ul.hira 		{ list-style-type: hiragana; }
-	ul.kata 		{ list-style-type: katakana; }
-	ul.hira-iroha 	{ list-style-type: hiragana-iroha; }
-	ul.kata-iroha 	{ list-style-type: katakana-iroha; }
-	*/
-
 	dl {
 		margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
 		padding: 0;

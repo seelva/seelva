@@ -9,8 +9,8 @@
   }
 
   .holder {
+  	@include cf;
     margin: 0 auto;
-    overflow: hidden;
     padding: #{ $gutterWidth / 2 }px;
     width: #{$contentWidth}px;
   }
@@ -85,7 +85,7 @@
 
 
 	@each $size in $devices {
-		@include media-query($size) {
+		@include mq($size) {
 		  .#{$size}-full-width    { width: 100.0%; clear: both; }
 
 		  .#{$size}-half-width,

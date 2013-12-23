@@ -6,8 +6,8 @@
 	**/
 
 	.media {
-	    display: block;
 	    @include cf;
+	    display: block;
 	}
 
 	.media-img {
@@ -29,8 +29,6 @@
 	.media-body {
 	    overflow: hidden;
 
-		&, & > :last-child {
-		    margin-bottom: 0;
-		}
+		&, & > :last-child { margin-bottom: 0; }
 	}
 }

@@ -1,8 +1,6 @@
 @if $useObjects == true and $useStats == true {
 	/*==========  $Object - Stat  ==========*/
-	.stat-group {
-	    @include cf;
-	}
+	.stat-group { @include cf; }
 
 	.stat { display: inline-block; }
 
