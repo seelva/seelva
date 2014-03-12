@@ -1,8 +1,25 @@
 /*==========  $Common patterns  ==========*/
-// Image replacement
+// Tradition image replacement
 @mixin imgreplace {
-	display: block;
+	display: inline-block;
 	text-indent: -5000em;
+}
+
+// Modern image replacement technique from h5bp
+// https://github.com/h5bp/html5-boilerplate/blob/081f8aa0decdc1d2d561ff6dd23abaeff4bbf439/css/main.css
+@mixin ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+	/* IE 6/7 fallback */
+	*text-indent: -9999px;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 150%;
+	}
 }
 
 // Micro clearfix
@@ -26,12 +43,19 @@
 	margin-right: 0;
 }
 
+// Hides and element but screen readers can still see it
+@mixin invisible() {
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important; /* IE6, IE7 */
+}
+
 // Visually truncate text from an elment
 @mixin truncate($truncation-boundary) {
-    max-width: $truncation-boundary;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	max-width: $truncation-boundary;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 // /*==========  $Butons and forms  ==========*/
@@ -140,39 +164,39 @@ $palm-end: $lap-start - 1px;
 $lap-end:  $desk-start - 1px;
 
 @mixin mq($media-query){
-    @if $media-query == palm{
-        @media only screen and (max-width:$palm-end) { @content; }
-    }
+	@if $media-query == palm{
+		@media only screen and (max-width:$palm-end) { @content; }
+	}
 
-    @if $media-query == lap{
-        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
-    }
+	@if $media-query == lap{
+		@media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+	}
 
-    @if $media-query == lap-and-up{
-        @media only screen and (min-width:$lap-start) { @content; }
-    }
+	@if $media-query == lap-and-up{
+		@media only screen and (min-width:$lap-start) { @content; }
+	}
 
-    @if $media-query == portable{
-        @media only screen and (max-width:$lap-end) { @content; }
-    }
+	@if $media-query == portable{
+		@media only screen and (max-width:$lap-end) { @content; }
+	}
 
-    @if $media-query == desk{
-        @media only screen and (min-width:$desk-start) { @content; }
-    }
+	@if $media-query == desk{
+		@media only screen and (min-width:$desk-start) { @content; }
+	}
 
-    @if $media-query == desk-wide{
-        @media only screen and (min-width: $desk-wide-start) { @content; }
-    }
+	@if $media-query == desk-wide{
+		@media only screen and (min-width: $desk-wide-start) { @content; }
+	}
 }
 
 /*==========  $Other  ==========*/
 // Create a vendor prefixer
 @mixin vendor($property, $value...){
   -webkit-#{$property}:$value;
-     -moz-#{$property}:$value;
-      -ms-#{$property}:$value;
-       -o-#{$property}:$value;
-          #{$property}:$value;
+	 -moz-#{$property}:$value;
+	  -ms-#{$property}:$value;
+	   -o-#{$property}:$value;
+		  #{$property}:$value;
 }
 
 // Creates a vertical gradient
