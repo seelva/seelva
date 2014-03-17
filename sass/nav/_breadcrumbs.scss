@@ -2,9 +2,9 @@
 	/*==========  $Nav Breadcrumbs  ==========*/
 	.breadcrumb {
 		@if $legacySupport == true { @include legacy-bg(); }
-		@include default-gradient($GhostWhite, $WhiteSmoke);
+		@include default-gradient($c-ghostwhite, $c-whitesmoke);
 		@include border-radius($radius1);
-		border: 1px solid $Silver;
+		border: 1px solid $c-silver;
 
 		span { display: block; }
 
@@ -12,7 +12,7 @@
 
 		a, a:link, a:visited, span { padding: #{$baseUnit1 * 2} 0 #{$baseUnit1 * 2} #{$baseUnit1 * 3}; }
 
-		a:hover, .active a, .active a:link { color: $Black; }
+		a:hover, .active a, .active a:link { color: $c-black; }
 
 		.active a, .active a:link {
 			&:after { content: ""; }

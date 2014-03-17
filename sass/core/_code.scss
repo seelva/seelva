@@ -1,7 +1,7 @@
 @if $useCore == true and $styleCode == true {
 	/*==========  $Core Code  ==========*/
 	code, kbd, pre {
-		background: $GhostWhite;
+		background: $c-ghostwhite;
 		font-family: $fstack-code;
 		_font-family: $fstack-code; // Hack for IE 6
 	}
@@ -13,13 +13,13 @@
 		white-space: pre;
 	}
 
-	code, pre { border: 1px solid $Gainsboro; }
+	code, pre { border: 1px solid $c-gainsboro; }
 
 	kbd, pre { @include border-radius($radius1); }
 
 	kbd {
-		@include box-shadow($Silver 0 2px 0, $DimGray 0 2px 2px);
-		color: $DimGray;
+		@include box-shadow($c-silver 0 2px 0, $c-dimgray 0 2px 2px);
+		color: $c-dimgray;
 		font-weight: bold;
 		text-transform: capitalize;
 	}

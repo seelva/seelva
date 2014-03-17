@@ -11,14 +11,14 @@
 
 	fieldset {
 //		border: 0;
-		border-color: $Silver;
+		border-color: $c-silver;
 		margin: 0 0 #{$baseUnit1 * 5} 0;
 //		padding: 0;
 
 	}
 
 	legend {
-//		border-bottom: 1px solid $WhiteSmoke;
+//		border-bottom: 1px solid $c-whitesmoke;
 		font: {
 			size: 128%;
 			weight: normal;
@@ -33,16 +33,16 @@
 		line-height: 130%;
 		padding: #{$baseUnit1 + 1} 0;
 
-		em, .required { color: $Crimson; }
+		em, .required { color: $c-crimson; }
 	}
 
 	/*==========  $Forms Controls  ==========*/
 	@include form-text() {
-		@if $legacySupport == true { background: $White url(../images/txt-bg.png) repeat-x left top; }
-		@include box-shadow(0 2px 6px $Gainsboro inset);
+		@if $legacySupport == true { background: $c-white url(../images/txt-bg.png) repeat-x left top; }
+		@include box-shadow(0 2px 6px $c-gainsboro inset);
 		@include box-sizing(border-box);
 		@include border-radius($radius1);
-		border: 1px solid $Silver {
+		border: 1px solid $c-silver {
 			top-width: 2px;
 		}
 		font-family: $fstack-forms;
@@ -50,23 +50,23 @@
 		width: 100%;
 
 		&:focus {
-			border-color: $brand-main;
-			outline-color: $brand-main;
+			border-color: $c-brand-main;
+			outline-color: $c-brand-main;
 		}
 
-		&[readonly] { background-color: $GhostWhite; }
+		&[readonly] { background-color: $c-ghostwhite; }
 
 		&[disabled] {
 			@include box-shadow(none);
-			background: $LightGray;
-			color: $Gray;
+			background: $c-lightgray;
+			color: $c-gray;
 		}
 	}
 
 	@include form-options() {
 		cursor: pointer;
 
-		&:focus { outline-color: $brand-main; }
+		&:focus { outline-color: $c-brand-main; }
 
 		+ label { display: inline-block; }
 	}

@@ -76,11 +76,11 @@ $gridType:            "both"!default; // Should the grid be fluid, fixed, or bot
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors
-$brand-main:          $LimeGreen!default;
-$brand-error:         $Crimson!default;
-$brand-info:          $SteelBlue!default;
-$brand-notice:        $GoldenRod!default;
-$brand-success:       $LimeGreen!default;
+$c-brand-main:        $c-limegreen!default;
+$c-brand-error:       $c-crimson!default;
+$c-brand-info:        $c-steelblue!default;
+$c-brand-notice:      $c-goldenrod!default;
+$c-brand-success:     $c-limegreen!default;
 
 // /*=========  $Font config  =========*/
 // Default stacks
@@ -96,7 +96,7 @@ $fstack-forms:        $fstack-helvetica!default;
 $fstack-buttons:      $fstack-helvetica!default;
 
 // /*=======  $Text properties  =======*/
-$textColor:           $Black!default;
+$textColor:           $c-black!default;
 
 $textSize:            0.875em!default;
 $textLineHeight:      1.5em!default;

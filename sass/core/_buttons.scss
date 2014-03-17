@@ -1,13 +1,13 @@
 @if $useCore == true and $styleButtons == true {
 	/*==========  $Buttons  ==========*/
 	@include button('normal') {
-		@if $legacySupport == true { @include legacy-bg($LightGray); }
+		@if $legacySupport == true { @include legacy-bg($c-lightgray); }
 		@include default-gradient();
 		@include border-radius($radius1);
-		border: 1px solid $Silver {
-			bottom-color: $DarkGray;
+		border: 1px solid $c-silver {
+			bottom-color: $c-darkgray;
 		}
-		color: $Gray;
+		color: $c-gray;
 		display: inline-block;
 		font: {
 			family: $fstack-buttons;
@@ -26,31 +26,31 @@
 
 	@include button('focus') {
 		@if $legacySupport == true { background-position: 0 -292px; }
-		@include default-gradient($GhostWhite, $Silver);
-		color: $DimGray;
-		outline: thin auto $brand-main;
+		@include default-gradient($c-ghostwhite, $c-silver);
+		color: $c-dimgray;
+		outline: thin auto $c-brand-main;
 	}
 
 	@include button('hover') {
 		@if $legacySupport == true { background-position: 0 -292px; }
-		@include default-gradient($GhostWhite, $Silver);
-		color: $DimGray;
-		outline-color: $brand-main;
+		@include default-gradient($c-ghostwhite, $c-silver);
+		color: $c-dimgray;
+		outline-color: $c-brand-main;
 	}
 
 	@include button('active') {
 		@if $legacySupport == true { background-position: 0 bottom; }
-		@include default-gradient($LightGray, $GhostWhite);
-		@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $DarkGray, 0 1px 0 $WhiteSmoke);
-		border-color: $Gray $DarkGray $Silver;
-		color: $Gray;
+		@include default-gradient($c-lightgray, $c-ghostwhite);
+		@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $c-darkgray, 0 1px 0 $c-whitesmoke);
+		border-color: $c-gray $c-darkgray $c-silver;
+		color: $c-gray;
 	}
 
 	@include button('disabled') {
 		@include single-box-shadow(none);
-		background: $LightGray;
-		border: 1px solid $Silver;
-		color: $Gray;
+		background: $c-lightgray;
+		border: 1px solid $c-silver;
+		color: $c-gray;
 		cursor: default;
 	}
 

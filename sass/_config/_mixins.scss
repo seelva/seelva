@@ -200,11 +200,11 @@ $lap-end:  $desk-start - 1px;
 }
 
 // Creates a vertical gradient
-@mixin default-gradient($start: $GhostWhite, $stop: $LightGray) {
+@mixin default-gradient($start: $c-ghostwhite, $stop: $c-lightgray) {
 	@include background-image(linear-gradient($start, $stop));
 }
 
 // Creates a fallback background for legacy browsers
-@mixin legacy-bg($color: $WhiteSmoke, $posY: 'top') {
+@mixin legacy-bg($color: $c-whitesmoke, $posY: 'top') {
 	background: $color url(../images/gradient-bg.png) repeat-x left $posY;
 }

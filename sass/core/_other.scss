@@ -2,38 +2,38 @@
 	/*==========  $Core Details/Summary  ==========*/
 	details {
 		@include border-radius($radius1);
-		background: $GhostWhite;
-		border: 1px solid $LightGray;
+		background: $c-ghostwhite;
+		border: 1px solid $c-lightgray;
 
 		summary {
 			@if $legacySupport == true { @include legacy-bg(); }
 			@include default-gradient();
 			@include border-radius($radius1 $radius1 0 0);
-			border-bottom: 1px solid $LightGray;
+			border-bottom: 1px solid $c-lightgray;
 			cursor: pointer;
 			margin: 0;
 			padding: 0 #{$baseUnit1 * 2};
 			text-align: left;
 
 			&:focus {
-				border-color: $brand-main;
-				outline-color: $brand-main;
+				border-color: $c-brand-main;
+				outline-color: $c-brand-main;
 			}
 		}
 
 		> div { padding: #{$baseUnit1 * 2}; }
 
-		&[open] summary { border-color: $Silver; }
+		&[open] summary { border-color: $c-silver; }
 	}
 
 	/*==========  $Core Rulers / line breaks  ==========*/
 	hr {
 		clear: both;
-		color: $Gray;
+		color: $c-gray;
 	}
 
 	br { clear: both; }
 
 	/*==========  $Misc  ==========*/
-	:focus { outline-color: $brand-main; }
+	:focus { outline-color: $c-brand-main; }
 }

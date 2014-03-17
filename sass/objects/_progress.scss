@@ -12,8 +12,8 @@
 	.progressbar-success {
 		@include border-radius($radius3);
 		@include box-sizing(border-box);
-		background: $GhostWhite;
-		border: 1px solid $Silver;
+		background: $c-ghostwhite;
+		border: 1px solid $c-silver;
 		height: #{$baseUnit1 * 7};
 		margin: #{$baseUnit1 * 2} 0;
 		overflow: hidden;
@@ -21,14 +21,14 @@
 
 		.progress-value {
 			@include border-radius($radius3);
-			@if $legacySupport == true { @include legacy-bg($Silver, '-12px'); }
-			@include default-gradient($WhiteSmoke, $Silver);
+			@if $legacySupport == true { @include legacy-bg($c-silver, '-12px'); }
+			@include default-gradient($c-whitesmoke, $c-silver);
 			float: left;
 			height: #{$baseUnit1 * 7 - 1};
 		}
 
 		.progress-text {
-			color: $DimGray;
+			color: $c-dimgray;
 			font: {
 				size: 14px;
 				weight: bold;
@@ -41,8 +41,8 @@
 		}
 	}
 
-	.progressbar-error   .progress-value { @include progress_colorize( $Crimson, 35% ); }
-	.progressbar-info    .progress-value { @include progress_colorize( $DodgerBlue, 35% ); }
-	.progressbar-notice  .progress-value { @include progress_colorize( $Gold ); }
-	.progressbar-success .progress-value { @include progress_colorize( $YellowGreen ); }
+	.progressbar-error   .progress-value { @include progress_colorize( $c-crimson, 35% ); }
+	.progressbar-info    .progress-value { @include progress_colorize( $c-dodgerblue, 35% ); }
+	.progressbar-notice  .progress-value { @include progress_colorize( $c-gold ); }
+	.progressbar-success .progress-value { @include progress_colorize( $c-yellowgreen ); }
 }

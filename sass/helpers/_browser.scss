@@ -1,4 +1,4 @@
-@mixin selection { background: $brand-main; color: $White; text-shadow: none; }
+@mixin selection { background: $c-brand-main; color: $c-white; text-shadow: none; }
 
 @if $useHelpers == true and $useBrowser == true {
 	/*==========  $Resizable elements  ==========*/

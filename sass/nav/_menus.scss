@@ -3,23 +3,23 @@
 	.menu-horizontal, .menu-vertical {
 		> li {
 			> a, > a:link, > a:visited {
-				@if $legacySupport == true { @include legacy-bg($Silver); }
-				@include default-gradient($GhostWhite, $Silver);
+				@if $legacySupport == true { @include legacy-bg($c-silver); }
+				@include default-gradient($c-ghostwhite, $c-silver);
 
-				color: $Black;
+				color: $c-black;
 				padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
 			}
 
 			> a:hover, &.active > a, &.active > a:link {
 				@if $legacySupport == true {
 					background: {
-						color: $Gray;
+						color: $c-gray;
 						position: left -15px;
 					}
 				}
-				@include default-gradient($DarkGray, $Gray);
+				@include default-gradient($c-darkgray, $c-gray);
 
-				color: $White;
+				color: $c-white;
 			}
 		}
 	}
@@ -27,7 +27,7 @@
 	/*==========  menu-Horizontal  ==========*/
 	.menu-horizontal {
 		> li {
-			border-left: 1px solid $LightGray;
+			border-left: 1px solid $c-lightgray;
 			display: inline-block;
 			float: left;
 		}
@@ -36,7 +36,7 @@
 	/*==========  menu-Vertical  ==========*/
 	.menu-vertical {
 		> li {
-			border-bottom: 1px solid $LightGray;
+			border-bottom: 1px solid $c-lightgray;
 			float: none;
 		}
 	}

@@ -150,7 +150,7 @@ hr.clear, hr.clearing { background: transparent; border: 0; clear: both; color: 
 .hidden { display: none; }
 
 /*==========  $Utils Image replacement  ==========*/
-.imgreplace { display: block; text-indent: -5000em; }
+.imgreplace { display: inline-block; text-indent: -5000em; }
 
 /*==========  $Utils Accesibility  ==========*/
 #skip-links { clear: both; list-style: none; margin: 0; position: absolute; text-align: center; width: 100%; }

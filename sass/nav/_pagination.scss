@@ -9,8 +9,8 @@
 		span, li span, a, a:link, a:visited {
 			@if $legacySupport == true { @include legacy-bg(); }
 			@include default-gradient();
-			border: 1px solid $Silver;
-			color: $DimGray;
+			border: 1px solid $c-silver;
+			color: $c-dimgray;
 			display: inline-block;
 			margin: 0;
 			padding: $baseUnit1 #{$baseUnit1 * 3};
@@ -18,9 +18,9 @@
 		}
 
 		.current, .current span, li.active a, li.active a:link, a:hover {
-			@if $legacySupport == true { background-color: $Silver; }
-			@include default-gradient($Gainsboro, $DarkGray);
-			color: $Black;
+			@if $legacySupport == true { background-color: $c-silver; }
+			@include default-gradient($c-gainsboro, $c-darkgray);
+			color: $c-black;
 			text-decoration: none;
 		}
 	}
@@ -33,8 +33,8 @@
 
 		.disabled {
 			&, span, a, a:link {
-				background: $WhiteSmoke;
-				color: $Silver;
+				background: $c-whitesmoke;
+				color: $c-silver;
 				text-decoration: none;
 			}
 		}

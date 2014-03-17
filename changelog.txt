@@ -11,6 +11,7 @@ New
 
 
 Fixes
+	IMPORTANT: Renamed variables names to keep a consistent naming structure
 	Regresion of webkit-file-button styling, made buttons look wrong in IE, even IE9
 	Moved nav object from nav/main to objects/nav
 	Form divs and paragraphs get no margin by default
@@ -20,7 +21,7 @@ Fixes
 
 Changes
 	Updated html5shim to v3.7.0
-	Updated normalize to v2.1.3
+	Updated normalize to v3.0.0
 
 
 v3.3.1

@@ -39,19 +39,19 @@
 	}
 
 	/*==========  Form Fields  ==========*/
-	.field-error   { @include field-status( $Snow,         $Pink,          $Crimson ); }
-	.field-info    { @include field-status( $LightCyan,    $DarkTurquoise, $SteelBlue ); }
-	.field-notice  { @include field-status( $LemonChiffon, $Gold,          $GoldenRod ); }
-	.field-success { @include field-status( $Beige,        $YellowGreen,   $LimeGreen ); }
+	.field-error   { @include field-status( $c-snow,         $c-pink,          $c-crimson ); }
+	.field-info    { @include field-status( $c-lightcyan,    $c-darkturquoise, $c-steelblue ); }
+	.field-notice  { @include field-status( $c-lemonchiffon, $c-gold,          $c-goldenrod ); }
+	.field-success { @include field-status( $c-beige,        $c-yellowgreen,   $c-limegreen ); }
 
 	.field-prefix, .field-suffix {
 		overflow: hidden; /* Clearfix */
 
 		.label {
-			background: $GhostWhite;
-			border: 1px solid $Silver;
+			background: $c-ghostwhite;
+			border: 1px solid $c-silver;
 			border-right-width: 0;
-			color: $DimGray;
+			color: $c-dimgray;
 			float: left;
 			margin: 0;
 			padding: $baseUnit1 #{$baseUnit1 * 3};

@@ -19,7 +19,7 @@
 
 			> a, > a:link { @include nav-li-a; }
 
-			> a:focus { outline: thin auto $brand-main; }
+			> a:focus { outline: thin auto $c-brand-main; }
 		}
 	}
 }

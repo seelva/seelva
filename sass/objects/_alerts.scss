@@ -16,12 +16,12 @@
 	.notice, .warning,
 	.status, .success {
 		background: {
-			color: $WhiteSmoke;
+			color: $c-whitesmoke;
 			repeat: no-repeat;
 			position: 4px 1em;
 		}
-		border: 1px solid $LightGray;
-		color: $Gray;
+		border: 1px solid $c-lightgray;
+		color: $c-gray;
 		margin-bottom: #{$baseUnit1 * 5};
 		padding: #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 *8};
 
@@ -29,11 +29,11 @@
 	}
 
 
-	.error            { @include alert-config( $LavenderBlush, "cross",       $Pink,          $Crimson ); }
-	.info, .status    { @include alert-config( $LightCyan,     "information", $DarkTurquoise, $SteelBlue ); }
-	.notice, .warning { @include alert-config( $LemonChiffon,  "error",       $Gold,          $GoldenRod ); }
-	.success, .ok     { @include alert-config( $PaleGreen,     "tick",        $YellowGreen,   $OliveDrab ); }
-	.guidelines       { @include alert-config( $Ivory,         "",            $Cornsilk,      $DimGray);
+	.error            { @include alert-config( $c-lavenderblush, "cross",       $c-pink,          $c-crimson ); }
+	.info, .status    { @include alert-config( $c-lightcyan,     "information", $c-darkturquoise, $c-steelblue ); }
+	.notice, .warning { @include alert-config( $c-lemonchiffon,  "error",       $c-gold,          $c-goldenrod ); }
+	.success, .ok     { @include alert-config( $c-palegreen,     "tick",        $c-yellowgreen,   $c-olivedrab ); }
+	.guidelines       { @include alert-config( $c-ivory,         "",            $c-cornsilk,      $c-dimgray);
 
 		line-height: 130%;
 		margin-top: #{$baseUnit1 * 2};

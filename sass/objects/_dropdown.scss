@@ -3,7 +3,7 @@
 		> a:after, > a:link:after {
 			/* Arrow for dropdown links */
 			border: 4px solid transparent;
-			border-top-color: $Gray;
+			border-top-color: $c-gray;
 			content: " ";
 			display: inline-block;
 			line-height: 100%;
@@ -23,7 +23,7 @@
 
 		.drop-content {
 			@include border-radius( 0 0 $radius2 $radius2 );
-			background: $Gainsboro;
+			background: $c-gainsboro;
 			padding: #{$baseUnit1 * 3};
 			width: 230px;
 		}
@@ -37,20 +37,20 @@
 			zoom: 1;
 
 			> li {
-				border-left: 1px solid $WhiteSmoke;
+				border-left: 1px solid $c-whitesmoke;
 				display: block;
 				float: none;
 
 				> a, > a:link, > a:visited {
-					background: $LightGray;
-					color: $Black;
+					background: $c-lightgray;
+					color: $c-black;
 					display: block;
 					padding: #{$baseUnit1 * 2} #{$baseUnit1 * 3};
 					text-decoration: none;
 				}
 				> a:hover, &.active > a, &.active > a:link {
-					background: $Gray;
-					color: $White;
+					background: $c-gray;
+					color: $c-white;
 				}
 			}
 		}
@@ -59,7 +59,7 @@
 			> a:after, > a:link:after {
 				/* Arrow for 2nd+ level dropdown links */
 				border: {
-					left-color: $Gray;
+					left-color: $c-gray;
 					top-color: transparent;
 				}
 			}
@@ -67,7 +67,7 @@
 			&:hover, &.active {
 				> a:after, > a:link:after {
 					border: {
-						left-color: $White;
+						left-color: $c-white;
 						top-color: transparent;
 					}
 				}
@@ -84,7 +84,7 @@
 		}
 
 		&:hover, &.active {
-			> a:after, > a:link:after { border-top-color: $White; }
+			> a:after, > a:link:after { border-top-color: $c-white; }
 		}
 
 		&:hover > ul, ul a:hover ul, &:hover .drop-content { display: block; }
@@ -93,12 +93,12 @@
 
 		&.active, .active {
 			ul li a, ul li a:link {
-				background: $LightGray;
-				color: $Black;
+				background: $c-lightgray;
+				color: $c-black;
 			}
 			ul li a:hover {
-				background: $Gray;
-				color: $White;
+				background: $c-gray;
+				color: $c-white;
 			}
 		}
 	}

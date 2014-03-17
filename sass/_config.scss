@@ -75,12 +75,12 @@ $gridType:            "both"; // Should the grid be fluid, fixed, or both?
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors
-$brand-error:         $Crimson;
-$brand-info:          $SteelBlue;
-$brand-notice:        $GoldenRod;
-$brand-success:       $LimeGreen;
+$c-brand-error:         $c-crimson;
+$c-brand-info:          $c-steelblue;
+$c-brand-notice:        $c-goldenrod;
+$c-brand-success:       $c-limegreen;
 
-$brand-main:          $LimeGreen;
+$c-brand-main:          $c-limegreen;
 
 // /*=========  $Font config  =========*/
 // Default stacks
@@ -96,7 +96,7 @@ $fstack-forms:        $fstack-helvetica;
 $fstack-buttons:      $fstack-helvetica;
 
 // /*=======  $Text properties  =======*/
-$textColor:           $Black;
+$textColor:           $c-black;
 
 $textSize:            0.875em;
 $textLineHeight:      1.5em;

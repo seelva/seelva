@@ -2,11 +2,11 @@
 	/*==========  $Core Text  ==========*/
 	p, address { margin: 0 0 1em 0; }
 
-	mark, .highlight { background: $Gold; }
+	mark, .highlight { background: $c-gold; }
 	
 	acronym, abbr {
 		&[title] {
-			border-bottom: 1px dotted $brand-main;
+			border-bottom: 1px dotted $c-brand-main;
 			cursor: help;
 			letter-spacing: 2px;
 		}

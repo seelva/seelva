@@ -1,10 +1,10 @@
 @if $useCore == true {
 	/*==========  $Core Links  ==========*/
 	a {
-		&, &:link { color: $brand-main; text-decoration: underline; }
-		&:visited { color: darken( $brand-main, 5% ); }
-		&:hover   { color: darken( $brand-main, 10% ); }
-		&:active  { color: darken( $brand-main, 5% ); }
-		&:focus   { color: $brand-main; outline-color: $brand-main; }
+		&, &:link { color: $c-brand-main; text-decoration: underline; }
+		&:visited { color: darken( $c-brand-main, 5% ); }
+		&:hover   { color: darken( $c-brand-main, 10% ); }
+		&:active  { color: darken( $c-brand-main, 5% ); }
+		&:focus   { color: $c-brand-main; outline-color: $c-brand-main; }
 	}
 }

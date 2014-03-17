@@ -29,7 +29,7 @@
     &[class^="suffix"], &[class*=" suffix"] { float: left; }
   }
   /* Useful in fixed-width grids only */
-  .grid-guides { background: $White url(http://griddle.it/#{$contentWidth}-#{$colAmount}-#{$colWidth}?color=edf2c4&text=7b9712) repeat-y center top; }
+  .grid-guides { background: $c-white url(http://griddle.it/#{$contentWidth}-#{$colAmount}-#{$colWidth}?color=edf2c4&text=7b9712) repeat-y center top; }
 
   /* Fix units inside forms */
   form {

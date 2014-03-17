@@ -4,8 +4,8 @@
 		@include border-radius($radius1 $radius1 0 0);
 		border: {
 			collapse: separate;
-			right: 1px solid $LightGray;
-			top: 1px solid $LightGray;
+			right: 1px solid $c-lightgray;
+			top: 1px solid $c-lightgray;
 		}
 		margin: 0 0 #{$baseUnit1 * 5} 0;
 		width: 100%;
@@ -27,11 +27,11 @@
 	[rowspan="1"] { vertical-align: top; }
 
 	th {
-		@if $legacySupport == true { @include legacy-bg($WhiteSmoke, '-292px'); }
-		@include default-gradient($GhostWhite, $WhiteSmoke);
+		@if $legacySupport == true { @include legacy-bg($c-whitesmoke, '-292px'); }
+		@include default-gradient($c-ghostwhite, $c-whitesmoke);
 		border: {
-			bottom: 1px solid $LightGray;
-			left: 1px solid $LightGray;
+			bottom: 1px solid $c-lightgray;
+			left: 1px solid $c-lightgray;
 		}
 		font-weight: bold;
 		padding: #{$baseUnit1 * 2};
@@ -44,13 +44,13 @@
 	}
 
 	tr {
-		&.odd, .table-zebra &:nth-child(odd)   { background: $White; }
-		&.even, .table-zebra &:nth-child(even) { background: $GhostWhite; }
+		&.odd, .table-zebra &:nth-child(odd)   { background: $c-white; }
+		&.even, .table-zebra &:nth-child(even) { background: $c-ghostwhite; }
 	}
 	td {
 		border: {
-			bottom: 1px solid $LightGray;
-			left: 1px solid $LightGray;
+			bottom: 1px solid $c-lightgray;
+			left: 1px solid $c-lightgray;
 		}
 		padding: #{$baseUnit1 * 2};
 		vertical-align: top;

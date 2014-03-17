@@ -1,7 +1,7 @@
 @if $useCore == true and $styleQuotes == true {
 	/*==========  $Core Quotes  ==========*/
 	blockquote {
-		border-left: 1px solid $LightGray;
+		border-left: 1px solid $c-lightgray;
 		font: {
 			size: 122%;
 			style: italic;
@@ -27,13 +27,13 @@
 
 		&.styled {
 			@include border-radius($radius2);
-			background: $WhiteSmoke;
+			background: $c-whitesmoke;
 			border: 0;
-			color: $DimGray;
+			color: $c-dimgray;
 			padding: #{$baseUnit1 * 6} 0;
 
 			&:before {
-				color: $Silver;
+				color: $c-silver;
 				content: '\201C';
 				font: {
 					size: 60px;
