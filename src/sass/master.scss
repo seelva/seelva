@@ -5,20 +5,19 @@
 =========================================*\
 *
 * Project:                 seelva
-* Version:                 3.3.0
+* Version:                 4.0.0
 * URL:                     http://seelva.com/
-* Latest Edition (Y/M/D):  2013/04/17
+* Latest Edition (Y/M/D):  2014/08/20
 * Assigned to:             Hernan Silva, @hachesilva
 *
 /*!---------------------------------------*/
 
 @import "print.css" print;       // Print stylesheet
-@import "normalize.css" screen;  // Fixes bugs across web browsers
-@import "base.css" screen;       // Normalize, Grid helper, layout helpers
-@import "core.css" screen;       // Hyperlinks, Headings, Text, Lists, Tables
-@import "nav.css" screen;        // Menus, tabs, breadcrumbs and pagination
-@import "helpers.css" screen;    // Image replacement and other utils
-@import "objects.css" screen;    // OOCSS objects, as per @stubbornella and @csswizardry
-@import "icons.css" screen;      // Icons webfont css setup. Custom version of FontAwesome
+@import "normalize.css" screen;  // Popular library to standarize HTML appearance and rendering across web browsers
+@import "base.css" screen;       // Grid helper, layout helpers
+@import "core.css" screen;       // Default styling for hyperlinks, headings, lists, tables, forms, buttons
+@import "objects.css" screen;    // Common patterns for regular CSS and OOCSS objects
+@import "helpers.css" screen;    // Additional classes and utilities sitting on top of objects and patterns
+@import "icons.css" screen;      // Icons webfont css setup
 
 @import "custom.css" screen;     // Your styles

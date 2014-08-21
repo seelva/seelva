@@ -1,9 +1,9 @@
 @import "compass/css3";
 
-@import "_config/variables";
-@import "_config/colors";
-@import "_config/fonts";
-@import "_config/mixins";
+@import "default/_config/variables";
+@import "default/_config/colors";
+@import "default/_config/fonts";
+@import "default/_config/mixins";
 
 // /*==========  $Features  ==========*/
 // Enable or disable legacy browser support.
@@ -26,13 +26,8 @@ $useCore:             true;
   $styleMedia:        true;
   $styleQuotes:       true;
   $styleTables:       true;
-$useNav:              true;
-  $useBreadcrumbs:    true;
-  $useMenus:          true;
-  $usePagination:     true;
-  $useTabs:           true;
 $useHelpers:          true;
-  $useAccesibility:   true;
+  $useAccessibility:  true;
   $useBrowser:        true;
   $useButtonsHelpers: true;
   $useClearfix:       true;
@@ -45,12 +40,16 @@ $useHelpers:          true;
   $useOtherHelpers:   true;
 $useObjects:          true;
   $useAlerts:         true;
-  $useDropdown:       true; // READ WARNING BELOW!
-  $useFlyout:         true; // READ wARNING BELOW!
   $useMediaObj:       true;
   $useProgress:       true;
-  $useNavObj:         true;
+  $useNav:            true;
+    $useBreadcrumbs:  true;
+    $useMenus:        true;
+    $usePagination:   true;
+    $useTabs:         true;
   $useStats:          true;
+  $useDropdown:       true; // READ WARNING BELOW!
+  $useFlyout:         true; // READ wARNING BELOW!
 $useIcons:            true;
 
 // /*************************************************************************

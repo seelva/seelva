@@ -4,16 +4,16 @@
 =            $Utilities            =
 ==================================*/
 
-@import "helpers/forms";
-@import "helpers/buttons";
-@import "helpers/lists";
-@import "helpers/media";
-@import "helpers/clearfix";
-@import "helpers/clearing";
-@import "helpers/display";
-@import "helpers/imgreplace";
-@import "helpers/accesibility";
-@import "helpers/browser";
-@import "helpers/other";
+@import "default/helpers/forms";
+@import "default/helpers/buttons";
+@import "default/helpers/lists";
+@import "default/helpers/media";
+@import "default/helpers/clearfix";
+@import "default/helpers/clearing";
+@import "default/helpers/display";
+@import "default/helpers/imgreplace";
+@import "default/helpers/accessibility";
+@import "default/helpers/browser";
+@import "default/helpers/other";
 
 /*-----  End of $Utilities  ------*/

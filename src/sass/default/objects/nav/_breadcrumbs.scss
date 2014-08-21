@@ -1,4 +1,4 @@
-@if $useNav == true and $useBreadcrumbs == true {
+@if $useObjects == true and $useNav == true and $useBreadcrumbs == true {
 	/*==========  $Nav Breadcrumbs  ==========*/
 	.breadcrumb {
 		@if $legacySupport == true { @include legacy-bg(); }

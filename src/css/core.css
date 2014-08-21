@@ -47,7 +47,7 @@ blockquote:before, blockquote:after { content: none; }
 blockquote p:last-child { margin-bottom: 0; }
 blockquote > span, blockquote .credit { font-size: 78%; font-style: italic; margin-bottom: 0; }
 blockquote > span:before, blockquote .credit:before { content: '\2013'; }
-blockquote.styled { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; background: whitesmoke; border: 0; color: #555555; padding: 18px 0; }
+blockquote.styled { -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; background: whitesmoke; border: 0; color: #555555; padding: 18px 0; }
 blockquote.styled:before { color: #dadada; content: '\201C'; font-size: 60px; font-style: normal; font-weight: bold; line-height: 40px; padding-left: 9px; }
 blockquote.styled p { margin: 0 18px 1em 36px; }
 blockquote.styled p:first-child { margin-top: -40px; }
@@ -64,9 +64,9 @@ code, kbd { font-size: 85.7%; line-height: 192%; padding: 2px 5px; white-space: 
 
 code, pre { border: 1px solid #eeeeee; }
 
-kbd, pre { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+kbd, pre { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
-kbd { -moz-box-shadow: #dadada 0 2px 0, #555555 0 2px 2px; -webkit-box-shadow: #dadada 0 2px 0, #555555 0 2px 2px; box-shadow: #dadada 0 2px 0, #555555 0 2px 2px; color: #555555; font-weight: bold; text-transform: capitalize; }
+kbd { -webkit-box-shadow: #dadada 0 2px 0, #555555 0 2px 2px; -moz-box-shadow: #dadada 0 2px 0, #555555 0 2px 2px; box-shadow: #dadada 0 2px 0, #555555 0 2px 2px; color: #555555; font-weight: bold; text-transform: capitalize; }
 
 pre { margin: 0 0 9px 0; padding: 6px; }
 pre code { background: transparent; border: 0; padding: 0; }
@@ -84,7 +84,7 @@ dt { font-weight: bold; margin: 0; padding: 0; }
 dd { margin: 0 0 0 9px; padding: 0; }
 
 /*==========  $Core Tables  ==========*/
-table { -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px; border-radius: 3px 3px 0 0; border-collapse: separate; border-right: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; margin: 0 0 15px 0; width: 100%; }
+table { -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -ms-border-radius: 3px 3px 0 0; -o-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; border-collapse: separate; border-right: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; margin: 0 0 15px 0; width: 100%; }
 table caption { font-size: 85.7%; font-style: italic; font-weight: bold; margin: 0; padding: 0 0 3px 0; }
 
 [colspan] { text-align: center; }
@@ -95,10 +95,10 @@ table caption { font-size: 85.7%; font-style: italic; font-weight: bold; margin:
 
 [rowspan="1"] { vertical-align: top; }
 
-th { background-image: -moz-linear-gradient(#fafafa, #f5f5f5); background-image: -webkit-linear-gradient(#fafafa, #f5f5f5); background-image: linear-gradient(#fafafa, #f5f5f5); border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-weight: bold; padding: 6px; text-align: left; }
+th { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #f5f5f5)); background-image: -webkit-linear-gradient(#fafafa, #f5f5f5); background-image: -moz-linear-gradient(#fafafa, #f5f5f5); background-image: -o-linear-gradient(#fafafa, #f5f5f5); background-image: linear-gradient(#fafafa, #f5f5f5); border-bottom: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5; font-weight: bold; padding: 6px; text-align: left; }
 
-thead tr:first-child th:first-child { -moz-border-radius: 3px 0 0 0; -webkit-border-radius: 3px; border-radius: 3px 0 0 0; }
-thead tr:last-child th:last-child { -moz-border-radius: 0 3px 0 0; -webkit-border-radius: 0; border-radius: 0 3px 0 0; }
+thead tr:first-child th:first-child { -webkit-border-radius: 3px 0 0 0; -moz-border-radius: 3px 0 0 0; -ms-border-radius: 3px 0 0 0; -o-border-radius: 3px 0 0 0; border-radius: 3px 0 0 0; }
+thead tr:last-child th:last-child { -webkit-border-radius: 0 3px 0 0; -moz-border-radius: 0 3px 0 0; -ms-border-radius: 0 3px 0 0; -o-border-radius: 0 3px 0 0; border-radius: 0 3px 0 0; }
 
 tr.odd, .table-zebra tr:nth-child(odd) { background: white; }
 tr.even, .table-zebra tr:nth-child(even) { background: #fafafa; }
@@ -130,10 +130,10 @@ label, span.label { display: block; line-height: 130%; padding: 4px 0; }
 label em, label .required, span.label em, span.label .required { color: #e14049; }
 
 /*==========  $Forms Controls  ==========*/
-input:not([type]), input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=file], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea { -moz-box-shadow: 0 2px 6px #eeeeee inset; -webkit-box-shadow: 0 2px 6px #eeeeee inset; box-shadow: 0 2px 6px #eeeeee inset; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #dadada; border-top-width: 2px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; padding: 3px; width: 100%; }
+input:not([type]), input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=file], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea { -webkit-box-shadow: 0 2px 6px #eeeeee inset; -moz-box-shadow: 0 2px 6px #eeeeee inset; box-shadow: 0 2px 6px #eeeeee inset; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #dadada; border-top-width: 2px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; padding: 3px; width: 100%; }
 input:not([type]):focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=file]:focus, input[type=month]:focus, input[type=number]:focus, input[type=password]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, select:focus, textarea:focus { border-color: #4e9a06; outline-color: #4e9a06; }
 input:not([type])[readonly], input[type=date][readonly], input[type=datetime][readonly], input[type=datetime-local][readonly], input[type=email][readonly], input[type=file][readonly], input[type=month][readonly], input[type=number][readonly], input[type=password][readonly], input[type=search][readonly], input[type=tel][readonly], input[type=text][readonly], input[type=time][readonly], input[type=url][readonly], input[type=week][readonly], select[readonly], textarea[readonly] { background-color: #fafafa; }
-input:not([type])[disabled], input[type=date][disabled], input[type=datetime][disabled], input[type=datetime-local][disabled], input[type=email][disabled], input[type=file][disabled], input[type=month][disabled], input[type=number][disabled], input[type=password][disabled], input[type=search][disabled], input[type=tel][disabled], input[type=text][disabled], input[type=time][disabled], input[type=url][disabled], input[type=week][disabled], select[disabled], textarea[disabled] { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; background: #e5e5e5; color: #888888; }
+input:not([type])[disabled], input[type=date][disabled], input[type=datetime][disabled], input[type=datetime-local][disabled], input[type=email][disabled], input[type=file][disabled], input[type=month][disabled], input[type=number][disabled], input[type=password][disabled], input[type=search][disabled], input[type=tel][disabled], input[type=text][disabled], input[type=time][disabled], input[type=url][disabled], input[type=week][disabled], select[disabled], textarea[disabled] { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; background: #e5e5e5; color: #888888; }
 
 input[type=checkbox], input[type=radio] { cursor: pointer; }
 input[type=checkbox]:focus, input[type=radio]:focus { outline-color: #4e9a06; }
@@ -147,26 +147,27 @@ select { cursor: pointer; padding: 3px; }
 select[disabled] { cursor: default; }
 
 /*==========  $Buttons  ==========*/
-input[type=button], input[type=submit], input[type=reset], input[type=color], button, button[type], .btn, .btn:link, .btn:visited, .button, .button:link, .button { background-image: -moz-linear-gradient(#fafafa, #e5e5e5); background-image: -webkit-linear-gradient(#fafafa, #e5e5e5); background-image: linear-gradient(#fafafa, #e5e5e5); -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #dadada; border-bottom-color: darkgray; color: #888888; display: inline-block; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight: bold; line-height: 100%; padding: 5px 9px; /*! For links */ text-decoration: none; white-space: nowrap; word-wrap: normal; /* IE7 padding bugfix */ overflow: visible; width: auto; }
+input[type=button], input[type=submit], input[type=reset], input[type=color], button, button[type], .btn, .btn:link, .btn:visited, .button, .button:link, .button { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e5e5e5)); background-image: -webkit-linear-gradient(#fafafa, #e5e5e5); background-image: -moz-linear-gradient(#fafafa, #e5e5e5); background-image: -o-linear-gradient(#fafafa, #e5e5e5); background-image: linear-gradient(#fafafa, #e5e5e5); -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #dadada; border-bottom-color: darkgrey; color: #888888; display: inline-block; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-weight: bold; line-height: 100%; padding: 5px 9px; /*! For links */ text-decoration: none; white-space: nowrap; word-wrap: normal; /* IE7 padding bugfix */ overflow: visible; width: auto; }
 
-input[type=button]:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=color]:focus, button:focus, button[type]:focus, .btn:focus, .button:focus { background-image: -moz-linear-gradient(#fafafa, #dadada); background-image: -webkit-linear-gradient(#fafafa, #dadada); background-image: linear-gradient(#fafafa, #dadada); color: #555555; outline: thin auto #4e9a06; }
+input[type=button]:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=color]:focus, button:focus, button[type]:focus, .btn:focus, .button:focus { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #dadada)); background-image: -webkit-linear-gradient(#fafafa, #dadada); background-image: -moz-linear-gradient(#fafafa, #dadada); background-image: -o-linear-gradient(#fafafa, #dadada); background-image: linear-gradient(#fafafa, #dadada); color: #555555; outline: thin auto #4e9a06; }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=color]:hover, button:hover, button[type]:hover, .btn:hover, .button:hover { background-image: -moz-linear-gradient(#fafafa, #dadada); background-image: -webkit-linear-gradient(#fafafa, #dadada); background-image: linear-gradient(#fafafa, #dadada); color: #555555; outline-color: #4e9a06; }
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=color]:hover, button:hover, button[type]:hover, .btn:hover, .button:hover { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #dadada)); background-image: -webkit-linear-gradient(#fafafa, #dadada); background-image: -moz-linear-gradient(#fafafa, #dadada); background-image: -o-linear-gradient(#fafafa, #dadada); background-image: linear-gradient(#fafafa, #dadada); color: #555555; outline-color: #4e9a06; }
 
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active, input[type=color]:active, button:active, button[type]:active, .btn:active, .button:active { background-image: -moz-linear-gradient(#e5e5e5, #fafafa); background-image: -webkit-linear-gradient(#e5e5e5, #fafafa); background-image: linear-gradient(#e5e5e5, #fafafa); -moz-box-shadow: inset 0 1px 6px darkgray, 0 1px 0 whitesmoke; -webkit-box-shadow: inset 0 1px 6px darkgray, 0 1px 0 whitesmoke; box-shadow: inset 0 1px 6px darkgray, 0 1px 0 whitesmoke; border-color: #888888 darkgray #dadada; color: #888888; }
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active, input[type=color]:active, button:active, button[type]:active, .btn:active, .button:active { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e5e5), color-stop(100%, #fafafa)); background-image: -webkit-linear-gradient(#e5e5e5, #fafafa); background-image: -moz-linear-gradient(#e5e5e5, #fafafa); background-image: -o-linear-gradient(#e5e5e5, #fafafa); background-image: linear-gradient(#e5e5e5, #fafafa); -webkit-box-shadow: inset 0 1px 6px darkgrey, 0 1px 0 whitesmoke; -moz-box-shadow: inset 0 1px 6px darkgrey, 0 1px 0 whitesmoke; box-shadow: inset 0 1px 6px darkgrey, 0 1px 0 whitesmoke; border-color: #888888 darkgrey #dadada; color: #888888; }
 
-input[type=button][disabled], input[type=button][disabled]:hover, input[type=button][disabled]:active, input[type=submit][disabled], input[type=submit][disabled]:hover, input[type=submit][disabled]:active, input[type=reset][disabled], input[type=reset][disabled]:hover, input[type=reset][disabled]:active, input[type=color][disabled], input[type=color][disabled]:hover, input[type=color][disabled]:active, button[disabled], button[disabled]:hover, button[disabled]:active, button[type][disabled], button[type][disabled]:hover, button[type][disabled]:active, .btn.disabled, .btn.disabled:hover, .btn.disabled:active, .button.disabled, .button.disabled:hover, .button.disabled:active { -moz-box-shadow: 0px 5px #333333; -webkit-box-shadow: 0px 5px #333333; box-shadow: 0px 5px #333333; background: #e5e5e5; border: 1px solid #dadada; color: #888888; cursor: default; }
+input[type=button][disabled], input[type=button][disabled]:hover, input[type=button][disabled]:active, input[type=submit][disabled], input[type=submit][disabled]:hover, input[type=submit][disabled]:active, input[type=reset][disabled], input[type=reset][disabled]:hover, input[type=reset][disabled]:active, input[type=color][disabled], input[type=color][disabled]:hover, input[type=color][disabled]:active, button[disabled], button[disabled]:hover, button[disabled]:active, button[type][disabled], button[type][disabled]:hover, button[type][disabled]:active, .btn.disabled, .btn.disabled:hover, .btn.disabled:active, .button.disabled, .button.disabled:hover, .button.disabled:active { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; background: #e5e5e5; border: 1px solid #dadada; color: #888888; cursor: default; }
 
 input[type=color] { height: 25px; width: 25px; }
 
 /*! Fixes a NASTY bug in Firefox where input's line-height does not work */
 @-moz-document url-prefix() { input[type=button], input[type=submit], input[type=reset] { height: 1.9em; } }
+
 /*! Removes box-model-related styles from images inside buttons */
 button img, .btn img, .button img { border: 0; margin: 0; padding: 0; }
 
 /*==========  $Core Details/Summary  ==========*/
-details { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #fafafa; border: 1px solid #e5e5e5; }
-details summary { background-image: -moz-linear-gradient(#fafafa, #e5e5e5); background-image: -webkit-linear-gradient(#fafafa, #e5e5e5); background-image: linear-gradient(#fafafa, #e5e5e5); -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px; border-radius: 3px 3px 0 0; border-bottom: 1px solid #e5e5e5; cursor: pointer; margin: 0; padding: 0 6px; text-align: left; }
+details { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: #fafafa; border: 1px solid #e5e5e5; }
+details summary { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e5e5e5)); background-image: -webkit-linear-gradient(#fafafa, #e5e5e5); background-image: -moz-linear-gradient(#fafafa, #e5e5e5); background-image: -o-linear-gradient(#fafafa, #e5e5e5); background-image: linear-gradient(#fafafa, #e5e5e5); -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -ms-border-radius: 3px 3px 0 0; -o-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; border-bottom: 1px solid #e5e5e5; cursor: pointer; margin: 0; padding: 0 6px; text-align: left; }
 details summary:focus { border-color: #4e9a06; outline-color: #4e9a06; }
 details > div { padding: 6px; }
 details[open] summary { border-color: #dadada; }

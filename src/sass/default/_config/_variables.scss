@@ -28,30 +28,30 @@ $useCore:             true!default;
   $styleMedia:        true!default;
   $styleQuotes:       true!default;
   $styleTables:       true!default;
-$useNav:              true!default;
-  $useBreadcrumbs:    true!default;
-  $useMenus:          true!default;
-  $usePagination:     true!default;
-  $useTabs:           true!default;
 $useHelpers:          true!default;
-  $useAccesibility:   true!default;
+  $useAccessibility:  true!default;
   $useBrowser:        true!default;
   $useButtonsHelpers: true!default;
   $useClearfix:       true!default;
   $useClearing:       true!default;
   $useDisplay:        true!default;
+  $useListsHelpers:   true!default;
   $useFormsHelpers:   true!default;
   $useImgreplace:     true!default;
   $useMediaHelpers:   true!default;
   $useOtherHelpers:   true!default;
 $useObjects:          true!default;
   $useAlerts:         true!default;
-  $useDropdown:       true!default; // READ WARNING BELOW!
-  $useFlyout:         true!default; // READ wARNING BELOW!
   $useMediaObj:       true!default;
   $useProgress:       true!default;
-  $useNavObj:         true!default;
+  $useNav:            true!default;
+    $useBreadcrumbs:  true!default;
+    $useMenus:        true!default;
+    $usePagination:   true!default;
+    $useTabs:         true!default;
   $useStats:          true!default;
+  $useDropdown:       true!default; // READ WARNING BELOW!
+  $useFlyout:         true!default; // READ wARNING BELOW!
 $useIcons:            true!default;
 
 // /*************************************************************************
@@ -66,7 +66,7 @@ $useIcons:            true!default;
 // Device widths
 $lap-start:           481px!default;   // All sizes below are 'palm', all above 'lap-and-up'
 $desk-start:          960px!default;   // All sizes below are 'portable' devices
-$desk-wide-start:     1200px!default;  
+$desk-wide-start:     1200px!default;
 
 // /*=========  $Grid Config  =========*/
 // If grid module is enabled, these settings modifies the grid:
@@ -77,24 +77,25 @@ $gridType:            "both"!default; // Should the grid be fluid, fixed, or bot
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors
-$c-brand-main:        $c-limegreen!default;
 $c-brand-error:       $c-crimson!default;
 $c-brand-info:        $c-steelblue!default;
 $c-brand-notice:      $c-goldenrod!default;
 $c-brand-success:     $c-limegreen!default;
 
+$c-brand-main:        $c-limegreen!default;
+
 // /*=========  $Font config  =========*/
 // Default stacks
-$fstack-sans:         $fstack-helvetica!default;
+$fstack-sans:         $fstack-arial!default;
 $fstack-serif:        $fstack-cambria!default;
 $fstack-mono:         $fstack-consolas!default;
 
 // Custom stacks
-$fstack-body:         $fstack-helvetica!default;
+$fstack-body:         $fstack-arial!default;
 $fstack-headings:     $fstack-segoe!default;
 $fstack-code:         $fstack-consolas!default;
-$fstack-forms:        $fstack-helvetica!default;
-$fstack-buttons:      $fstack-helvetica!default;
+$fstack-forms:        $fstack-arial!default;
+$fstack-buttons:      $fstack-arial!default;
 
 // /*=======  $Text properties  =======*/
 $textColor:           $c-black!default;

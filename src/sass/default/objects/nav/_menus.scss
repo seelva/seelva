@@ -1,4 +1,4 @@
-@if $useNav == true and $useMenus == true {
+@if $useObjects == true and $useNav == true and $useMenus == true {
 	/*==========  $Nav Menus  ==========*/
 	.menu-horizontal, .menu-vertical {
 		> li {

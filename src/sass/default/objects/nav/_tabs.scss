@@ -1,4 +1,4 @@
-@if $useNav == true and $useTabs == true {
+@if $useObjects == true and $useNav == true and $useTabs == true {
 	/*==========  $Nav Tabs  ==========*/
 	.tabs, .tabs-vertical {
 		@include cf;

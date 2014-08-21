@@ -6,9 +6,55 @@
 /*===============================
 =            $Custom            =
 ===============================*/
+/*==================================
+=            $artifacts            =
+------------------------------------
+*
+*
+* Global mixins, functions, classes and objects accesible from every custom file.
+*
+*
+==================================*/
+/**
+*
+* scope: WHERE DOES IT OPERATE?
+* type: SILENT CLASS, OBJECT, MIXIN?
+* desc: DESCRIPTION
+*
+**/
+/*=============================
+=            $core            =
+-------------------------------
+*
+*
+* Write any code overriding core (browser or framework) styles here. Usually, you will not
+* have any classes or ids here, just tags.
+*
+*
+=============================*/
 html { /* HTML style */ }
 
 body { color: black; }
 .ie6 body, .ie7 body { font-size: 82%; line-height: 1.12em; }
 
+/*==============================
+=            $lyout            =
+--------------------------------
+*
+*
+* Write global layout styles here.
+*
+*
+==============================*/
+/*==============================
+=            $inbox            =
+--------------------------------
+*
+*
+* File to add new styles or styles that you don't know where else to write but someone else does.
+* This file is the last file loaded by the custom module, so this can overwrite rules with the
+* same specificity level.
+*
+*
+==============================*/
 /*-----  End of $Custom  ------*/

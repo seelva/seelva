@@ -1,0 +1,18 @@
+/*=============================
+=            $core            =
+-------------------------------
+*
+*
+* Write any code overriding core (browser or framework) styles here. Usually, you will not
+* have any classes or ids here, just tags.
+*
+*
+=============================*/
+
+html { /* HTML style */ }
+
+body {
+	color: $textColor;
+
+	.ie6 &, .ie7 & { font-size: 82%; line-height: 1.12em; }
+}

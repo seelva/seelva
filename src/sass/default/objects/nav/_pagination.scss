@@ -1,4 +1,4 @@
-@if $useNav == true and $usePagination == true {
+@if $useObjects == true and $useNav == true and $usePagination == true {
 	/*==========  $Nav Pagination  ==========*/
 	.pagination,
 	.nav-direction {

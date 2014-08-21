@@ -1,0 +1,39 @@
+@import "../_nav";
+@if $useObjects == true and $useNav == true {
+	/*==========  Global setup  ==========*/
+
+	$navObjects: (
+		$useTabs           '.tabs, .tabs-vertical',
+		$useMenus          '.menu-horizontal, .menu-vertical',
+		$useBreadcrumbs    '.breadcrumb',
+		$usePagination     '.pagination, .pagination ul, .nav-direction, .nav-direction ul'
+	);
+
+	$selector: '';
+	$counter: 0;
+
+	@each $navObj in $navObjects {
+		$counter: $counter + 1;
+
+		@if nth($navObj, 1) == true {
+			$selector: $selector + nth($navObj, 2);
+		}
+
+		@if length($navObjects) > $counter {
+			$selector: $selector + ', ';
+		}
+	}
+
+	#{$selector} {
+		@include nav;
+		@include cf;
+
+		> li {
+			@include nav-li;
+
+			> a, > a:link { @include nav-li-a; }
+
+			> a:focus { outline: thin auto $c-brand-main; }
+		}
+	}
+}
