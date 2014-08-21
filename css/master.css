@@ -1,12 +1,3 @@
-@import "print.css" print;
-@import "normalize.css" screen;
-@import "base.css" screen;
-@import "core.css" screen;
-@import "nav.css" screen;
-@import "helpers.css" screen;
-@import "objects.css" screen;
-@import "icons.css" screen;
-@import "custom.css" screen;
 /*=================================================
 =            $seelva default variables            =
 =================================================*/
@@ -23,3 +14,12 @@
 * Assigned to:             Hernan Silva, @hachesilva
 *
 /*!---------------------------------------*/
+@import "print.css" print;
+@import "normalize.css" screen;
+@import "base.css" screen;
+@import "core.css" screen;
+@import "nav.css" screen;
+@import "helpers.css" screen;
+@import "objects.css" screen;
+@import "icons.css" screen;
+@import "custom.css" screen;

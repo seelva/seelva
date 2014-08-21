@@ -38,6 +38,7 @@ $useHelpers:          true;
   $useClearfix:       true;
   $useClearing:       true;
   $useDisplay:        true;
+  $useListsHelpers:   true;
   $useFormsHelpers:   true;
   $useImgreplace:     true;
   $useMediaHelpers:   true;
@@ -64,7 +65,7 @@ $useIcons:            true;
 // Device widths
 $lap-start:           481px;   // All sizes below are 'palm', all above 'lap-and-up'
 $desk-start:          960px;   // All sizes below are 'portable' devices
-$desk-wide-start:     1200px;  
+$desk-wide-start:     1200px;
 
 // /*=========  $Grid Config  =========*/
 // If grid module is enabled, these settings modifies the grid:
@@ -75,25 +76,25 @@ $gridType:            "both"; // Should the grid be fluid, fixed, or both?
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors
-$c-brand-error:         $c-crimson;
-$c-brand-info:          $c-steelblue;
-$c-brand-notice:        $c-goldenrod;
-$c-brand-success:       $c-limegreen;
+$c-brand-error:       $c-crimson;
+$c-brand-info:        $c-steelblue;
+$c-brand-notice:      $c-goldenrod;
+$c-brand-success:     $c-limegreen;
 
-$c-brand-main:          $c-limegreen;
+$c-brand-main:        $c-limegreen;
 
 // /*=========  $Font config  =========*/
 // Default stacks
-$fstack-sans:         $fstack-helvetica;
+$fstack-sans:         $fstack-arial;
 $fstack-serif:        $fstack-cambria;
 $fstack-mono:         $fstack-consolas;
 
 // Custom stacks
-$fstack-body:         $fstack-helvetica;
+$fstack-body:         $fstack-arial;
 $fstack-headings:     $fstack-segoe;
 $fstack-code:         $fstack-consolas;
-$fstack-forms:        $fstack-helvetica;
-$fstack-buttons:      $fstack-helvetica;
+$fstack-forms:        $fstack-arial;
+$fstack-buttons:      $fstack-arial;
 
 // /*=======  $Text properties  =======*/
 $textColor:           $c-black;

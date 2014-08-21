@@ -8,7 +8,8 @@ New
 	Added 'state' argument to buttons() mixin to control the state to style
 	Added vendor() mixin to prepend vendor prefixes
 	Added legacy-bg() mixin to reduce ammount of code needed to create a fallback background for legacy browsers
-
+	Added modern image replacement technique using the ir() mixin
+	Added invisible() mixin to hide elements from the vieport
 
 Fixes
 	IMPORTANT: Renamed variables names to keep a consistent naming structure
@@ -20,6 +21,8 @@ Fixes
 	Replaced Google Chromeframe script with Browserhappy prompt for IE8- users
 
 Changes
+	IMPORTANT: Dropped Font-Awesome out of core framework. Related fixes (fixed icon sizes) were kept
+	IMPORTANT: Renamed color variables to use "c-" prefix
 	Updated html5shim to v3.7.0
 	Updated normalize to v3.0.0
 
