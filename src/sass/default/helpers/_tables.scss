@@ -1,0 +1,28 @@
+@if $useHelpers == true and $useTablesHelpers == true {
+	/*==========  $Tables Helpers  ==========*/
+	tr {
+		&.odd, .table-zebra &:nth-child(odd)   { background: $c-white; }
+		&.even, .table-zebra &:nth-child(even) { background: $c-ghostwhite; }
+	}
+
+	.table-compact {
+		td, th { padding: #{$baseUnit1 - 1} #{$baseUnit1 * 2}; }
+	}
+
+	.table-minimal {
+		border: 0;
+
+		th {
+			background: $c-gainsboro;
+			border: 0 {
+				bottom: 1px solid $c-lightgray;
+			}
+		}
+
+		td {
+			border: 0 {
+				bottom: 1px solid $c-lightgray;
+			}
+		}
+	}
+}

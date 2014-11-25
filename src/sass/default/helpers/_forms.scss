@@ -38,6 +38,11 @@
 		}
 	}
 
+	fieldset.unstyled {
+		border: 0;
+		padding: 0;
+	}
+
 	/*==========  Form Fields  ==========*/
 	.field-error   { @include field-status( $c-snow,         $c-pink,          $c-crimson ); }
 	.field-info    { @include field-status( $c-lightcyan,    $c-darkturquoise, $c-steelblue ); }

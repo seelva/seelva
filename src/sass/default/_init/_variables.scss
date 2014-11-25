@@ -37,6 +37,7 @@ $useHelpers:          true!default;
   $useDisplay:        true!default;
   $useListsHelpers:   true!default;
   $useFormsHelpers:   true!default;
+  $useTablesHelpers:  true!default;
   $useImgreplace:     true!default;
   $useMediaHelpers:   true!default;
   $useOtherHelpers:   true!default;
@@ -63,6 +64,7 @@ $useIcons:            true!default;
 // **************************************************************************/
 
 // /*====  $Media-queries Config  ====*/
+$useDefaultDeviceNames: true;
 // Device widths
 $lap-start:           481px!default;   // All sizes below are 'palm', all above 'lap-and-up'
 $desk-start:          960px!default;   // All sizes below are 'portable' devices

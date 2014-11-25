@@ -262,7 +262,7 @@
 .row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"] { float: left; }
 
 /* Useful in fixed-width grids only */
-.grid-guides { background: white url(http://griddle.it/940-24-20?color=edf2c4&text=7b9712) repeat-y center top; }
+.grid-guides { background: #ffffff url(http://griddle.it/940-24-20?color=edf2c4&text=7b9712) repeat-y center top; }
 
 /* Fix units inside forms */
 form [class^="unit-"], form [class*=" unit-"] { clear: none; }

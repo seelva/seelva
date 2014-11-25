@@ -10,22 +10,17 @@
 	}
 
 	fieldset {
-//		border: 0;
 		border-color: $c-silver;
 		margin: 0 0 #{$baseUnit1 * 5} 0;
-//		padding: 0;
-
 	}
 
 	legend {
-//		border-bottom: 1px solid $c-whitesmoke;
 		font: {
 			size: 128%;
 			weight: normal;
 		}
 		margin: 0 0 #{$baseUnit1 * 2} 0;
 		padding: 0 0 #{$baseUnit1 * 2} 0;
-//		width: 100%;
 	}
 
 	label, span.label {

@@ -4,6 +4,7 @@ fonts_dir = "fonts"
 images_dir = "images"
 javascripts_dir = "js"
 
+relative_assets = true
 environment = :production
 
 if environment == :production
@@ -13,5 +14,5 @@ else
 	sass_options = {:debug_info => true}
 end
 
-# To disable debugging comments that display the original location of your selectors. Uncomment:
+# To disable debugging comments that display the original location of your selectors, uncomment:
 # line_comments = false

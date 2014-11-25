@@ -34,11 +34,11 @@
 =============================*/
 html { /* HTML style */ }
 
-body { color: black; }
+body { color: #000000; }
 .ie6 body, .ie7 body { font-size: 82%; line-height: 1.12em; }
 
 /*==============================
-=            $lyout            =
+=           $layout            =
 --------------------------------
 *
 *

@@ -47,7 +47,7 @@
 	}
 
 	@include button('disabled') {
-		@include single-box-shadow(none);
+		@include box-shadow(none);
 		background: $c-lightgray;
 		border: 1px solid $c-silver;
 		color: $c-gray;
