@@ -4,16 +4,10 @@
 =            $Custom            =
 ===============================*/
 
-@import "custom/artifacts";
-@import "custom/core";
-@import "custom/layout";
-
-
-
-// ADD YOUR CUSTOM IMPORTS HERE
-
-
-
-@import "custom/inbox";
+@import "../custom/artifacts";
+@import "../custom/core";
+@import "../custom/layout";
+@import "../custom/custom";
+@import "../custom/inbox";
 
 /*-----  End of $Custom  ------*/

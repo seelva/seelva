@@ -27,8 +27,8 @@
 -------------------------------
 *
 *
-* Write any code overriding core (browser or framework) styles here. Usually, you will not
-* have any classes or ids here, just tags.
+* Write any code overriding core (browser or framework) styles here. Usually,
+* you will not have any classes or ids here, just tags.
 *
 *
 =============================*/
@@ -47,13 +47,24 @@ body { color: #000000; }
 *
 ==============================*/
 /*==============================
+=           $custom            =
+--------------------------------
+*
+*
+* File to write the main style of your app, either by importing components via
+* sass-globbing or similar plugins (recommended) or by adding rules and
+* declarations directly at the end of this file.
+*
+*
+==============================*/
+/*==============================
 =            $inbox            =
 --------------------------------
 *
 *
-* File to add new styles or styles that you don't know where else to write but someone else does.
-* This file is the last file loaded by the custom module, so this can overwrite rules with the
-* same specificity level.
+* File to add new styles or styles that you don't know where else to write but
+* someone else does. This file is the last file loaded by the custom module, so
+* this can overwrite rules with the same specificity level.
 *
 *
 ==============================*/
