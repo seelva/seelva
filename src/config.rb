@@ -4,6 +4,8 @@ fonts_dir = "fonts"
 images_dir = "images"
 javascripts_dir = "js"
 
+add_import_path "sass/custom"
+
 relative_assets = true
 environment = :production
 
