@@ -9,3 +9,16 @@
 *
 *
 ==============================*/
+
+* {
+	@include box-sizing(border-box);
+
+	@include mq(small)      { background: blue; }
+	@include mq(medium)     { background: green; }
+	@include mq(large)      { background: yellow; }
+	@include mq(extralarge) { background: purple; }
+
+	@include mq(portable)   { background: pink; }
+	@include mq(mup)        { background: orange; }
+}
+

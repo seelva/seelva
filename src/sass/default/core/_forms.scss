@@ -37,11 +37,9 @@
 		@include box-shadow(0 2px 6px $c-gainsboro inset);
 		@include box-sizing(border-box);
 		@include border-radius($radius1);
-		border: 1px solid $c-silver {
-			top-width: 2px;
-		}
+		border: 1px solid $c-silver;
 		font-family: $fstack-forms;
-		padding: $baseUnit1;
+		padding: #{($baseUnit1 * 3) - 1} #{$baseUnit1 + 1};
 		width: 100%;
 
 		&:focus {
@@ -80,7 +78,7 @@
 
 	select {
 		cursor: pointer;
-		padding: $baseUnit1;
+		padding: #{($baseUnit1 * 3) - 1} #{$baseUnit1 + 1};
 
 		&[disabled] { cursor: default; }
 	}

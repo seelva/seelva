@@ -102,7 +102,7 @@
 
 						<h3 id="section-headings">Headings</h3>
 						<div class="row">
-							<div class="unit-6">
+							<div class="unit-4">
 								<h1>Heading 1</h1>
 								<h2>Heading 2</h2>
 								<h3>Heading 3</h3>
@@ -111,7 +111,7 @@
 								<h6>Heading 6</h6>
 							</div>
 
-							<div class="unit-9">
+							<div class="unit-4">
 								<h1>Heading 1 <span class="subtitle">Subtitle</span></h1>
 								<h2>Heading 2 with <span class="subtitle">Subtitle</span></h2>
 								<h3>Heading 3 with <span class="subtitle">Subtitle</span></h3>
@@ -120,7 +120,7 @@
 								<h6>Heading 6 with <span class="subtitle">Subtitle</span></h6>
 							</div>
 
-							<div class="unit-9 omega">
+							<div class="unit-4 omega">
 								<h1 class="styled">Styled heading 1</h1>
 								<h2 class="styled">Styled heading 2</h2>
 								<h3 class="styled">Styled heading 3 with <span class="subtitle">Subtitle</span></h3>
@@ -132,7 +132,7 @@
 
 						<h3 id="section-text">Regular Text</h3>
 						<div class="row">
-							<div class="unit-6">
+							<div class="unit-3">
 								<p>
 									<a href="#header">Hyperlink (a)</a><br />
 									<abbr title="Abbreviation">abbr.</abbr><br />
@@ -156,11 +156,11 @@
 									Subscript <sub>sub</sub> sample<br />
 									Superscript <sup>sup</sup> sample<br />
 									<u>underline</u> tag sample<br />
-									<var>var tag</var><br />
+									var <var>tag</var> = <var>x</var><var>y</var> + <var>z</var><br />
 								</p>
 							</div>
 
-							<div class="unit-18 omega">
+							<div class="unit-9 omega">
 								<h4>Characters</h4>
 								<p>0 1 2 3 4 5 6 7 8 9 + - * / ^ % =</p>
 								<p>. , ; : &mdash; &ndash; _ &tilde; &iquest; ? &iexcl; ! ( ) [ ] { } "" '' &lsquo; &rsquo; \ @ $ &amp; &sect; &frac12; &cent; &pound; &curren; &yen; &brvbar; &sect; &uml; &copy; &ordf; &laquo; &not; &shy; &reg; &macr; &trade;</p>
@@ -184,7 +184,7 @@
 
 						<h3>Preformated text</h3>
 						<div class="row">
-							<div class="unit-12">
+							<div class="unit-6">
 								<pre>Preformated text:
  ####  ###### ###### #      #    #   ##
 #      #      #      #      #    #  #  #
@@ -196,7 +196,7 @@
 
 							</div>
 
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<pre>code inside preformated text
 <code>&lt;div>
 	&lt;h2>seelva&lt;/h2>
@@ -210,7 +210,7 @@
 
 						<h3>Blockquotes</h3>
 						<div class="row">
-							<div class="unit-12">
+							<div class="unit-6">
 								<h4>Blockquote - Default</h4>
 								<blockquote>
 									<p>Progressively incubate frictionless metrics through competitive web-readiness. Rapidiously e-enable
@@ -219,7 +219,7 @@
 								</blockquote>
 							</div>
 
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<h4>Blockquote - Styled</h4>
 								<blockquote class="styled">
 									<p>Progressively incubate frictionless metrics through competitive web-readiness. Rapidiously e-enable
@@ -232,50 +232,92 @@
 						<h3 id="section-lists">Lists</h3>
 
 						<div class="row">
-							<div class="unit-6">
+							<div class="unit-3">
 								<h4>Unordered list</h4>
 								<ul class="disc">
 									<li>Unordered list - item 1</li>
-									<li>Unordered list - item 2</li>
+									<li>
+										Unordered list - item 2
+										<ul>
+											<li>Unordered list - item 1</li>
+											<li>Unordered list - item 2</li>
+											<li>Unordered list - item 3</li>
+										</ul>
+									</li>
 									<li>Unordered list - item 3</li>
 								</ul>
 								<h5>Unordered list - unstyled</h5>
 								<ul class="unstyled">
 									<li>List - item 1</li>
-									<li>List - item 2</li>
+									<li>
+										List - item 2
+										<ul>
+											<li>Unordered list - item 1</li>
+											<li>Unordered list - item 2</li>
+											<li>Unordered list - item 3</li>
+										</ul>
+									</li>
 									<li>List - item 3</li>
 								</ul>
 								<h5>Unordered list - styled</h5>
 								<ul class="styled">
 									<li>List - item 1</li>
-									<li>List - item 2</li>
+									<li>
+										List - item 2
+										<ul>
+											<li>Unordered list - item 1</li>
+											<li>Unordered list - item 2</li>
+											<li>Unordered list - item 3</li>
+										</ul>
+									</li>
 									<li>List - item 3</li>
 								</ul>
 							</div>
 
-							<div class="unit-6">
+							<div class="unit-3">
 								<h4>Ordered list</h4>
 								<ol>
 									<li>List - item 1</li>
-									<li>List - item 2</li>
+									<li>
+										List - item 2
+										<ol>
+											<li>List - item 1</li>
+											<li>List - item 2</li>
+											<li>List - item 3</li>
+										</ol>
+									</li>
 									<li>List - item 3</li>
 								</ol>
 
 								<h5>Ordered list - unstyled</h5>
 								<ol class="unstyled">
 									<li>List - item 1</li>
-									<li>List - item 2</li>
+									<li>
+										List - item 2
+										<ol>
+											<li>List - item 1</li>
+											<li>List - item 2</li>
+											<li>List - item 3</li>
+										</ol>
+									</li>
 									<li>List - item 3</li>
 								</ol>
 								<h5>Ordered list - Latin</h5>
 								<ol class="llatin">
 									<li>List - item 1</li>
-									<li>List - item 2</li>
+									<li>
+										List - item 2
+										<ol>
+											<li>List - item 1</li>
+											<li>List - item 2</li>
+											<li>List - item 3</li>
+										</ol>
+									</li>
 									<li>List - item 3</li>
 								</ol>
 							</div>
 
-							<div class="unit-6">
+							<div class="unit-3">
 								<h4>Nested lists</h4>
 								<ol>
 									<li>List - item 1</li>
@@ -302,7 +344,7 @@
 								</ol>
 							</div>
 
-							<div class="unit-6 omega">
+							<div class="unit-3 omega">
 								<h4>Definition List</h4>
 								<dl>
 									<dt>seelva</dt>
@@ -433,22 +475,22 @@
 						<h2>Media</h2>
 						<h3 id="section-images">Images</h3>
 						<div class="row">
-							<div class="unit-6">
+							<div class="unit-3">
 								<h4>Standard image</h4>
 								<p><img src="http://placehold.it/220x100.png" alt="Seelva logo" /></p>
 							</div>
 
-							<div class="unit-6">
+							<div class="unit-3">
 								<h4>light-styled</h4>
 								<p><img src="http://placehold.it/220x100.png" alt="Seelva logo" class="light-styled" /></p>
 							</div>
 
-							<div class="unit-6">
+							<div class="unit-3">
 								<h4>Styled image</h4>
 								<p><img src="http://placehold.it/205x100.png" alt="Seelva logo" class="styled" /></p>
 							</div>
 
-							<div class="unit-6 omega">
+							<div class="unit-3 omega">
 								<h4>Captioned image</h4>
 								<div class="image-caption">
 									<a href="#header"><img src="http://placehold.it/205x100.png" alt="Seelva logo" /></a>
@@ -459,13 +501,13 @@
 
 						<div class="row">
 							<h4>Floated images</h4>
-							<div class="unit-12">
+							<div class="unit-6">
 								<p><img src="http://placehold.it/220x100.png" alt="Seelva logo" class="floatleft" /> Professionally incentivize cooperative partnerships
 									before integrated bandwidth. Interactively provide access to team driven collaboration and idea-sharing after highly efficient
 									paradigms. Energistically enable cross functional platforms vis-a-vis prospective functionalities. Professionally target.</p>
 							</div>
 
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<p><img src="http://placehold.it/220x100.png" alt="Seelva logo" class="floatright" /> Professionally incentivize cooperative partnerships
 									before integrated bandwidth. Interactively provide access to team driven collaboration and idea-sharing after highly efficient
 									paradigms. Energistically enable cross functional platforms vis-a-vis prospective functionalities. Professionally target.</p>
@@ -474,7 +516,7 @@
 
 						<div class="row">
 							<h4>Floated images with caption</h4>
-							<div class="unit-12">
+							<div class="unit-6">
 								<div class="image-caption alignleft">
 									<a href="#header"><img src="http://placehold.it/220x100.png" alt="Seelva logo" /></a>
 									<p class="caption-text">Seelva Logotype</p>
@@ -484,7 +526,7 @@
 									prospective functionalities. Professionally target.</p>
 							</div>
 
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<div class="image-caption alignright">
 									<a href="#header"><img src="http://placehold.it/220x100.png" alt="Seelva logo" /></a>
 									<p class="caption-text">Seelva Logotype</p>
@@ -513,10 +555,10 @@
 
 						<h3>Video</h3>
 						<div class="row">
-							<div class="unit-12">
+							<div class="unit-6">
 								<iframe width="460" height="370" src="http://www.youtube.com/embed/Bc1Zc4qsTQk" frameborder="0" allowfullscreen></iframe>
 							</div>
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<video src="http://www.quackit.com/video/pass-countdown.ogg" width="460" height="370" controls>
 									<p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
 								</video>
@@ -525,7 +567,7 @@
 
 						<h3>HTML5 audio</h3>
 						<div class="row">
-							<div class="unit-12">
+							<div class="unit-6">
 								<audio src="http://www.quackit.com/video/pass-countdown.ogg" controls>
 									<p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
 								</audio>
@@ -533,7 +575,7 @@
 									and quality channels. Collaboratively underwhelm extensible systems rather than ubiquitous bandwidth. Continually productivate
 									enabled.</p>
 							</div>
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<div class="caption one-third floatleft">
 									<audio src="http://www.quackit.com/video/pass-countdown.ogg" controls>
 										<p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
@@ -712,7 +754,7 @@
 
 						<h3>Tabs</h3>
 						<div class="row">
-							<div class="unit-12">
+							<div class="unit-6">
 								<h4>Horizontal tabs</h4>
 								<ul class="tabs">
 									<li class="active dropdown">
@@ -746,7 +788,7 @@
 								</div>
 							</div>
 
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<h4>Vertical tabs</h4>
 								<ul class="tabs-vertical">
 									<li class="active"><a href="#header" title="Link 1" class="active">Tab #1</a></li>
@@ -774,7 +816,7 @@
 
 						<h3>Menus</h3>
 						<div class="row">
-							<div class="unit-12">
+							<div class="unit-6">
 								<p><code>ul.vertical-menu</code></p>
 
 								<ul class="menu-vertical">
@@ -841,7 +883,7 @@
 								</ul>
 							</div>
 
-							<div class="unit-12 omega">
+							<div class="unit-6 omega">
 								<p><code>ul.menu-horizontal</code></p>
 
 								<ul class="menu-horizontal">

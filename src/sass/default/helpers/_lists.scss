@@ -16,7 +16,7 @@
 		&.uroman      { list-style-type: upper-roman; }
 
 		&.styled, &.unstyled { list-style-type: none; margin-left: #{$baseUnit1 * 3}; }
-		&.styled li {
+		&.styled > li {
 			background: url(../images/bullet.png) no-repeat 0 6px;
 			padding-left: 16px;
 		}

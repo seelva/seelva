@@ -49,7 +49,8 @@
 	.field-notice  { @include field-status( $c-lemonchiffon, $c-gold,          $c-goldenrod ); }
 	.field-success { @include field-status( $c-beige,        $c-yellowgreen,   $c-limegreen ); }
 
-	.field-prefix, .field-suffix {
+	.field-prefix,
+	.field-suffix {
 		overflow: hidden; /* Clearfix */
 
 		.label {
@@ -59,7 +60,8 @@
 			color: $c-dimgray;
 			float: left;
 			margin: 0;
-			padding: $baseUnit1 #{$baseUnit1 * 3};
+			line-height: 1;
+			padding: #{$baseUnit1 * 3};
 
 			&:last-child {
 				@include border-radius(0 $radius1 $radius1 0);
@@ -169,8 +171,12 @@
 		label { display: inline-block; }
 
 		input, select {
+			@include box-shadow(none);
+			border: 0;
+			border-bottom: 1px solid $c-silver;
 			display: inline-block;
 			width: auto;
+			text-align: center;
 		}
 	}
 
@@ -180,9 +186,14 @@
 			float: left;
 		}
 
-		input, label {
+		label {
 			float: left;
 			margin-right: $baseUnit1;
+			width: auto;
+		}
+
+		input {
+			float: left;
 			width: auto;
 		}
 	}

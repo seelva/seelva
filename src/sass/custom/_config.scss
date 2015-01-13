@@ -55,19 +55,30 @@ $useIcons:            true;
 // **************************************************************************/
 
 // /*====  $Media-queries Config  ====*/
-$useDefaultDeviceNames: true;
+// Default widths
+$s-sm: 480px;
+$s-md: 768px;
+$s-lg: 960px;
+$s-xl: 1200px;
 
-  // Device widths
-$lap-start:           481px;   // All sizes below are 'palm', all above 'lap-and-up'
-$desk-start:          960px;   // All sizes below are 'portable' devices
-$desk-wide-start:     1200px;
+// Device widths ( name  abbreviation  size  [ type: min | max ] )
+$devices-list: (
+  small:      ( abbr: sm,   size: $s-sm  $s-md ),
+  medium:     ( abbr: md,   size: $s-md  $s-lg ),
+  large:      ( abbr: lg,   size: $s-lg  $s-xl ),
+  extralarge: ( abbr: xl,   size: $s-xl ),
+
+  // Device Aliases
+  portable:   ( abbr: null, size: $s-md, type: max ),
+  mup:        ( abbr: null, size: $s-md, type: min )
+);
+
 
 // /*=========  $Grid Config  =========*/
 // If grid module is enabled, these settings modifies the grid:
-$colAmount:           24;     // How many columns should the grid have?
-$colWidth:            20;     // What is the width of each column? In px
-$gutterWidth:         20;     // Separation between columns, In px
-$gridType:            "both"; // Should the grid be fluid, fixed, or both?
+$colAmount:           12;     // How many columns should the grid have?
+$gutterWidth:         20px;     // Separation between columns, In px
+$contentWidth:        1200px; // Max-width of the main content area?
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors

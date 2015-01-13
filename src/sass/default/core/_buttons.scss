@@ -14,7 +14,7 @@
 			weight: bold;
 		}
 		line-height: 100%;
-		padding: #{$baseUnit1 * 2 - 1} #{$baseUnit1 * 3}; /*! For links */
+		padding: #{$baseUnit1 * 3}; /*! For links */
 		text-decoration: none;
 		white-space: nowrap;
 		word-wrap: normal;
@@ -26,14 +26,14 @@
 
 	@include button('focus') {
 		@if $legacySupport == true { background-position: 0 -292px; }
-		@include default-gradient($c-ghostwhite, $c-silver);
+		@include default-gradient($c-ghostwhite, $c-lightgray);
 		color: $c-dimgray;
 		outline: thin auto $c-brand-main;
 	}
 
 	@include button('hover') {
 		@if $legacySupport == true { background-position: 0 -292px; }
-		@include default-gradient($c-ghostwhite, $c-silver);
+		@include default-gradient($c-ghostwhite, $c-lightgray);
 		color: $c-dimgray;
 		outline-color: $c-brand-main;
 	}
@@ -61,13 +61,13 @@
 	}
 
 	/*! Fixes a NASTY bug in Firefox where input's line-height does not work */
-	@-moz-document url-prefix() {
+	/* @-moz-document url-prefix() {
 		input[type=button],
 		input[type=submit],
 		input[type=reset] {
 			height: 1.9em;
 		}
-	}
+	} */
 
 	/*! Removes box-model-related styles from images inside buttons */
 	button img,

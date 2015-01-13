@@ -34,7 +34,7 @@ fieldset.unstyled { border: 0; padding: 0; }
 .field-success input:not([type]), .field-success input[type=date], .field-success input[type=datetime], .field-success input[type=datetime-local], .field-success input[type=email], .field-success input[type=file], .field-success input[type=month], .field-success input[type=number], .field-success input[type=password], .field-success input[type=search], .field-success input[type=tel], .field-success input[type=text], .field-success input[type=time], .field-success input[type=url], .field-success input[type=week], .field-success select, .field-success textarea, .field-success input[type=checkbox], .field-success input[type=radio] { background: #F5F5DC; border-color: #becf59; color: #4e9a06; }
 
 .field-prefix, .field-suffix { overflow: hidden; /* Clearfix */ }
-.field-prefix .label, .field-suffix .label { background: #fafafa; border: 1px solid #dadada; border-right-width: 0; color: #555555; float: left; margin: 0; padding: 3px 9px; }
+.field-prefix .label, .field-suffix .label { background: #fafafa; border: 1px solid #dadada; border-right-width: 0; color: #555555; float: left; margin: 0; line-height: 1; padding: 9px; }
 .field-prefix .label:last-child, .field-suffix .label:last-child { -moz-border-radius: 0 3px 3px 0; -webkit-border-radius: 0; border-radius: 0 3px 3px 0; border-left-width: 0; border-right-width: 1px; }
 .field-prefix input, .field-prefix select, .field-prefix button, .field-suffix input, .field-suffix select, .field-suffix button { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; clear: none; float: left; margin: 0; position: relative; width: auto; }
 .field-prefix input:first-child, .field-prefix select:first-child, .field-prefix button:first-child, .field-suffix input:first-child, .field-suffix select:first-child, .field-suffix button:first-child { -moz-border-radius: 3px 0 0 3px; -webkit-border-radius: 3px; border-radius: 3px 0 0 3px; }
@@ -62,10 +62,11 @@ fieldset.unstyled { border: 0; padding: 0; }
 /*==========  Form types  ==========*/
 .form-inline { line-height: 250%; /* This produces vertical spacing between inputs */ }
 .form-inline label { display: inline-block; }
-.form-inline input, .form-inline select { display: inline-block; width: auto; }
+.form-inline input, .form-inline select { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border: 0; border-bottom: 1px solid #dadada; display: inline-block; width: auto; text-align: center; }
 
 .form-search > div, .form-search > p { clear: none; float: left; }
-.form-search input, .form-search label { float: left; margin-right: 3px; width: auto; }
+.form-search label { float: left; margin-right: 3px; width: auto; }
+.form-search input { float: left; width: auto; }
 
 /*==========  $Buttons helpers  ==========*/
 input[type="button"].btn-info, input[type="submit"].btn-info, input[type="reset"].btn-info, button.btn-info, button[type].btn-info, .btn.btn-info, .button.btn-info { color: #4682B4; }
@@ -115,7 +116,7 @@ ul.ualpha, ol.ualpha { list-style-type: upper-alpha; }
 ul.ulatin, ol.ulatin { list-style-type: upper-latin; }
 ul.uroman, ol.uroman { list-style-type: upper-roman; }
 ul.styled, ul.unstyled, ol.styled, ol.unstyled { list-style-type: none; margin-left: 9px; }
-ul.styled li, ol.styled li { background: url(../images/bullet.png) no-repeat 0 6px; padding-left: 16px; }
+ul.styled > li, ol.styled > li { background: url(../images/bullet.png) no-repeat 0 6px; padding-left: 16px; }
 ul.horizontal, ol.horizontal { margin-left: 0; }
 ul.horizontal > li, ol.horizontal > li { border-left: 1px solid #e5e5e5; display: inline-block; padding-left: 6px; padding-right: 3px; }
 ul.horizontal > li:first-child, ol.horizontal > li:first-child { border-left: 0; }
@@ -180,6 +181,34 @@ hr.clear, hr.clearing { background: transparent; border: 0; clear: both; color: 
 
 /* Screen readers can not see it */
 .hidden { display: none; }
+
+.visible-sm, .hidden-sm { display: none; }
+
+.visible-md, .hidden-md { display: none; }
+
+.visible-lg, .hidden-lg { display: none; }
+
+.visible-xl, .hidden-xl { display: none; }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) { .visible-sm { display: block !important; } }
+@media only screen and (min-width: 768px) and (max-width: 960px) { .visible-sm { display: none !important; } }
+@media only screen and (min-width: 960px) and (max-width: 1200px) { .visible-sm { display: none !important; } }
+@media only screen and (min-width: 1200px) { .visible-sm { display: none !important; } }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) { .visible-md { display: none !important; } }
+@media only screen and (min-width: 768px) and (max-width: 960px) { .visible-md { display: block !important; } }
+@media only screen and (min-width: 960px) and (max-width: 1200px) { .visible-md { display: none !important; } }
+@media only screen and (min-width: 1200px) { .visible-md { display: none !important; } }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) { .visible-lg { display: none !important; } }
+@media only screen and (min-width: 768px) and (max-width: 960px) { .visible-lg { display: none !important; } }
+@media only screen and (min-width: 960px) and (max-width: 1200px) { .visible-lg { display: block !important; } }
+@media only screen and (min-width: 1200px) { .visible-lg { display: none !important; } }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) { .visible-xl { display: none !important; } }
+@media only screen and (min-width: 768px) and (max-width: 960px) { .visible-xl { display: none !important; } }
+@media only screen and (min-width: 960px) and (max-width: 1200px) { .visible-xl { display: none !important; } }
+@media only screen and (min-width: 1200px) { .visible-xl { display: block !important; } }
 
 /*==========  $Utils Image replacement  ==========*/
 .imgreplace { display: inline-block; text-indent: -5000em; }

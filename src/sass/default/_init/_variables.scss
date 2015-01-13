@@ -64,18 +64,21 @@ $useIcons:            true!default;
 // **************************************************************************/
 
 // /*====  $Media-queries Config  ====*/
-$useDefaultDeviceNames: true;
-// Device widths
-$lap-start:           481px!default;   // All sizes below are 'palm', all above 'lap-and-up'
-$desk-start:          960px!default;   // All sizes below are 'portable' devices
-$desk-wide-start:     1200px!default;
+  // Device widths
+$contentWidth:        1200px;
+
+// name  abbreviation  size
+$devices-list: (
+  small:      ( abbr: sm,  size: 480px ),
+  medium:     ( abbr: md,  size: 768px ),
+  large:      ( abbr: lg,  size: 960px ),
+  extralarge: ( abbr: xl,  size: 1200px )
+)!default;
 
 // /*=========  $Grid Config  =========*/
 // If grid module is enabled, these settings modifies the grid:
-$colAmount:           24!default;     // How many columns should the grid have?
-$colWidth:            20!default;     // What is the width of each column? In px
+$colAmount:           12!default;     // How many columns should the grid have?
 $gutterWidth:         20!default;     // Separation between columns, In px
-$gridType:            "both"!default; // Should the grid be fluid, fixed, or both?
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors

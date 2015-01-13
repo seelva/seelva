@@ -1,36 +1,72 @@
 // /*==========  $Media-queries  ==========*/
 // Breakpoints
-$palm-end: $lap-start - 1px;
-$lap-end:  $desk-start - 1px;
-
+//
 @mixin mq($media-query){
-	@if type-of($media-query) == number { // 960px, 60em
-		@media only screen and (min-width:#{$media-query}) { @content; }
+	@if type-of($media-query) == number {
+		// Params is of the kind: 960px, 60em
+		@if unitless($media-query) {
+			@warn "You should use a unit for your breakpoint size: px, em, rem";
+		}
+		@else {
+			@media only screen and (min-width:#{$media-query}) { @content; }
+		}
 	}
-	@elseif type-of($media-query) == list { // 960px min-width, 60em max-width
-		@media only screen and (#{nth($media-query, 2)}:#{nth($media-query, 1)}) { @content; }
+	@elseif type-of($media-query) == list {
+		// Param is of the kind:
+		// 960px min-width
+		// 60em max-width
+		// 320px 960px
+		$isSizeRange: false;
+
+		@if length($media-query) == 2 {
+			@if type-of( nth($media-query, 1) ) == number and type-of( nth($media-query, 2) ) == number { // Both items are numbers, then it's a size range
+				@media only screen and (min-width:nth($media-query, 1)) and (max-width:nth($media-query, 2)) { @content; }
+				$isSizeRange: true;
+			}
+			@else { // There are 2 items in the list and they are not a size range...
+				@media only screen and (#{nth($media-query, 2)}:#{nth($media-query, 1)}) { @content; }
+			}
+		}
+		@else {
+			@warn "Oops! There are more than 2 items for the mq() parameter";
+		}
 	}
 	@elseif type-of($media-query) == string {
-		@if $media-query == palm {
-			@media only screen and (max-width:$palm-end) { @content; }
-		}
-		@elseif $media-query == lap {
-			@media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
-		}
-		@elseif $media-query == lap-and-up {
-			@media only screen and (min-width:$lap-start) { @content; }
-		}
-		@elseif $media-query == portable {
-			@media only screen and (max-width:$lap-end) { @content; }
-		}
-		@elseif $media-query == desk {
-			@media only screen and (min-width:$desk-start) { @content; }
-		}
-		@elseif $media-query == desk-wide {
-			@media only screen and (min-width: $desk-wide-start) { @content; }
+		// param is of the kind:
+		// palm
+		// desk
+		// 'only screen and (min-width:10em) and (orientation:landscape)'
+
+		@if map-has-key($devices-list, $media-query) {
+			$device-size: getDeviceAttr($media-query, size);
+
+			@if type-of($device-size) == list {
+				@media only screen and (min-width:#{nth($device-size, 1)}) and (max-width:#{nth($device-size, 2)}) { @content; }
+			}
+			@elseif type-of($device-size) == number {
+				$mq-type: getDeviceAttr($media-query, type);
+
+				@if ( type-of($mq-type) == string ) {
+					@if $mq-type == min or $mq-type == max {
+						@media only screen and (#{$mq-type}-width:$device-size) { @content; }
+					}
+				}
+				@elseif type-of($mq-type == null) {
+					@media only screen and (min-width:$device-size) { @content; }
+				}
+				@else {
+					@warn "Please provide a proper breakpoint type for the device. Your breakpoint type was `#{type-of($mq-type)}`";
+				}
+			}
+			@else {
+				@warn "Please provide a correct size value for the device. Your size type was `#{type-of($device-size)}`";
+			}
 		}
 		@else {
 			@media #{$media-query} { @content; }
 		}
+	}
+	@else {
+		@warn "mq() mixin needs a parameter af type number, list or string. Your parameter type was `#{type-of($media-query)}`";
 	}
 }

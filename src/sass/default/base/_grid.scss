@@ -1,71 +1,57 @@
 @if $useBase == true and $useGrid == true {
-	$contentWidth: ($colAmount * $colWidth) + ( ($colAmount - 1) * $gutterWidth);
-	
-	@if $gridType == "fixed" or $gridType == "both" {
-		/*==========  $Grid - Fixed width  ==========*/
-		/*!*
-		*
-		* Config.
-		*
-		* No. of Columns:  #{$colAmount};
-		* Column width:    #{$colWidth}px;
-		* Gutter width:    #{$gutterWidth}px;
-		* Content width:   #{$contentWidth}px;
-		*
-		**/
+	/*==========  $Grid - Fluid width  ==========*/
+	/*!*
+	*
+	* Config.
+	*
+	* No. of Columns:          #{$colAmount};
+	* Percentual column width: #{ percentage(100 / $colAmount) };
+	* Gutter width:            #{ $gutterWidth };
+	*
+	**/
 
-		[class^="unit-"], [class*=" unit-"] {
-			float: left;
-			margin-right: #{$gutterWidth}px;
-		}
-		/* Columns width */
-		@for $i from 1 through ($colAmount - 1) {
-			.unit-#{$i} { width: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) - $gutterWidth }px; }
-		}
-		.unit-#{$colAmount} { width: #{ ( $colWidth * $colAmount ) + ( $gutterWidth * $colAmount ) - $gutterWidth }px; margin-right: 0; }
-
-		/* Prefixes */
-		@for $i from 1 through ($colAmount - 1) {
-			.prefix-#{$i} { margin-left: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) }px; }
-		}
-
-		/* Suffixes */
-		@for $i from 1 through ($colAmount - 1) {
-			.suffix-#{$i} { margin-right: #{ ( $colWidth * $i ) + ( $gutterWidth * $i ) }px; }
-		}
+	/*==========  Global setup  ==========*/
+	[class^="unit-"], [class*=" unit-"] {
+		@include box-sizing(border-box);
+		float: left;
+		padding-left: #{$gutterWidth/2};
+		padding-right: #{$gutterWidth/2};
+		width: 100%;
 	}
 
-	@if $gridType == "fluid" or $gridType == "both" {
-		/*==========  $Grid - Fluid width  ==========*/
-		/*!*
-		*
-		* Config.
-		*
-		* No. of Columns:          #{$colAmount};
-		* Percentual column width: #{ percentage($colWidth / $contentWidth) };
-		* Percentual gutter width: #{ percentage($gutterWidth / $contentWidth) };
-		*
-		**/
+	// Columns width
+	@for $i from 1 through ($colAmount) {
+		.unit-#{$i} { @include seelva-col($i); }
+	}
 
-		.holder-fluid {
-			[class^="unit-"], [class*=" unit-"] {
-				float: left;
-				margin-right: percentage( $gutterWidth / $contentWidth );
-			}
-			// Columns width
-			@for $i from 1 through ($colAmount - 1) {
-				.unit-#{$i} { width: percentage( (( $colWidth * $i ) + ( $gutterWidth * $i ) - $gutterWidth) / $contentWidth ); }
-			}
-			.unit-#{$colAmount} { width: percentage( (( $colWidth * $colAmount ) + ( $gutterWidth * $colAmount ) - $gutterWidth) / $contentWidth ); margin-right: 0; }
+	// Prefixes
+	@for $i from 1 through ($colAmount - 1) {
+		.prefix-#{$i} { @include seelva-col( (p:$i) ); }
+	}
 
-			// Prefixes
-			@for $i from 1 through ($colAmount - 1) {
-				.prefix-#{$i} { margin-left: percentage( ( ( $colWidth * $i ) + ( $gutterWidth * $i ) ) / $contentWidth ); }
-			}
+	// Suffixes
+	@for $i from 1 through ($colAmount - 1) {
+		.suffix-#{$i} { @include seelva-col( (s:$i) ); }
+	}
 
-			// Suffixes
-			@for $i from 1 through ($colAmount - 1) {
-				.suffix-#{$i} { margin-right: percentage( ( ( $colWidth * $i ) + ( $gutterWidth * $i ) ) / $contentWidth ); }
+	@each $device, $deviceAttrs in $devices-list {
+		@if not deviceIsAlias($device) {
+			// Create units for real devices, not for aliases
+			/*! Units for '#{$device}' devices */
+			@include mq($device) {
+				@for $i from 1 through ($colAmount) {
+					.unit-#{getDeviceAttr($device, abbr)}-#{$i} { @include seelva-col($i); }
+				}
+
+				// Prefixes
+				@for $i from 1 through ($colAmount - 1) {
+					.prefix-#{getDeviceAttr($device, abbr)}-#{$i} { @include seelva-col( (p:$i) ); }
+				}
+
+				// Suffixes
+				@for $i from 1 through ($colAmount - 1) {
+					.suffix-#{getDeviceAttr($device, abbr)}-#{$i} { @include seelva-col( (s:$i) ); }
+				}
 			}
 		}
 	}
