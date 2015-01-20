@@ -2,6 +2,7 @@
 	html { font-size: 100.01%; }
 
 	body {
+		direction: $text-direction;
 		font: {
 			family: $fstack-body;
 			size: $textSize;

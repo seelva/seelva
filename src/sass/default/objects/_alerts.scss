@@ -1,6 +1,5 @@
-@mixin alert-config($bg, $image, $border-color, $color) {
+@mixin alert-config($bg, $border-color, $color) {
 	background-color: $bg;
-	@if $image != '' { background-image: url(../images/icons/#{$image}.png); }
 	border-color: $border-color;
 	color: $color;
 
@@ -23,17 +22,29 @@
 		border: 1px solid $c-lightgray;
 		color: $c-gray;
 		margin-bottom: #{$baseUnit1 * 5};
-		padding: #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 * 3} #{$baseUnit1 *8};
+		padding: #{$baseUnit1 * 3};
 
 		a, a:link { background: none; margin: 0; padding: 0; }
+
+		.alert-icon {
+			&,
+			~ * {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			~ * {
+				padding-#{getTextDir(default)}: 1em;
+			}
+		}
 	}
 
 
-	.error            { @include alert-config( $c-lavenderblush, "cross",       $c-pink,          $c-crimson ); }
-	.info, .status    { @include alert-config( $c-lightcyan,     "information", $c-darkturquoise, $c-steelblue ); }
-	.notice, .warning { @include alert-config( $c-lemonchiffon,  "error",       $c-gold,          $c-goldenrod ); }
-	.success, .ok     { @include alert-config( $c-palegreen,     "tick",        $c-yellowgreen,   $c-olivedrab ); }
-	.guidelines       { @include alert-config( $c-ivory,         "",            $c-cornsilk,      $c-dimgray);
+	.error            { @include alert-config( $c-lavenderblush, $c-pink,          $c-crimson ); }
+	.info, .status    { @include alert-config( $c-lightcyan,     $c-darkturquoise, $c-steelblue ); }
+	.notice, .warning { @include alert-config( $c-lemonchiffon,  $c-gold,          $c-goldenrod ); }
+	.success, .ok     { @include alert-config( $c-palegreen,     $c-yellowgreen,   $c-olivedrab ); }
+	.guidelines       { @include alert-config( $c-ivory,         $c-cornsilk,      $c-dimgray);
 
 		line-height: 130%;
 		margin-top: #{$baseUnit1 * 2};

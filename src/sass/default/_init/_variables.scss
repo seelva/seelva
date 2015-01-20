@@ -11,6 +11,10 @@
 // Enable or disable legacy browser support.
 // Uses fallback techniques to style some elements in IE5-IE8
 $legacySupport:       false!default;
+// Direction
+// Configure text direction and floar order to address LTR and RTL languages
+$text-direction:      ltr!default;  // Options: 'ltr' (default) | 'rtl'
+$float-default:       left!default; // Options: 'left' (default) | 'right'
 
 // /*==========  $Modules  ==========*/
 // Enable or disable modules depending on your needs
@@ -64,21 +68,29 @@ $useIcons:            true!default;
 // **************************************************************************/
 
 // /*====  $Media-queries Config  ====*/
-  // Device widths
-$contentWidth:        1200px;
+// Default widths
+$s-sm: 480px;
+$s-md: 768px;
+$s-lg: 960px;
+$s-xl: 1200px;
 
-// name  abbreviation  size
+// Device widths ( name  abbreviation  size  [ type: min | max ] )
 $devices-list: (
-  small:      ( abbr: sm,  size: 480px ),
-  medium:     ( abbr: md,  size: 768px ),
-  large:      ( abbr: lg,  size: 960px ),
-  extralarge: ( abbr: xl,  size: 1200px )
+  small:      ( abbr: sm,   size: $s-sm  $s-md ),
+  medium:     ( abbr: md,   size: $s-md  $s-lg ),
+  large:      ( abbr: lg,   size: $s-lg  $s-xl ),
+  extralarge: ( abbr: xl,   size: $s-xl ),
+
+  // Device Aliases
+  portable:   ( abbr: null, size: $s-md, type: max ),
+  mup:        ( abbr: null, size: $s-md, type: min )
 )!default;
 
 // /*=========  $Grid Config  =========*/
 // If grid module is enabled, these settings modifies the grid:
 $colAmount:           12!default;     // How many columns should the grid have?
-$gutterWidth:         20!default;     // Separation between columns, In px
+$gutterWidth:         20px!default;     // Separation between columns, In px
+$contentWidth:        1200px!default; // Max-width of the main content area?
 
 // /*========  $Custom Colors  ========*/
 // Brand Colors

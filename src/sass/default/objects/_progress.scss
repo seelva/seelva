@@ -23,7 +23,7 @@
 			@include border-radius($radius3);
 			@if $legacySupport == true { @include legacy-bg($c-silver, '-12px'); }
 			@include default-gradient($c-whitesmoke, $c-silver);
-			float: left;
+			float: getTextDir(default);
 			height: #{$baseUnit1 * 7 - 1};
 		}
 
@@ -33,7 +33,7 @@
 				size: 14px;
 				weight: bold;
 			}
-			left: 0;
+			#{getTextDir(default)}: 0;
 			position: absolute;
 			text-align: center;
 			top: 0;

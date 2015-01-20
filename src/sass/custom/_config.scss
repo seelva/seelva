@@ -3,6 +3,11 @@
 // Uses fallback techniques to style some elements in IE5-IE8
 $legacySupport:       false;
 
+// Direction
+// Configure text direction and floar order to address LTR and RTL languages
+$text-direction:      ltr;  // Options: 'ltr' (default) | 'rtl'
+$float-default:       left; // Options: 'left' (default) | 'right'
+
 // /*==========  $Modules  ==========*/
 // Enable or disable modules depending on your needs
 $usePrint:            true;

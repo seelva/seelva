@@ -99,7 +99,7 @@ input[type="button"].btn-natural, input[type="submit"].btn-natural, input[type="
 .btn-group input[type="button"]:last-child, .btn-group input[type="submit"]:last-child, .btn-group input[type="reset"]:last-child, .btn-group button:last-child, .btn-group .btn:last-child, .btn-group .btn:link:last-child, .btn-group .button:last-child, .btn-group .button:link:last-child { -moz-border-radius: 0 3px 3px 0; -webkit-border-radius: 0; border-radius: 0 3px 3px 0; border-right-width: 1px; }
 
 /*==========  Close button  ==========*/
-.btn-close, .btn-close:link, .btn-close:visited, .btn-close:hover, .btn-close:active, .btn-close:focus { cursor: pointer; float: right; font-weight: bold; position: relative; text-decoration: none; top: -3px; }
+.btn-close, .btn-close:link, .btn-close:visited, .btn-close:hover, .btn-close:active, .btn-close:focus { cursor: pointer; float: left; font-weight: bold; position: relative; text-decoration: none; top: -3px; }
 
 ul.armenian, ol.armenian { list-style-type: armenian; }
 ul.circle, ol.circle { list-style-type: circle; }
@@ -116,7 +116,7 @@ ul.ualpha, ol.ualpha { list-style-type: upper-alpha; }
 ul.ulatin, ol.ulatin { list-style-type: upper-latin; }
 ul.uroman, ol.uroman { list-style-type: upper-roman; }
 ul.styled, ul.unstyled, ol.styled, ol.unstyled { list-style-type: none; margin-left: 9px; }
-ul.styled > li, ol.styled > li { background: url(../images/bullet.png) no-repeat 0 6px; padding-left: 16px; }
+ul.styled > li, ol.styled > li { background-image: url(../images/bullet.png); background-repeat: no-repeat; background-position: left 0 top 6px; padding-left: 16px; }
 ul.horizontal, ol.horizontal { margin-left: 0; }
 ul.horizontal > li, ol.horizontal > li { border-left: 1px solid #e5e5e5; display: inline-block; padding-left: 6px; padding-right: 3px; }
 ul.horizontal > li:first-child, ol.horizontal > li:first-child { border-left: 0; }
@@ -142,6 +142,11 @@ img.alignright, img.floatright, .image-caption.alignright, .image-caption.floatr
 .gallery.styled > div, .gallery.styled > li { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
 .gallery.light-styled > div, .gallery.light-styled > li { background: transparent; border: 0; padding: 0; }
 .gallery.light-styled > div img, .gallery.light-styled > li img { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
+
+/*==========  Responsive video  ==========*/
+.responsive-video { position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0; }
+.responsive-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.responsive-video video { width: 100%    !important; height: auto   !important; }
 
 /*==========  $Tables Helpers  ==========*/
 tr.odd, .table-zebra tr:nth-child(odd) { background: #ffffff; }

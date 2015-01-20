@@ -15,10 +15,17 @@
 		&.ulatin      { list-style-type: upper-latin; }
 		&.uroman      { list-style-type: upper-roman; }
 
-		&.styled, &.unstyled { list-style-type: none; margin-left: #{$baseUnit1 * 3}; }
+		&.styled,
+		&.unstyled {
+			list-style-type: none;
+			margin-#{getTextDir(default)}: #{$baseUnit1 * 3};
+		}
+
 		&.styled > li {
-			background: url(../images/bullet.png) no-repeat 0 6px;
-			padding-left: 16px;
+			background-image: url(../images/bullet.png);
+			background-repeat: no-repeat;
+			background-position: getTextDir(default) 0 top 6px;
+			padding-#{getTextDir(default)}: 16px;
 		}
 
 		&.horizontal {

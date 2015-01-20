@@ -4,5 +4,12 @@
 @import "_init/colors";
 @import "_init/fonts";
 @import "../custom/config";
-@import "_init/mixins";
-@import "_init/responsive";
+
+@import "_mixins/mixins";
+@import "_mixins/grid";
+@import "_mixins/responsive";
+
+@import "_functions/getTextDir";
+@import "_functions/getFloat";
+@import "_functions/getDeviceAttr";
+@import "_functions/deviceIsAlias";

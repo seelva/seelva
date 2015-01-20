@@ -1,7 +1,10 @@
 @if $useCore == true and $styleLists == true {
 	/*==========  $Core Lists  ==========*/
 	ul, ol {
-		margin: 0 0 #{$baseUnit1 * 5} #{$baseUnit1 * 8};
+		margin-top: 0;
+		margin-#{getTextDir(opposite)}: 0;
+		margin-bottom: #{$baseUnit1 * 5};
+		margin-#{getTextDir(default)}: #{$baseUnit1 * 8};
 		padding: 0;
 
 		/* Remove vertical spacing from nested lists. */

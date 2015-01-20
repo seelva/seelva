@@ -1,0 +1,21 @@
+@function getTextDir($type: null) {
+	$default: $text-direction;
+	$opposite: null;
+
+	@if $default == ltr {
+		$default: left;
+		$opposite: right;
+	}
+	@elseif $default == rtl {
+		$default: right;
+		$opposite: left;
+	}
+
+	@if $type == default or $type == null {
+		@return $default;
+	}
+
+	@if $type == opposite {
+		@return $opposite;
+	}
+}

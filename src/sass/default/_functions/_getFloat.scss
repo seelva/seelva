@@ -1,0 +1,19 @@
+@function getFloat($type: null) {
+	$default: $float-default;
+	$opposite: null;
+
+	@if $default == left {
+		$opposite: right;
+	}
+	@elseif $default == right {
+		$opposite: left;
+	}
+
+	@if $type == default or $type == null {
+		@return $default;
+	}
+
+	@if $type == opposite {
+		@return $opposite;
+	}
+}

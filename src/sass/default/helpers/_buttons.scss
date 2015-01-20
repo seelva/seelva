@@ -83,9 +83,14 @@
 		display: inline-block;
 		vertical-align: middle;
 
-		input[type="button"], input[type="submit"], input[type="reset"], button, .btn, .btn:link, .button, .button:link {
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		button,
+		.btn, .btn:link,
+		.button, .button:link {
 			@include border-radius(0);
-			float: left;
+			float: getTextDir(default);
 			margin: 0;
 			border-right-width: 0;
 
@@ -99,7 +104,7 @@
 	.btn-close {
 		&, &:link, &:visited, &:hover, &:active, &:focus {
 			cursor: pointer;
-			float: right;
+			float: getTextDir();
 			font-weight: bold;
 			position: relative;
 			text-decoration: none;

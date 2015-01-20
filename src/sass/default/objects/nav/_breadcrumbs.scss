@@ -10,7 +10,12 @@
 
 		> a, > a:link { display: inline-block; }
 
-		a, a:link, a:visited, span { padding: #{$baseUnit1 * 2} 0 #{$baseUnit1 * 2} #{$baseUnit1 * 3}; }
+		a, a:link, a:visited, span {
+			padding-top: #{$baseUnit1 * 2};
+			padding-#{getTextDir(opposite)}: 0 ;
+			padding-bottom: #{$baseUnit1 * 2};
+			padding-#{getTextDir(default)}: #{$baseUnit1 * 3};
+		}
 
 		a:hover, .active a, .active a:link { color: $c-black; }
 

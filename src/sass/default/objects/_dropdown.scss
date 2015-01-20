@@ -7,7 +7,7 @@
 			content: " ";
 			display: inline-block;
 			line-height: 100%;
-			margin-left: 4px;
+			margin-#{getTextDir(default)}: 4px;
 			text-align: right;
 			vertical-align: middle;
 		}
@@ -38,7 +38,7 @@
 			zoom: 1;
 
 			> li {
-				border-left: 1px solid $c-whitesmoke;
+				border-#{getTextDir(default)}: 1px solid $c-whitesmoke;
 				display: block;
 				float: none;
 
@@ -76,7 +76,7 @@
 			> ul {
 				/* 3rd+ Level submenu style */
 				display: none;
-				left: 100%;
+				#{getTextDir(default)}: 100%;
 				position: absolute;
 				top: #{$baseUnit1 * 2};
 				width: 100%;

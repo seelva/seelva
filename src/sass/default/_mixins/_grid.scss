@@ -1,0 +1,32 @@
+@mixin seelva-col($arguments: null) {
+	@if type-of($arguments) == map {
+		$width: null;
+		$prefix: null;
+		$suffix: null;
+
+		@if map-has-key($arguments, w) { $width: map-get($arguments, w); } @else { $width: 0; }
+		@if map-has-key($arguments, p) { $prefix: map-get($arguments, p); } @else { $prefix: 0; }
+		@if map-has-key($arguments, s) { $suffix: map-get($arguments, s); } @else { $suffix: 0; }
+
+		@if ($width + $prefix + $suffix) > $colAmount {
+			@warn "You set the maximum number of columns to `#{$colAmount}` but you are trying to allocate `#{$width  + $prefix + $suffix}` columns";
+		}
+		@elseif ($width + $prefix + $suffix) == 0 {
+			width: percentage( ((100 / $colAmount) * 1)/100 );
+		}
+		@else {
+			@if $width != 0 { width: percentage( ((100 / $colAmount) * $width)/100 ); }
+			@if $prefix != 0 { margin-#{getFloat(default)}: percentage( ((100 / $colAmount) * $prefix)/100 ); }
+			@if $suffix != 0 { margin-#{getFloat(opposite)}: percentage( ((100 / $colAmount) * $suffix)/100 ); }
+		}
+	}
+	@elseif type-of($arguments) == number {
+		width: percentage( ((100 / $colAmount) * $arguments)/100 );
+	}
+	@elseif type-of($arguments) == null {
+		width: percentage( ((100 / $colAmount) * 1)/100 );
+	}
+	@else {
+		@warn "Type of argument not recognised for seelva-col(). Your argument is of the type `#{type-of($arguments)}`.";
+	}
+}

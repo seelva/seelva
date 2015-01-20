@@ -19,7 +19,7 @@
 		> li {
 			border-left: 1px solid $c-lightgray;
 			display: inline-block;
-			float: left;
+			float: getTextDir(default);
 		}
 	}
 

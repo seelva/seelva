@@ -11,14 +11,14 @@
 	}
 
 	.media-img {
-	    float: left;
+	    float: getTextDir(default);
 	    margin-right: 1em;
 	}
 
 	/* Reversed image location (right instead of left). */
 	.media-img--rev {
-	    float: right;
-	    margin-left: 1em;
+	    float: getTextDir(opposite);
+	    margin-#{getTextDir(default)}: 1em;
 	}
 
 	.media-img img,

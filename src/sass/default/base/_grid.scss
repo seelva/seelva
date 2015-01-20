@@ -13,7 +13,7 @@
 	/*==========  Global setup  ==========*/
 	[class^="unit-"], [class*=" unit-"] {
 		@include box-sizing(border-box);
-		float: left;
+		float: getFloat(default);
 		padding-left: #{$gutterWidth/2};
 		padding-right: #{$gutterWidth/2};
 		width: 100%;

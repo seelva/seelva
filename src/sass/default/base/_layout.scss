@@ -25,7 +25,7 @@
 	.row > div:last-child {
 		@include omega;
 
-		&[class^="suffix"], &[class*=" suffix"] { float: left; }
+		&[class^="suffix"], &[class*=" suffix"] { float: getFloat(default); }
 	}
 
 	/* Fix units inside forms */
@@ -50,7 +50,7 @@
 	 .four-sixths,
 	 .five-sixths  {
 		clear: none;
-		float: left;
+		float: getFloat(default);
 		margin-right: 1%;
 	}
 

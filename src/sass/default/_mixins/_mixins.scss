@@ -32,18 +32,18 @@
 
 // First element in a row
 @mixin alpha {
-	clear: left;
-	float: left;
+	clear: getFloat(default);
+	float: getFloat(default);
 }
 
 // Last element in a row
 @mixin omega {
-	clear: right;
-	float: right;
+	clear: getFloat(opposite);
+	float: getFloat(opposite);
 	margin-right: 0;
 }
 
-// Hides an element but screen readers can still see it
+// Hides an element but keeps it visible to screen readers
 @mixin invisible() {
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
@@ -176,66 +176,4 @@
 // Creates a fallback background for legacy browsers
 @mixin legacy-bg($color: $c-whitesmoke, $posY: 'top') {
 	background: $color url(../images/gradient-bg.png) repeat-x left $posY;
-}
-
-
-@mixin seelva-col($arguments) {
-	@if type-of($arguments) == map {
-		$width: null;
-		$prefix: null;
-		$suffix: null;
-
-		@if map-has-key($arguments, w) { $width: map-get($arguments, w); } @else { $width: 0; }
-		@if map-has-key($arguments, p) { $prefix: map-get($arguments, p); } @else { $prefix: 0; }
-		@if map-has-key($arguments, s) { $suffix: map-get($arguments, s); } @else { $suffix: 0; }
-
-		@if ($width + $prefix + $suffix) > $colAmount {
-			@warn "You set the maximum number of columns to `#{$colAmount}` but you are trying to use `#{$width  + $prefix + $suffix}` columns";
-		}
-		@elseif ($width + $prefix + $suffix) == 0 {
-			width: percentage( ((100 / $colAmount) * 1)/100 );
-		}
-		@else {
-			@if $width != 0 { width: percentage( ((100 / $colAmount) * $width)/100 ); }
-			@if $prefix != 0 { margin-left: percentage( ((100 / $colAmount) * $prefix)/100 ); }
-			@if $suffix != 0 { margin-right: percentage( ((100 / $colAmount) * $suffix)/100 ); }
-		}
-	}
-	@elseif type-of($arguments) == number {
-		width: percentage( ((100 / $colAmount) * $arguments)/100 );
-	}
-	@elseif type-of($arguments) == null {
-		width: percentage( ((100 / $colAmount) * 1)/100 );
-	}
-	@else {
-		@warn "Type of argument not recognised for seelva-col(). Your argument is of the type `#{type-of($arguments)}`.";
-	}
-}
-
-
-@function getDeviceAttr($deviceName, $attrName) {
-	@if map-has-key($devices-list, $deviceName) { // If the device exists
-		$device: map-get($devices-list, $deviceName);
-
-		@if map-has-key($device, $attrName) { // If the attribute exists
-			@return map-get($device, $attrName);
-		}
-		@else {
-			@return null;
-		}
-	}
-
-	@return null;
-}
-
-@function deviceIsAlias($deviceName) {
-	@if map-has-key($devices-list, $deviceName) { // If the device exists
-		$deviceAbbr: getDeviceAttr($deviceName, abbr);
-
-		@if $deviceAbbr == null {
-			@return true;
-		}
-	}
-
-	@return false;
 }

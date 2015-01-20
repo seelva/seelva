@@ -8,7 +8,7 @@
 =============================*/
 html { font-size: 100.01%; }
 
-body { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 0.875em; line-height: 1.5em; }
+body { direction: ltr; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 0.875em; line-height: 1.5em; }
 
 /*==========  $Core Links  ==========*/
 a, a:link { color: #4e9a06; text-decoration: underline; }
@@ -49,7 +49,7 @@ blockquote > span, blockquote .credit { font-size: 78%; font-style: italic; marg
 blockquote > span:before, blockquote .credit:before { content: '\2013'; }
 blockquote.styled { -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; background: #f5f5f5; border: 0; color: #555555; padding: 18px 0; }
 blockquote.styled:before { color: #dadada; content: '\201C'; font-size: 60px; font-style: normal; font-weight: bold; line-height: 40px; padding-left: 9px; }
-blockquote.styled p { margin: 0 18px 1em 36px; }
+blockquote.styled p { margin-top: 0; margin-right: 18px; margin-bottom: 1em; margin-left: 36px; }
 blockquote.styled p:first-child { margin-top: -40px; }
 blockquote.styled p:last-child { margin-bottom: 0; }
 
@@ -72,7 +72,7 @@ pre { margin: 0 0 9px 0; padding: 6px; }
 pre code { background: transparent; border: 0; padding: 0; }
 
 /*==========  $Core Lists  ==========*/
-ul, ol { margin: 0 0 15px 24px; padding: 0; /* Remove vertical spacing from nested lists. */ }
+ul, ol { margin-top: 0; margin-right: 0; margin-bottom: 15px; margin-left: 24px; padding: 0; /* Remove vertical spacing from nested lists. */ }
 li > ul, li > ol { margin-bottom: 0; }
 
 ol li { margin: 0 0 0 9px; }
@@ -167,7 +167,7 @@ button img, .btn img, .button img { border: 0; margin: 0; padding: 0; }
 
 /*==========  $Core Details/Summary  ==========*/
 details { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #fafafa; border: 1px solid #e5e5e5; }
-details summary { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #eeeeee)); background-image: -moz-linear-gradient(#fafafa, #eeeeee); background-image: -webkit-linear-gradient(#fafafa, #eeeeee); background-image: linear-gradient(#fafafa, #eeeeee); -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px; border-radius: 3px 3px 0 0; border-bottom: 1px solid #e5e5e5; cursor: pointer; margin: 0; padding: 0 6px; text-align: left; }
+details summary { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #eeeeee)); background-image: -moz-linear-gradient(#fafafa, #eeeeee); background-image: -webkit-linear-gradient(#fafafa, #eeeeee); background-image: linear-gradient(#fafafa, #eeeeee); -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px; border-radius: 3px 3px 0 0; border-bottom: 1px solid #e5e5e5; cursor: pointer; margin: 0; padding: 0 6px; }
 details summary:focus { border-color: #4e9a06; outline-color: #4e9a06; }
 details > div { padding: 6px; }
 details[open] summary { border-color: #dadada; }

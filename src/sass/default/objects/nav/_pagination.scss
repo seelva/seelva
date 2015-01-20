@@ -19,7 +19,7 @@
 
 		.current, .current span, li.active a, li.active a:link, a:hover {
 			@if $legacySupport == true { background-color: $c-silver; }
-			@include default-gradient($c-gainsboro, $c-darkgray);
+			@include default-gradient($c-lightgray, $c-silver);
 			color: $c-black;
 			text-decoration: none;
 		}
@@ -27,9 +27,9 @@
 
 	/* Full Pagination */
 	.pagination {
-		li { float: left; }
+		li { float: getTextDir(default); }
 
-		span, li span, a, a:link, a:visited { float: left; }
+		span, li span, a, a:link, a:visited { float: getTextDir(default); }
 
 		.disabled {
 			&, span, a, a:link {
@@ -54,8 +54,8 @@
 	.nav-direction {
 		a, a:link, a:visited { @include border-radius($radius1); }
 
-		li:first-child, .prev, .prev a, .prev a:link { float: left; }
+		li:first-child, .prev, .prev a, .prev a:link { float: getTextDir(default); }
 
-		li:last-child, .next, .next a, .prev a:link { float: right; }
+		li:last-child, .next, .next a, .prev a:link { float: getTextDir(opposite); }
 	}
 }

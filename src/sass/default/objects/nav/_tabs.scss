@@ -38,23 +38,23 @@
 
 	/*==========  tabs-Vertical  ==========*/
 	.tabs-vertical {
-		border-right: 1px solid $c-silver;
-		float: left;
-		margin-right: #{$baseUnit1 * 3};
+		border-#{getTextDir(opposite)}: 1px solid $c-silver;
+		float: getTextDir(default);
+		margin-#{getTextDir(opposite)}: #{$baseUnit1 * 3};
 		width: 10em;
 
 		> li {
 			float: none;
-			left: 1px;
+			#{getTextDir(default)}: 1px;
 			margin-bottom: $baseUnit1;
-			padding-left: 1px;
+			padding-#{getTextDir(default)}: 1px;
 
 			> a, > a:link, > a:visited { @include border-radius($radius1 0 0 $radius1); }
 
 			> a:hover, &.active > a, &.active > a:link {
 				background: $c-white;
 				border: 1px solid $c-lightgray {
-					right-color: transparent;
+					#{getTextDir(opposite)}-color: transparent;
 				};
 			}
 		}

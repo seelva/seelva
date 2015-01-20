@@ -1,0 +1,14 @@
+@function getDeviceAttr($deviceName, $attrName) {
+	@if map-has-key($devices-list, $deviceName) { // If the device exists
+		$device: map-get($devices-list, $deviceName);
+
+		@if map-has-key($device, $attrName) { // If the attribute exists
+			@return map-get($device, $attrName);
+		}
+		@else {
+			@return null;
+		}
+	}
+
+	@return null;
+}

@@ -8,20 +8,18 @@
 			@warn "You should use a unit for your breakpoint size: px, em, rem";
 		}
 		@else {
-			@media only screen and (min-width:#{$media-query}) { @content; }
+			@media only screen and (min-width: #{$media-query}) { @content; }
 		}
 	}
 	@elseif type-of($media-query) == list {
 		// Param is of the kind:
 		// 960px min-width
-		// 60em max-width
+		// 60em max-device-width
 		// 320px 960px
-		$isSizeRange: false;
 
 		@if length($media-query) == 2 {
 			@if type-of( nth($media-query, 1) ) == number and type-of( nth($media-query, 2) ) == number { // Both items are numbers, then it's a size range
-				@media only screen and (min-width:nth($media-query, 1)) and (max-width:nth($media-query, 2)) { @content; }
-				$isSizeRange: true;
+				@media only screen and (min-width: #{nth($media-query, 1)}) and (max-width: #{nth($media-query, 2)}) { @content; }
 			}
 			@else { // There are 2 items in the list and they are not a size range...
 				@media only screen and (#{nth($media-query, 2)}:#{nth($media-query, 1)}) { @content; }
