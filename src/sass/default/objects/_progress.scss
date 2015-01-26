@@ -1,5 +1,4 @@
 @mixin progress_colorize($bg, $percent: 20%) {
-	@if $legacySupport == true { background-color: lighten( $bg, $percent ); }
 	@include default-gradient( lighten($bg, $percent), $bg );
 }
 
@@ -21,9 +20,8 @@
 
 		.progress-value {
 			@include border-radius($radius3);
-			@if $legacySupport == true { @include legacy-bg($c-silver, '-12px'); }
 			@include default-gradient($c-whitesmoke, $c-silver);
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			height: #{$baseUnit1 * 7 - 1};
 		}
 
@@ -33,7 +31,7 @@
 				size: 14px;
 				weight: bold;
 			}
-			#{getTextDir(default)}: 0;
+			#{get-text-dir(default)}: 0;
 			position: absolute;
 			text-align: center;
 			top: 0;

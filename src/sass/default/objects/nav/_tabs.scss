@@ -8,7 +8,6 @@
 			position: relative;
 
 			> a, > a:link, > a:visited {
-				@if $legacySupport == true { @include legacy-bg(); }
 				@include default-gradient();
 				border: 1px solid $c-lightgray;
 				color: $c-black;
@@ -38,23 +37,23 @@
 
 	/*==========  tabs-Vertical  ==========*/
 	.tabs-vertical {
-		border-#{getTextDir(opposite)}: 1px solid $c-silver;
-		float: getTextDir(default);
-		margin-#{getTextDir(opposite)}: #{$baseUnit1 * 3};
+		border-#{get-text-dir(opposite)}: 1px solid $c-silver;
+		float: get-text-dir(default);
+		margin-#{get-text-dir(opposite)}: #{$baseUnit1 * 3};
 		width: 10em;
 
 		> li {
 			float: none;
-			#{getTextDir(default)}: 1px;
+			#{get-text-dir(default)}: 1px;
 			margin-bottom: $baseUnit1;
-			padding-#{getTextDir(default)}: 1px;
+			padding-#{get-text-dir(default)}: 1px;
 
 			> a, > a:link, > a:visited { @include border-radius($radius1 0 0 $radius1); }
 
 			> a:hover, &.active > a, &.active > a:link {
 				background: $c-white;
 				border: 1px solid $c-lightgray {
-					#{getTextDir(opposite)}-color: transparent;
+					#{get-text-dir(opposite)}-color: transparent;
 				};
 			}
 		}

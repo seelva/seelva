@@ -3,8 +3,9 @@
 		@extend .dropdown;
 		position: relative;
 
-		.drop-content, > ul {
-			#{getTextDir(default)}: 100px;
+		.drop-content,
+		> ul {
+			#{get-text-dir(default)}: 100px;
 			top: 0;
 		}
 	}

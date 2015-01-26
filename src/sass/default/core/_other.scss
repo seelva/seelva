@@ -6,7 +6,6 @@
 		border: 1px solid $c-lightgray;
 
 		summary {
-			@if $legacySupport == true { @include legacy-bg(); }
 			@include default-gradient();
 			@include border-radius($radius1 $radius1 0 0);
 			border-bottom: 1px solid $c-lightgray;

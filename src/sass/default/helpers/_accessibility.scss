@@ -12,7 +12,7 @@
 			background: $c-brand-main;
 			color: $c-white;
 			display: block;
-			#{getTextDir(default)}: -200%;
+			#{get-text-dir(default)}: -200%;
 			padding: #{$baseUnit1 * 2} 0;
 			position: absolute;
 			width: 100%;
@@ -20,14 +20,14 @@
 		}
 
 		a:active, a:focus {
-			#{getTextDir(default)}: 0;
+			#{get-text-dir(default)}: 0;
 			text-align: center;
 			z-index: 100;
 		}
 	}
 
 	.accessibility {
-		#{getTextDir(default)}: -5000em;
+		#{get-text-dir(default)}: -5000em;
 		position: absolute;
 	}
 }

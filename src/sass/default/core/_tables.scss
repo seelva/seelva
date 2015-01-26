@@ -22,7 +22,7 @@
 	}
 
 	[colspan]     { text-align: center; }
-	[colspan="1"] { text-align: getTextDir(); }
+	[colspan="1"] { text-align: get-text-dir(); }
 	[rowspan]     { vertical-align: middle; }
 	[rowspan="1"] { vertical-align: top; }
 
@@ -34,7 +34,7 @@
 		}
 		font-weight: bold;
 		padding: #{$baseUnit1 * 2};
-		text-align: getTextDir();
+		text-align: get-text-dir();
 	}
 
 	thead {

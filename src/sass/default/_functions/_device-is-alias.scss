@@ -1,0 +1,14 @@
+/// Check if certain device is an alias or a 'real' device
+/// @param {String} $deviceName is the name of the device to look for
+/// @return {Bool} options [true | false] wheter the device is an alias or not
+@function device-is-alias($deviceName) {
+	@if map-has-key($devices-list, $deviceName) { // If the device exists
+		$deviceAbbr: get-device-attr($deviceName, abbr);
+
+		@if $deviceAbbr == null {
+			@return true;
+		}
+	}
+
+	@return false;
+}

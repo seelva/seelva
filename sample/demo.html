@@ -44,7 +44,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../src/favicon.ico" />
 	<link rel="icon" type="image/x-icon" href="../src/favicon.ico" />
 	<link rel="icon" type="image/png" href="../src/favicon.png" />
-	<link rel="author" href="humans.txt" />
+	<link rel="author" href="../src/humans.txt" />
 
 	<title>Demo - seelva CSS / HTML Framework</title>
 
@@ -73,7 +73,7 @@
 </head>
 
 <body class="inside page">
-	<!-- When using legacy IE browsers, suggest user to use a moder one -->
+	<!-- When using legacy IE browsers, suggest user to use a modern one -->
 	<!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -556,7 +556,7 @@
 						<h3>Video</h3>
 						<div class="row">
 							<div class="unit-6">
-								<iframe width="460" height="370" src="http://www.youtube.com/embed/Bc1Zc4qsTQk" frameborder="0" allowfullscreen></iframe>
+								<iframe width="460" height="370" src="http://www.youtube.com/embed/C0DPdy98e4c" frameborder="0" allowfullscreen></iframe>
 							</div>
 							<div class="unit-6 omega">
 								<video src="http://www.quackit.com/video/pass-countdown.ogg" width="460" height="370" controls>
@@ -569,15 +569,13 @@
 						<div class="row">
 							<div class="unit-6">
 								<div class="responsive-video">
-									<iframe width="460" height="370" src="http://www.youtube.com/embed/Bc1Zc4qsTQk" frameborder="0" allowfullscreen></iframe>
+									<iframe width="460" height="370" src="http://www.youtube.com/embed/C0DPdy98e4c" frameborder="0" allowfullscreen></iframe>
 								</div>
 							</div>
 							<div class="unit-6 omega">
-								<div class="responsive-video">
-									<video src="http://www.quackit.com/video/pass-countdown.ogg" width="460" height="370" controls>
-										<p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
-									</video>
-								</div>
+								<video class="responsive-video" src="http://www.quackit.com/video/pass-countdown.ogg" width="460" height="370" controls>
+									<p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+								</video>
 							</div>
 						</div>
 
@@ -724,18 +722,19 @@
 
 						<h3>Message/Alert boxes</h3>
 						<p class="alert">This is a paragraph with class="alert" and <a href="#header">a link</a>.</p>
-						<p class="error"><span class="icon icon-error alert-icon"><img src="../src/images/icons/cross.png" alt="" /></span><span>This is a paragraph with class="error" and <a href="#header">a link</a>.
-						Intrinsicly streamline an expanded array of functionalities through client-centric technologies. Compellingly orchestrate emerging action items vis-a-vis extensible interfaces. Energistically
-						provide access to fully tested alignments through covalent e-markets. Distinctively aggregate strategic methodologies after cross-unit materials. Appropriately seize client-focused experiences
-						vis-a-vis inexpensive "outside the box" thinking.
-						Interactively architect covalent alignments rather than backward-compatible web-readiness. Appropriately negotiate high standards in resources through technically sound experiences.
-						Enthusiastically.</span></p>
-						<p class="error">This is a paragraph with class="error" and <a href="#header">a link</a>.</p>
-						<p class="info"> This is a paragraph with <code>class="info"</code> and <a href="#header">a link</a>.
-						Synergistically fashion ubiquitous users rather than future-proof models. Phosfluorescently
-						integrate clicks-and-mortar technology through future-proof systems.</p>
-						<p class="notice">This is a paragraph with class="notice" and <a href="#header">a link</a>.</p>
-						<p class="success closable">This is a paragraph with class="success" and <a href="#header">a link</a>. <a class="btn-close">&times;</a></p>
+						<p class="error">
+							<span class="icon icon-error alert-icon large">&cross;</span><span>This is a paragraph with class="error" and <a href="#header">a link</a>.
+							Intrinsicly streamline an expanded array of functionalities through client-centric technologies. Compellingly orchestrate emerging action items vis-a-vis extensible interfaces. Energistically
+							provide access to fully tested alignments through covalent e-markets. Distinctively aggregate strategic methodologies after cross-unit materials. Appropriately seize client-focused experiences
+							vis-a-vis inexpensive "outside the box" thinking.
+							Interactively architect covalent alignments rather than backward-compatible web-readiness. Appropriately negotiate high standards in resources through technically sound experiences.
+							Enthusiastically.</span>
+						</p>
+						<p class="info"><span class="icon icon-info alert-icon large">&#9432;</span><span>This is a paragraph with <code>class="info"</code> and <a href="#header">a link</a>.
+							Synergistically fashion ubiquitous users rather than future-proof models. Phosfluorescently
+							integrate clicks-and-mortar technology through future-proof systems.</span></p>
+						<p class="notice"><span>This is a paragraph with class="notice" and <a href="#header">a link</a>.</span></p>
+						<p class="success closable"><span class="icon icon-success alert-icon large">&check;</span><span>This is a paragraph with class="success" and <a href="#header">a link</a>.</span> <a class="btn-close">&times;</a></p>
 						<p class="guidelines">This is a paragraph with class="guidelines" and <a href="#header">a link</a>.</p>
 
 						<h3>Progress bars</h3>
@@ -847,6 +846,7 @@
 											<li class="active"><a href="#header" title="Link 1">Welcome</a></li>
 											<li><a href="#header" title="Link 1">Tags showcase</a></li>
 											<li><a href="#header" title="Link 2">Fake link</a></li>
+											<li class="divider"></li>
 											<li><a href="#header" title="Link 3">Another fake link mega hyper recontra uber super long</a></li>
 										</ul>
 									</li>
@@ -914,6 +914,7 @@
 											<li class="active"><a href="#header" title="Link 1">Welcome</a></li>
 											<li><a href="#header" title="Link 1">Tags showcase</a></li>
 											<li><a href="#header" title="Link 2">Fake link</a></li>
+											<li class="divider"></li>
 											<li><a href="#header" title="Link 3">Another fake link mega hyper recontra uber super long</a></li>
 										</ul>
 									</li>
@@ -929,6 +930,7 @@
 											</li>
 											<li class="active"><a href="#header" title="Link 1">Tags showcase</a></li>
 											<li><a href="#header" title="Link 2">Fake link</a></li>
+											<li class="divider">Divider</li>
 											<li><a href="#header" title="Link 3">Another fake link</a></li>
 										</ul>
 									</li>
@@ -1049,6 +1051,6 @@
 		</div>
 	</div>
 
-	<script src="js/custom.scripts.js"></script>
+	<script src="../src/js/custom.scripts.js"></script>
 </body>
 </html>

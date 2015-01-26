@@ -1,15 +1,19 @@
 @import "compass/css3";
 
-@import "_init/variables";
-@import "_init/colors";
-@import "_init/fonts";
+@import
+	"_init/variables",
+	"_init/colors",
+	"_init/fonts";
+
 @import "../custom/config";
 
-@import "_mixins/mixins";
-@import "_mixins/grid";
-@import "_mixins/responsive";
+@import
+	"_mixins/mixins",
+	"_mixins/grid",
+	"_mixins/responsive";
 
-@import "_functions/getTextDir";
-@import "_functions/getFloat";
-@import "_functions/getDeviceAttr";
-@import "_functions/deviceIsAlias";
+@import
+	"_functions/get-text-dir",
+	"_functions/get-float",
+	"_functions/get-device-attr",
+	"_functions/device-is-alias";

@@ -2,7 +2,6 @@
 	color: $color;
 
 	&:focus, &:hover {
-		@if $legacySupport == true { background-color: $bg; }
 		@include default-gradient( lighten( $bg, 5%), darken( $bg, 5% ) );
 		border-color: $border;
 		color: darken( $color, 10% );
@@ -90,7 +89,7 @@
 		.btn, .btn:link,
 		.button, .button:link {
 			@include border-radius(0);
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			margin: 0;
 			border-right-width: 0;
 
@@ -104,7 +103,7 @@
 	.btn-close {
 		&, &:link, &:visited, &:hover, &:active, &:focus {
 			cursor: pointer;
-			float: getTextDir();
+			float: get-text-dir(opposite);
 			font-weight: bold;
 			position: relative;
 			text-decoration: none;

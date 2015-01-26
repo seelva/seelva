@@ -1,4 +1,7 @@
-@function getTextDir($type: null) {
+/// Get text direction depending on the argument
+/// @param {String} $type with options [default | opposite]
+/// @return {String} options [left | right]
+@function get-text-dir($type: null) {
 	$default: $text-direction;
 	$opposite: null;
 

@@ -1,6 +1,6 @@
-// /*==========  $Media-queries  ==========*/
-// Breakpoints
-//
+// /*==========  $Media-queries  ==========*\
+// Creates a media query targeting a specific set of features specified by the argument
+/// @param {Multiple} $media-query for the breakpont settings
 @mixin mq($media-query){
 	@if type-of($media-query) == number {
 		// Params is of the kind: 960px, 60em
@@ -36,13 +36,13 @@
 		// 'only screen and (min-width:10em) and (orientation:landscape)'
 
 		@if map-has-key($devices-list, $media-query) {
-			$device-size: getDeviceAttr($media-query, size);
+			$device-size: get-device-attr($media-query, size);
 
 			@if type-of($device-size) == list {
 				@media only screen and (min-width:#{nth($device-size, 1)}) and (max-width:#{nth($device-size, 2)}) { @content; }
 			}
 			@elseif type-of($device-size) == number {
-				$mq-type: getDeviceAttr($media-query, type);
+				$mq-type: get-device-attr($media-query, type);
 
 				@if ( type-of($mq-type) == string ) {
 					@if $mq-type == min or $mq-type == max {

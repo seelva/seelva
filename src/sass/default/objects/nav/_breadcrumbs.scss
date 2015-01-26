@@ -1,7 +1,6 @@
 @if $useObjects == true and $useNav == true and $useBreadcrumbs == true {
 	/*==========  $Nav Breadcrumbs  ==========*/
 	.breadcrumb {
-		@if $legacySupport == true { @include legacy-bg(); }
 		@include default-gradient($c-ghostwhite, $c-whitesmoke);
 		@include border-radius($radius1);
 		border: 1px solid $c-silver;
@@ -12,9 +11,9 @@
 
 		a, a:link, a:visited, span {
 			padding-top: #{$baseUnit1 * 2};
-			padding-#{getTextDir(opposite)}: 0 ;
+			padding-#{get-text-dir(opposite)}: 0 ;
 			padding-bottom: #{$baseUnit1 * 2};
-			padding-#{getTextDir(default)}: #{$baseUnit1 * 3};
+			padding-#{get-text-dir(default)}: #{$baseUnit1 * 3};
 		}
 
 		a:hover, .active a, .active a:link { color: $c-black; }

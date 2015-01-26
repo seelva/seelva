@@ -58,7 +58,7 @@
 			border: 1px solid $c-silver;
 			border-right-width: 0;
 			color: $c-dimgray;
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			margin: 0;
 			line-height: 1;
 			padding: #{$baseUnit1 * 3};
@@ -75,7 +75,7 @@
 		button {
 			@include border-radius(0);
 			clear: none;
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			margin: 0;
 			position: relative;
 			width: auto;
@@ -132,7 +132,7 @@
 
 		label, span.label {
 			display: inline;
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			width: 35%;
 		}
 
@@ -141,14 +141,14 @@
 		& > textarea,
 		& > .control-group {
 			clear: none;
-			float: getTextDir(opposite);
+			float: get-text-dir(opposite);
 			width: 60%;
 		}
 
 		.field-prefix,
 		.field-suffix {
 			clear: none;
-			float: getTextDir(opposite);
+			float: get-text-dir(opposite);
 			width: 60%;
 
 			input { width: auto; }
@@ -183,17 +183,17 @@
 	.form-search {
 		> div, > p {
 			clear: none;
-			float: getTextDir(default);
+			float: get-text-dir(default);
 		}
 
 		label {
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			margin-right: $baseUnit1;
 			width: auto;
 		}
 
 		input {
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			width: auto;
 		}
 	}

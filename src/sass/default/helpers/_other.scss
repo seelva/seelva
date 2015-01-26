@@ -31,4 +31,49 @@
 	.capitalize  { text-transform: capitalize; }
 	.lowercase   { text-transform: lowercase; }
 	.uppercase   { text-transform: uppercase; }
+
+
+	/* Relative width classes */
+	.half-width, .one-half,
+	  .one-third,
+	  .two-thirds,
+	  .one-fourth,
+	  .two-fourths,
+	.three-fourths,
+	  .one-fifth,
+	  .two-fifths,
+	.three-fifths,
+	 .four-fifths,
+	  .one-sixth,
+	  .two-sixths,
+	.three-sixths,
+	 .four-sixths,
+	 .five-sixths  {
+		clear: none;
+		float: get-float(default);
+		margin-right: 1%;
+	}
+
+	 .full-width   { width: 100.0%; clear: both; }
+
+	 .half-width,
+	  .one-half    { width: 50%; clear: none; }
+
+	  .one-third   { width: percentage( ((100 / 3) * 1)/100 ); }
+	  .two-thirds  { width: percentage( ((100 / 3) * 3)/100 ); }
+
+	  .one-fourth  { width: percentage( ((100 / 4) * 1)/100 ); }
+	  .two-fourths { width: percentage( ((100 / 4) * 2)/100 ); }
+	.three-fourths { width: percentage( ((100 / 4) * 3)/100 ); }
+
+	  .one-fifth   { width: percentage( ((100 / 5) * 1)/100 ); }
+	  .two-fifths  { width: percentage( ((100 / 5) * 2)/100 ); }
+	.three-fifths  { width: percentage( ((100 / 5) * 3)/100 ); }
+	 .four-fifths  { width: percentage( ((100 / 5) * 4)/100 ); }
+
+	  .one-sixth   { width: percentage( ((100 / 6) * 1)/100 ); }
+	  .two-sixths  { width: percentage( ((100 / 6) * 2)/100 ); }
+	.three-sixths  { width: percentage( ((100 / 6) * 3)/100 ); }
+	 .four-sixths  { width: percentage( ((100 / 6) * 4)/100 ); }
+	 .five-sixths  { width: percentage( ((100 / 6) * 5)/100 ); }
 }

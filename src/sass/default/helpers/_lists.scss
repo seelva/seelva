@@ -18,14 +18,16 @@
 		&.styled,
 		&.unstyled {
 			list-style-type: none;
-			margin-#{getTextDir(default)}: #{$baseUnit1 * 3};
+			margin-#{get-text-dir(default)}: #{$baseUnit1 * 3};
 		}
 
 		&.styled > li {
-			background-image: url(../images/bullet.png);
-			background-repeat: no-repeat;
-			background-position: getTextDir(default) 0 top 6px;
-			padding-#{getTextDir(default)}: 16px;
+			&:before {
+				content: '\2605';
+				color: $c-goldenrod;
+				display: inline-block;
+				margin-right: #{$baseUnit1};
+			}
 		}
 
 		&.horizontal {

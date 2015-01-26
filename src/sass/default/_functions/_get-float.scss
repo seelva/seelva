@@ -1,4 +1,7 @@
-@function getFloat($type: null) {
+/// Get float direction setting depending on the aliased argument
+/// @param {String} $type with options [default | opposite]
+/// @return {String} options [left | right]
+@function get-float($type: null) {
 	$default: $float-default;
 	$opposite: null;
 

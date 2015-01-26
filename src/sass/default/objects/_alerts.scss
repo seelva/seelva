@@ -34,7 +34,7 @@
 			}
 
 			~ * {
-				padding-#{getTextDir(default)}: 1em;
+				padding-#{get-text-dir(default)}: 1em;
 			}
 		}
 	}

@@ -1,12 +1,12 @@
-/*==========  $Common patterns  ==========*/
-// Tradition image replacement
+// /*==========  $Common patterns  ==========*\
+/// Tradition image replacement
 @mixin imgreplace {
 	display: inline-block;
 	text-indent: -5000em;
 }
 
-// Modern image replacement technique from h5bp
-// https://github.com/h5bp/html5-boilerplate/blob/081f8aa0decdc1d2d561ff6dd23abaeff4bbf439/css/main.css
+/// Modern image replacement technique from h5bp
+/// https://github.com/h5bp/html5-boilerplate/blob/081f8aa0decdc1d2d561ff6dd23abaeff4bbf439/css/main.css
 @mixin ir {
 	background-color: transparent;
 	border: 0;
@@ -15,53 +15,59 @@
 	*text-indent: -9999px;
 
 	&:before {
-		content: "";
+		content: '';
 		display: block;
 		width: 0;
 		height: 150%;
 	}
 }
 
-// Micro clearfix
+/// Micro clearfix
 @mixin cf {
 	*zoom: 1;
 
-	&:before, &:after { content: " "; display: table; }
+	&:before, &:after { content: ' '; display: table; }
 	&:after { clear: both; }
 }
 
-// First element in a row
+/// First element in a row
 @mixin alpha {
-	clear: getFloat(default);
-	float: getFloat(default);
+	clear: get-float(default);
+	float: get-float(default);
 }
 
-// Last element in a row
+/// Last element in a row
 @mixin omega {
-	clear: getFloat(opposite);
-	float: getFloat(opposite);
-	margin-right: 0;
+	clear: get-float(opposite);
+	float: get-float(opposite);
 }
 
-// Hides an element but keeps it visible to screen readers
-@mixin invisible() {
+/// Hides an element but keeps it visible to screen readers
+@mixin invisible {
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important; /* IE6, IE7 */
 }
 
-// Visually truncate text from an elment
+/// Visually truncate text from an elment
+/// @param {Number} truncation-boundary size where the text will be truncated
 @mixin truncate($truncation-boundary) {
-	max-width: $truncation-boundary;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	@if type-of($truncation-boundary) == number {
+		max-width: $truncation-boundary;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 }
 
-// /*==========  $Buttons and forms  ==========*/
-// Select all buttons
-@mixin button($state: 'normal') {
-	@if $state == 'normal' {
+// /*==========  $Buttons and forms  ==========*\
+/// Creates a multiple selector targeting buttons and their states
+/// @param {String} $state for the button state to target
+@mixin button($state: normal) {
+	@if not type-of($state) == string {
+		@warn "The `$state` parameter must be a string";
+	}
+	@if $state == normal {
 		input[type=button],
 		input[type=submit],
 		input[type=reset],
@@ -73,7 +79,7 @@
 			@content;
 		}
 	}
-	@else if $state == 'focus' {
+	@else if $state == focus {
 		input[type=button]:focus,
 		input[type=submit]:focus,
 		input[type=reset]:focus,
@@ -85,7 +91,7 @@
 			@content;
 		}
 	}
-	@else if $state == 'hover' {
+	@else if $state == hover {
 		input[type=button]:hover,
 		input[type=submit]:hover,
 		input[type=reset]:hover,
@@ -97,7 +103,7 @@
 			@content;
 		}
 	}
-	@else if $state == 'active' {
+	@else if $state == active {
 		input[type=button]:active,
 		input[type=submit]:active,
 		input[type=reset]:active,
@@ -109,7 +115,7 @@
 			@content;
 		}
 	}
-	@else if $state == 'disabled' {
+	@else if $state == disabled {
 		input[type=button][disabled],
 		input[type=submit][disabled],
 		input[type=reset][disabled],
@@ -127,8 +133,8 @@
 	}
 }
 
-// Select all text-based inputs
-@mixin form-text() {
+/// Creates a multiple selector targeting form fields with text input features
+@mixin form-text {
 	input:not([type]),
 	input[type=date],
 	input[type=datetime],
@@ -150,16 +156,18 @@
 	}
 }
 
-// Select all option inputs
-@mixin form-options() {
+/// Creates a multiple selector targeting form options
+@mixin form-options {
 	input[type=checkbox],
 	input[type=radio] {
 		@content;
 	}
 }
 
-/*==========  $Other  ==========*/
-// Create a vendor prefixer
+// /*==========  $Other  ==========*\
+/// Custom vendor prefixer
+/// @param {String} $property name of the css property to vendor-prefix
+/// @param {Multiple} $value value to be applied to the css property
 @mixin vendor($property, $value...){
   -webkit-#{$property}:$value;
 	 -moz-#{$property}:$value;
@@ -168,12 +176,10 @@
 		  #{$property}:$value;
 }
 
-// Creates a vertical gradient
+/// Creates a vertical gradient
+/// @param {Color} $start top color for the gradient
+/// @param {Color} $stop bottom color for the gradient
 @mixin default-gradient($start: $c-ghostwhite, $stop: $c-gainsboro) {
-	@include background-image(linear-gradient($start, $stop));
-}
-
-// Creates a fallback background for legacy browsers
-@mixin legacy-bg($color: $c-whitesmoke, $posY: 'top') {
-	background: $color url(../images/gradient-bg.png) repeat-x left $posY;
+	background: $start; // Fallback color
+	@include background-image( linear-gradient($start, $stop) );
 }

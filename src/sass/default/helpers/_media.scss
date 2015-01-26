@@ -3,7 +3,7 @@
 	img {
 		&.styled {
 			@include border-radius($radius2);
-			background: $c-ghostwhite url(../images/loading.gif) no-repeat center;
+			background: $c-ghostwhite image-url('loading.gif') no-repeat center;
 			border: 1px solid $c-whitesmoke;
 			padding: #{$baseUnit1 * 2};
 		}
@@ -60,7 +60,7 @@
 			@include border-radius($radius2);
 			background: $c-ghostwhite;
 			border: 1px solid $c-whitesmoke;
-			float: getTextDir(default);
+			float: get-text-dir(default);
 			margin: 0 10px 20px;
 			padding: #{$baseUnit1 * 2};
 			text-align: center;
@@ -98,9 +98,12 @@
 			height: 100%;
 		}
 
-		video {
-			width: 100%    !important;
-			height: auto   !important;
-		}
+	}
+
+	video.responsive-video {
+		width: 100%    !important;
+		height: auto   !important;
+		position: static;
+		padding: 0;
 	}
 }

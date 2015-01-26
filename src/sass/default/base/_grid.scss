@@ -10,10 +10,39 @@
 	*
 	**/
 
-	/*==========  Global setup  ==========*/
+	// /*==========  Global setup  ==========*\
+	.section {
+		clear: both;
+		width: 100%;
+	}
+
+	.holder {
+		@include cf;
+		margin: 0 auto;
+		max-width: $contentWidth;
+		padding-left: #{$gutterWidth/2};
+		padding-right: #{$gutterWidth/2};
+	}
+
+	.row {
+		@include cf;
+		margin-left: -#{$gutterWidth/2};
+		margin-right: -#{$gutterWidth/2};
+
+		/* Fix last column in a row if it has suffix */
+		> div:last-child {
+			&[class^="suffix"], &[class*=" suffix"] { float: get-float(default); }
+		}
+	}
+
+	/* Fix units inside forms */
+	form {
+		[class^="unit-"], [class*=" unit-"] { clear: none; }
+	}
+
 	[class^="unit-"], [class*=" unit-"] {
 		@include box-sizing(border-box);
-		float: getFloat(default);
+		float: get-float(default);
 		padding-left: #{$gutterWidth/2};
 		padding-right: #{$gutterWidth/2};
 		width: 100%;
@@ -21,36 +50,47 @@
 
 	// Columns width
 	@for $i from 1 through ($colAmount) {
-		.unit-#{$i} { @include seelva-col($i); }
+		.unit-#{$i} { @include seelva-col( $width: $i, $settings: false ); }
 	}
 
 	// Prefixes
 	@for $i from 1 through ($colAmount - 1) {
-		.prefix-#{$i} { @include seelva-col( (p:$i) ); }
+		.prefix-#{$i} { @include seelva-col( $prefix: $i, $settings: false ); }
 	}
 
 	// Suffixes
 	@for $i from 1 through ($colAmount - 1) {
-		.suffix-#{$i} { @include seelva-col( (s:$i) ); }
+		.suffix-#{$i} { @include seelva-col( $suffix: $i, $settings: false ); }
+	}
+
+	// Shifts for ordering
+	@for $i from 1 through ($colAmount - 1) {
+		.push-#{$i} { @include seelva-col-shift( $i ); }
+	}
+
+	// Shifts for ordering
+	@for $i from 1 through ($colAmount - 1) {
+		.pull-#{$i} { @include seelva-col-unshift( $i ); }
 	}
 
 	@each $device, $deviceAttrs in $devices-list {
-		@if not deviceIsAlias($device) {
+		@if not device-is-alias($device) {
 			// Create units for real devices, not for aliases
+
 			/*! Units for '#{$device}' devices */
 			@include mq($device) {
 				@for $i from 1 through ($colAmount) {
-					.unit-#{getDeviceAttr($device, abbr)}-#{$i} { @include seelva-col($i); }
+					.unit-#{get-device-attr($device, abbr)}-#{$i} { @include seelva-col( $width: $i, $settings: false ); }
 				}
 
 				// Prefixes
 				@for $i from 1 through ($colAmount - 1) {
-					.prefix-#{getDeviceAttr($device, abbr)}-#{$i} { @include seelva-col( (p:$i) ); }
+					.prefix-#{get-device-attr($device, abbr)}-#{$i} { @include seelva-col( $prefix: $i, $settings: false ); }
 				}
 
 				// Suffixes
 				@for $i from 1 through ($colAmount - 1) {
-					.suffix-#{getDeviceAttr($device, abbr)}-#{$i} { @include seelva-col( (s:$i) ); }
+					.suffix-#{get-device-attr($device, abbr)}-#{$i} { @include seelva-col( $suffix: $i, $settings: false ); }
 				}
 			}
 		}

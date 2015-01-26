@@ -1,0 +1,18 @@
+/// Get a device attribute
+/// @param {String} $deviceName is the device name to look in
+/// @param {String} $attrName is the attribute name to look for
+/// @return {Multiple} values of `$attrName` if it does exist or null if it does not
+@function get-device-attr($deviceName, $attrName) {
+	@if map-has-key($devices-list, $deviceName) { // If the device exists
+		$device: map-get($devices-list, $deviceName);
+
+		@if map-has-key($device, $attrName) { // If the attribute exists
+			@return map-get($device, $attrName);
+		}
+		@else {
+			@return null;
+		}
+	}
+
+	@return null;
+}

@@ -26,14 +26,13 @@
 	label, span.label {
 		display: block;
 		line-height: 130%;
-		padding: #{$baseUnit1 + 1} 0;
+		padding: #{($baseUnit1 * 3) - 1} 0;
 
 		em, .required { color: $c-crimson; }
 	}
 
 	/*==========  $Forms Controls  ==========*/
 	@include form-text() {
-		@if $legacySupport == true { background: $c-white url(../images/txt-bg.png) repeat-x left top; }
 		@include box-shadow(0 2px 6px $c-gainsboro inset);
 		@include box-sizing(border-box);
 		@include border-radius($radius1);

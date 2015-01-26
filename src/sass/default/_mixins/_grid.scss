@@ -1,32 +1,97 @@
-@mixin seelva-col($arguments: null) {
-	@if type-of($arguments) == map {
-		$width: null;
-		$prefix: null;
-		$suffix: null;
+/// Creates a grid column with optional width, prefix, suffix, cycle and shift settings
+/// @param {Number} $width for column width
+/// @param {Number} $prefix for the ammount of blank columns to put before the actual column
+/// @param {Number} $suffix for the ammount of blank columns to put after the actual column
+/// @param {Number} $cycle for the ammount of columns to finish a cycle on and start a new one
+/// @param {Number} $shift for the ammount of columns to shift or unshift a column
+/// @param {Bool} $settings to set wether the mixin should output or not a set of settings for the column
+@mixin seelva-col($width: null, $prefix: null, $suffix: null, $cycle: null, $shift: null, $settings: true) {
+	@if $settings == true {
+		@include box-sizing(border-box);
+		float: get-float(default);
+		padding-left: #{$gutterWidth/2};
+		padding-right: #{$gutterWidth/2};
+	}
 
-		@if map-has-key($arguments, w) { $width: map-get($arguments, w); } @else { $width: 0; }
-		@if map-has-key($arguments, p) { $prefix: map-get($arguments, p); } @else { $prefix: 0; }
-		@if map-has-key($arguments, s) { $suffix: map-get($arguments, s); } @else { $suffix: 0; }
-
-		@if ($width + $prefix + $suffix) > $colAmount {
-			@warn "You set the maximum number of columns to `#{$colAmount}` but you are trying to allocate `#{$width  + $prefix + $suffix}` columns";
-		}
-		@elseif ($width + $prefix + $suffix) == 0 {
-			width: percentage( ((100 / $colAmount) * 1)/100 );
+	// Check if there is a cycle param and use it
+	@if $cycle != null {
+		@if unitless($cycle) {
+			// Is number and unitless
+			@include seelva-col-cycle($cycle);
 		}
 		@else {
-			@if $width != 0 { width: percentage( ((100 / $colAmount) * $width)/100 ); }
-			@if $prefix != 0 { margin-#{getFloat(default)}: percentage( ((100 / $colAmount) * $prefix)/100 ); }
-			@if $suffix != 0 { margin-#{getFloat(opposite)}: percentage( ((100 / $colAmount) * $suffix)/100 ); }
+			@warn "The `cycle` argument must be a unitless number";
 		}
 	}
-	@elseif type-of($arguments) == number {
-		width: percentage( ((100 / $colAmount) * $arguments)/100 );
+
+	// Check if there is a shift argument and use it
+	@if $shift != null {
+		@if unitless($shift) {
+			// Is number and unitless
+			@if -#{$colAmount} < $shift < $colAmount {
+				position: relative;
+				#{get-float(default)}: percentage( ((100 / $colAmount) * $shift)/100 );
+			}
+		}
+		@else {
+			@warn "The `shift` argument must be a unitless number";
+		}
 	}
-	@elseif type-of($arguments) == null {
-		width: percentage( ((100 / $colAmount) * 1)/100 );
+
+	@if $width == null { $width: 0; }
+	@if $prefix == null { $prefix: 0; }
+	@if $suffix == null { $suffix: 0; }
+
+	@if unitless($width) and unitless($prefix) and unitless($suffix) {
+		@if $width + $prefix + $suffix != 0 {
+			@if ($width + $prefix + $suffix) < 0 or ($width + $prefix + $suffix) > $colAmount {
+				@warn "You are trying to allocate `#{$width  + $prefix + $suffix}` (width + prefix + suffix) columns of `#{$colAmount}` available";
+			}
+			@else {
+				@if $width != 0 { width: percentage( ((100 / $colAmount) * $width)/100 ); }
+				@if $prefix != 0 { margin-#{get-float(default)}: percentage( ((100 / $colAmount) * $prefix)/100 ); }
+				@if $suffix != 0 { margin-#{get-float(opposite)}: percentage( ((100 / $colAmount) * $suffix)/100 ); }
+			}
+		}
 	}
 	@else {
-		@warn "Type of argument not recognised for seelva-col(). Your argument is of the type `#{type-of($arguments)}`.";
+		@warn "You should use unitless numbers for `$width`, `$prefix` and `$suffix` arguments";
+	}
+}
+
+/// Creates a column cycle allowing to end a virtual row and start a new one
+/// @param {Number} $col for the ammount of columns to finish a cycle on and start a new one
+@mixin seelva-col-cycle($col) {
+	@if unitless($col) {
+		&:nth-child(#{$col}n) {
+			clear: #{get-float(opposite)};
+		}
+
+		&:nth-child(#{$col}n+1) {
+			clear: #{get-float(default)};
+		}
+	}
+	@else {
+		@warn "The `cycle` argument must be a unitless number";
+	}
+}
+
+/// @param {Number} $col for the ammount of virtual columns to push the column
+@mixin seelva-col-shift($col) {
+	@if unitless($col) {
+		@include seelva-col($shift: $col, $settings: false);
+	}
+	@else {
+		@warn "The `shift` argument must be a unitless number";
+	}
+}
+
+/// @param {Number} $col for the ammount of virtual columns to pull the column
+@mixin seelva-col-unshift($col) {
+	@if unitless($col) {
+		@include seelva-col($shift: -$col, $settings: false);
+	}
+	@else {
+		@warn "The `unshift` argument must be a unitless number";
 	}
 }

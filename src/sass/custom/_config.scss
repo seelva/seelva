@@ -1,15 +1,22 @@
-// /*==========  $Features  ==========*/
-// Enable or disable legacy browser support.
-// Uses fallback techniques to style some elements in IE5-IE8
-$legacySupport:       false;
+// /*==============================
+// =            $config           =
+// --------------------------------
+// *
+// *
+// * Framework configuration file.
+// *
+// *
+// ==============================*\
 
+
+// /*==========  $Features  ==========*\
 // Direction
-// Configure text direction and floar order to address LTR and RTL languages
+// Configure text direction and float direction to address LTR and RTL languages
 $text-direction:      ltr;  // Options: 'ltr' (default) | 'rtl'
 $float-default:       left; // Options: 'left' (default) | 'right'
 
-// /*==========  $Modules  ==========*/
-// Enable or disable modules depending on your needs
+// /*==========  $Modules  ==========*\
+// Enable or disable framework components according to your needs
 $usePrint:            true;
 $useNormalize:        true;
 $useBase:             true;
@@ -20,6 +27,7 @@ $useCore:             true;
   $styleCode:         true;
   $styleForms:        true;
   $styleHeadings:     true;
+  $styleLinks:        true;
   $styleLists:        true;
   $styleMedia:        true;
   $styleQuotes:       true;
@@ -51,41 +59,41 @@ $useObjects:          true;
   $useFlyout:         true; // READ wARNING BELOW!
 $useIcons:            true;
 
-// /*************************************************************************
+// /***************************************************************************
 // *  WARNING:
 // *  Seelva's dropdown and flyout objects *DO NOT WORK* with touchscreen
 // *  devices because they use the ':hover' pseudo-class to display submenus.
 // *  Be aware that if you want to use dropdowns with touchscreen devices you
 // *  should use a Javascript-based alternative.
-// **************************************************************************/
+// ****************************************************************************\
 
-// /*====  $Media-queries Config  ====*/
+// /*====  $Media-queries Config  ====*\
 // Default widths
 $s-sm: 480px;
 $s-md: 768px;
 $s-lg: 960px;
 $s-xl: 1200px;
 
-// Device widths ( name  abbreviation  size  [ type: min | max ] )
+// Devices ( name  abbreviation  size  [ type: min | max ] )
 $devices-list: (
-  small:      ( abbr: sm,   size: $s-sm  $s-md ),
-  medium:     ( abbr: md,   size: $s-md  $s-lg ),
-  large:      ( abbr: lg,   size: $s-lg  $s-xl ),
-  extralarge: ( abbr: xl,   size: $s-xl ),
+  'small':      ( 'abbr': sm,   'size': $s-sm  $s-md ),
+  'medium':     ( 'abbr': md,   'size': $s-md  $s-lg ),
+  'large':      ( 'abbr': lg,   'size': $s-lg  $s-xl ),
+  'extralarge': ( 'abbr': xl,   'size': $s-xl ),
 
   // Device Aliases
-  portable:   ( abbr: null, size: $s-md, type: max ),
-  mup:        ( abbr: null, size: $s-md, type: min )
+  'portable':   ( 'abbr': null, 'size': $s-md, 'type': max ),
+  'mup':        ( 'abbr': null, 'size': $s-md, 'type': min )
 );
 
 
-// /*=========  $Grid Config  =========*/
+// /*=========  $Grid Config  =========*\
 // If grid module is enabled, these settings modifies the grid:
 $colAmount:           12;     // How many columns should the grid have?
 $gutterWidth:         20px;     // Separation between columns, In px
 $contentWidth:        1200px; // Max-width of the main content area?
 
-// /*========  $Custom Colors  ========*/
+// /*========  $Custom Colors  ========*\
 // Brand Colors
 $c-brand-error:       $c-crimson;
 $c-brand-info:        $c-steelblue;
@@ -94,7 +102,7 @@ $c-brand-success:     $c-limegreen;
 
 $c-brand-main:        $c-limegreen;
 
-// /*=========  $Font config  =========*/
+// /*=========  $Font config  =========*\
 // Default stacks
 $fstack-sans:         $fstack-arial;
 $fstack-serif:        $fstack-cambria;
@@ -107,7 +115,7 @@ $fstack-code:         $fstack-consolas;
 $fstack-forms:        $fstack-arial;
 $fstack-buttons:      $fstack-arial;
 
-// /*=======  $Text properties  =======*/
+// /*=======  $Text properties  =======*\
 $textColor:           $c-black;
 
 $textSize:            0.875em;
@@ -120,7 +128,7 @@ $h4-size:             150%;
 $h5-size:             128%;
 $h6-size:             107%;
 
-// /*==========  $Variables  ==========*/
+// /*==========  $Variables  ==========*\
 // Px unit
 $baseUnit1:           3px;
 

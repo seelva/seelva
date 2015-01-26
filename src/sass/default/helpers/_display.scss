@@ -9,8 +9,8 @@
 	.hidden { display: none; }
 
 	@each $device, $deviceAttrs in $devices-list {
-		@if not deviceIsAlias($device) {
-			$deviceAbbr: getDeviceAttr($device, abbr);
+		@if not device-is-alias($device) {
+			$deviceAbbr: get-device-attr($device, abbr);
 
 			.visible-#{$deviceAbbr},
 			.hidden-#{$deviceAbbr} {
@@ -20,12 +20,12 @@
 	}
 
 	@each $device, $deviceAttrs in $devices-list {
-		@if not deviceIsAlias($device) {
-			$deviceAbbr: getDeviceAttr($device, abbr);
+		@if not device-is-alias($device) {
+			$deviceAbbr: get-device-attr($device, abbr);
 
 			.visible-#{$deviceAbbr} {
 				@each $deviceAlt, $deviceAltAttrs in $devices-list {
-					@if not deviceIsAlias($deviceAlt) {
+					@if not device-is-alias($deviceAlt) {
 						@if $deviceAlt == $device {
 							@include mq($device) {
 								display: block!important;

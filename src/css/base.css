@@ -1,8 +1,3 @@
-/*=================================================
-=            $seelva default variables            =
-=================================================*/
-/*==========  $Common patterns  ==========*/
-/*==========  $Other  ==========*/
 /*=============================
 =            $Base            =
 =============================*/
@@ -16,7 +11,20 @@
 * Gutter width:            20px;
 *
 **/
-/*==========  Global setup  ==========*/
+.section { clear: both; width: 100%; }
+
+.holder { *zoom: 1; margin: 0 auto; max-width: 1200px; padding-left: 10px; padding-right: 10px; }
+.holder:before, .holder:after { content: ' '; display: table; }
+.holder:after { clear: both; }
+
+.row { *zoom: 1; margin-left: -10px; margin-right: -10px; /* Fix last column in a row if it has suffix */ }
+.row:before, .row:after { content: ' '; display: table; }
+.row:after { clear: both; }
+.row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"] { float: left; }
+
+/* Fix units inside forms */
+form [class^="unit-"], form [class*=" unit-"] { clear: none; }
+
 [class^="unit-"], [class*=" unit-"] { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; float: left; padding-left: 10px; padding-right: 10px; width: 100%; }
 
 .unit-1 { width: 8.33333%; }
@@ -86,6 +94,50 @@
 .suffix-10 { margin-right: 83.33333%; }
 
 .suffix-11 { margin-right: 91.66667%; }
+
+.push-1 { position: relative; left: 8.33333%; }
+
+.push-2 { position: relative; left: 16.66667%; }
+
+.push-3 { position: relative; left: 25%; }
+
+.push-4 { position: relative; left: 33.33333%; }
+
+.push-5 { position: relative; left: 41.66667%; }
+
+.push-6 { position: relative; left: 50%; }
+
+.push-7 { position: relative; left: 58.33333%; }
+
+.push-8 { position: relative; left: 66.66667%; }
+
+.push-9 { position: relative; left: 75%; }
+
+.push-10 { position: relative; left: 83.33333%; }
+
+.push-11 { position: relative; left: 91.66667%; }
+
+.pull-1 { position: relative; left: -8.33333%; }
+
+.pull-2 { position: relative; left: -16.66667%; }
+
+.pull-3 { position: relative; left: -25%; }
+
+.pull-4 { position: relative; left: -33.33333%; }
+
+.pull-5 { position: relative; left: -41.66667%; }
+
+.pull-6 { position: relative; left: -50%; }
+
+.pull-7 { position: relative; left: -58.33333%; }
+
+.pull-8 { position: relative; left: -66.66667%; }
+
+.pull-9 { position: relative; left: -75%; }
+
+.pull-10 { position: relative; left: -83.33333%; }
+
+.pull-11 { position: relative; left: -91.66667%; }
 
 /*! Units for 'small' devices */
 @media only screen and (min-width: 480px) and (max-width: 768px) { .unit-sm-1 { width: 8.33333%; }
@@ -227,57 +279,4 @@
   .suffix-xl-9 { margin-right: 75%; }
   .suffix-xl-10 { margin-right: 83.33333%; }
   .suffix-xl-11 { margin-right: 91.66667%; } }
-/*==========  $Layout  ==========*/
-.section { clear: both; width: 100%; }
-
-.holder { *zoom: 1; margin: 0 auto; max-width: 1200px; padding-left: 10px; padding-right: 10px; }
-.holder:before, .holder:after { content: " "; display: table; }
-.holder:after { clear: both; }
-
-.row { *zoom: 1; margin-left: -10px; margin-right: -10px; }
-.row:before, .row:after { content: " "; display: table; }
-.row:after { clear: both; }
-
-/* The last column in a row gets automatically floated to the right */
-.row > div:last-child { clear: right; float: right; margin-right: 0; }
-.row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"] { float: left; }
-
-/* Fix units inside forms */
-form [class^="unit-"], form [class*=" unit-"] { clear: none; }
-
-/*==========  $Relative-width classes  ==========*/
-.half-width, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { clear: none; float: left; margin-right: 1%; }
-
-.full-width { width: 100.0%; clear: both; }
-
-.half-width, .one-half { width: 50%; clear: none; }
-
-.one-third { width: 33.33333%; }
-
-.two-thirds { width: 100%; }
-
-.one-fourth { width: 25%; }
-
-.two-fourths { width: 50%; }
-
-.three-fourths { width: 75%; }
-
-.one-fifth { width: 20%; }
-
-.two-fifths { width: 40%; }
-
-.three-fifths { width: 60%; }
-
-.four-fifths { width: 80%; }
-
-.one-sixth { width: 16.66667%; }
-
-.two-sixths { width: 33.33333%; }
-
-.three-sixths { width: 50%; }
-
-.four-sixths { width: 66.66667%; }
-
-.five-sixths { width: 83.33333%; }
-
 /*-----  End of $Base  ------*/

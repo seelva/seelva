@@ -4,17 +4,18 @@
 =            $Core            =
 =============================*/
 
-@import "core/main";
-@import "core/links";
-@import "core/headings";
-@import "core/text";
-@import "core/quotes";
-@import "core/code";
-@import "core/lists";
-@import "core/tables";
-@import "core/media";
-@import "core/forms";
-@import "core/buttons";
-@import "core/other";
+@import
+	"core/main",
+	"core/links",
+	"core/headings",
+	"core/text",
+	"core/quotes",
+	"core/code",
+	"core/lists",
+	"core/tables",
+	"core/media",
+	"core/forms",
+	"core/buttons",
+	"core/other";
 
 /*-----  End of $Core  ------*/

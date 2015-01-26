@@ -1,14 +1,14 @@
 @if $useCore == true and $styleQuotes == true {
 	/*==========  $Core Quotes  ==========*/
 	blockquote {
-		border-#{getTextDir(default)}: 1px solid $c-lightgray;
+		border-#{get-text-dir(default)}: 1px solid $c-lightgray;
 		font: {
 			size: 122%;
 			style: italic;
 		}
 		line-height: 150%;
 		margin: #{$baseUnit1 * 2} #{$baseUnit1 * 5} 1em #{$baseUnit1 * 5};
-		padding-#{getTextDir(default)}: #{$baseUnit1 * 2};
+		padding-#{get-text-dir(default)}: #{$baseUnit1 * 2};
 		quotes: none;
 
 		&:before, &:after { content: none; }
@@ -41,14 +41,14 @@
 					weight: bold;
 				}
 				line-height: 40px;
-				padding-#{getTextDir(default)}: #{$baseUnit1 * 3};
+				padding-#{get-text-dir(default)}: #{$baseUnit1 * 3};
 			}
 
 			p {
 				margin-top: 0;
-				margin-#{getTextDir(opposite)}: #{$baseUnit1 * 6};
+				margin-#{get-text-dir(opposite)}: #{$baseUnit1 * 6};
 				margin-bottom: 1em;
-				margin-#{getTextDir(default)}: #{$baseUnit1 * 12};
+				margin-#{get-text-dir(default)}: #{$baseUnit1 * 12};
 
 				&:first-child { margin-top: -40px; }
 
