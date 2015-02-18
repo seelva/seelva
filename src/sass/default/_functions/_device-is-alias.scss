@@ -3,9 +3,9 @@
 /// @return {Bool} options [true | false] wheter the device is an alias or not
 @function device-is-alias($deviceName) {
 	@if map-has-key($devices-list, $deviceName) { // If the device exists
-		$deviceAbbr: get-device-attr($deviceName, abbr);
+		$deviceAlias: get-device-attr($deviceName, alias);
 
-		@if $deviceAbbr == null {
+		@if $deviceAlias == true {
 			@return true;
 		}
 	}

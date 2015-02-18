@@ -1,0 +1,20 @@
+/// Tradition image replacement
+@mixin imgreplace {
+	display: inline-block;
+	text-indent: -5000em;
+}
+
+/// Modern image replacement technique from h5bp
+/// https://github.com/h5bp/html5-boilerplate/blob/081f8aa0decdc1d2d561ff6dd23abaeff4bbf439/css/main.css
+@mixin ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 0;
+		height: 150%;
+	}
+}

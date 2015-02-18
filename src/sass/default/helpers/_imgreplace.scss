@@ -1,4 +1,6 @@
 @if $useHelpers == true and $useImgreplace == true {
 	/*==========  $Utils Image replacement  ==========*/
 	.imgreplace { @include imgreplace; }
+
+	.ir { @include ir; }
 }

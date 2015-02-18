@@ -1,0 +1,10 @@
+@mixin heading-size($heading) {
+	@if type-of($heading) == string {
+		@if $heading == h1 or $heading == tera  { font-size: $h1-size; }
+		@if $heading == h2 or $heading == giga  { font-size: $h2-size; }
+		@if $heading == h3 or $heading == mega  { font-size: $h3-size; }
+		@if $heading == h4 or $heading == kilo  { font-size: $h4-size; }
+		@if $heading == h5 or $heading == hecto { font-size: $h5-size; }
+		@if $heading == h6 or $heading == deca  { font-size: $h6-size; }
+	}
+}

@@ -1,0 +1,6 @@
+/// Returns a white or black color depending on the lightness of a given color
+/// @param {Color} $bg-color the color to contrast against
+/// @return {Color} with options [$c-white | $c-black]
+@function text-contrast($bg-color) {
+    @return if( lightness($bg-color) < 51, $c-white, $c-black );
+}

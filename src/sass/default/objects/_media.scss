@@ -21,14 +21,19 @@
 	    margin-#{get-text-dir(default)}: 1em;
 	}
 
-	.media-img img,
-	.media-img--rev img {
-	    display: block;
+	.media-img,
+	.media-img--rev {
+		img {
+	    	display: block;
+		}
 	}
 
 	.media-body {
 	    overflow: hidden;
 
-		&, & > :last-child { margin-bottom: 0; }
+		&,
+		& > :last-child {
+			margin-bottom: 0;
+		}
 	}
 }

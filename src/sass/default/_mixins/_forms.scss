@@ -1,0 +1,209 @@
+/// Creates a multiple selector targeting form fields with text input features
+@mixin form-text {
+	input:not([type]),
+	input[type=date],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=email],
+	input[type=file],
+	input[type=month],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=tel],
+	input[type=text],
+	input[type=time],
+	input[type=url],
+	input[type=week],
+	select,
+	textarea {
+		@content;
+	}
+}
+
+/// Creates a multiple selector targeting form options
+@mixin form-options {
+	input[type=checkbox],
+	input[type=radio] {
+		@content;
+	}
+}
+
+@mixin field-status($bg, $border, $color) {
+	label { color: $color; }
+
+	%field-status {
+		background: $bg;
+		border-color:$border;
+		color: $color;
+	}
+
+	// Select all form elements except buttons
+	@include form-text()    { @extend %field-status; }
+	@include form-options() { @extend %field-status; }
+}
+
+@mixin control-group {
+	clear: both;
+	float: none;
+	margin: 0;
+
+	span.label { line-height: normal; }
+
+	label {
+		display: inline;
+		padding: 0;
+		width: auto;
+	}
+}
+
+@mixin field-attachment($type: null, $settings: false) {
+	@if $settings == true {
+		overflow: hidden; /* Clearfix */
+
+		.label {
+			background: $c-ghostwhite;
+			border: 1px solid $c-silver;
+			border-right-width: 0;
+			color: $c-dimgray;
+			float: get-text-dir(default);
+			margin: 0;
+			line-height: 1;
+			padding: #{$baseUnit1 * 3};
+
+			&:last-child {
+				@include border-radius(0 $radius1 $radius1 0);
+				border-left-width: 0;
+				border-right-width: 1px;
+			}
+		}
+
+		input,
+		select,
+		button {
+			@include border-radius(0);
+			clear: none;
+			float: get-text-dir(default);
+			margin: 0;
+			position: relative;
+			width: auto;
+
+			&:first-child { @include border-radius($radius1 0 0 $radius1); }
+		}
+	}
+
+	@if $type == prefix {
+		.label { @include border-radius($radius1 0 0 $radius1); }
+
+		input,
+		select,
+		button {
+			@include border-radius(0 $radius1 $radius1 0);
+		}
+	}
+	@else if $type == suffix {
+		.label {
+			@include border-radius(0 $radius1 $radius1 0);
+			border-right-width: 1px;
+		}
+
+		input,
+		select,
+		button {
+			@include border-radius($radius1 0 0 $radius1);
+		}
+	}
+	@elseif $type == both {
+		.label {
+			@include border-radius($radius1 0 0 $radius1);
+			border-right-width: 0;
+
+			&:last-child {
+				@include border-radius(0 $radius1 $radius1 0);
+				border-right-width: 1px;
+			}
+		}
+
+		input,
+		select,
+		button {
+			@include border-radius(0);
+
+			&:last-child { @include border-radius(0 $radius1 $radius1 0); }
+		}
+	}
+}
+
+
+@mixin field-horizontal {
+	@include cf;
+
+	label, span.label {
+		display: inline;
+		float: get-text-dir(default);
+		width: 35%;
+	}
+
+	& > input:not([type="radio"]):not([type="checkbox"]), // target all but radios and checks
+	& > select,
+	& > textarea,
+	& > .control-group {
+		clear: none;
+		float: get-text-dir(opposite);
+		width: 60%;
+	}
+
+	.field-prefix,
+	.field-suffix {
+		clear: none;
+		float: get-text-dir(opposite);
+		width: 60%;
+
+		input { width: auto; }
+	}
+
+	.control-group label, .control-group span.label {
+		float: none;
+		width: auto;
+	}
+}
+
+@mixin form-horizontal {
+	> div {
+		@include field-horizontal;
+	}
+}
+
+
+@mixin form-inline {
+	line-height: 250%; /* This produces vertical spacing between inputs */
+
+	label { display: inline-block; }
+
+	input, select {
+		@include box-shadow(none);
+		border: 0;
+		border-bottom: 1px solid $c-silver;
+		display: inline-block;
+		width: auto;
+		text-align: center;
+	}
+}
+
+@mixin form-search {
+	> div, > p {
+		clear: none;
+		float: get-text-dir(default);
+	}
+
+	label {
+		float: get-text-dir(default);
+		margin-right: $baseUnit1;
+		width: auto;
+	}
+
+	input {
+		float: get-text-dir(default);
+		width: auto;
+	}
+}

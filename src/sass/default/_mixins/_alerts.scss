@@ -1,0 +1,7 @@
+@mixin alert-config($bg, $border-color, $color) {
+	background-color: $bg;
+	border-color: $border-color;
+	color: $color;
+
+	a, a:link { color: $color; }
+}

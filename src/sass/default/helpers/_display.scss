@@ -1,41 +1,50 @@
 @if $useHelpers == true and $useDisplay == true {
 	/*==========  $Utils Display  ==========*/
 	/* Screen readers can see it */
-	.invisible {
-		@include invisible;
-	}
+	.invisible { @include invisible; }
 
 	 /* Screen readers can not see it */
 	.hidden { display: none; }
 
+	/* Per device visibility classes */
 	@each $device, $deviceAttrs in $devices-list {
-		@if not device-is-alias($device) {
-			$deviceAbbr: get-device-attr($device, abbr);
+		$deviceAbbr: get-device-attr($device, abbr);
+		$className: null;
 
-			.visible-#{$deviceAbbr},
-			.hidden-#{$deviceAbbr} {
-				display: none;
-			}
+		@if $deviceAbbr == null {
+			$className: $device;
+		}
+		@else {
+			$className: $deviceAbbr;
+		}
+
+		.visible-#{$className},
+		.hidden-#{$className} {
+			display: none;
 		}
 	}
 
 	@each $device, $deviceAttrs in $devices-list {
-		@if not device-is-alias($device) {
-			$deviceAbbr: get-device-attr($device, abbr);
+		$deviceAbbr: get-device-attr($device, abbr);
+		$className: null;
 
-			.visible-#{$deviceAbbr} {
-				@each $deviceAlt, $deviceAltAttrs in $devices-list {
-					@if not device-is-alias($deviceAlt) {
-						@if $deviceAlt == $device {
-							@include mq($device) {
-								display: block!important;
-							}
-						}
-						@else {
-							@include mq($deviceAlt) {
-								display: none!important;
-							}
-						}
+		@if $deviceAbbr == null {
+			$className: $device;
+		}
+		@else {
+			$className: $deviceAbbr;
+		}
+
+		.visible-#{$className} {
+			@each $deviceAlt, $deviceAltAttrs in $devices-list {
+				@if $deviceAlt == $device {
+					@include mq($device) {
+						display: block!important;
+					}
+				}
+				@else {
+					@include mq($deviceAlt) {
+						display: none!important;
 					}
 				}
 			}

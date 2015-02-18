@@ -4,13 +4,14 @@
 		clear: both;
 		list-style: none;
 		margin: 0;
-		position: absolute;
+		position: fixed;
+		z-index: 9999;
 		text-align: center;
 		width: 100%;
 
 		a, a:link, a:visited {
 			background: $c-brand-main;
-			color: $c-white;
+			color: text-contrast($c-brand-main);
 			display: block;
 			#{get-text-dir(default)}: -200%;
 			padding: #{$baseUnit1 * 2} 0;
@@ -27,7 +28,6 @@
 	}
 
 	.accessibility {
-		#{get-text-dir(default)}: -5000em;
-		position: absolute;
+		@include accesibility-link;
 	}
 }

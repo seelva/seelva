@@ -1,0 +1,4 @@
+@mixin accesibility-link {
+	#{get-text-dir(default)}: -5000em;
+	position: absolute;
+}

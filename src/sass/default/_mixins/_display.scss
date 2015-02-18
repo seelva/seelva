@@ -1,0 +1,35 @@
+/// Makes an element visible on a particular breakpoint/device
+/// @param {String} $device is the device name or alias
+@mixin visible($device) {
+	@if map-has-key($devices-list, $device) {
+		// THe argument is a name of a device, so use it
+		@include mq($device) {
+			display: block!important;
+		}
+	}
+	@else {
+		// Maybe the argument is the abbreviation of the name, so search for it
+		$found: false;
+
+		@each $deviceAlt, $deviceAttrs in $devices-list {
+			@if get-device-attr($deviceAlt, abbr) == $device {
+				$found: true;
+
+				@include mq($deviceAlt) {
+					display: block!important;
+				}
+			}
+		}
+
+		@if not $found {
+			@warn "There is not a device with name or abbreviation `#{$device}` so you can not make use of the visible() mixin for that particular device.";
+		}
+	}
+}
+
+/// Hides an element but keeps it visible to screen readers
+@mixin invisible {
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}

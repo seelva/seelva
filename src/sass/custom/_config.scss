@@ -17,47 +17,51 @@ $float-default:       left; // Options: 'left' (default) | 'right'
 
 // /*==========  $Modules  ==========*\
 // Enable or disable framework components according to your needs
-$usePrint:            true;
-$useNormalize:        true;
-$useBase:             true;
-  $useGrid:           true;
-  $useLayout:         true;
-$useCore:             true;
-  $styleButtons:      true;
-  $styleCode:         true;
-  $styleForms:        true;
-  $styleHeadings:     true;
-  $styleLinks:        true;
-  $styleLists:        true;
-  $styleMedia:        true;
-  $styleQuotes:       true;
-  $styleTables:       true;
-$useHelpers:          true;
-  $useAccessibility:  true;
-  $useBrowser:        true;
-  $useButtonsHelpers: true;
-  $useClearfix:       true;
-  $useClearing:       true;
-  $useDisplay:        true;
-  $useListsHelpers:   true;
-  $useFormsHelpers:   true;
-  $useTablesHelpers:  true;
-  $useImgreplace:     true;
-  $useMediaHelpers:   true;
-  $useOtherHelpers:   true;
-$useObjects:          true;
-  $useAlerts:         true;
-  $useMediaObj:       true;
-  $useProgress:       true;
-  $useNav:            true;
-    $useBreadcrumbs:  true;
-    $useMenus:        true;
-    $usePagination:   true;
-    $useTabs:         true;
-  $useStats:          true;
-  $useDropdown:       true; // READ WARNING BELOW!
-  $useFlyout:         true; // READ wARNING BELOW!
-$useIcons:            true;
+$usePrint:             true;
+$useNormalize:         true;
+$useBase:              true;
+  $useGrid:            true;
+  $useLayout:          true;
+$useCore:              true;
+  $styleButtons:       true;
+  $styleCode:          true;
+  $styleForms:         true;
+  $styleHeadings:      true;
+  $styleLinks:         true;
+  $styleLists:         true;
+  $styleMain:          true;
+  $styleMedia:         true;
+  $styleOther:         true;
+  $styleQuotes:        true;
+  $styleTables:        true;
+  $styleText:          true;
+$useHelpers:           true;
+  $useAccessibility:   true;
+  $useBrowser:         true;
+  $useButtonsHelpers:  true;
+  $useClearfix:        true;
+  $useClearing:        true;
+  $useDisplay:         true;
+  $useFormsHelpers:    true;
+  $useHeadingsHelpers: true;
+  $useImgreplace:      true;
+  $useListsHelpers:    true;
+  $useMediaHelpers:    true;
+  $useOtherHelpers:    true;
+  $useTablesHelpers:   true;
+$useObjects:           true;
+  $useAlerts:          true;
+  $useMediaObj:        true;
+  $useProgress:        true;
+  $useNav:             true;
+    $useBreadcrumbs:   true;
+    $useMenus:         true;
+    $usePagination:    true;
+    $useTabs:          true;
+  $useStats:           true;
+  $useDropdown:        true; // READ WARNING BELOW!
+  $useFlyout:          true; // READ wARNING BELOW!
+$useIcons:             true;
 
 // /***************************************************************************
 // *  WARNING:
@@ -74,16 +78,16 @@ $s-md: 768px;
 $s-lg: 960px;
 $s-xl: 1200px;
 
-// Devices ( name  abbreviation  size  [ type: min | max ] )
+// Devices ( name  ( [abbreviation]  size  [ type: min | max ]  [ alias: true | false  ] ) )
 $devices-list: (
-  'small':      ( 'abbr': sm,   'size': $s-sm  $s-md ),
-  'medium':     ( 'abbr': md,   'size': $s-md  $s-lg ),
-  'large':      ( 'abbr': lg,   'size': $s-lg  $s-xl ),
-  'extralarge': ( 'abbr': xl,   'size': $s-xl ),
+  'small':      ( 'abbr': sm,  'size': $s-sm  $s-md ),
+  'medium':     ( 'abbr': md,  'size': $s-md  $s-lg ),
+  'large':      ( 'abbr': lg,  'size': $s-lg  $s-xl ),
+  'extralarge': ( 'abbr': xl,  'size': $s-xl ),
 
   // Device Aliases
-  'portable':   ( 'abbr': null, 'size': $s-md, 'type': max ),
-  'mup':        ( 'abbr': null, 'size': $s-md, 'type': min )
+  'portable':   ( 'abbr': pt,  'size': $s-md,  'type': max,  'alias': true ),
+  'mup':        ( 'abbr': mup, 'size': $s-md,  'type': min,  'alias': true )
 );
 
 

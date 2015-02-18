@@ -1,21 +1,25 @@
 @if $useCore == true and $styleCode == true {
 	/*==========  $Core Code  ==========*/
-	code, kbd, pre {
+	code,
+	kbd,
+	pre {
 		background: $c-ghostwhite;
 		font-family: $fstack-code;
-		_font-family: $fstack-code; // Hack for IE 6
 	}
 
-	code, kbd {
+	code,
+	kbd {
 		font-size: 85.7%;
 		line-height: 192%;
 		padding: #{$baseUnit1 - 1} #{$baseUnit1 * 2 - 1};
 		white-space: pre;
 	}
 
-	code, pre { border: 1px solid $c-gainsboro; }
+	code,
+	pre { border: 1px solid $c-gainsboro; }
 
-	kbd, pre { @include border-radius($radius1); }
+	kbd,
+	pre { @include border-radius($radius1); }
 
 	kbd {
 		@include box-shadow($c-silver 0 2px 0, $c-dimgray 0 2px 2px);

@@ -12,22 +12,15 @@
 
 	// /*==========  Global setup  ==========*\
 	.section {
-		clear: both;
-		width: 100%;
+		@include section;
 	}
 
 	.holder {
-		@include cf;
-		margin: 0 auto;
-		max-width: $contentWidth;
-		padding-left: #{$gutterWidth/2};
-		padding-right: #{$gutterWidth/2};
+		@include holder;
 	}
 
 	.row {
-		@include cf;
-		margin-left: -#{$gutterWidth/2};
-		margin-right: -#{$gutterWidth/2};
+		@include row;
 
 		/* Fix last column in a row if it has suffix */
 		> div:last-child {

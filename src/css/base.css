@@ -1,3 +1,4 @@
+/*==========  Close button  ==========*/
 /*=============================
 =            $Base            =
 =============================*/
@@ -14,11 +15,11 @@
 .section { clear: both; width: 100%; }
 
 .holder { *zoom: 1; margin: 0 auto; max-width: 1200px; padding-left: 10px; padding-right: 10px; }
-.holder:before, .holder:after { content: ' '; display: table; }
+.holder:before, .holder:after { content: ''; display: table; }
 .holder:after { clear: both; }
 
 .row { *zoom: 1; margin-left: -10px; margin-right: -10px; /* Fix last column in a row if it has suffix */ }
-.row:before, .row:after { content: ' '; display: table; }
+.row:before, .row:after { content: ''; display: table; }
 .row:after { clear: both; }
 .row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"] { float: left; }
 

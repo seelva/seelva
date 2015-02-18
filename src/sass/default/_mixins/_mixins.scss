@@ -1,52 +1,8 @@
 // /*==========  $Common patterns  ==========*\
-/// Tradition image replacement
-@mixin imgreplace {
-	display: inline-block;
-	text-indent: -5000em;
-}
-
-/// Modern image replacement technique from h5bp
-/// https://github.com/h5bp/html5-boilerplate/blob/081f8aa0decdc1d2d561ff6dd23abaeff4bbf439/css/main.css
-@mixin ir {
-	background-color: transparent;
-	border: 0;
-	overflow: hidden;
-	/* IE 6/7 fallback */
-	*text-indent: -9999px;
-
-	&:before {
-		content: '';
-		display: block;
-		width: 0;
-		height: 150%;
-	}
-}
-
-/// Micro clearfix
-@mixin cf {
-	*zoom: 1;
-
-	&:before, &:after { content: ' '; display: table; }
-	&:after { clear: both; }
-}
-
-/// First element in a row
-@mixin alpha {
-	clear: get-float(default);
-	float: get-float(default);
-}
-
-/// Last element in a row
-@mixin omega {
-	clear: get-float(opposite);
-	float: get-float(opposite);
-}
-
-/// Hides an element but keeps it visible to screen readers
-@mixin invisible {
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important; /* IE6, IE7 */
+/// Resizable
+@mixin resizable {
+	overflow: auto;
+	resize: both;
 }
 
 /// Visually truncate text from an elment
@@ -57,110 +13,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-	}
-}
-
-// /*==========  $Buttons and forms  ==========*\
-/// Creates a multiple selector targeting buttons and their states
-/// @param {String} $state for the button state to target
-@mixin button($state: normal) {
-	@if not type-of($state) == string {
-		@warn "The `$state` parameter must be a string";
-	}
-	@if $state == normal {
-		input[type=button],
-		input[type=submit],
-		input[type=reset],
-		input[type=color],
-		button,
-		button[type],
-		.btn, .btn:link, .btn:visited,
-		.button, .button:link, .button {
-			@content;
-		}
-	}
-	@else if $state == focus {
-		input[type=button]:focus,
-		input[type=submit]:focus,
-		input[type=reset]:focus,
-		input[type=color]:focus,
-		button:focus,
-		button[type]:focus,
-		.btn:focus,
-		.button:focus {
-			@content;
-		}
-	}
-	@else if $state == hover {
-		input[type=button]:hover,
-		input[type=submit]:hover,
-		input[type=reset]:hover,
-		input[type=color]:hover,
-		button:hover,
-		button[type]:hover,
-		.btn:hover,
-		.button:hover {
-			@content;
-		}
-	}
-	@else if $state == active {
-		input[type=button]:active,
-		input[type=submit]:active,
-		input[type=reset]:active,
-		input[type=color]:active,
-		button:active,
-		button[type]:active,
-		.btn:active,
-		.button:active {
-			@content;
-		}
-	}
-	@else if $state == disabled {
-		input[type=button][disabled],
-		input[type=submit][disabled],
-		input[type=reset][disabled],
-		input[type=color][disabled],
-		button[disabled],
-		button[type][disabled],
-		.btn.disabled,
-		.button.disabled {
-			&,
-			&:hover,
-			&:active {
-				@content;
-			}
-		}
-	}
-}
-
-/// Creates a multiple selector targeting form fields with text input features
-@mixin form-text {
-	input:not([type]),
-	input[type=date],
-	input[type=datetime],
-	input[type=datetime-local],
-	input[type=email],
-	input[type=file],
-	input[type=month],
-	input[type=number],
-	input[type=password],
-	input[type=search],
-	input[type=tel],
-	input[type=text],
-	input[type=time],
-	input[type=url],
-	input[type=week],
-	select,
-	textarea {
-		@content;
-	}
-}
-
-/// Creates a multiple selector targeting form options
-@mixin form-options {
-	input[type=checkbox],
-	input[type=radio] {
-		@content;
 	}
 }
 
@@ -182,4 +34,18 @@
 @mixin default-gradient($start: $c-ghostwhite, $stop: $c-gainsboro) {
 	background: $start; // Fallback color
 	@include background-image( linear-gradient($start, $stop) );
+}
+
+/// Creates a circle with size $size
+/// @param {Number} $size
+@mixin circle($size) {
+	@include border-radius(50%);
+	width: $size;
+	height: $size;
+}
+
+@mixin selection {
+	background: $c-brand-main;
+	color: $c-white;
+	text-shadow: none;
 }

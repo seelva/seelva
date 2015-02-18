@@ -47,7 +47,10 @@
 	}
 
 	/*==========  $floated Images  ==========*/
-	img, .image-caption, .caption, figure.styled {
+	img,
+	.image-caption,
+	.caption,
+	figure.styled {
 		&.alignleft, &.floatleft   { float: left; margin-right: #{$baseUnit1 * 3}; }
 		&.alignright, &.floatright { float: right; margin-left: #{$baseUnit1 * 3}; }
 	}
@@ -56,7 +59,8 @@
 	.gallery {
 		overflow: hidden;
 
-		> div, > li {
+		> div,
+		> li {
 			@include border-radius($radius2);
 			background: $c-ghostwhite;
 			border: 1px solid $c-whitesmoke;

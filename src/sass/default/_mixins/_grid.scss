@@ -1,3 +1,34 @@
+@mixin section {
+	clear: both;
+	width: 100%;
+}
+
+@mixin holder {
+	@include cf;
+	margin: 0 auto;
+	max-width: $contentWidth;
+	padding-left: #{$gutterWidth/2};
+	padding-right: #{$gutterWidth/2};
+}
+
+@mixin row {
+	@include cf;
+	margin-left: -#{$gutterWidth/2};
+	margin-right: -#{$gutterWidth/2};
+}
+
+/// First element in a row
+@mixin alpha {
+	clear: get-float(default);
+	float: get-float(default);
+}
+
+/// Last element in a row
+@mixin omega {
+	clear: get-float(opposite);
+	float: get-float(opposite);
+}
+
 /// Creates a grid column with optional width, prefix, suffix, cycle and shift settings
 /// @param {Number} $width for column width
 /// @param {Number} $prefix for the ammount of blank columns to put before the actual column

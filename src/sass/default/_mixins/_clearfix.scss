@@ -1,0 +1,21 @@
+/// Updated cLearfix hack
+/// Source: http://www.contentwithstyle.co.uk/content/a-css-framework
+@mixin clearfix {
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: ' ';
+		clear: both;
+		height: 0;
+	}
+}
+
+/// Micro clearfix
+/// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin cf {
+	*zoom: 1;
+
+	&:before, &:after { content: ''; display: table; }
+	&:after { clear: both; }
+}

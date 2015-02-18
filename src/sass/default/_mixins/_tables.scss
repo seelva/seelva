@@ -1,0 +1,27 @@
+@mixin table-zebra($odd-bg: $c-white, $even-bg: $c-ghostwhite){
+	tr {
+		&.odd, &:nth-child(odd)   { background: $odd-bg; }
+		&.even, &:nth-child(even) { background: $even-bg; }
+	}
+}
+
+@mixin table-compact {
+	td, th { padding: #{$baseUnit1 - 1} #{$baseUnit1 * 2}; }
+}
+
+@mixin table-minimal {
+	border: 0;
+
+	th {
+		background: $c-gainsboro;
+		border: 0 {
+			bottom: 1px solid $c-lightgray;
+		}
+	}
+
+	td {
+		border: 0 {
+			bottom: 1px solid $c-lightgray;
+		}
+	}
+}

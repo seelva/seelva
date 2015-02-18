@@ -5,17 +5,18 @@
 ==================================*/
 
 @import
-	"helpers/forms",
+	"helpers/accessibility",
+	"helpers/browser",
 	"helpers/buttons",
-	"helpers/lists",
-	"helpers/media",
-	"helpers/tables",
 	"helpers/clearfix",
 	"helpers/clearing",
 	"helpers/display",
+	"helpers/forms",
+	"helpers/headings",
 	"helpers/imgreplace",
-	"helpers/accessibility",
-	"helpers/browser",
-	"helpers/other";
+	"helpers/lists",
+	"helpers/media",
+	"helpers/other",
+	"helpers/tables";
 
 /*-----  End of $Utilities  ------*/

@@ -1,0 +1,222 @@
+/// Creates a multiple selector targeting buttons and their states
+/// @param {String} $state for the button state to target
+@mixin button($state: normal) {
+	@if not type-of($state) == string {
+		@warn "The `$state` parameter must be a string";
+	}
+	@if $state == normal {
+		input[type=button],
+		input[type=submit],
+		input[type=reset],
+		input[type=color],
+		button,
+		.btn, .btn:link, .btn:visited,
+		.button, .button:link, .button:visited {
+			@content;
+		}
+	}
+	@else if $state == focus {
+		input[type=button]:focus,
+		input[type=submit]:focus,
+		input[type=reset]:focus,
+		input[type=color]:focus,
+		button:focus,
+		.btn:focus,
+		.button:focus {
+			@content;
+		}
+	}
+	@else if $state == hover {
+		input[type=button]:hover,
+		input[type=submit]:hover,
+		input[type=reset]:hover,
+		input[type=color]:hover,
+		button:hover,
+		.btn:hover,
+		.button:hover {
+			@content;
+		}
+	}
+	@else if $state == active {
+		input[type=button]:active,
+		input[type=submit]:active,
+		input[type=reset]:active,
+		input[type=color]:active,
+		button:active,
+		.btn:active,
+		.button:active {
+			@content;
+		}
+	}
+	@else if $state == disabled {
+		input[type=button][disabled],
+		input[type=submit][disabled],
+		input[type=reset][disabled],
+		input[type=color][disabled],
+		button[disabled],
+		.btn.disabled,
+		.button.disabled {
+			&,
+			&:hover,
+			&:active {
+				@content;
+			}
+		}
+	}
+}
+
+/// Set a background color, text color and border color to buttons
+/// @param {Multiple} $bg-color with options [Color | List]
+/// @param {Color} $border-color
+/// @param {Color} $text-color
+/// @param {Number} $darken-percent
+@mixin btn-color($bg-color, $border-color: $bg-color, $text-color: $c-white, $darken-percent: 40) {
+	&, &:link {
+		color: $text-color;
+	}
+
+	&:focus, &:hover {
+		@if type-of($bg-color) == color {
+			background: $bg-color;
+		}
+		@if type-of($bg-color) == list {
+			@include default-gradient( nth($bg-color, 1), nth($bg-color, 2) );
+		}
+		border-color: $border-color;
+		color: darken( $text-color, 10% );
+	}
+
+	$shadow-color: null;
+
+	@if type-of($bg-color) == color {
+		$shadow-color: $bg-color;
+	}
+	@if type-of($bg-color) == list {
+		$shadow-color: nth($bg-color, 2);
+	}
+
+	&:active { @include box-shadow(inset 0 1px #{$baseUnit1 * 4} darken( $shadow-color, $darken-percent ), 0 1px 0 $c-whitesmoke); }
+}
+
+@mixin btn-solid($bg-color, $border-color: $bg-color, $text-color: $c-white, $hover-saturation: 40) {
+	&, &:link {
+		@include border-radius($radius1);
+		@if type-of($bg-color) == color {
+			background: $bg-color;
+		}
+		@if type-of($bg-color) == list {
+			@include default-gradient( nth($bg-color, 1), nth($bg-color, 2) );
+		}
+		@if type-of($border-color) == color {
+			border: 1px solid $border-color;
+		}
+		@if type-of($border-color) == list {
+			border: 1px solid nth($bg-color, 2);
+		}
+		color: $text-color;
+	}
+	&:focus, &:hover {
+		@if type-of($bg-color) == color {
+			background: lighten($bg-color, $hover-saturation);
+		}
+		@if type-of($bg-color) == list {
+			@include default-gradient( lighten(nth($bg-color, 1), $hover-saturation), lighten(nth($bg-color, 2), $hover-saturation) );
+		}
+	}
+	&:active {
+		@if type-of($bg-color) == color {
+			@include box-shadow(0 1px 1em $bg-color inset);
+		}
+		@if type-of($bg-color) == list {
+			@include box-shadow(0 1px 1em nth($bg-color, 1) inset);
+		}
+	}
+}
+
+/// Define a button size
+/// @param {Number} $padding
+/// @param {Number} $line-height
+@mixin btn-size($padding, $line-height) {
+	line-height: $line-height;
+	padding: {
+		left: $padding;
+		right: $padding;
+	}
+}
+
+@mixin btn-info    { @include btn-color( lighten($c-lightcyan, 5)     darken($c-lightcyan, 5),     $c-darkturquoise, $c-steelblue, 30 ); }
+@mixin btn-success { @include btn-color( lighten($c-palegreen, 5)     darken($c-palegreen, 5),     $c-yellowgreen,   $c-olivedrab, 40 ); }
+@mixin btn-error   { @include btn-color( lighten($c-lavenderblush, 5) darken($c-lavenderblush, 5), $c-pink,          $c-crimson,   50 ); }
+@mixin btn-notice  { @include btn-color( lighten($c-lemonchiffon, 5)  darken($c-lemonchiffon, 5),  $c-gold,          $c-goldenrod, 50 ); }
+
+// *==========  $btn modifiers  ==========*/
+// Source: http://csswizardry.com/beautons/
+// $sizes
+@mixin btn-small  { @include btn-size( 0.5em, 0.75 ); }
+@mixin btn-medium { @include btn-size( 1.5em, 1.5 ); }
+@mixin btn-large  { @include btn-size( 2em,   2 ); }
+@mixin btn-huge   { @include btn-size( 2.5em, 4 ); }
+
+// $font-sizes
+@mixin btn-alpha { font-size: 0.75em; }
+@mixin btn-beta  { font-size: 1.28em; }
+@mixin btn-gamma { font-size: 1.50em; }
+
+// Buttons with the appearance of a link
+@mixin btn-unstyled {
+	&, &:link, &:visited, &:hover, &:focus, &:active {
+		@include box-shadow(0 0 0 transparent);
+		background: transparent;
+		border-color: transparent;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+}
+
+/// Button filling the entire width of its container
+@mixin btn-full {
+	padding: {
+		right: 0;
+		left: 0;
+	}
+	text-align: center;
+	width: 100%;
+}
+
+/// Make the button inherit sizing from its parent
+@mixin btn-natural {
+	font-size :inherit;
+	line-height: inherit;
+	padding: {
+		left: 0.5em;
+		right: 0.5em;
+	}
+}
+
+@mixin btn-group {
+	display: inline-block;
+	vertical-align: middle;
+
+	@include button(normal) {
+		@include border-radius(0);
+		float: get-text-dir(default);
+		margin: 0;
+		border-right-width: 0;
+
+		&:first-child { @include border-radius($radius1 0 0 $radius1); }
+
+		&:last-child  { @include border-radius(0 $radius1 $radius1 0); border-right-width: 1px; }
+	}
+}
+
+/*==========  Close button  ==========*/
+@mixin btn-close {
+	&, &:link, &:visited, &:hover, &:active, &:focus {
+		cursor: pointer;
+		float: get-text-dir(opposite);
+		font-weight: bold;
+		position: relative;
+		text-decoration: none;
+		top: -#{$baseUnit1};
+	}
+}

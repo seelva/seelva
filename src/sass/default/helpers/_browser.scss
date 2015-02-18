@@ -1,8 +1,8 @@
-@mixin selection { background: $c-brand-main; color: $c-white; text-shadow: none; }
-
 @if $useHelpers == true and $useBrowser == true {
 	/*==========  $Resizable elements  ==========*/
-	.resizable { overflow: auto; resize: both; }
+	.resizable {
+		@include resizable;
+	}
 
 	/*==========  $Selection styling  ==========*/
 	::-moz-selection { @include selection; }
