@@ -33,34 +33,48 @@
 		// param is of the kind:
 		// palm
 		// desk
+		// sm
+		// lg
 		// 'only screen and (min-width:10em) and (orientation:landscape)'
 
-		@if map-has-key($devices-list, $media-query) {
-			$device-size: get-device-attr($media-query, size);
+		// Set a flag for string types
+		$is-device-or-abbr: false;
 
-			@if type-of($device-size) == list {
-				@media only screen and (min-width:#{nth($device-size, 1)}) and (max-width:#{nth($device-size, 2)}) { @content; }
-			}
-			@elseif type-of($device-size) == number {
-				$mq-type: get-device-attr($media-query, type);
+		@each $device-name, $device-attrs in $devices-list {
+			$device-abbr: map-get($device-attrs, abbr);
 
-				@if ( type-of($mq-type) == string ) {
-					@if $mq-type == min or $mq-type == max {
-						@media only screen and (#{$mq-type}-width:$device-size) { @content; }
+			@if ($device-name == $media-query) or ($device-abbr == $media-query) {
+				// Since there is a device with $device-name or $device-abbr, set the flag to true
+				$is-device-or-abbr: true;
+
+				$device-size: get-device-attr($device-name, size);
+
+				@if type-of($device-size) == list {
+					@media only screen and (min-width:#{nth($device-size, 1)}) and (max-width:#{nth($device-size, 2)}) { @content; }
+				}
+				@elseif type-of($device-size) == number {
+					$mq-type: get-device-attr($device-name, type);
+
+					@if ( type-of($mq-type) == string ) {
+						@if $mq-type == min or $mq-type == max {
+							@media only screen and (#{$mq-type}-width:$device-size) { @content; }
+						}
+					}
+					@elseif type-of($mq-type == null) {
+						@media only screen and (min-width:$device-size) { @content; }
+					}
+					@else {
+						@warn "Please provide a proper breakpoint type for the device. Your breakpoint type was `#{type-of($mq-type)}`";
 					}
 				}
-				@elseif type-of($mq-type == null) {
-					@media only screen and (min-width:$device-size) { @content; }
-				}
 				@else {
-					@warn "Please provide a proper breakpoint type for the device. Your breakpoint type was `#{type-of($mq-type)}`";
+					@warn "Please provide a correct size value for the device. Your size type was `#{type-of($device-size)}`";
 				}
-			}
-			@else {
-				@warn "Please provide a correct size value for the device. Your size type was `#{type-of($device-size)}`";
 			}
 		}
-		@else {
+
+		@if $is-device-or-abbr == false {
+			// There were no devices with that abbreviation or name, then it should be a full media-query string
 			@media #{$media-query} { @content; }
 		}
 	}
