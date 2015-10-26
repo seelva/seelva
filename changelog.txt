@@ -27,7 +27,7 @@ Changes
 	IMPORTANT: Renamed color variables to use "c-" prefix
 	Dropped .styled class for headings, served no useful purpose
 	Updated html5shim to v3.7.0
-	Updated normalize to v3.0.0
+	Updated normalize to v3.0.3
 
 
 v3.3.1

@@ -9,9 +9,9 @@ body { direction: ltr; font-family: Arial, "Helvetica Neue", Helvetica, sans-ser
 /*==========  $Core Links  ==========*/
 a, a:link { color: #4e9a06; font-weight: bold; text-decoration: none; }
 a:hover, a:active { text-decoration: underline; }
-a:visited { color: #468a05; }
-a:hover { color: #3e7b04; }
-a:active { color: #468a05; }
+a:visited { color: #468b05; }
+a:hover { color: #3e7b05; }
+a:active { color: #468b05; }
 a:focus { color: #4e9a06; outline-color: #4e9a06; }
 
 /*==========  $Core Headings  ==========*/

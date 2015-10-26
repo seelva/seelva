@@ -59,14 +59,16 @@
 
 @mixin field-attachment($type: null, $settings: false) {
 	@if $settings == true {
-		overflow: hidden; /* Clearfix */
+		display: flex;
+		@if(get-text-dir(default) == right) {
+			flex-direction: row-reverse;
+		}
 
 		.label {
 			background: $c-ghostwhite;
 			border: 1px solid $c-silver;
 			border-right-width: 0;
 			color: $c-dimgray;
-			float: get-text-dir(default);
 			margin: 0;
 			line-height: 1;
 			padding: #{$baseUnit1 * 3};
@@ -83,7 +85,7 @@
 		button {
 			@include border-radius(0);
 			clear: none;
-			float: get-text-dir(default);
+			flex: 1 0;
 			margin: 0;
 			position: relative;
 			width: auto;
