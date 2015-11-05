@@ -1,0 +1,4 @@
+// Add percentage of black to a color
+@function shade($color, $percent){
+	@return mix(black, $color, $percent);
+}

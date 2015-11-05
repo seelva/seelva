@@ -50,7 +50,7 @@
 
 	/* nav-direction */
 	.nav-direction {
-		a, a:link, a:visited { @include border-radius($radius1); }
+		a, a:link, a:visited { border-radius: $radius1; }
 
 		li:first-child, .prev, .prev a, .prev a:link { float: get-text-dir(default); }
 

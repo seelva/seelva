@@ -95,12 +95,12 @@
 		$shadow-color: nth($bg-color, 2);
 	}
 
-	&:active { @include box-shadow(inset 0 1px #{$baseUnit1 * 4} darken( $shadow-color, $darken-percent ), 0 1px 0 $c-whitesmoke); }
+	&:active { box-shadow: inset 0 1px #{$baseUnit1 * 4} darken( $shadow-color, $darken-percent ), 0 1px 0 $c-whitesmoke; }
 }
 
 @mixin btn-solid($bg-color, $border-color: $bg-color, $text-color: $c-white, $hover-saturation: 40) {
 	&, &:link {
-		@include border-radius($radius1);
+		border-radius: $radius1;
 		@if type-of($bg-color) == color {
 			background: $bg-color;
 		}
@@ -125,10 +125,10 @@
 	}
 	&:active {
 		@if type-of($bg-color) == color {
-			@include box-shadow(0 1px 1em $bg-color inset);
+			box-shadow: 0 1px 1em $bg-color inset;
 		}
 		@if type-of($bg-color) == list {
-			@include box-shadow(0 1px 1em nth($bg-color, 1) inset);
+			box-shadow: 0 1px 1em nth($bg-color, 1) inset;
 		}
 	}
 }
@@ -165,7 +165,7 @@
 // Buttons with the appearance of a link
 @mixin btn-unstyled {
 	&, &:link, &:visited, &:hover, &:focus, &:active {
-		@include box-shadow(0 0 0 transparent);
+		box-shadow: 0 0 0 transparent;
 		background: transparent;
 		border-color: transparent;
 		font-weight: normal;
@@ -198,18 +198,18 @@
 	vertical-align: middle;
 
 	@include button(normal) {
-		@include border-radius(0);
+		border-radius: 0;
 		float: get-text-dir(default);
 		margin: 0;
 		border-right-width: 0;
 
-		&:first-child { @include border-radius($radius1 0 0 $radius1); }
+		&:first-child { border-radius: $radius1 0 0 $radius1; }
 
-		&:last-child  { @include border-radius(0 $radius1 $radius1 0); border-right-width: 1px; }
+		&:last-child  { border-radius: 0 $radius1 $radius1 0; border-right-width: 1px; }
 	}
 }
 
-/*==========  Close button  ==========*/
+// /*==========  Close button  ==========*/
 @mixin btn-close {
 	&, &:link, &:visited, &:hover, &:active, &:focus {
 		cursor: pointer;

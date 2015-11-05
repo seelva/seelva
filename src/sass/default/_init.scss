@@ -1,30 +1,28 @@
-@import "compass/css3";
-
-@import
-	"_init/colors",
-	"_init/fonts",
-	"_init/variables";
+@import "_init/colors";
+@import "_init/fonts";
+@import "_init/variables";
 
 @import "../custom/config";
 
-@import
-	"_mixins/accesibility",
-	"_mixins/alerts",
-	"_mixins/buttons",
-	"_mixins/clearfix",
-	"_mixins/display",
-	"_mixins/forms",
-	"_mixins/grid",
-	"_mixins/headings",
-	"_mixins/imgreplace",
-	"_mixins/mixins",
-	"_mixins/nav",
-	"_mixins/responsive",
-	"_mixins/tables";
+@import "_mixins/accesibility";
+@import "_mixins/alerts";
+@import "_mixins/buttons";
+@import "_mixins/clearfix";
+@import "_mixins/display";
+@import "_mixins/forms";
+@import "_mixins/grid";
+@import "_mixins/headings";
+@import "_mixins/imgreplace";
+@import "_mixins/mixins";
+@import "_mixins/nav";
+@import "_mixins/responsive";
+@import "_mixins/tables";
 
-@import
-	"_functions/device-is-alias",
-	"_functions/get-device-attr",
-	"_functions/get-float",
-	"_functions/get-text-dir",
-	"_functions/text-contrast";
+@import "_functions/color-shade";
+@import "_functions/color-tint";
+@import "_functions/device-is-alias";
+@import "_functions/get-device-attr";
+@import "_functions/get-float";
+@import "_functions/get-text-dir";
+@import "_functions/headings";
+@import "_functions/text-contrast";

@@ -12,12 +12,12 @@
 *
 /*!---------------------------------------*/
 
-@import "print.css" print;       // Print stylesheet
-@import "normalize.css" screen;  // Popular library to standarize HTML appearance and rendering across web browsers
-@import "base.css" screen;       // Grid helper, layout helpers
-@import "core.css" screen;       // Default styling for hyperlinks, headings, lists, tables, forms, buttons
-@import "objects.css" screen;    // Common patterns for regular CSS and OOCSS objects
-@import "helpers.css" screen;    // Additional classes and utilities sitting on top of objects and patterns
-@import "icons.css" screen;      // Icons webfont css setup
+@import url("print.css") print;       // Print stylesheet
+@import url("normalize.css") screen;  // Popular library to standarize HTML appearance and rendering across web browsers
+@import url("base.css") screen;       // Grid helper, layout helpers
+@import url("core.css") screen;       // Default styling for hyperlinks, headings, lists, tables, forms, buttons
+@import url("objects.css") screen;    // Common patterns for regular CSS and OOCSS objects
+@import url("helpers.css") screen;    // Additional classes and utilities sitting on top of objects and patterns
+@import url("icons.css") screen;      // Icons webfont css setup
 
-@import "custom.css" screen;     // Your styles
+@import url("custom.css") screen;     // Your styles

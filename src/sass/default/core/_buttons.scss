@@ -2,7 +2,7 @@
 	/*==========  $Buttons  ==========*/
 	@include button('normal') {
 		@include default-gradient();
-		@include border-radius($radius1);
+		border-radius: $radius1;
 		border: 1px solid $c-silver {
 			bottom-color: $c-darkgray;
 		}
@@ -37,13 +37,13 @@
 
 	@include button('active') {
 		@include default-gradient($c-lightgray, $c-ghostwhite);
-		@include box-shadow(inset 0 1px #{$baseUnit1 * 2} $c-darkgray, 0 1px 0 $c-whitesmoke);
+		box-shadow: inset 0 1px $baseUnit1*2 $c-darkgray, 0 1px 0 $c-whitesmoke;
 		border-color: $c-gray $c-darkgray $c-silver;
 		color: $c-gray;
 	}
 
 	@include button('disabled') {
-		@include box-shadow(none);
+		box-shadow: none;
 		background: $c-lightgray;
 		border: 1px solid $c-silver;
 		color: $c-gray;

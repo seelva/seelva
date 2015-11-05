@@ -1,7 +1,8 @@
-/*==========  Close button  ==========*/
 /*===============================
 =            $Custom            =
 ===============================*/
 body { color: #000000; }
+
+body { background: red; content: 'yup'; }
 
 /*-----  End of $Custom  ------*/

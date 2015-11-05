@@ -1,7 +1,7 @@
 @if $useCore == true and $styleTables == true {
 	/*==========  $Core Tables  ==========*/
 	table {
-		@include border-radius($radius1 $radius1 0 0);
+		border-radius: $radius1 $radius1 0 0;
 		border: {
 			collapse: separate;
 			right: 1px solid $c-lightgray;
@@ -38,8 +38,8 @@
 	}
 
 	thead {
-		tr:first-child th:first-child { @include border-radius($radius1 0 0 0); }
-		tr:last-child th:last-child   { @include border-radius(0 $radius1 0 0); }
+		tr:first-child th:first-child { border-radius: $radius1 0 0 0; }
+		tr:last-child th:last-child   { border-radius: 0 $radius1 0 0; }
 	}
 
 	td {

@@ -1,32 +1,28 @@
-/*==========  Close button  ==========*/
 /*=============================
 =            $Base            =
 =============================*/
 /*==========  $Grid - Fluid width  ==========*/
-/*!*
-*
-* Config.
-*
-* No. of Columns:          12;
-* Percentual column width: 833.33333%;
-* Gutter width:            20px;
-*
-**/
+/*!* Config. No. of Columns:          12; Percentual column width: 833.33333%; Gutter width:            20px; */
 .section { clear: both; width: 100%; }
 
 .holder { *zoom: 1; margin: 0 auto; max-width: 1200px; padding-left: 10px; padding-right: 10px; }
+
 .holder:before, .holder:after { content: ''; display: table; }
+
 .holder:after { clear: both; }
 
 .row { *zoom: 1; margin-left: -10px; margin-right: -10px; /* Fix last column in a row if it has suffix */ }
+
 .row:before, .row:after { content: ''; display: table; }
+
 .row:after { clear: both; }
+
 .row > div:last-child[class^="suffix"], .row > div:last-child[class*=" suffix"] { float: left; }
 
 /* Fix units inside forms */
 form [class^="unit-"], form [class*=" unit-"] { clear: none; }
 
-[class^="unit-"], [class*=" unit-"] { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; float: left; padding-left: 10px; padding-right: 10px; width: 100%; }
+[class^="unit-"], [class*=" unit-"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; padding-left: 10px; padding-right: 10px; width: 100%; }
 
 .unit-1 { width: 8.33333%; }
 
@@ -175,6 +171,7 @@ form [class^="unit-"], form [class*=" unit-"] { clear: none; }
   .suffix-sm-9 { margin-right: 75%; }
   .suffix-sm-10 { margin-right: 83.33333%; }
   .suffix-sm-11 { margin-right: 91.66667%; } }
+
 /*! Units for 'medium' devices */
 @media only screen and (min-width: 768px) and (max-width: 960px) { .unit-md-1 { width: 8.33333%; }
   .unit-md-2 { width: 16.66667%; }
@@ -210,6 +207,7 @@ form [class^="unit-"], form [class*=" unit-"] { clear: none; }
   .suffix-md-9 { margin-right: 75%; }
   .suffix-md-10 { margin-right: 83.33333%; }
   .suffix-md-11 { margin-right: 91.66667%; } }
+
 /*! Units for 'large' devices */
 @media only screen and (min-width: 960px) and (max-width: 1200px) { .unit-lg-1 { width: 8.33333%; }
   .unit-lg-2 { width: 16.66667%; }
@@ -245,6 +243,7 @@ form [class^="unit-"], form [class*=" unit-"] { clear: none; }
   .suffix-lg-9 { margin-right: 75%; }
   .suffix-lg-10 { margin-right: 83.33333%; }
   .suffix-lg-11 { margin-right: 91.66667%; } }
+
 /*! Units for 'extralarge' devices */
 @media only screen and (min-width: 1200px) { .unit-xl-1 { width: 8.33333%; }
   .unit-xl-2 { width: 16.66667%; }
@@ -280,4 +279,5 @@ form [class^="unit-"], form [class*=" unit-"] { clear: none; }
   .suffix-xl-9 { margin-right: 75%; }
   .suffix-xl-10 { margin-right: 83.33333%; }
   .suffix-xl-11 { margin-right: 91.66667%; } }
+
 /*-----  End of $Base  ------*/

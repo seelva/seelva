@@ -34,7 +34,7 @@
 	}
 
 	[class^="unit-"], [class*=" unit-"] {
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		float: get-float(default);
 		padding-left: #{$gutterWidth/2};
 		padding-right: #{$gutterWidth/2};

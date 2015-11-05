@@ -2,15 +2,15 @@
 	/*==========  $Media Helpers  ==========*/
 	img {
 		&.styled {
-			@include border-radius($radius2);
+			border-radius: $radius2;
 			background: $c-ghostwhite image-url('loading.gif') no-repeat center;
 			border: 1px solid $c-whitesmoke;
 			padding: #{$baseUnit1 * 2};
 		}
 
 		&.light-styled, a &.light-styled {
-			@include border-radius($radius2);
-			@include single-box-shadow($c-darkgray, 0, 0, #{$baseUnit1 * 2}, 0, true);
+			border-radius: $radius2;
+			box-shadow: $c-darkgray, 0, 0, $baseUnit1 * 2, 0, true;
 			border-width: 0;
 			padding: 0;
 		}
@@ -24,7 +24,7 @@
 
 	/*==========  Captioned image  ==========*/
 	.image-caption, .caption, figure.styled {
-		@include border-radius($radius2);
+		border-radius: $radius2;
 		background: $c-ghostwhite;
 		border: 1px solid $c-whitesmoke;
 		display: inline-block;
@@ -61,7 +61,7 @@
 
 		> div,
 		> li {
-			@include border-radius($radius2);
+			border-radius: $radius2;
 			background: $c-ghostwhite;
 			border: 1px solid $c-whitesmoke;
 			float: get-text-dir(default);
@@ -73,7 +73,7 @@
 		}
 
 		&.styled {
-			> div, > li { @include border-radius($radius2); }
+			> div, > li { border-radius: $radius2; }
 		}
 
 		&.light-styled {
@@ -82,7 +82,7 @@
 				border: 0;
 				padding: 0;
 
-				img { @include border-radius($radius2); }
+				img { border-radius: $radius2; }
 			}
 		}
 	}

@@ -1,0 +1,3 @@
+@import url("blocks/_home.scss");
+@import url("blocks/_test.scss");
+body { background: red; }

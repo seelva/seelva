@@ -59,20 +59,22 @@
 
 @mixin field-attachment($type: null, $settings: false) {
 	@if $settings == true {
-		overflow: hidden; /* Clearfix */
+		display: flex;
+		@if(get-text-dir(default) == right) {
+			flex-direction: row-reverse;
+		}
 
 		.label {
 			background: $c-ghostwhite;
 			border: 1px solid $c-silver;
 			border-right-width: 0;
 			color: $c-dimgray;
-			float: get-text-dir(default);
 			margin: 0;
 			line-height: 1;
 			padding: #{$baseUnit1 * 3};
 
 			&:last-child {
-				@include border-radius(0 $radius1 $radius1 0);
+				border-radius: 0 $radius1 $radius1 0;
 				border-left-width: 0;
 				border-right-width: 1px;
 			}
@@ -81,45 +83,45 @@
 		input,
 		select,
 		button {
-			@include border-radius(0);
+			border-radius: 0;
 			clear: none;
-			float: get-text-dir(default);
+			flex: 1 0;
 			margin: 0;
 			position: relative;
 			width: auto;
 
-			&:first-child { @include border-radius($radius1 0 0 $radius1); }
+			&:first-child { border-radius: $radius1 0 0 $radius1; }
 		}
 	}
 
 	@if $type == prefix {
-		.label { @include border-radius($radius1 0 0 $radius1); }
+		.label { border-radius: $radius1 0 0 $radius1; }
 
 		input,
 		select,
 		button {
-			@include border-radius(0 $radius1 $radius1 0);
+			border-radius: 0 $radius1 $radius1 0;
 		}
 	}
 	@else if $type == suffix {
 		.label {
-			@include border-radius(0 $radius1 $radius1 0);
+			border-radius: 0 $radius1 $radius1 0;
 			border-right-width: 1px;
 		}
 
 		input,
 		select,
 		button {
-			@include border-radius($radius1 0 0 $radius1);
+			border-radius: $radius1 0 0 $radius1;
 		}
 	}
 	@elseif $type == both {
 		.label {
-			@include border-radius($radius1 0 0 $radius1);
+			border-radius: $radius1 0 0 $radius1;
 			border-right-width: 0;
 
 			&:last-child {
-				@include border-radius(0 $radius1 $radius1 0);
+				border-radius: 0 $radius1 $radius1 0;
 				border-right-width: 1px;
 			}
 		}
@@ -127,9 +129,9 @@
 		input,
 		select,
 		button {
-			@include border-radius(0);
+			border-radius: 0;
 
-			&:last-child { @include border-radius(0 $radius1 $radius1 0); }
+			&:last-child { border-radius: 0 $radius1 $radius1 0; }
 		}
 	}
 }
@@ -181,7 +183,7 @@
 	label { display: inline-block; }
 
 	input, select {
-		@include box-shadow(none);
+		box-shadow: none;
 		border: 0;
 		border-bottom: 1px solid $c-silver;
 		display: inline-block;

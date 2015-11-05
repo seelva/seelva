@@ -1,8 +1,5 @@
-/*==========  Close button  ==========*/
-/*!==============================
-=            $Print            =
-==============================*/
-@media print { *, *:before, *:after { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
+/*!============================== =            $Print            = ==============================*/
+@media print { *, *:before, *:after { background: transparent !important; color: #000 !important; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; text-shadow: none !important; -webkit-filter: none !important; filter: none !important; -ms-filter: none !important; }
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
@@ -14,4 +11,5 @@
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
   @page { margin: 0.5cm; } }
+
 /*!-----  End of $Print  ------*/

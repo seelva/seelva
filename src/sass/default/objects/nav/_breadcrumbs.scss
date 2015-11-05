@@ -2,7 +2,7 @@
 	/*==========  $Nav Breadcrumbs  ==========*/
 	.breadcrumb {
 		@include default-gradient($c-ghostwhite, $c-whitesmoke);
-		@include border-radius($radius1);
+		border-radius: $radius1;
 		border: 1px solid $c-silver;
 
 		span { display: block; }

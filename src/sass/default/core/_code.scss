@@ -19,10 +19,10 @@
 	pre { border: 1px solid $c-gainsboro; }
 
 	kbd,
-	pre { @include border-radius($radius1); }
+	pre { border-radius: $radius1; }
 
 	kbd {
-		@include box-shadow($c-silver 0 2px 0, $c-dimgray 0 2px 2px);
+		box-shadow: $c-silver 0 2px 0, $c-dimgray 0 2px 2px;
 		color: $c-dimgray;
 		font-weight: bold;
 		text-transform: capitalize;

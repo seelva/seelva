@@ -24,7 +24,7 @@
 			margin-right: $baseUnit1;
 			top: 1px;
 
-			> a, > a:link, > a:visited { @include border-radius($radius1 $radius1 0 0); }
+			> a, > a:link, > a:visited { border-radius: $radius1 $radius1 0 0; }
 
 			> a:hover, &.active > a, &.active > a:link {
 				background: $c-white;
@@ -48,7 +48,7 @@
 			margin-bottom: $baseUnit1;
 			padding-#{get-text-dir(default)}: 1px;
 
-			> a, > a:link, > a:visited { @include border-radius($radius1 0 0 $radius1); }
+			> a, > a:link, > a:visited { border-radius: $radius1 0 0 $radius1; }
 
 			> a:hover, &.active > a, &.active > a:link {
 				background: $c-white;

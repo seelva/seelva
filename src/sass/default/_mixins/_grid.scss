@@ -38,7 +38,7 @@
 /// @param {Bool} $settings to set wether the mixin should output or not a set of settings for the column
 @mixin seelva-col($width: null, $prefix: null, $suffix: null, $cycle: null, $shift: null, $settings: true) {
 	@if $settings == true {
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		float: get-float(default);
 		padding-left: #{$gutterWidth/2};
 		padding-right: #{$gutterWidth/2};
@@ -59,7 +59,7 @@
 	@if $shift != null {
 		@if unitless($shift) {
 			// Is number and unitless
-			@if -#{$colAmount} < $shift < $colAmount {
+			@if -$colAmount < $shift AND $shift < $colAmount {
 				position: relative;
 				#{get-float(default)}: percentage( ((100 / $colAmount) * $shift)/100 );
 			}

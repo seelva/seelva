@@ -41,14 +41,14 @@
 	<meta name="viewport"
 		  content="width=device-width" />
 
-	<link rel="shortcut icon" type="image/x-icon" href="../src/favicon.ico" />
-	<link rel="icon" type="image/x-icon" href="../src/favicon.ico" />
-	<link rel="icon" type="image/png" href="../src/favicon.png" />
-	<link rel="author" href="../src/humans.txt" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="author" href="humans.txt" />
 
 	<title>Demo - seelva CSS / HTML Framework</title>
 
-	<link rel="stylesheet" href="../src/css/master.css" />
+	<link rel="stylesheet" href="css/master.css" />
 
 	<style type="text/css">
 		/* Styles that apply to this page only, they are not part of seelva */
@@ -87,7 +87,7 @@
 					<div class="branding">
 						<div id="logo">
 							<a href="http://www.seelva.com/"
-							title="seelva CSS / HTML Framework"><img src="../src/images/logo.png" alt="Logo" /></a>
+							title="seelva CSS / HTML Framework"><img src="images/logo.png" alt="Logo" /></a>
 						</div>
 						<h1 class="page-title">Demo page</h1>
 					</div>
@@ -121,12 +121,12 @@
 							</div>
 
 							<div class="unit-5 omega">
-								<h1 class="styled">Styled heading 1</h1>
-								<h2 class="styled">Styled heading 2</h2>
-								<h3 class="styled">Styled heading 3 with <span class="subtitle">Subtitle</span></h3>
-								<h4 class="styled">Styled heading 4 with <span class="subtitle">Subtitle</span></h4>
-								<h5 class="styled">Styled heading 5 with <span class="subtitle">Subtitle</span></h5>
-								<h6 class="styled">And so on...</h6>
+								<h1><a href="#">Heading 1 with link</a></h1>
+								<h2><a href="#">Heading 2</a> with link and <span class="subtitle">subtitle</span></h2>
+								<h3>Heading 3 with <a href="#">link</a> and <span class="subtitle">Subtitle</span></h3>
+								<h4>Heading 4 with link and <a href="#"><span class="subtitle">Subtitle</span></a></h4>
+								<h5>Heading 5 with <span class="subtitle">Subtitle</span></h5>
+								<h6>And so on...</h6>
 							</div>
 						</div>
 
@@ -374,11 +374,11 @@
 								</tr>
 							</tfoot>
 							<tbody>
-								<tr>
+								<tr class="odd">
 									<td>Column 1</td>
 									<td>Column 2</td>
 								</tr>
-								<tr>
+								<tr class="even">
 									<td>Cell 1-1</td>
 									<td>Cell 1-2</td>
 								</tr>
@@ -405,8 +405,20 @@
 									<td>Column 2</td>
 								</tr>
 								<tr>
-									<td>Cell 1-1</td>
-									<td>Cell 1-2</td>
+									<td>Cell 2-1</td>
+									<td>Cell 2-2</td>
+								</tr>
+								<tr>
+									<td>Cell 3-1</td>
+									<td>Cell 3-2</td>
+								</tr>
+								<tr>
+									<td>Cell 4-1</td>
+									<td>Cell 4-2</td>
+								</tr>
+								<tr>
+									<td>Cell 5-1</td>
+									<td>Cell 5-2</td>
 								</tr>
 							</tbody>
 						</table>
@@ -1051,6 +1063,6 @@
 		</div>
 	</div>
 
-	<script src="../src/js/custom.scripts.js"></script>
+	<script src="js/custom.scripts.js"></script>
 </body>
 </html>

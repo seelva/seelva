@@ -1,8 +1,6 @@
-/*==========  Close button  ==========*/
 /*!=========================================
 =            Master Stylesheet            =
-=========================================*\
-*
+=========================================**
 * Project:                 seelva
 * Version:                 4.0.0
 * URL:                     http://seelva.com/
@@ -10,11 +8,11 @@
 * Assigned to:             Hernan Silva, @hachesilva
 *
 /*!---------------------------------------*/
-@import "print.css" print;
-@import "normalize.css" screen;
-@import "base.css" screen;
-@import "core.css" screen;
-@import "objects.css" screen;
-@import "helpers.css" screen;
-@import "icons.css" screen;
-@import "custom.css" screen;
+@import url("print.css") print;
+@import url("normalize.css") screen;
+@import url("base.css") screen;
+@import url("core.css") screen;
+@import url("objects.css") screen;
+@import url("helpers.css") screen;
+@import url("icons.css") screen;
+@import url("custom.css") screen;

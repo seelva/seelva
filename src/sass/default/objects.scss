@@ -4,18 +4,17 @@
 =              $Objects             =
 ===================================*/
 
-@import
-	"objects/alerts",
-	"objects/dropdown",
-	"objects/flyout",
-	"objects/media",
-	"objects/nav",
-	"objects/nav/main",
-	"objects/nav/tabs",
-	"objects/nav/menus",
-	"objects/nav/pagination",
-	"objects/nav/breadcrumbs",
-	"objects/progress",
-	"objects/stats";
+@import "objects/alerts";
+@import "objects/dropdown";
+@import "objects/flyout";
+@import "objects/media";
+@import "objects/nav";
+@import "objects/nav/main";
+@import "objects/nav/tabs";
+@import "objects/nav/menus";
+@import "objects/nav/pagination";
+@import "objects/nav/breadcrumbs";
+@import "objects/progress";
+@import "objects/stats";
 
 /*-------  End of $Objects  -------*/

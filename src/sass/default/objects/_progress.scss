@@ -9,8 +9,8 @@
 	.progressbar-info,
 	.progressbar-notice,
 	.progressbar-success {
-		@include border-radius($radius3);
-		@include box-sizing(border-box);
+		border-radius: $radius3;
+		box-sizing: border-box;
 		background: $c-ghostwhite;
 		border: 1px solid $c-silver;
 		height: #{$baseUnit1 * 7};
@@ -19,7 +19,7 @@
 		position: relative;
 
 		.progress-value {
-			@include border-radius($radius3);
+			border-radius: $radius3;
 			@include default-gradient($c-whitesmoke, $c-silver);
 			float: get-text-dir(default);
 			height: #{$baseUnit1 * 7 - 1};

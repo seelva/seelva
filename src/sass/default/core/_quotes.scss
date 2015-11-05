@@ -26,7 +26,7 @@
 		}
 
 		&.styled {
-			@include border-radius($radius2);
+			border-radius: $radius2;
 			background: $c-whitesmoke;
 			border: 0;
 			color: $c-dimgray;

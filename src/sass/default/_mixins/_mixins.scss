@@ -1,4 +1,7 @@
 // /*==========  $Common patterns  ==========*\
+@mixin linear-gradient($start, $stop) {
+	background: linear-gradient(180deg, $start, $stop);
+}
 /// Resizable
 @mixin resizable {
 	overflow: auto;
@@ -33,13 +36,13 @@
 /// @param {Color} $stop bottom color for the gradient
 @mixin default-gradient($start: $c-ghostwhite, $stop: $c-gainsboro) {
 	background: $start; // Fallback color
-	@include background-image( linear-gradient($start, $stop) );
+	@include linear-gradient($start, $stop);
 }
 
 /// Creates a circle with size $size
 /// @param {Number} $size
 @mixin circle($size) {
-	@include border-radius(50%);
+	border-radius: 50%;
 	width: $size;
 	height: $size;
 }
